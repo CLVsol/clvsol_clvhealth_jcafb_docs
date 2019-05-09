@@ -67,21 +67,23 @@ html_static_path = ['_static']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-# html_theme = 'alabaster'
-# html_theme = 'classic'
-# html_theme = 'sphinxdoc'
-# html_theme = 'agogo'
-# html_theme = 'nature'
-# html_theme = 'pyramid'
-# html_theme = 'traditional'
-# html_theme = 'bizstyle'
-# html_theme = 'sphinx_rtd_theme'
-
 on_rtd = os.environ.get('READTHEDOCS') == 'True'
+
 if on_rtd:
+
     html_theme = 'default'
+
 else:
+
     html_theme = 'alabaster'
+    # html_theme = 'classic'
+    # html_theme = 'sphinxdoc'
+    # html_theme = 'agogo'
+    # html_theme = 'nature'
+    # html_theme = 'pyramid'
+    # html_theme = 'traditional'
+    # html_theme = 'bizstyle'
+    # html_theme = 'sphinx_rtd_theme'
 
     html_sidebars = {
         '**': [
