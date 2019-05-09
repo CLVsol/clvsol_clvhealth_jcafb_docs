@@ -112,3 +112,5 @@ else:
         'fixed_sidebar': False,
         'show_related': True,
     }
+
+master_doc = 'index'
