@@ -6,6 +6,7 @@ Benvindo à documentação do CLVhealth-JCAFB!
    :maxdepth: 2
    :caption: Contents:
 
+   setup/index
    this_documentation/index
 
 
