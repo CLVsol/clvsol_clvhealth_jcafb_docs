@@ -8,3 +8,4 @@ Setup
 
    create_new_database
    database_backup
+   database_restore
