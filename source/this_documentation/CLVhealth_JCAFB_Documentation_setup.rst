@@ -1,6 +1,6 @@
-====================================
-Sphinx CLVhealth-JCAFB Documentation
-====================================
+===================================
+CLVhealth-JCAFB Documentation setup
+===================================
 
 References
 ==========

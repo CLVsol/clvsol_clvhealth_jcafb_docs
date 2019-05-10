@@ -6,7 +6,7 @@ Benvindo à documentação do CLVhealth-JCAFB!
    :maxdepth: 2
    :caption: Contents:
 
-   sphinx/index
+   this_documentation/index
 
 
 Índices e tabelas
