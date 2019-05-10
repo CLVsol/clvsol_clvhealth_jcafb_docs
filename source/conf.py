@@ -24,7 +24,11 @@ copyright = '2019, Carlos Eduardo Vercelino - CLVsol'
 author = 'Carlos Eduardo Vercelino - CLVsol'
 
 # The full version, including alpha/beta/rc tags
-release = '1.0.0'
+# release = '1.0.0'
+# The short X.Y version.
+version = '12.0'
+# The full version, including alpha/beta/rc tags.
+release = '12.0.1.0'
 
 
 # -- General configuration ---------------------------------------------------
@@ -67,6 +71,7 @@ html_static_path = ['_static']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
+
 on_rtd = os.environ.get('READTHEDOCS') == 'True'
 
 if on_rtd:
