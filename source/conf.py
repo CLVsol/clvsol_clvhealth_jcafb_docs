@@ -96,7 +96,7 @@ else:
             # 'globaltoc.html',
             # 'localtoc.html',
             'navigation.html',
-            # 'relations.html',
+            'relations.html',
             'sourcelink.html',
             'searchbox.html',
         ],
