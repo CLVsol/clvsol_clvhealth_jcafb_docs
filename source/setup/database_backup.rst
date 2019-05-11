@@ -22,7 +22,7 @@ Glossário
           Nome do Banco de Dados do *CLVhelth_JCAFB*.
 
        timestamp
-          *Time Stamp* para identificação da versão do backup dos dados.
+          *Time Stamp* de identificação da versão do backup dos dados.
 
 Procedimento
 ------------
