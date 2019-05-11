@@ -4,18 +4,39 @@
 
 .. role:: red
 
-================
-Database restore
-================
+.. index:: Banco de Dados (Restauração)
+.. index:: Restauração do Banco de dados
 
-#. [tkl-odoo12-dev-vm] Restaurar o backup dos dados de "**clvhealth_jcafb**", executando:
+=============================
+Restauração do Banco de dados
+=============================
+
+Glossário
+---------
+    .. glossary::
+
+       odoo12-jcafb-server
+          Nome do Servidor Linux em que o *CLVhelth_JCAFB* está sendo executado.
+
+       clvhealth_jcafb_db
+          Nome do Banco de Dados do *CLVhelth_JCAFB*.
+
+       timestamp
+          *Time Stamp* para identificação da versão do backup dos dados.
+
+Procedimento
+------------
+
+Este procedimento deve ser usado quando o backup do banco de dados tiver sido executado usando o procedimento :doc:`/setup/database_backup`.
+
+#. [odoo12-jcafb-server] Restaurar o backup dos dados de "**<clvhealth_jcafb_db>**", executando:
 
     ::
 
-        # ***** tkl-odoo12-dev-vm
+        # ***** odoo12-jcafb-server
         #
 
-        ssh tkl-odoo12-dev-vm -l root
+        ssh odoo12-jcafb-server -l root
 
         /etc/init.d/odoo stop
 
@@ -23,33 +44,33 @@ Database restore
 
     ::
 
-        # ***** tkl-odoo12-dev-vm
+        # ***** odoo12-jcafb-server
         #
 
         cd /opt/odoo
-        # gzip -d clvhealth_jcafb_2019-05-15a.sql.gz
+        # gzip -d <clvhealth_jcafb_db>_<time_stamp>.sql.gz
 
-        dropdb -i clvhealth_jcafb
+        dropdb -i <clvhealth_jcafb_db>
 
-        createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb
-        psql -f clvhealth_jcafb_2019-05-15a.sql -d clvhealth_jcafb -U postgres -h localhost -p 5432 -q
+        createdb -O odoo -E UTF8 -T template0 <clvhealth_jcafb_db>
+        psql -f <clvhealth_jcafb_db>_<time_stamp>.sql -d <clvhealth_jcafb_db> -U postgres -h localhost -p 5432 -q
 
         # mkdir /var/lib/odoo/.local/share/Odoo/filestore
         cd /var/lib/odoo/.local/share/Odoo/filestore
-        rm -rf clvhealth_jcafb
-        tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2019-05-15a.tar.gz
+        rm -rf <clvhealth_jcafb_db>
+        tar -xzvf /opt/odoo/filestore_<clvhealth_jcafb_db>_<time_stamp>.tar.gz
 
         # mkdir /opt/odoo/clvsol_filestore
         cd /opt/odoo/clvsol_filestore
         rm -rf clvhealth_jcafb
-        tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-05-15a.tar.gz
+        tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_<time_stamp>.tar.gz
 
         cd /opt/odoo
         /usr/bin/odoo -c /etc/odoo/odoo-man.conf
 
     ::
 
-        # ***** tkl-odoo12-dev-vm
+        # ***** odoo12-jcafb-server
         #
 
         ^C

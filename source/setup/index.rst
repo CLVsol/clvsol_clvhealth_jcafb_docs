@@ -6,6 +6,6 @@ Setup
    :maxdepth: 2
    :caption: Contents:
 
-   create_new_database
+   database_setup
    database_backup
    database_restore
