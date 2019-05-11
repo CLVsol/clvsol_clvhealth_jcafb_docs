@@ -19,7 +19,7 @@ import os
 
 # -- Project information -----------------------------------------------------
 
-project = 'Documentação do CLVhealth-JCAFB'
+project = 'CLVhealth-JCAFB'
 copyright = '2019, Carlos Eduardo Vercelino - CLVsol'
 author = 'Carlos Eduardo Vercelino - CLVsol'
 
@@ -110,7 +110,7 @@ else:
     html_theme_options = {
         'logo': 'CLVsol_logo.png',
         'logo_name': True,
-        # 'description': 'Documentação do CLVhealth-JCAFB',
+        'description': 'Documentação do CLVhealth-JCAFB',
         'show_powered_by': True,
         # 'page_width': 'auto',
         'page_width': '1220px',
