@@ -1,6 +1,6 @@
-=====
-Setup
-=====
+=======================
+*CLVhealth-JCAFB* Setup
+=======================
 
 .. toctree::
    :maxdepth: 2
@@ -9,4 +9,4 @@ Setup
    database_setup
    database_backup
    database_restore
-   tkl-odoo12-jcafb-vm
+   tkl-odoo12-jcafb-vm/index
