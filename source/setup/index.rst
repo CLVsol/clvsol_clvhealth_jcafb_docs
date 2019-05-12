@@ -9,3 +9,4 @@ Setup
    database_setup
    database_backup
    database_restore
+   tkl-odoo12-jcafb-vm
