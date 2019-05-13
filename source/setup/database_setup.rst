@@ -88,7 +88,7 @@ O **Procedimento 1** é utilizado por ocasição da criação de uma nova instâ
 
         cd /opt/odoo/clvsol_clvhealth_jcafb/project
         
-        python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb"
+        python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_db"
         
     ::
 
@@ -166,7 +166,7 @@ O **Procedimento 2** é utilizado por ocasição da criação de uma nova instâ
 
         cd /opt/odoo/clvsol_clvhealth_jcafb/project
         
-        python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb"
+        python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_db"
         
     ::
 
