@@ -7,6 +7,6 @@ tkl-odoo12-jcafb-vm
    :caption: Contents:
 
    server_setup
-   database_setup
+   /setup/database_setup
    database_backup
    database_restore
