@@ -7,3 +7,4 @@ tkl-odoo12-jcafb-vm
    :caption: Contents:
 
    tkl-odoo12-jcafb-vm_setup
+   database_setup
