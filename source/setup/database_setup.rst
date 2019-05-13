@@ -4,7 +4,7 @@
 
 .. role:: red
 
-.. index:: ! Banco de Dados (Preparação)
+.. index:: Banco de Dados (Preparação)
 .. index:: Preparação do Banco de Dados
 
 ============================

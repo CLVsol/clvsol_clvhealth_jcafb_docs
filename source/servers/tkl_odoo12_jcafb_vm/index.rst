@@ -2,11 +2,13 @@
 tkl-odoo12-jcafb-vm
 ===================
 
+.. index:: tkl-odoo12-jcafb-vm
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   server_setup
+   /setup/server_setup_local
    /setup/database_setup
    /setup/database_backup
    /setup/database_restore

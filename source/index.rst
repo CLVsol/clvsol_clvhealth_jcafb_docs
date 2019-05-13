@@ -7,6 +7,7 @@ Benvindo à documentação do CLVhealth-JCAFB!
    :caption: Contents:
 
    setup/index
+   servers/index
    this_documentation/index
 
 
