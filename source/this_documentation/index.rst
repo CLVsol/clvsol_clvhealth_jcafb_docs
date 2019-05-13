@@ -2,6 +2,8 @@
 This Documentation
 ==================
 
+.. index:: This Documentation
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
