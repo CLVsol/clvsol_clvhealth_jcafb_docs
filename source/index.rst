@@ -3,7 +3,7 @@ Benvindo à documentação do CLVhealth-JCAFB!
 ===========================================
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: Contents:
 
    setup/index
