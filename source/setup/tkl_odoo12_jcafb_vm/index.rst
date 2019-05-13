@@ -6,7 +6,7 @@ tkl-odoo12-jcafb-vm
    :maxdepth: 2
    :caption: Contents:
 
-   tkl-odoo12-jcafb-vm_setup
+   server_setup
    database_setup
    database_backup
    database_restore

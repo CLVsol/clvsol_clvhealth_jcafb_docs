@@ -4,12 +4,12 @@
 
 .. role:: red
 
-.. index:: tkl-odoo12-jcafb-vm Server Setup
+.. index:: Server Setup (tkl-odoo12-jcafb-vm)
 .. index:: Odoo 12.0 Setup
 
-================================
-tkl-odoo12-jcafb-vm Server Setup
-================================
+==================================
+Server Setup (tkl-odoo12-jcafb-vm)
+==================================
 
 This project will help you create a server to host the **Odoo 12 (JCAFB)** solution, based on an `Odoo <https://www.odoo.com/>`_  appliance, using the VMWare Workstagion infrastructure.
 
