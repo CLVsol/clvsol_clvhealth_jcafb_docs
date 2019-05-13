@@ -8,5 +8,5 @@ tkl-odoo12-jcafb-vm
 
    server_setup
    /setup/database_setup
-   database_backup
+   /setup/database_backup
    database_restore
