@@ -81,6 +81,28 @@ if on_rtd:
 
     html_theme = 'default'
 
+    # html_theme_options = {}
+    html_theme_options = {
+        'canonical_url': '',
+        # 'analytics_id': 'UA-XXXXXXX-1',  # Provided by Google in your dashboard
+        'logo_only': False,
+        'display_version': True,
+        # 'prev_next_buttons_location': 'bottom',
+        'prev_next_buttons_location': 'both',
+        # 'style_external_links': False,
+        'style_external_links': True,
+        # 'vcs_pageview_mode': '',
+        # 'style_nav_header_background': 'white',
+        'style_nav_header_background': '#2980B9',
+        # Toc options
+        'collapse_navigation': False,
+        'sticky_navigation': True,
+        # 'navigation_depth': 4,
+        'navigation_depth': -1,
+        'includehidden': True,
+        'titles_only': False
+    }
+
 # else:
 
 #     html_theme = 'alabaster'
@@ -135,17 +157,17 @@ else:
     # html_theme = 'bizstyle'
     html_theme = 'sphinx_rtd_theme'
 
-    html_sidebars = {
-        '**': [
-            'about.html',
-            # 'globaltoc.html',
-            # 'localtoc.html',
-            'navigation.html',
-            # 'relations.html',
-            'sourcelink.html',
-            'searchbox.html',
-        ],
-    }
+    # html_sidebars = {
+    #     '**': [
+    #         'about.html',
+    #         # 'globaltoc.html',
+    #         # 'localtoc.html',
+    #         'navigation.html',
+    #         # 'relations.html',
+    #         'sourcelink.html',
+    #         'searchbox.html',
+    #     ],
+    # }
 
     # Theme options are theme-specific and customize the look and feel of a theme
     # further.  For a list of options available for each theme, see the
