@@ -63,6 +63,9 @@ exclude_patterns = []
 # html_favicon = None
 html_favicon = '_static/CLVsol_favicon.ico'
 
+# html_logo = '_static/CLVsol_logo.png'
+html_logo = '_static/CLVhealth_logo.png'
+
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
@@ -78,9 +81,51 @@ if on_rtd:
 
     html_theme = 'default'
 
+# else:
+
+#     html_theme = 'alabaster'
+#     # html_theme = 'classic'
+#     # html_theme = 'sphinxdoc'
+#     # html_theme = 'agogo'
+#     # html_theme = 'nature'
+#     # html_theme = 'pyramid'
+#     # html_theme = 'traditional'
+#     # html_theme = 'bizstyle'
+#     # html_theme = 'sphinx_rtd_theme'
+
+#     html_sidebars = {
+#         '**': [
+#             'about.html',
+#             # 'globaltoc.html',
+#             # 'localtoc.html',
+#             'navigation.html',
+#             # 'relations.html',
+#             'sourcelink.html',
+#             'searchbox.html',
+#         ],
+#     }
+
+#     # Theme options are theme-specific and customize the look and feel of a theme
+#     # further.  For a list of options available for each theme, see the
+#     # documentation.
+#     #
+#     # html_theme_options = {}
+#     html_theme_options = {
+#         'logo': 'CLVsol_logo.png',
+#         'logo_name': True,
+#         'description': 'Documentação do CLVhealth-JCAFB',
+#         'show_powered_by': True,
+#         # 'page_width': 'auto',
+#         'page_width': '1220px',
+#         # 'sidebar_width': '220px',
+#         'sidebar_width': '302px',
+#         'fixed_sidebar': False,
+#         'show_related': True,
+#     }
+
 else:
 
-    html_theme = 'alabaster'
+    # html_theme = 'alabaster'
     # html_theme = 'classic'
     # html_theme = 'sphinxdoc'
     # html_theme = 'agogo'
@@ -88,7 +133,7 @@ else:
     # html_theme = 'pyramid'
     # html_theme = 'traditional'
     # html_theme = 'bizstyle'
-    # html_theme = 'sphinx_rtd_theme'
+    html_theme = 'sphinx_rtd_theme'
 
     html_sidebars = {
         '**': [
@@ -96,7 +141,7 @@ else:
             # 'globaltoc.html',
             # 'localtoc.html',
             'navigation.html',
-            'relations.html',
+            # 'relations.html',
             'sourcelink.html',
             'searchbox.html',
         ],
@@ -108,16 +153,24 @@ else:
     #
     # html_theme_options = {}
     html_theme_options = {
-        'logo': 'CLVsol_logo.png',
-        'logo_name': True,
-        'description': 'Documentação do CLVhealth-JCAFB',
-        'show_powered_by': True,
-        # 'page_width': 'auto',
-        'page_width': '1220px',
-        # 'sidebar_width': '220px',
-        'sidebar_width': '302px',
-        'fixed_sidebar': False,
-        'show_related': True,
+        'canonical_url': '',
+        # 'analytics_id': 'UA-XXXXXXX-1',  # Provided by Google in your dashboard
+        'logo_only': False,
+        'display_version': True,
+        # 'prev_next_buttons_location': 'bottom',
+        'prev_next_buttons_location': 'both',
+        # 'style_external_links': False,
+        'style_external_links': True,
+        # 'vcs_pageview_mode': '',
+        # 'style_nav_header_background': 'white',
+        'style_nav_header_background': '#2980B9',
+        # Toc options
+        'collapse_navigation': False,
+        'sticky_navigation': True,
+        # 'navigation_depth': 4,
+        'navigation_depth': -1,
+        'includehidden': True,
+        'titles_only': False
     }
 
 master_doc = 'index'
