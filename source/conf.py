@@ -79,7 +79,8 @@ on_rtd = os.environ.get('READTHEDOCS') == 'True'
 
 if on_rtd:
 
-    html_theme = 'default'
+    # html_theme = 'default'
+    html_theme = 'sphinx_rtd_theme'
 
     # html_theme_options = {}
     html_theme_options = {
