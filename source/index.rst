@@ -8,6 +8,7 @@ Benvindo à documentação do *CLVhealth-JCAFB*!
 
    setup/index
    servers/index
+   jcafb_2020/index
    this_documentation/index
 
 
