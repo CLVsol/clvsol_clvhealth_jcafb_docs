@@ -98,8 +98,8 @@ if on_rtd:
         # Toc options
         'collapse_navigation': False,
         'sticky_navigation': True,
-        # 'navigation_depth': 4,
-        'navigation_depth': -1,
+        'navigation_depth': 4,
+        # 'navigation_depth': -1,
         'includehidden': True,
         'titles_only': False
     }
