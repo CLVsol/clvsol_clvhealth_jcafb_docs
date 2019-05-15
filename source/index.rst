@@ -2,6 +2,8 @@
 Benvindo à documentação do *CLVhealth-JCAFB*!
 =============================================
 
+* :ref:`genindex`
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
@@ -10,10 +12,4 @@ Benvindo à documentação do *CLVhealth-JCAFB*!
    servers/index
    jcafb_2020/index
    this_documentation/index
-
-
-Índices e tabelas
-=================
-
-* :ref:`genindex`
-* :ref:`search`
+   general_index

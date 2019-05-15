@@ -9,6 +9,6 @@ tkl-odoo12-jcafb-vm
    :caption: Contents:
 
    /setup/server_setup_local
-   /setup/database_setup
-   /setup/database_backup
-   /setup/database_restore
+   /setup/clvhealth_jcafb_setup
+   /setup/clvhealth_jcafb_backup
+   /setup/clvhealth_jcafb_restore

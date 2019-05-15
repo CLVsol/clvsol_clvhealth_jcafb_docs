@@ -4,12 +4,11 @@
 
 .. role:: red
 
-.. index:: Banco de Dados (Restauração)
-.. index:: Restauração do Banco de dados
+.. index:: Restauração do *CLVhealth-JCAFB*
 
-=============================
-Restauração do Banco de dados
-=============================
+================================
+Restauração do *CLVhealth-JCAFB*
+================================
 
 Glossário
 ---------
@@ -27,7 +26,7 @@ Glossário
 Procedimento
 ------------
 
-Este procedimento deve ser usado quando o backup do banco de dados tiver sido executado usando o procedimento :doc:`/setup/database_backup`.
+Este procedimento deve ser usado quando o backup do banco de dados tiver sido executado usando o procedimento :doc:`/setup/clvhealth_jcafb_backup`.
 
 #. [odoo12-jcafb-server] Restaurar o backup dos dados de "**<clvhealth_jcafb_db>**", executando:
 

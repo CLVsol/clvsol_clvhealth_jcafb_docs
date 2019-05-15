@@ -4,12 +4,11 @@
 
 .. role:: red
 
-.. index:: Banco de Dados (Preparação)
-.. index:: Preparação do Banco de Dados
+.. index:: Preparação do *CLVhealth-JCAFB*
 
-============================
-Preparação do Banco de Dados
-============================
+===============================
+Preparação do *CLVhealth-JCAFB*
+===============================
 
 Glossário
 ---------
