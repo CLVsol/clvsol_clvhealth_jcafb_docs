@@ -5,7 +5,7 @@
 .. role:: red
 
 ===============
-2019-05-(14-15)
+2019-05-(14-21)
 ===============
 
 Inicializar o conteúdo do **clvsol_filestore/clvhealth_jcafb**
@@ -103,7 +103,7 @@ Criar uma nova instância (**vazia**) do *CLVhealth-JCAFB-2020*
 
 		        /etc/init.d/odoo start
 
-Criar um backup do *CLVhealth-JCAFB-2020* (2019-05-15a)
+Criar um backup do *CLVhealth-JCAFB-2020* (2019-05-21a)
 -------------------------------------------------------
 
 	* Referência: :doc:`/setup/clvhealth_jcafb_backup`.
@@ -131,16 +131,16 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-05-15a)
 	        #
 
 	        cd /opt/odoo
-	        pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-05-15a.sql
+	        pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-05-21a.sql
 
-	        gzip clvhealth_jcafb_2020_2019-05-15a.sql
-	        pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > <clvhealth_jcafb_2020_2019-05-15a.sql
+	        gzip clvhealth_jcafb_2020_2019-05-21a.sql
+	        pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-05-21a.sql
 
 	        cd /var/lib/odoo/.local/share/Odoo/filestore
-	        tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-05-15a.tar.gz clvhealth_jcafb_2020
+	        tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-05-21a.tar.gz clvhealth_jcafb_2020
 
 	        cd /opt/odoo/clvsol_filestore
-	        tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-05-15a.tar.gz clvhealth_jcafb
+	        tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-05-21a.tar.gz clvhealth_jcafb
 
 	#. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
 
@@ -159,18 +159,87 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-05-15a)
 	        /etc/init.d/odoo start
 
     Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2020_2019-05-15a.sql
-        * /opt/odoo/clvhealth_jcafb_2020_2019-05-15a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2020_2019-05-15atar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-05-15a.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2020_2019-05-21a.sql
+        * /opt/odoo/clvhealth_jcafb_2020_2019-05-21a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2020_2019-05-21a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-05-21a.tar.gz
 
-Restaurar um backup do *CLVhealth-JCAFB-2020* (2019-05-15a)
+Restaurar um backup do *CLVhealth-JCAFB-2020* (2019-05-21a)
 -----------------------------------------------------------
 
-Migrar os Usuários do *CLVhealth-JCAFB-2020* para o *CLVhealth-JCAFB-2020*
+	* Referência: :doc:`/setup/clvhealth_jcafb_restore`.
+
+	#. [tkl-odoo12-jcafb-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-vm** e paralizar o *Odoo*:
+
+	    ::
+
+	        # ***** tkl-odoo12-jcafb-vm
+	        #
+
+	        ssh tkl-odoo12-jcafb-vm -l root
+
+	        /etc/init.d/odoo stop
+
+	        su odoo
+
+	#. [tkl-odoo12-jcafb-vm] Executar os comandos de restauração dos arquivos de backup:
+
+	    ::
+
+	        # ***** tkl-odoo12-jcafb-vm
+	        #
+
+	        cd /opt/odoo
+	        # gzip -d clvhealth_jcafb_2020_2019-05-21a.sql.gz
+
+	        dropdb -i clvhealth_jcafb_2020
+
+	        createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2020
+	        psql -f clvhealth_jcafb_2020_2019-05-21a.sql -d clvhealth_jcafb_2020 -U postgres -h localhost -p 5432 -q
+
+	        # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+	        cd /var/lib/odoo/.local/share/Odoo/filestore
+	        rm -rf clvhealth_jcafb_2020
+	        tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-05-21a.tar.gz
+
+	        # mkdir /opt/odoo/clvsol_filestore
+	        cd /opt/odoo/clvsol_filestore
+	        rm -rf clvhealth_jcafb
+	        tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-05-21a.tar.gz
+
+	#. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
+
+	    ::
+
+	        # ***** tkl-odoo12-jcafb-vm
+	        #
+
+	        cd /opt/odoo
+	        /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+	        ^C
+
+	        exit
+
+	        /etc/init.d/odoo start
+
+Migrar os Usuários do *CLVhealth-JCAFB-2019* para o *CLVhealth-JCAFB-2020*
 --------------------------------------------------------------------------
 
-Criar um backup do *CLVhealth-JCAFB-2020* (2019-05-15b)
+	    #. Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-vm** e executar o **res_users_migration.py**, acessando o servidor **tkl-odoo10-jcafb-vm** [base de dados **clvhealth_jcafb_2019**]:
+
+		    ::
+
+		        # ***** tkl-odoo12-jcafb-vm (session 2)
+		        #
+
+		        ssh tkl-odoo12-jcafb-vm -l odoo
+
+		        cd /opt/odoo/clvsol_clvhealth_jcafb/project
+		        
+		        python3 res_users_migration.py --server "https://192.168.25.152" --admin_user_pw "***" --db "clvhealth_jcafb_2019"
+	        
+Criar um backup do *CLVhealth-JCAFB-2020* (2019-05-21b)
 -------------------------------------------------------
 
 	* Referência: :doc:`/setup/clvhealth_jcafb_backup`.
@@ -198,16 +267,16 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-05-15b)
 	        #
 
 	        cd /opt/odoo
-	        pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-05-15b.sql
+	        pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-05-21b.sql
 
-	        gzip clvhealth_jcafb_2020_2019-05-15b.sql
-	        pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > <clvhealth_jcafb_2020_2019-05-15b.sql
+	        gzip clvhealth_jcafb_2020_2019-05-21b.sql
+	        pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > <clvhealth_jcafb_2020_2019-05-21b.sql
 
 	        cd /var/lib/odoo/.local/share/Odoo/filestore
-	        tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-05-15b.tar.gz clvhealth_jcafb_2020
+	        tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-05-21b.tar.gz clvhealth_jcafb_2020
 
 	        cd /opt/odoo/clvsol_filestore
-	        tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-05-15b.tar.gz clvhealth_jcafb
+	        tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-05-21b.tar.gz clvhealth_jcafb
 
 	#. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
 
@@ -226,7 +295,7 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-05-15b)
 	        /etc/init.d/odoo start
 
     Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2020_2019-05-15b.sql
-        * /opt/odoo/clvhealth_jcafb_2020_2019-05-15b.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2020_2019-05-15btar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-05-15b.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2020_2019-05-21b.sql
+        * /opt/odoo/clvhealth_jcafb_2020_2019-05-21b.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2020_2019-05-21b.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-05-21b.tar.gz
