@@ -28,8 +28,6 @@ Procedimento
 
 O Backup do Banco de Dados pode ser restaurado executando o procedimento :doc:`/setup/clvhealth_jcafb_restore`.
 
-#. [odoo12-jcafb-server] Criar um backup do Banco de Dados "**clvhealth_jcafb_db**", executando:
-
     #. [tkl-odoo12-jcafb-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-vm** e paralizar o *Odoo*:
 
         ::
