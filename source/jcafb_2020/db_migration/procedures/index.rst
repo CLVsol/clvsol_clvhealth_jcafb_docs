@@ -1,6 +1,6 @@
-==========
-Procedures
-==========
+=============
+Procedimentos
+=============
 
 .. toctree::
    :maxdepth: 2

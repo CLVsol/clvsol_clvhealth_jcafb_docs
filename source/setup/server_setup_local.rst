@@ -4,7 +4,7 @@
 
 .. role:: red
 
-.. index:: Criação de um Servidor do *CLVhealth-JCAFB* (*Turnkey Linux* Local)
+.. index:: Criação de um Servidor do CLVhealth-JCAFB (Turnkey Linux Local)
 
 ===================================================================
 Criação de um Servidor do *CLVhealth-JCAFB* (*Turnkey Linux* Local)

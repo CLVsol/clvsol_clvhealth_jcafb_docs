@@ -4,7 +4,7 @@
 
 .. role:: red
 
-.. index:: Preparação do *CLVhealth-JCAFB*
+.. index:: Preparação do CLVhealth-JCAFB
 
 ===============================
 Preparação do *CLVhealth-JCAFB*

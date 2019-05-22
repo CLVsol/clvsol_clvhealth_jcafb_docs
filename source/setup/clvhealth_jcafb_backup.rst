@@ -4,7 +4,7 @@
 
 .. role:: red
 
-.. index:: Backup do *CLVhealth-JCAFB
+.. index:: Backup do CLVhealth-JCAFB
 
 ===========================
 Backup do *CLVhealth-JCAFB*

@@ -4,7 +4,7 @@
 
 .. role:: red
 
-.. index:: Restauração do *CLVhealth-JCAFB*
+.. index:: Restauração do CLVhealth-JCAFB
 
 ================================
 Restauração do *CLVhealth-JCAFB*
