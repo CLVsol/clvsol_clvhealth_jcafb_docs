@@ -7,3 +7,4 @@ Diário (JCAFB-2020)
    :caption: Contents:
 
    jcafb_diary_2019_05_14
+   jcafb_diary_2019_05_22
