@@ -547,7 +547,7 @@ Installation of external modules
 
 #. `OCA/l10n-brazil <https://github.com/OCA/l10n-brazil>`_
 
-    #. :red:`(Não Executado)` To install "**OCA/l10n-brazil**", use the following commands (as odoo):
+    #. To install "**OCA/l10n-brazil**", use the following commands (as odoo):
 
         ::
 
@@ -560,7 +560,7 @@ Installation of external modules
             cd /opt/odoo/oca_l10n-brazil
             git branch -a
 
-    #. :red:`(Não Executado)` To install "`num2words <https://pypi.python.org/pypi/num2words>`_", use the following commands (as root):
+    #. To install "`node-less <https://github.com/odoo/odoo/issues/16463>`_", use the following commands (as root):
 
         ::
 
@@ -568,9 +568,9 @@ Installation of external modules
 
         ::
 
-            pip3 install num2words
+            apt-get install node-less
 
-    #. :red:`(Não Executado)` To install "`suds <https://pypi.python.org/pypi/suds>`_", use the following commands (as root):
+    #. To install "`suds-py3 <https://stackoverflow.com/questions/46043345/how-use-suds-client-library-in-python-3-6-2>`_", use the following commands (as root):
 
         ::
 
@@ -578,44 +578,9 @@ Installation of external modules
 
         ::
 
-            pip3 install suds
+            pip3 install suds-py3
 
-        :red:`ImportError: No module named 'client'`
-
-        ::
-
-            root@tkl-odoo12-jcafb-vm ~# pip3 install suds
-            Downloading/unpacking suds
-              Downloading suds-0.4.tar.gz (104kB): 104kB downloaded
-              Running setup.py (path:/tmp/pip-build-r8jkp16h/suds/setup.py) egg_info for package suds
-                Traceback (most recent call last):
-                  File "<string>", line 17, in <module>
-                  File "/tmp/pip-build-r8jkp16h/suds/setup.py", line 20, in <module>
-                    import suds
-                  File "/tmp/pip-build-r8jkp16h/suds/suds/__init__.py", line 154, in <module>
-                    import client
-                ImportError: No module named 'client'
-                Complete output from command python setup.py egg_info:
-                Traceback (most recent call last):
-
-              File "<string>", line 17, in <module>
-
-              File "/tmp/pip-build-r8jkp16h/suds/setup.py", line 20, in <module>
-
-                import suds
-
-              File "/tmp/pip-build-r8jkp16h/suds/suds/__init__.py", line 154, in <module>
-
-                import client
-
-            ImportError: No module named 'client'
-
-            ----------------------------------------
-            Cleaning up...
-            Command python setup.py egg_info failed with error code 1 in /tmp/pip-build-r8jkp16h/suds
-            Storing debug log for failure in /root/.pip/pip.log
-
-    #. :red:`(Não Executado)` Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
 
         ::
 
