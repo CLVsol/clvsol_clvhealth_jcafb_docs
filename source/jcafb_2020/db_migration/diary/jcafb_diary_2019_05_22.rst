@@ -170,7 +170,7 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-05-23a)
 	        pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-05-23a.sql
 
 	        gzip clvhealth_jcafb_2020_2019-05-23a.sql
-	        pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > <clvhealth_jcafb_2020_2019-05-23a.sql
+	        pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-05-23a.sql
 
 	        cd /var/lib/odoo/.local/share/Odoo/filestore
 	        tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-05-23a.tar.gz clvhealth_jcafb_2020
