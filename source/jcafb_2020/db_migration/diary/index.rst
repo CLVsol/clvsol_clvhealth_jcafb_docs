@@ -8,4 +8,3 @@ Diário (JCAFB-2020)
 
    jcafb_diary_2019_05_14
    jcafb_diary_2019_05_22
-   jcafb_diary_2019_05_24
