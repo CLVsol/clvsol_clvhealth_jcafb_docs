@@ -371,7 +371,7 @@ Replace the Odoo installation (Odoo 12.0)
 
         /etc/init.d/odoo start
 
-#. :red:`(Não Executado)` Configure Odoo Server timeouts
+#. Configure Odoo Server timeouts
 
     #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
 
