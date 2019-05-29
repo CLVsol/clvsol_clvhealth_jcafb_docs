@@ -4,9 +4,9 @@
 
 .. role:: red
 
-===============
-2019-05-(22-28)
-===============
+=================
+2019-05-(22 a 29)
+=================
 
 Restaurar um backup do *CLVhealth-JCAFB-2020* (2019-05-21a)
 -----------------------------------------------------------
@@ -727,6 +727,128 @@ Instalar o(s) módulo(s) [clv_partner_entity, clv_partner_entity_l10n_br, clv_ad
 
                 /etc/init.d/odoo start
 
+Instalar o(s) módulo(s) [clv_family, clv_family_history, clv_family_l10n_br, clv_family_jcafb, clv_family_history_jcafb]
+-------------------------------------------------------------------------------------------------------------------------------
+
+    * Referência: :doc:`/setup/module_installation`.
+
+    #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, habilitando o(s) Módulo(s):
+
+        * clv_family
+        * clv_family_history
+        * clv_family_l10n_br
+        * clv_family_jcafb
+        * clv_family_history_jcafb
+
+    #. [tkl-odoo12-jcafb-vm] **Executar** a instalação do(s) Módulo(s) adicionado(s)/habilitado(s):
+
+        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo12-jcafb-vm** e executar o *Odoo* no modo manual:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-vm (session 1)
+                #
+
+                ssh tkl-odoo12-jcafb-vm -l root
+
+                /etc/init.d/odoo stop
+
+                su odoo
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo12-jcafb-vm** e executar o **install.py**:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-vm (session 2)
+                #
+
+                ssh tkl-odoo12-jcafb-vm -l odoo
+
+                cd /opt/odoo/clvsol_clvhealth_jcafb/project
+                
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020"
+
+            
+        #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-vm (session 1)
+                #
+
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+                ^C
+
+                exit
+
+                /etc/init.d/odoo start
+
+Instalar o(s) módulo(s) [clv_person, clv_person_history, clv_person_l10n_br, clv_person_jcafb, clv_person_history_jcafb, clv_person_sync_jcafb, clv_person_history_sync_jcafb]
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    * Referência: :doc:`/setup/module_installation`.
+
+    #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, habilitando o(s) Módulo(s):
+
+        * clv_person
+        * clv_person_history
+        * clv_person_l10n_br
+        * clv_person_jcafb
+        * clv_person_history_jcafb
+        * clv_person_sync_jcafb
+        * clv_person_history_sync_jcafb
+
+    #. [tkl-odoo12-jcafb-vm] **Executar** a instalação do(s) Módulo(s) adicionado(s)/habilitado(s):
+
+        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo12-jcafb-vm** e executar o *Odoo* no modo manual:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-vm (session 1)
+                #
+
+                ssh tkl-odoo12-jcafb-vm -l root
+
+                /etc/init.d/odoo stop
+
+                su odoo
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo12-jcafb-vm** e executar o **install.py**:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-vm (session 2)
+                #
+
+                ssh tkl-odoo12-jcafb-vm -l odoo
+
+                cd /opt/odoo/clvsol_clvhealth_jcafb/project
+                
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020"
+
+            
+        #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-vm (session 1)
+                #
+
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+                ^C
+
+                exit
+
+                /etc/init.d/odoo start
+
 Migrar os Usuários do *CLVhealth-JCAFB-2019* para o *CLVhealth-JCAFB-2020*
 --------------------------------------------------------------------------
 
@@ -802,6 +924,10 @@ Executar o *External Sync Batch* "*Default Batch*"
                 * clv.address.category (clv.address.category)
                 * clv.address (clv.address)
                 * clv.address.history (clv.address.history)
+                * clv.person.category (clv.person.category)
+                * clv.person.marker (clv.person.marker)
+                * clv.person (clv.person)
+                * clv.person.history (clv.person.history)
 
             * Menu de acesso:
                 * *External Sync* > *External Sync* > *External Sync* > *Schedules* > Ação > *External Sync Schedule Mass Edit*
@@ -867,6 +993,10 @@ Executar o *External Sync Batch* "*Default Batch*"
                 * clv.address.category (clv.address.category)
                 * clv.address (clv.address)
                 * clv.address.history (clv.address.history)
+                * clv.person.category (clv.person.category)
+                * clv.person.marker (clv.person.marker)
+                * clv.person (clv.person)
+                * clv.person.history (clv.person.history)
 
             * *Synchronization Logs*:
                 .. * :doc:`/jcafb_2020/db_migration/diary/jcafb_diary_2019_05_22_sync_log`
@@ -915,6 +1045,10 @@ Executar o *External Sync Batch* "*Default Batch*"
                 * clv.address.category (clv.address.category)
                 * clv.address (clv.address)
                 * clv.address.history (clv.address.history)
+                * clv.person.category (clv.person.category)
+                * clv.person.marker (clv.person.marker)
+                * clv.person (clv.person)
+                * clv.person.history (clv.person.history)
 
             * Menu de acesso:
                 * *External Sync* > *External Sync* > *External Sync* > *Schedules* > Ação > *External Sync Schedule Mass Edit*
@@ -935,7 +1069,7 @@ Executar o *External Sync Batch* "*Default Batch*"
 
             /etc/init.d/odoo start
 
-Criar um backup do *CLVhealth-JCAFB-2020* (2019-05-28a)
+Criar um backup do *CLVhealth-JCAFB-2020* (2019-05-29a)
 -------------------------------------------------------
 
     * Referência: :doc:`/setup/clvhealth_jcafb_backup`.
@@ -963,16 +1097,16 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-05-28a)
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-05-28a.sql
+            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-05-29a.sql
 
-            gzip clvhealth_jcafb_2020_2019-05-28a.sql
-            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-05-28a.sql
+            gzip clvhealth_jcafb_2020_2019-05-29a.sql
+            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-05-29a.sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-05-28a.tar.gz clvhealth_jcafb_2020
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-05-29a.tar.gz clvhealth_jcafb_2020
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-05-28a.tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-05-29a.tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
 
@@ -991,70 +1125,11 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-05-28a)
             /etc/init.d/odoo start
 
     Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2020_2019-05-28a.sql
-        * /opt/odoo/clvhealth_jcafb_2020_2019-05-28a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2020_2019-05-28a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-05-28a.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2020_2019-05-29a.sql
+        * /opt/odoo/clvhealth_jcafb_2020_2019-05-29a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2020_2019-05-29a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-05-29a.tar.gz
 
-.. index:: clvhealth_jcafb_2020_2019-05-28a.sql
-.. index:: filestore_clvhealth_jcafb_2020_2019-05-28a
-.. index:: clvsol_filestore_clvhealth_jcafb_2019-05-28a
-
-Restaurar um backup do *CLVhealth-JCAFB-2020* (2019-05-28a)
------------------------------------------------------------
-
-    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
-
-    #. [tkl-odoo12-jcafb-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo12-jcafb-vm
-            #
-
-            ssh tkl-odoo12-jcafb-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo12-jcafb-vm] Executar os comandos de restauração dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo12-jcafb-vm
-            #
-
-            cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2020_2019-05-28a.sql.gz
-
-            dropdb -i clvhealth_jcafb_2020
-
-            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2020
-            psql -f clvhealth_jcafb_2020_2019-05-28a.sql -d clvhealth_jcafb_2020 -U postgres -h localhost -p 5432 -q
-
-            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            rm -rf clvhealth_jcafb_2020
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-05-28a.tar.gz
-
-            # mkdir /opt/odoo/clvsol_filestore
-            cd /opt/odoo/clvsol_filestore
-            rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-05-28a.tar.gz
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo12-jcafb-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
+.. index:: clvhealth_jcafb_2020_2019-05-29a.sql
+.. index:: filestore_clvhealth_jcafb_2020_2019-05-29a
+.. index:: clvsol_filestore_clvhealth_jcafb_2019-05-29a
