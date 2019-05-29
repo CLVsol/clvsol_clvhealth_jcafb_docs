@@ -7,4 +7,4 @@ Data Base Migration (from JCAFB-2019)
    :caption: Contents:
 
    procedures/index
-   diary/index
+   history/index

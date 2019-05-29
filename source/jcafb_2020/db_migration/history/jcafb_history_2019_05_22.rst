@@ -999,12 +999,12 @@ Executar o *External Sync Batch* "*Default Batch*"
                 * clv.person.history (clv.person.history)
 
             * *Synchronization Logs*:
-                .. * :doc:`/jcafb_2020/db_migration/diary/jcafb_diary_2019_05_22_sync_log`
+                .. * :doc:`/jcafb_2020/db_migration/history/jcafb_history_2019_05_22_sync_log`
 
                 .. toctree::
                    :maxdepth: 2
 
-                   jcafb_diary_2019_05_22_sync_log
+                   jcafb_history_2019_05_22_sync_log
 
     #. [tkl-odoo12-jcafb-vm] Configurar os *External Sync Schedules* disponíveis:
 
