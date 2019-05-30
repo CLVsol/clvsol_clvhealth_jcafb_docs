@@ -8,7 +8,7 @@
 2019-05-(29 a 30)
 =================
 
-Restaurar um backup do *CLVhealth-JCAFB-2020* (2019-05-29a)
+Restaurar um backup do *CLVhealth-JCAFB-2020* (2019-05-30a)
 -----------------------------------------------------------
 
     * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
@@ -34,22 +34,22 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* (2019-05-29a)
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2020_2019-05-29a.sql.gz
+            # gzip -d clvhealth_jcafb_2020_2019-05-30a.sql.gz
 
             dropdb -i clvhealth_jcafb_2020
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2020
-            psql -f clvhealth_jcafb_2020_2019-05-29a.sql -d clvhealth_jcafb_2020 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2020_2019-05-30a.sql -d clvhealth_jcafb_2020 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2020
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-05-29a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-05-30a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-05-29a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-05-30a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
 
