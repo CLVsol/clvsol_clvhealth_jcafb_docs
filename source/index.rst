@@ -8,6 +8,8 @@ Benvindo à documentação do *CLVhealth-JCAFB*!
    :maxdepth: 2
    :caption: Contents:
 
+   user_guide/index
+   procedures/index
    setup/index
    servers/index
    jcafb_2020/index
