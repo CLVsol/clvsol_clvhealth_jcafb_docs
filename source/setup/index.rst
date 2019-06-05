@@ -10,4 +10,5 @@ Administração do *CLVhealth-JCAFB*
    clvhealth_jcafb_backup
    clvhealth_jcafb_restore
    module_installation
+   module_update
    server_setup_local

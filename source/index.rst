@@ -9,7 +9,6 @@ Benvindo à documentação do *CLVhealth-JCAFB*!
    :caption: Contents:
 
    user_guide/index
-   procedures/index
    setup/index
    servers/index
    jcafb_2020/index

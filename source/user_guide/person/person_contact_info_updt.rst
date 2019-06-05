@@ -4,11 +4,12 @@
 
 .. role:: red
 
-.. index:: Atualizar o Contact Information de uma Pessoa
+.. index:: Atualizar o Contact Information de Pessoa(s)
+.. index:: Person Contact Information Update
 
-===============================================
-Atualizar o *Contact Information* de uma Pessoa
-===============================================
+==============================================
+Atualizar o *Contact Information* de Pessoa(s)
+==============================================
 
     #. [tkl-odoo12-jcafb-vm] Executar a Ação *Person Contact Information Update* para todas as Pessoas:
 

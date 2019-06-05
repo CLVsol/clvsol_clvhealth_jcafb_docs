@@ -9,3 +9,4 @@ Guia do Usuário
    person/index
    family/index
    address/index
+   document/index
