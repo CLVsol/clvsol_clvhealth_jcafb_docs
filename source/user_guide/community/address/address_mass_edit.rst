@@ -1,15 +1,16 @@
 .. raw:: html
 
     <style> .red {color:red} </style>
+    <style> .bi {font-weight: bold; font-style: italic} </style>
 
 .. role:: red
+.. role:: bi
 
-.. index:: Atualizar dados em massa de Endereço(s)
 .. index:: Address Mass Edit
 
-=======================================
-Atualizar dados em massa de Endereço(s)
-=======================================
+=======================
+:bi:`Address Mass Edit`
+=======================
 
     #. [tkl-odoo12-jcafb-vm] Executar a Ação *Address Mass Edit* de Endereço(s):
 

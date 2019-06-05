@@ -1,15 +1,16 @@
 .. raw:: html
 
     <style> .red {color:red} </style>
+    <style> .bi {font-weight: bold; font-style: italic} </style>
 
 .. role:: red
+.. role:: bi
 
-.. index:: Atualizar dados em massa de Documento(s)
 .. index:: Document Mass Edit
 
-========================================
-Atualizar dados em massa de Documento(s)
-========================================
+========================
+:bi:`Document Mass Edit`
+========================
 
     #. [tkl-odoo12-jcafb-vm] Executar a Ação *Document Mass Edit* de Documento(s):
 

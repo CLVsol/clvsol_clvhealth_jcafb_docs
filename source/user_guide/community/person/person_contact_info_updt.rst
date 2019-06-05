@@ -1,22 +1,23 @@
 .. raw:: html
 
     <style> .red {color:red} </style>
+    <style> .bi {font-weight: bold; font-style: italic} </style>
 
 .. role:: red
+.. role:: bi
 
-.. index:: Atualizar o Contact Information de Pessoa(s)
 .. index:: Person Contact Information Update
 
-==============================================
-Atualizar o *Contact Information* de Pessoa(s)
-==============================================
+=======================================
+:bi:`Person Contact Information Update`
+=======================================
 
     #. [tkl-odoo12-jcafb-vm] Executar a Ação *Person Contact Information Update* para todas as Pessoas:
 
         #. Acessar a *View* *Persons*:
 
             * Menu de acesso:
-                * *Community* > *Community* > *Persons*
+                * *Community* » *Community* » *Persons*
 
         #. Selecionar a(s) Pessoa(s) desejada(s).
 
