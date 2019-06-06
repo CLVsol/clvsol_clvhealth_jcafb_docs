@@ -12,3 +12,4 @@ Administração do *CLVhealth-JCAFB*
    module_installation
    module_update
    server_setup_local
+   server_setup_aws_tst
