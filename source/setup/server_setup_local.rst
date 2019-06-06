@@ -4,10 +4,10 @@
 
 .. role:: red
 
-.. index:: Criação de um Servidor do CLVhealth-JCAFB (Turnkey Linux Local)
+.. index:: Criação de um Servidor Local do CLVhealth-JCAFB (Turnkey Linux)
 
 ===================================================================
-Criação de um Servidor do *CLVhealth-JCAFB* (*Turnkey Linux* Local)
+Criação de um Servidor Local do *CLVhealth-JCAFB* (*Turnkey Linux*)
 ===================================================================
 
 This project will help you create a server to host the **Odoo 12 (JCAFB)** solution, based on an `Odoo <https://www.odoo.com/>`_  appliance, using the VMWare Workstation infrastructure.
