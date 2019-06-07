@@ -1,0 +1,9 @@
+=====================================================
+Histórico (Preparação do Banco de Dados - JCAFB-2020)
+=====================================================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   jcafb_history_2019_06_07

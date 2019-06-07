@@ -7,3 +7,5 @@ JCAFB-2020
    :caption: Contents:
 
    db_migration/index
+   db_preparation/index
+   db_maintenance/index
