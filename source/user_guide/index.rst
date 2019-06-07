@@ -3,9 +3,10 @@ Guia do Usuário
 ===============
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Objetos:
+   :maxdepth: 3
+   :caption: Conteúdo:
 
    base/index
    community/index
    export/index
+   menu

@@ -6,15 +6,15 @@
 .. role:: red
 .. role:: bi
 
-.. index:: Address
+.. index:: Person
 
-=============
-:bi:`Address`
-=============
+============
+:bi:`Person`
+============
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Ações:
 
-   address_mass_edit
-
+   person_mass_edit
+   person_contact_info_updt

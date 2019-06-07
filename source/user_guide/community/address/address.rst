@@ -6,14 +6,15 @@
 .. role:: red
 .. role:: bi
 
-.. index:: Document
+.. index:: Address
 
-==============
-:bi:`Document`
-==============
+=============
+:bi:`Address`
+=============
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Ações:
 
-   document_mass_edit
+   address_mass_edit
+

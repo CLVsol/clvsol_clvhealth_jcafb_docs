@@ -16,6 +16,6 @@
    :maxdepth: 2
    :caption: Contents:
 
-   person/index
-   family/index
-   address/index
+   person/person
+   family/family
+   address/address

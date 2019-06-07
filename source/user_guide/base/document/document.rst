@@ -6,15 +6,14 @@
 .. role:: red
 .. role:: bi
 
-.. index:: Person
+.. index:: Document
 
-============
-:bi:`Person`
-============
+==============
+:bi:`Document`
+==============
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Ações:
 
-   person_mass_edit
-   person_contact_info_updt
+   document_mass_edit
