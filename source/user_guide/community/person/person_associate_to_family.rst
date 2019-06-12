@@ -6,13 +6,13 @@
 .. role:: red
 .. role:: bi
 
-.. index:: Person Contact Information Update
+.. index:: Person Associate to Family
 
-=======================================
-:bi:`Person Contact Information Update`
-=======================================
+==========================================================
+:red:`(Não Implementado)` :bi:`Person Associate to Family`
+==========================================================
 
-    #. Executar a Ação *Person Contact Information Update* para todas as Pessoas:
+    #. Executar a Ação *Person Associate to Family* para todas as Pessoas:
 
         #. Acessar a *View* *Persons*:
 
@@ -21,12 +21,11 @@
 
         #. Selecionar a(s) Pessoa(s) desejada(s).
 
-        #. Exercutar a Ação "**Person Contact Information Update**":
+        #. Exercutar a Ação "**Person Associate to Family**":
 
             * Parâmetros apresentados:
-                * *Update Phone*
-                * *Update Mobile*
-                * *Update Email*
+                * *Create new Family*
+                * *Associate all Persons form Reference Address*
 
             #. Utilize o botão *Contact Information Update* para executar a Ação.
 
