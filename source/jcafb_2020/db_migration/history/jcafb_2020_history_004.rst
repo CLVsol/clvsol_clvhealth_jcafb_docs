@@ -324,6 +324,32 @@ Atualizar o *Contact Information* de todas as Pessoas
 
             #. Utilize o botão *Contact Information Update* para executar a Ação.
 
+Criar a *Family* para cada Idosos e Criança da JCAFB-2019
+---------------------------------------------------------
+
+    * Referência: :doc:`/user_guide/community/person/person_associate_to_family`.
+
+    #. [tkl-odoo12-jcafb-vm] Executar a Ação *Person Associate to Family* para cada Idosos e Criança da JCAFB-2019:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
+
+        #. Acessar a *View* *Persons*:
+
+            * Menu de acesso:
+                * *Community* > *Community* > *Persons*
+
+        #. Selecionar todos os Idosos da JCAFB-2019 (**397**)
+
+        #. Selecionar todas as Crianças da JCAFB-2019 (**195**)
+
+        #. Exercutar a Ação "**Person Associate to Family**":
+
+            * Parâmetros utilizados:
+                * *Create new Family*: marcado
+                * *Associate all Persons form Reference Address*: marcado
+
+            #. Utilize o botão *Associate to Family* para executar a Ação.
+
 .. toctree::
    :maxdepth: 2
 

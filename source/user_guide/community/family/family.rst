@@ -28,4 +28,5 @@
    :maxdepth: 2
    :caption: Ações:
 
+   family_mass_edit
    family_contact_info_updt

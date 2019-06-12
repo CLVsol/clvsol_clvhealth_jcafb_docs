@@ -8,28 +8,28 @@
 
 .. index:: Person Associate to Family
 
-==========================================================
-:red:`(Não Implementado)` :bi:`Person Associate to Family`
-==========================================================
+================================
+:bi:`Person Associate to Family`
+================================
 
-    #. Executar a Ação *Person Associate to Family* para todas as Pessoas:
+    #. Executar a Ação :bi:`Person Associate to Family` para as Pessoas selecionadas:
 
         #. Acessar a *View* *Persons*:
 
             * Menu de acesso:
-                * *Community* » *Community* » *Persons*
+                * :bi:`Community` » :bi:`Community` » :bi:`Persons`
 
         #. Selecionar a(s) Pessoa(s) desejada(s).
 
-        #. Exercutar a Ação "**Person Associate to Family**":
+        #. Exercutar a Ação ":bi:`Person Associate to Family`":
 
             * Parâmetros apresentados:
                 * *Create new Family*
                 * *Associate all Persons form Reference Address*
 
-            #. Utilize o botão *Contact Information Update* para executar a Ação.
+            #. Utilize o botão :bi:`Contact Information Update` para executar a Ação.
 
-            #. Utilize o botão *Cancel* para cancelar a execução da Ação.
+            #. Utilize o botão :bi:`Cancel` para cancelar a execução da Ação.
 
 .. toctree::
    :maxdepth: 2
