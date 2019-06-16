@@ -12,7 +12,7 @@
 
 .. _External Sync Batch - Default Batch - 20190611c:
 
-*External Sync Batch* - *Default Batch* 03 (Execution time: 0:09:21.280)
+*External Sync Batch* - *Default Batch* 03 (Execution time: 0:09:11.053)
 ------------------------------------------------------------------------
 
     ::
@@ -43,10 +43,10 @@
         include_count: 0
         task_count: 30
 
-        date_last_sync: 2019-06-13 14:51:41
+        date_last_sync: 2019-06-16 16:56:04
         upmost_last_update: 2017-10-13 16:31:10
 
-        Execution time: 0:00:00.758
+        Execution time: 0:00:00.613
 
         ########## res.country.state (res.country.state) ##########
         method: _object_external_recognize
@@ -72,10 +72,10 @@
         include_count: 0
         task_count: 5
 
-        date_last_sync: 2019-06-13 14:51:42
+        date_last_sync: 2019-06-16 16:56:05
         upmost_last_update: 2017-10-13 16:30:19
 
-        Execution time: 0:00:00.270
+        Execution time: 0:00:00.277
 
         ########## res.city (l10n_br_base.city) ##########
         method: _object_external_recognize
@@ -101,10 +101,10 @@
         include_count: 0
         task_count: 0
 
-        date_last_sync: 2019-06-13 14:51:42
+        date_last_sync: 2019-06-16 16:56:05
         upmost_last_update: False
 
-        Execution time: 0:00:00.219
+        Execution time: 0:00:00.203
 
         ########## clv.global_tag (clv.global_tag) ##########
         method: _object_external_sync
@@ -135,13 +135,13 @@
 
         task_count: 0
 
-        date_last_sync: 2019-06-13 14:51:43
+        date_last_sync: 2019-06-16 16:56:05
         upmost_last_update: False
 
         sequence_code: False
         sequence_number_next_actual: False
 
-        Execution time: 0:00:00.192
+        Execution time: 0:00:00.209
 
         ########## clv.phase (clv.history_marker) ##########
         method: _object_external_sync
@@ -172,13 +172,13 @@
 
         task_count: 0
 
-        date_last_sync: 2019-06-13 14:51:43
+        date_last_sync: 2019-06-16 16:56:05
         upmost_last_update: False
 
         sequence_code: False
         sequence_number_next_actual: False
 
-        Execution time: 0:00:00.181
+        Execution time: 0:00:00.184
 
         ########## hr.department (hr.department) ##########
         method: _object_external_sync
@@ -209,13 +209,13 @@
 
         task_count: 0
 
-        date_last_sync: 2019-06-13 14:51:43
+        date_last_sync: 2019-06-16 16:56:06
         upmost_last_update: False
 
         sequence_code: False
         sequence_number_next_actual: False
 
-        Execution time: 0:00:00.195
+        Execution time: 0:00:00.183
 
         ########## hr.job (hr.job) ##########
         method: _object_external_sync
@@ -246,13 +246,13 @@
 
         task_count: 0
 
-        date_last_sync: 2019-06-13 14:51:43
+        date_last_sync: 2019-06-16 16:56:06
         upmost_last_update: False
 
         sequence_code: False
         sequence_number_next_actual: False
 
-        Execution time: 0:00:00.189
+        Execution time: 0:00:00.187
 
         ########## hr.employee (hr.employee) ##########
         method: _object_external_sync
@@ -283,13 +283,13 @@
 
         task_count: 0
 
-        date_last_sync: 2019-06-13 14:51:43
+        date_last_sync: 2019-06-16 16:56:06
         upmost_last_update: False
 
         sequence_code: False
         sequence_number_next_actual: False
 
-        Execution time: 0:00:00.187
+        Execution time: 0:00:00.199
 
         ########## clv.address.category (clv.address.category) ##########
         method: _object_external_sync
@@ -323,10 +323,10 @@
         update_count: 0
         task_count: 2
 
-        date_last_sync: 2019-06-13 14:51:44
+        date_last_sync: 2019-06-16 16:56:06
         upmost_last_update: 2019-01-25 17:27:25
 
-        Execution time: 0:00:00.235
+        Execution time: 0:00:00.217
 
         login_msg: [01] Login Ok.
 
@@ -342,13 +342,13 @@
 
         task_count: 2
 
-        date_last_sync: 2019-06-13 14:51:44
+        date_last_sync: 2019-06-16 16:56:06
         upmost_last_update: 2019-01-25 17:27:25
 
         sequence_code: False
         sequence_number_next_actual: False
 
-        Execution time: 0:00:00.277
+        Execution time: 0:00:00.261
 
         ########## clv.address (clv.address) ##########
         method: _object_external_sync
@@ -382,10 +382,10 @@
         update_count: 0
         task_count: 575
 
-        date_last_sync: 2019-06-13 14:51:44
+        date_last_sync: 2019-06-16 16:56:07
         upmost_last_update: 2019-03-24 13:31:15
 
-        Execution time: 0:00:04.123
+        Execution time: 0:00:03.815
 
         login_msg: [01] Login Ok.
 
@@ -401,13 +401,13 @@
 
         task_count: 575
 
-        date_last_sync: 2019-06-13 14:51:48
+        date_last_sync: 2019-06-16 16:56:10
         upmost_last_update: 2019-03-24 13:31:15
 
         sequence_code: clv.address.code
         sequence_number_next_actual: 611
 
-        Execution time: 0:01:37.321
+        Execution time: 0:01:21.484
 
         ########## clv.address.history (clv.address.history) ##########
         method: _object_external_sync
@@ -441,10 +441,10 @@
         update_count: 0
         task_count: 1225
 
-        date_last_sync: 2019-06-13 14:53:26
+        date_last_sync: 2019-06-16 16:57:32
         upmost_last_update: 2019-03-24 13:32:50
 
-        Execution time: 0:00:08.651
+        Execution time: 0:00:07.607
 
         login_msg: [01] Login Ok.
 
@@ -460,13 +460,13 @@
 
         task_count: 1225
 
-        date_last_sync: 2019-06-13 14:53:34
+        date_last_sync: 2019-06-16 16:57:40
         upmost_last_update: 2019-03-24 13:32:50
 
         sequence_code: False
         sequence_number_next_actual: False
 
-        Execution time: 0:01:02.856
+        Execution time: 0:01:10.447
 
         ########## clv.person.category (clv.person.category) ##########
         method: _object_external_sync
@@ -500,10 +500,10 @@
         update_count: 0
         task_count: 2
 
-        date_last_sync: 2019-06-13 14:54:37
+        date_last_sync: 2019-06-16 16:58:50
         upmost_last_update: 2017-10-18 23:24:40
 
-        Execution time: 0:00:00.225
+        Execution time: 0:00:00.217
 
         login_msg: [01] Login Ok.
 
@@ -519,13 +519,13 @@
 
         task_count: 2
 
-        date_last_sync: 2019-06-13 14:54:37
+        date_last_sync: 2019-06-16 16:58:50
         upmost_last_update: 2017-10-18 23:24:40
 
         sequence_code: False
         sequence_number_next_actual: False
 
-        Execution time: 0:00:00.256
+        Execution time: 0:00:00.263
 
         ########## clv.person.marker (clv.person.marker) ##########
         method: _object_external_sync
@@ -559,10 +559,10 @@
         update_count: 0
         task_count: 3
 
-        date_last_sync: 2019-06-13 14:54:38
+        date_last_sync: 2019-06-16 16:58:51
         upmost_last_update: 2018-11-27 18:26:38
 
-        Execution time: 0:00:00.229
+        Execution time: 0:00:00.216
 
         login_msg: [01] Login Ok.
 
@@ -578,13 +578,13 @@
 
         task_count: 3
 
-        date_last_sync: 2019-06-13 14:54:38
+        date_last_sync: 2019-06-16 16:58:51
         upmost_last_update: 2018-11-27 18:26:38
 
         sequence_code: False
         sequence_number_next_actual: False
 
-        Execution time: 0:00:00.262
+        Execution time: 0:00:00.269
 
         ########## clv.person (clv.person) ##########
         method: _object_external_sync
@@ -618,10 +618,10 @@
         update_count: 0
         task_count: 1375
 
-        date_last_sync: 2019-06-13 14:54:38
+        date_last_sync: 2019-06-16 16:58:51
         upmost_last_update: 2019-06-12 16:51:52
 
-        Execution time: 0:00:09.111
+        Execution time: 0:00:09.430
 
         login_msg: [01] Login Ok.
 
@@ -637,13 +637,13 @@
 
         task_count: 1375
 
-        date_last_sync: 2019-06-13 14:54:47
+        date_last_sync: 2019-06-16 16:59:00
         upmost_last_update: 2019-06-12 16:51:52
 
         sequence_code: clv.person.code
         sequence_number_next_actual: 1537
 
-        Execution time: 0:03:09.064
+        Execution time: 0:03:09.582
 
         ########## clv.person.history (clv.person.history) ##########
         method: _object_external_sync
@@ -677,10 +677,10 @@
         update_count: 0
         task_count: 3150
 
-        date_last_sync: 2019-06-13 14:57:56
+        date_last_sync: 2019-06-16 17:02:10
         upmost_last_update: 2019-03-24 13:41:14
 
-        Execution time: 0:00:21.826
+        Execution time: 0:00:21.639
 
         login_msg: [01] Login Ok.
 
@@ -696,20 +696,20 @@
 
         task_count: 3150
 
-        date_last_sync: 2019-06-13 14:58:18
+        date_last_sync: 2019-06-16 17:02:32
         upmost_last_update: 2019-03-24 13:41:14
 
         sequence_code: False
         sequence_number_next_actual: False
 
-        Execution time: 0:02:44.404
+        Execution time: 0:02:43.296
 
         ############################################################
-        Execution time: 0:09:21.280
+        Execution time: 0:09:11.053
 
 .. _External Sync Batch - Default Batch - 20190611d:
 
-*External Sync Batch* - *Default Batch* 04 (Execution time: 0:00:13.943)
+*External Sync Batch* - *Default Batch* 04 (Execution time: 0:00:13.861)
 ------------------------------------------------------------------------
 
     ::
@@ -740,10 +740,10 @@
         include_count: 0
         task_count: 30
 
-        date_last_sync: 2019-06-13 15:04:23
+        date_last_sync: 2019-06-16 17:07:42
         upmost_last_update: 2017-10-13 16:31:10
 
-        Execution time: 0:00:00.615
+        Execution time: 0:00:00.629
 
         ########## res.country.state (res.country.state) ##########
         method: _object_external_recognize
@@ -769,10 +769,10 @@
         include_count: 0
         task_count: 5
 
-        date_last_sync: 2019-06-13 15:04:23
+        date_last_sync: 2019-06-16 17:07:42
         upmost_last_update: 2017-10-13 16:30:19
 
-        Execution time: 0:00:00.273
+        Execution time: 0:00:00.280
 
         ########## res.city (l10n_br_base.city) ##########
         method: _object_external_recognize
@@ -798,10 +798,10 @@
         include_count: 0
         task_count: 0
 
-        date_last_sync: 2019-06-13 15:04:24
+        date_last_sync: 2019-06-16 17:07:43
         upmost_last_update: False
 
-        Execution time: 0:00:00.190
+        Execution time: 0:00:00.184
 
         ########## clv.global_tag (clv.global_tag) ##########
         method: _object_external_sync
@@ -832,13 +832,13 @@
 
         task_count: 0
 
-        date_last_sync: 2019-06-13 15:04:24
+        date_last_sync: 2019-06-16 17:07:43
         upmost_last_update: False
 
         sequence_code: False
         sequence_number_next_actual: False
 
-        Execution time: 0:00:00.213
+        Execution time: 0:00:00.203
 
         ########## clv.phase (clv.history_marker) ##########
         method: _object_external_sync
@@ -869,13 +869,13 @@
 
         task_count: 0
 
-        date_last_sync: 2019-06-13 15:04:24
+        date_last_sync: 2019-06-16 17:07:43
         upmost_last_update: False
 
         sequence_code: False
         sequence_number_next_actual: False
 
-        Execution time: 0:00:00.189
+        Execution time: 0:00:00.194
 
         ########## hr.department (hr.department) ##########
         method: _object_external_sync
@@ -906,7 +906,7 @@
 
         task_count: 0
 
-        date_last_sync: 2019-06-13 15:04:24
+        date_last_sync: 2019-06-16 17:07:43
         upmost_last_update: False
 
         sequence_code: False
@@ -943,13 +943,13 @@
 
         task_count: 0
 
-        date_last_sync: 2019-06-13 15:04:24
+        date_last_sync: 2019-06-16 17:07:44
         upmost_last_update: False
 
         sequence_code: False
         sequence_number_next_actual: False
 
-        Execution time: 0:00:00.185
+        Execution time: 0:00:00.201
 
         ########## hr.employee (hr.employee) ##########
         method: _object_external_sync
@@ -980,13 +980,13 @@
 
         task_count: 0
 
-        date_last_sync: 2019-06-13 15:04:25
+        date_last_sync: 2019-06-16 17:07:44
         upmost_last_update: False
 
         sequence_code: False
         sequence_number_next_actual: False
 
-        Execution time: 0:00:00.209
+        Execution time: 0:00:00.187
 
         ########## clv.address.category (clv.address.category) ##########
         method: _object_external_sync
@@ -1017,13 +1017,13 @@
 
         task_count: 0
 
-        date_last_sync: 2019-06-13 15:04:25
+        date_last_sync: 2019-06-16 17:07:44
         upmost_last_update: False
 
         sequence_code: False
         sequence_number_next_actual: False
 
-        Execution time: 0:00:00.188
+        Execution time: 0:00:00.189
 
         ########## clv.address (clv.address) ##########
         method: _object_external_sync
@@ -1054,13 +1054,13 @@
 
         task_count: 0
 
-        date_last_sync: 2019-06-13 15:04:25
+        date_last_sync: 2019-06-16 17:07:44
         upmost_last_update: False
 
         sequence_code: clv.address.code
         sequence_number_next_actual: 611
 
-        Execution time: 0:00:00.195
+        Execution time: 0:00:00.201
 
         ########## clv.address.history (clv.address.history) ##########
         method: _object_external_sync
@@ -1091,13 +1091,13 @@
 
         task_count: 0
 
-        date_last_sync: 2019-06-13 15:04:25
+        date_last_sync: 2019-06-16 17:07:44
         upmost_last_update: False
 
         sequence_code: False
         sequence_number_next_actual: False
 
-        Execution time: 0:00:00.180
+        Execution time: 0:00:00.184
 
         ########## clv.person.category (clv.person.category) ##########
         method: _object_external_sync
@@ -1128,13 +1128,13 @@
 
         task_count: 0
 
-        date_last_sync: 2019-06-13 15:04:25
+        date_last_sync: 2019-06-16 17:07:45
         upmost_last_update: False
 
         sequence_code: False
         sequence_number_next_actual: False
 
-        Execution time: 0:00:00.199
+        Execution time: 0:00:00.195
 
         ########## clv.person.marker (clv.person.marker) ##########
         method: _object_external_sync
@@ -1165,13 +1165,13 @@
 
         task_count: 0
 
-        date_last_sync: 2019-06-13 15:04:26
+        date_last_sync: 2019-06-16 17:07:45
         upmost_last_update: False
 
         sequence_code: False
         sequence_number_next_actual: False
 
-        Execution time: 0:00:00.256
+        Execution time: 0:00:00.255
 
         ########## clv.person (clv.person) ##########
         method: _object_external_sync
@@ -1202,13 +1202,13 @@
 
         task_count: 83
 
-        date_last_sync: 2019-06-13 15:04:26
+        date_last_sync: 2019-06-16 17:07:45
         upmost_last_update: 2019-06-12 14:37:52
 
         sequence_code: clv.person.code
         sequence_number_next_actual: 1537
 
-        Execution time: 0:00:10.440
+        Execution time: 0:00:10.364
 
         ########## clv.person.history (clv.person.history) ##########
         method: _object_external_sync
@@ -1239,13 +1239,13 @@
 
         task_count: 0
 
-        date_last_sync: 2019-06-13 15:04:36
+        date_last_sync: 2019-06-16 17:07:55
         upmost_last_update: False
 
         sequence_code: False
         sequence_number_next_actual: False
 
-        Execution time: 0:00:00.190
+        Execution time: 0:00:00.188
 
         ############################################################
-        Execution time: 0:00:13.943
+        Execution time: 0:00:13.861

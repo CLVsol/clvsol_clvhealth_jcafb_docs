@@ -350,7 +350,7 @@ Criar a *Family* para cada Idosos e Criança da JCAFB-2019
 
             #. Utilize o botão *Associate to Family* para executar a Ação.
 
-Criar um backup do *CLVhealth-JCAFB-2020* (2019-06-14a)
+Criar um backup do *CLVhealth-JCAFB-2020* (2019-06-16a)
 -------------------------------------------------------
 
     * Referência: :doc:`/setup/clvhealth_jcafb_backup`.
@@ -378,16 +378,16 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-06-14a)
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-06-14a.sql
+            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-06-16a.sql
 
-            gzip clvhealth_jcafb_2020_2019-06-14a.sql
-            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-06-14a.sql
+            gzip clvhealth_jcafb_2020_2019-06-16a.sql
+            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-06-16a.sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-06-14a.tar.gz clvhealth_jcafb_2020
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-06-16a.tar.gz clvhealth_jcafb_2020
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-06-14a.tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-06-16a.tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
 
@@ -406,14 +406,14 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-06-14a)
             /etc/init.d/odoo start
 
     Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2020_2019-06-14a.sql
-        * /opt/odoo/clvhealth_jcafb_2020_2019-06-14a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2020_2019-06-14a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-06-14a.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2020_2019-06-16a.sql
+        * /opt/odoo/clvhealth_jcafb_2020_2019-06-16a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2020_2019-06-16a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-06-16a.tar.gz
 
-.. index:: clvhealth_jcafb_2020_2019-06-14a.sql
-.. index:: filestore_clvhealth_jcafb_2020_2019-06-14a
-.. index:: clvsol_filestore_clvhealth_jcafb_2019-06-14a
+.. index:: clvhealth_jcafb_2020_2019-06-16a.sql
+.. index:: filestore_clvhealth_jcafb_2020_2019-06-16a
+.. index:: clvsol_filestore_clvhealth_jcafb_2019-06-16a
 
 .. toctree::
    :maxdepth: 2
