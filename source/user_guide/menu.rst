@@ -67,6 +67,10 @@ Menu
 			* Histories
 		* Address
 			* Histories
+	* Off
+		* Persons (Off) [:doc:`/user_guide/community/person_off/person_off`]
+		* Addresses (Off)
+		* Families (Off)
 	* Configuration
 		* Person
 			* Categories

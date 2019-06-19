@@ -6,17 +6,15 @@
 .. role:: red
 .. role:: bi
 
-.. index:: Community
+.. index:: Person (Off)
 
-===============
-:bi:`Community`
-===============
+==================
+:bi:`Person (Off)`
+==================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Ações:
 
-   person/person
-   family/family
-   address/address
-   person_off/person_off
+   person_off_mass_edit
+   person_off_contact_info_updt

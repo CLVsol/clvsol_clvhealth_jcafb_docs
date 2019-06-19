@@ -6,13 +6,13 @@
 .. role:: red
 .. role:: bi
 
-.. index:: Person Associate to Family
+.. index:: Person Associate to Person (Off)
 
-================================
-:bi:`Person Associate to Family`
-================================
+======================================
+:bi:`Person Associate to Person (Off)`
+======================================
 
-    #. Executar a Ação :bi:`Person Associate to Family` para as Pessoas selecionadas:
+    #. Executar a Ação :bi:`Person Associate to Person (Off)` para as Pessoas selecionadas:
 
         #. Acessar a *View* *Persons*:
 
@@ -21,13 +21,12 @@
 
         #. Selecionar a(s) Pessoa(s) desejada(s).
 
-        #. Exercutar a Ação ":bi:`Person Associate to Family`":
+        #. Exercutar a Ação ":bi:`Person Associate to Person (Off)`":
 
             * Parâmetros apresentados:
-                * *Create new Family*
-                * *Associate all Persons form Reference Address*
+                * *Create new Person (Off)* (**Observação**: Parâmetro não modificável)
 
-            #. Utilize o botão :bi:`Associate to Family` para executar a Ação.
+            #. Utilize o botão :bi:`Associate do Perton (Off)` para executar a Ação.
 
             #. Utilize o botão :bi:`Cancel` para cancelar a execução da Ação.
 
