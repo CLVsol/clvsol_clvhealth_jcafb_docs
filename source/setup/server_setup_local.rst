@@ -1,8 +1,10 @@
 .. raw:: html
 
     <style> .red {color:red} </style>
+    <style> .bi {font-weight: bold; font-style: italic} </style>
 
 .. role:: red
+.. role:: bi
 
 .. index:: Criação de um Servidor Local do CLVhealth-JCAFB (Turnkey Linux)
 
@@ -518,32 +520,6 @@ Installation of project modules
 
 Installation of external modules
 --------------------------------
-
-#. `clvsol_l10n_brazil (12.0) <https://github.com/CLVsol/clvsol_l10n_brazil/tree/12.0>`_
-
-    #. To install "**clvsol_l10n_brazil**", use the following commands (as odoo):
-
-        ::
-
-            ssh tkl-odoo12-jcafb-vm -l odoo
-
-        ::
-
-            cd /opt/odoo
-            git clone https://github.com/CLVsol/clvsol_l10n_brazil --branch 12.0
-            cd /opt/odoo/clvsol_l10n_brazil
-            git branch -a
-
-    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
-
-        ::
-
-                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-
-        ::
-
-                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_l10n_brazil
 
 #. `OCA/l10n-brazil <https://github.com/OCA/l10n-brazil>`_
 
