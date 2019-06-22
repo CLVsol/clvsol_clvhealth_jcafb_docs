@@ -8011,9 +8011,1305 @@
 
 .. _External Sync Batch - Default Batch - 20190621a:
 
-*External Sync Batch* - *Default Batch* 10 (Execution time: 0:04:21.316)
+*External Sync Batch* - *Default Batch* 10 (Execution time: 2:47:06.886)
 ------------------------------------------------------------------------
 
     ::
 
         ########## Default Batch ##########
+
+        ########## res.country (res.country) ##########
+        method: _object_external_recognize
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_recognize"...
+
+        sync_objects: 30
+        reg_count: 30
+        include_count: 0
+        task_count: 30
+
+        date_last_sync: 2019-06-21 18:29:59
+        upmost_last_update: 2017-10-13 16:31:10
+
+        Execution time: 0:00:04.036
+
+        ########## res.country.state (res.country.state) ##########
+        method: _object_external_recognize
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_recognize"...
+
+        sync_objects: 5
+        reg_count: 5
+        include_count: 0
+        task_count: 5
+
+        date_last_sync: 2019-06-21 18:30:03
+        upmost_last_update: 2017-10-13 16:30:19
+
+        Execution time: 0:00:00.596
+
+        ########## res.city (l10n_br_base.city) ##########
+        method: _object_external_recognize
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_recognize"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:04
+        upmost_last_update: False
+
+        Execution time: 0:00:00.262
+
+        ########## clv.global_tag (clv.global_tag) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:04
+        upmost_last_update: False
+
+        sequence_code: False
+        sequence_number_next_actual: False
+
+        Execution time: 0:00:00.265
+
+        ########## clv.phase (clv.history_marker) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:05
+        upmost_last_update: False
+
+        sequence_code: False
+        sequence_number_next_actual: False
+
+        Execution time: 0:00:00.261
+
+        ########## hr.department (hr.department) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:05
+        upmost_last_update: False
+
+        sequence_code: False
+        sequence_number_next_actual: False
+
+        Execution time: 0:00:00.267
+
+        ########## hr.job (hr.job) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:05
+        upmost_last_update: False
+
+        sequence_code: False
+        sequence_number_next_actual: False
+
+        Execution time: 0:00:00.262
+
+        ########## hr.employee (hr.employee) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:05
+        upmost_last_update: False
+
+        sequence_code: False
+        sequence_number_next_actual: False
+
+        Execution time: 0:00:00.259
+
+        ########## clv.address.category (clv.address.category) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:06
+        upmost_last_update: False
+
+        sequence_code: False
+        sequence_number_next_actual: False
+
+        Execution time: 0:00:00.255
+
+        ########## clv.address (clv.address) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: True
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:06
+        upmost_last_update: False
+
+        sequence_code: clv.address.code
+        sequence_number_next_actual: 611
+
+        Execution time: 0:00:00.285
+
+        ########## clv.address.history (clv.address.history) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:06
+        upmost_last_update: False
+
+        sequence_code: False
+        sequence_number_next_actual: False
+
+        Execution time: 0:00:00.260
+
+        ########## clv.person.category (clv.person.category) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:06
+        upmost_last_update: False
+
+        sequence_code: False
+        sequence_number_next_actual: False
+
+        Execution time: 0:00:00.260
+
+        ########## clv.person.marker (clv.person.marker) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:07
+        upmost_last_update: False
+
+        sequence_code: False
+        sequence_number_next_actual: False
+
+        Execution time: 0:00:00.261
+
+        ########## clv.person (clv.person) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: True
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:07
+        upmost_last_update: False
+
+        sequence_code: clv.person.code
+        sequence_number_next_actual: 1537
+
+        Execution time: 0:00:00.276
+
+        ########## clv.person.history (clv.person.history) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:07
+        upmost_last_update: False
+
+        sequence_code: False
+        sequence_number_next_actual: False
+
+        Execution time: 0:00:00.266
+
+        ########## survey.stage (survey.stage) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:08
+        upmost_last_update: False
+
+        sequence_code: False
+        sequence_number_next_actual: False
+
+        Execution time: 0:00:00.256
+
+        ########## survey.survey (survey.survey) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:08
+        upmost_last_update: False
+
+        sequence_code: False
+        sequence_number_next_actual: False
+
+        Execution time: 0:00:00.264
+
+        ########## survey.page (survey.page) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:08
+        upmost_last_update: False
+
+        sequence_code: False
+        sequence_number_next_actual: False
+
+        Execution time: 0:00:00.262
+
+        ########## survey.question (survey.question) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:08
+        upmost_last_update: False
+
+        sequence_code: False
+        sequence_number_next_actual: False
+
+        Execution time: 0:00:00.261
+
+        ########## survey.label (survey.label) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:09
+        upmost_last_update: False
+
+        sequence_code: False
+        sequence_number_next_actual: False
+
+        Execution time: 0:00:00.255
+
+        ########## survey.user_input (survey.user_input) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:09
+        upmost_last_update: False
+
+        sequence_code: False
+        sequence_number_next_actual: False
+
+        Execution time: 0:00:00.256
+
+        ########## survey.user_input_line (survey.user_input_line) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:09
+        upmost_last_update: False
+
+        sequence_code: False
+        sequence_number_next_actual: False
+
+        Execution time: 0:00:00.260
+
+        ########## clv.event (clv.event) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:09
+        upmost_last_update: False
+
+        sequence_code: False
+        sequence_number_next_actual: False
+
+        Execution time: 0:00:00.255
+
+        ########## clv.event.attendee (clv.event.attendee) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:10
+        upmost_last_update: False
+
+        sequence_code: False
+        sequence_number_next_actual: False
+
+        Execution time: 0:00:00.266
+
+        ########## clv.document.category (clv.document.category) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:10
+        upmost_last_update: False
+
+        sequence_code: False
+        sequence_number_next_actual: False
+
+        Execution time: 0:00:00.254
+
+        ########## clv.document.type (clv.document.type) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:10
+        upmost_last_update: False
+
+        sequence_code: False
+        sequence_number_next_actual: False
+
+        Execution time: 0:00:00.258
+
+        ########## clv.document (clv.document) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: True
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 28
+        reg_count: 28
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 28
+        sync_count: 28
+
+        task_count: 28
+
+        date_last_sync: 2019-06-21 18:30:11
+        upmost_last_update: 2019-01-16 15:25:42
+
+        sequence_code: clv.document.code
+        sequence_number_next_actual: 6686
+
+        Execution time: 0:00:07.872
+
+        ########## clv.document.item (clv.document.item) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:18
+        upmost_last_update: False
+
+        sequence_code: False
+        sequence_number_next_actual: False
+
+        Execution time: 0:00:00.360
+
+        ########## clv.lab_test.unit (clv.lab_test.unit) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:19
+        upmost_last_update: False
+
+        sequence_code: False
+        sequence_number_next_actual: False
+
+        Execution time: 0:00:00.415
+
+        ########## clv.lab_test.type (clv.lab_test.type) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:19
+        upmost_last_update: False
+
+        sequence_code: False
+        sequence_number_next_actual: False
+
+        Execution time: 0:00:00.237
+
+        ########## clv.lab_test.request (clv.lab_test.request) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: True
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:19
+        upmost_last_update: False
+
+        sequence_code: clv.lab_test.request.code
+        sequence_number_next_actual: 3848
+
+        Execution time: 0:00:00.246
+
+        ########## clv.lab_test.result (clv.lab_test.result) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: True
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:20
+        upmost_last_update: False
+
+        sequence_code: clv.lab_test.result.code
+        sequence_number_next_actual: 2519
+
+        Execution time: 0:00:00.269
+
+        ########## clv.lab_test.report (clv.lab_test.report) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: True
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 18:30:20
+        upmost_last_update: False
+
+        sequence_code: clv.lab_test.report.code
+        sequence_number_next_actual: 1846
+
+        Execution time: 0:00:00.291
+
+        ########## clv.lab_test.criterion (clv.lab_test.criterion) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: False
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_identify"...
+
+        external_args: ['|', ('active', '=', True), ('active', '=', False)]
+
+        external_object_ids: 0
+        sync_objects: 0
+        reg_count_2: 0
+        missing_count: 0
+
+        external_objects: 72773
+        reg_count: 72773
+        include_count: 72773
+        update_count: 0
+        task_count: 72773
+
+        date_last_sync: 2019-06-21 18:30:20
+        upmost_last_update: 2019-01-25 20:57:19
+
+        Execution time: 0:59:17.389
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 72773
+        reg_count: 72773
+        include_count: 72773
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 72773
+
+        date_last_sync: 2019-06-21 19:29:38
+        upmost_last_update: 2019-01-25 20:57:19
+
+        sequence_code: False
+        sequence_number_next_actual: False
+
+        Execution time: 1:47:28.150
+
+        ########## clv.mfile (clv.mfile) ##########
+        method: _object_external_sync
+
+        external_host: https://192.168.99.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        enable_sequence_code_sync: False
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 0
+        reg_count: 0
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 0
+        sync_count: 0
+
+        task_count: 0
+
+        date_last_sync: 2019-06-21 21:17:06
+        upmost_last_update: False
+
+        sequence_code: False
+        sequence_number_next_actual: False
+
+        Execution time: 0:00:00.233
+
+        ############################################################
+        Execution time: 2:47:06.886
