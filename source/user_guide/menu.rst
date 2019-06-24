@@ -1,6 +1,16 @@
-====
-Menu
-====
+.. raw:: html
+
+    <style> .red {color:red} </style>
+    <style> .bi {font-weight: bold; font-style: italic} </style>
+
+.. role:: red
+.. role:: bi
+
+.. index:: Menu
+
+==========
+:bi:`Menu`
+==========
 
 * Mensagens
 	* Caixa de Entrada
@@ -24,8 +34,8 @@ Menu
 	* Base
 		* Global Tags
 		* Documents [:doc:`/user_guide/base/document/document`]
-		* Sets
-		* Communities
+		* Sets [:doc:`/user_guide/base/set/set`]
+		* Communities [:doc:`/user_guide/base/community/community`]
 		* Events
 		* File System
 			* Directories

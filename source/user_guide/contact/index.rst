@@ -6,16 +6,12 @@
 .. role:: red
 .. role:: bi
 
-.. index:: Base
+.. index:: Contatos
 
-==========
-:bi:`Base`
-==========
+============
+**Contatos**
+============
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-
-   document/document
-   set/set
-   community/community

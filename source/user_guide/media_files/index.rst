@@ -6,16 +6,12 @@
 .. role:: red
 .. role:: bi
 
-.. index:: Base
+.. index:: Media Files
 
-==========
-:bi:`Base`
-==========
+=================
+:bi:`Media Files`
+=================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-
-   document/document
-   set/set
-   community/community
