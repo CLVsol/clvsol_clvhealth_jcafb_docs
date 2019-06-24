@@ -76,13 +76,16 @@ Atualizar o(s) módulo(s): [clv_base_jcafb]
 
     #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, desabilitando o(s) Módulo(s):
 
-        * clv_export
         * clv_set
+        * clv_set_jcafb
+
+    #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, desabilitando o(s) Módulo(s):
+
+        * clv_export
         * clv_document_export
         * clv_lab_test_export
         * clv_person_export
         * clv_export_jcafb
-        * clv_set_jcafb
         * clv_document_export_jcafb
         * clv_lab_test_export_jcafb
         * clv_person_export_jcafb
@@ -151,13 +154,16 @@ Instalar o(s) módulo(s) [ver lista de módulos] (2019-06-17)
 
     #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, habilitando o(s) Módulo(s):
 
-        * clv_export
         * clv_set
+        * clv_set_jcafb
+
+    #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, habilitando o(s) Módulo(s):
+
+        * clv_export
         * clv_document_export
         * clv_lab_test_export
         * clv_person_export
         * clv_export_jcafb
-        * clv_set_jcafb
         * clv_document_export_jcafb
         * clv_lab_test_export_jcafb
         * clv_person_export_jcafb
