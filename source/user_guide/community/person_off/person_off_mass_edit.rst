@@ -12,12 +12,12 @@
 :bi:`Person (Off) Mass Edit`
 ============================
 
-    #. Executar a ação *Person Mass Edit* de Pessoa(s):
+    #. Executar a ação :bi:`Person Mass Edit` de Pessoa(s):
 
-        #. Acessar a *view* *Persons (Off)*:
+        #. Acessar a *view* :bi:`Persons (Off)`:
 
             * Menu de acesso:
-                * *Community* » *Community* » *Persons (Off)*
+                * :bi:`Community` » :bi:`Community` » :bi:`Persons (Off)`
 
         #. Selecionar a(s) Pessoa(s) desejada(s).
 
@@ -28,9 +28,9 @@
                 * *Categories:*
                 * *Markers*
 
-            #. Utilize o botão *Mass Edit* para executar a ação.
+            #. Utilize o botão :bi:`Mass Edit` para executar a ação.
 
-            #. Utilize o botão *Cancel* para cancelar a execução da ação.
+            #. Utilize o botão :bi:`Cancel` para cancelar a execução da ação.
 
 .. toctree::
    :maxdepth: 2

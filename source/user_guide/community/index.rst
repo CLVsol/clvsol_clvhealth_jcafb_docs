@@ -20,3 +20,5 @@
    family/family
    address/address
    person_off/person_off
+   family_off/family_off
+   address_off/address_off

@@ -14,10 +14,10 @@
 
     #. Executar a Ação *Person (Off) Contact Information Update* para todas as Pessoas:
 
-        #. Acessar a *View* *Persons (Off)*:
+        #. Acessar a *View* :bi:`Persons (Off)`:
 
             * Menu de acesso:
-                * *Community* » *Community* » *Persons (Off)*
+                * :bi:`Community` » :bi:`Community` » :bi:`Persons (Off)`
 
         #. Selecionar a(s) Pessoa(s) desejada(s).
 
@@ -28,9 +28,9 @@
                 * *Update Mobile*
                 * *Update Email*
 
-            #. Utilize o botão *Contact Information Update* para executar a Ação.
+            #. Utilize o botão :bi:`Contact Information Update` para executar a Ação.
 
-            #. Utilize o botão *Cancel* para cancelar a execução da Ação.
+            #. Utilize o botão :bi:`Cancel` para cancelar a execução da Ação.
 
 .. toctree::
    :maxdepth: 2

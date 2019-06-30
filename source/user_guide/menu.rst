@@ -79,8 +79,8 @@
 			* Histories
 	* Off
 		* Persons (Off) [:doc:`/user_guide/community/person_off/person_off`]
-		* Addresses (Off)
-		* Families (Off)
+		* Addresses (Off) [:doc:`/user_guide/community/address_off/address_off`]
+		* Families (Off) [:doc:`/user_guide/community/family_off/family_off`]
 	* Configuration
 		* Person
 			* Categories

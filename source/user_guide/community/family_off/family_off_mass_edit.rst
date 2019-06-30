@@ -6,22 +6,22 @@
 .. role:: red
 .. role:: bi
 
-.. index:: Person Mass Edit
+.. index:: Family (Off) Mass Edit
 
-======================
-:bi:`Person Mass Edit`
-======================
+============================
+:bi:`Family (Off) Mass Edit`
+============================
 
-    #. Executar a ação :bi:`Person Mass Edit` de Pessoa(s):
+    #. Executar a ação :bi:`Family (Off) Mass Edit` de Pessoa(s):
 
-        #. Acessar a *view* :bi:`Persons`:
+        #. Acessar a *view* :bi:`Families (Off)`:
 
             * Menu de acesso:
-                * :bi:`Community` » :bi:`Community` » :bi:`Persons`
+                * :bi:`Community` » :bi:`Community` » :bi:`Families`
 
         #. Selecionar a(s) Pessoa(s) desejada(s).
 
-        #. Exercutar a ação "**Person Mass Edit**":
+        #. Exercutar a ação "**Family (Off) Mass Edit**":
 
             * Parâmetros apresentados:
                 * *Global Tags*
