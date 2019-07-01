@@ -30,3 +30,9 @@
 
    family_off_mass_edit
    family_off_contact_info_updt
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Eventos:
+
+   family_off_reregistration
