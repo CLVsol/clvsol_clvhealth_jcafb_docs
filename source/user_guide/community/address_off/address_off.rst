@@ -18,3 +18,8 @@
 
    address_off_mass_edit
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Eventos:
+
+   address_off_reregistration
