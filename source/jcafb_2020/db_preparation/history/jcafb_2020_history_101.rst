@@ -7,7 +7,7 @@
 .. role:: bi
 
 =========================================================================================
-[2019-06-19] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
+[2019-07-01] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
 =========================================================================================
 
 Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-06-21a)
@@ -69,7 +69,7 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
             /etc/init.d/odoo start
 
-Instalar o(s) módulo(s) [clv_set, clv_set_jcafb] (2019-06-25)
+Instalar o(s) módulo(s) [clv_set, clv_set_jcafb] (2019-07-01)
 -------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
@@ -167,7 +167,7 @@ Instalar o(s) módulo(s) [clv_set, clv_set_jcafb] (2019-06-25)
 
                 /etc/init.d/odoo start
 
-Atualizar o(s) módulo(s): [clv_base_jcafb, clv_person_jcafb] (2019-06-25)
+Atualizar o(s) módulo(s): [clv_base_jcafb, clv_person_jcafb] (2019-07-01)
 -------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_update`.
@@ -215,7 +215,7 @@ Atualizar o(s) módulo(s): [clv_base_jcafb, clv_person_jcafb] (2019-06-25)
 
                 /etc/init.d/odoo start
 
-Instalar o(s) módulo(s) [ver lista de módulos] (2019-06-25)
+Instalar o(s) módulo(s) [ver lista de módulos] (2019-07-01)
 -----------------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
