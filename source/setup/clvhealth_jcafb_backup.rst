@@ -15,10 +15,10 @@ Glossário
     .. glossary::
 
        odoo12-jcafb-server
-          Nome do Servidor Linux em que o *CLVhelth_JCAFB* está sendo executado.
+          Nome do Servidor Linux em que o *CLVhelth-JCAFB* está sendo executado.
 
        clvhealth_jcafb_db
-          Nome do Banco de Dados do *CLVhelth_JCAFB*.
+          Nome do Banco de Dados do *CLVhelth-JCAFB*.
 
        timestamp
           *Time Stamp* de identificação da versão do backup dos dados.
