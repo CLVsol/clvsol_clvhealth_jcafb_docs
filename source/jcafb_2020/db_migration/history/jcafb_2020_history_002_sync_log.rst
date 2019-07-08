@@ -10,9 +10,9 @@
 *External Sync Batch Log* [*Default Batch*]
 ===========================================
 
-.. _External Sync Batch - Default Batch - 20190611a:
+.. _External Sync Batch - Default Batch - 20190706a:
 
-*External Sync Batch* - *Default Batch* 01 (Execution time: 0:02:58.481)
+*External Sync Batch* - *Default Batch* 01 (Execution time: 0:02:54.100)
 ------------------------------------------------------------------------
 
     ::
@@ -51,10 +51,10 @@
         update_count: 0
         task_count: 253
 
-        date_last_sync: 2019-06-11 16:45:58
+        date_last_sync: 2019-07-06 18:02:07
         upmost_last_update: 2017-10-13 16:31:10
 
-        Execution time: 0:00:01.580
+        Execution time: 0:00:01.506
 
         login_msg: [01] Login Ok.
 
@@ -65,10 +65,10 @@
         include_count: 223
         task_count: 253
 
-        date_last_sync: 2019-06-11 16:45:59
+        date_last_sync: 2019-07-06 18:02:09
         upmost_last_update: 2017-10-13 16:31:10
 
-        Execution time: 0:00:04.232
+        Execution time: 0:00:04.314
 
         ########## res.country.state (res.country.state) ##########
         method: _object_external_recognize
@@ -102,10 +102,10 @@
         update_count: 0
         task_count: 645
 
-        date_last_sync: 2019-06-11 16:46:04
+        date_last_sync: 2019-07-06 18:02:13
         upmost_last_update: 2017-10-13 16:31:10
 
-        Execution time: 0:00:03.347
+        Execution time: 0:00:03.098
 
         login_msg: [01] Login Ok.
 
@@ -116,10 +116,10 @@
         include_count: 640
         task_count: 645
 
-        date_last_sync: 2019-06-11 16:46:07
+        date_last_sync: 2019-07-06 18:02:16
         upmost_last_update: 2017-10-13 16:31:10
 
-        Execution time: 0:00:11.642
+        Execution time: 0:00:11.357
 
         ########## res.city (l10n_br_base.city) ##########
         method: _object_external_recognize
@@ -153,10 +153,10 @@
         update_count: 0
         task_count: 5564
 
-        date_last_sync: 2019-06-11 16:46:19
+        date_last_sync: 2019-07-06 18:02:28
         upmost_last_update: 2017-10-13 16:31:10
 
-        Execution time: 0:00:30.880
+        Execution time: 0:00:28.976
 
         login_msg: [01] Login Ok.
 
@@ -167,10 +167,10 @@
         include_count: 5564
         task_count: 5564
 
-        date_last_sync: 2019-06-11 16:46:50
+        date_last_sync: 2019-07-06 18:02:57
         upmost_last_update: 2017-10-13 16:31:10
 
-        Execution time: 0:02:06.727
+        Execution time: 0:02:04.786
 
         ############################################################
-        Execution time: 0:02:58.481
+        Execution time: 0:02:54.100

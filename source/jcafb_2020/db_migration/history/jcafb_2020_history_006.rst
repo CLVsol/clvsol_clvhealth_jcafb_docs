@@ -1,16 +1,18 @@
 .. raw:: html
 
     <style> .red {color:red} </style>
+    <style> .green {color:green} </style>
     <style> .bi {font-weight: bold; font-style: italic} </style>
 
 .. role:: red
+.. role:: green
 .. role:: bi
 
 ===========================================================================================
-[2019-07-06 (b)] - Migração do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
+[2019-07-07 (b)] - Migração do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
 ===========================================================================================
 
-Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-07-06a)
+Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-07-07a)
 ---------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
@@ -36,22 +38,22 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2020_2019-07-06a.sql.gz
+            # gzip -d clvhealth_jcafb_2020_2019-07-07a.sql.gz
 
             dropdb -i clvhealth_jcafb_2020
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2020
-            psql -f clvhealth_jcafb_2020_2019-07-06a.sql -d clvhealth_jcafb_2020 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2020_2019-07-07a.sql -d clvhealth_jcafb_2020 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2020
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-07-06a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-07-07a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-07-06a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-07-07a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
 
@@ -69,34 +71,17 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
             /etc/init.d/odoo start
 
-Instalar o(s) módulo(s) [ver lista de módulos] (2019-07-06 (b))
+Instalar o(s) módulo(s) [ver lista de módulos] (2019-07-07 (a))
 ---------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
 
     #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, habilitando o(s) Módulo(s):
 
-        * clv_global_tag
-        * clv_global_tag_jcafb
-        * clv_global_tag_sync_jcafb
-
-    #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, habilitando o(s) Módulo(s):
-
-        * clv_phase
-        * clv_phase_jcafb
-        * clv_phase_sync_jcafb
-
-    #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, habilitando o(s) Módulo(s):
-
-        * clv_employee
-        * clv_employee_history
-        * clv_employee_jcafb
-        * clv_employee_sync_jcafb
-
-    #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, habilitando o(s) Módulo(s):
-
-        * clv_set
-        * clv_set_jcafb
+        * clv_survey_sync_jcafb
+        * clv_event_sync_jcafb
+        * clv_document_sync_jcafb
+        * clv_lab_test_sync_jcafb
 
     #. [tkl-odoo12-jcafb-vm] **Executar** a instalação do(s) Módulo(s) adicionado(s)/habilitado(s):
 
@@ -145,9 +130,9 @@ Instalar o(s) módulo(s) [ver lista de módulos] (2019-07-06 (b))
 
                 /etc/init.d/odoo start
 
-.. _Lista de Schedules 20190706b:
+.. _Lista de Schedules 20190707a:
 
-Lista de *Schedules* instalados (2019-07-06 (b))
+Lista de *Schedules* instalados (2019-07-07 (a))
 ------------------------------------------------
 
     * Lista de *Schedules* instalados:
@@ -159,18 +144,48 @@ Lista de *Schedules* instalados (2019-07-06 (b))
         * hr.department (hr.department)
         * hr.job (hr.job)
         * hr.employee (hr.employee)
+        * clv.address.category (clv.address.category)
+        * clv.address (clv.address)
+        * clv.address.history (clv.address.history)
+        * clv.person.category (clv.person.category)
+        * clv.person.marker (clv.person.marker)
+        * clv.person (clv.person)
+        * clv.person.history (clv.person.history)
 
-Executar o *External Sync Batch* "*Default Batch*" (2019-07-06 (b))
+        * :green:`(Novo)` survey.stage (survey.stage)
+        * :green:`(Novo)` survey.survey (survey.survey)
+        * :green:`(Novo)` survey.page (survey.page)
+        * :green:`(Novo)` survey.question (survey.question)
+        * :green:`(Novo)` survey.question (survey.question)
+        * :green:`(Novo)` survey.user_input (survey.user_input)
+        * :red:`(Não processado)` survey.user_input_line (survey.user_input_line)
+
+        * :green:`(Novo)` clv.event (clv.event)
+        * :green:`(Novo)` clv.event.attendee (clv.event.attendee)
+
+        * :green:`(Novo)` clv.document.category (clv.document.category)
+        * :green:`(Novo)` clv.document.type (clv.document.type)
+        * :green:`(Novo)` clv.document (clv.document)
+        * :red:`(Não processado)` clv.document.item (clv.document.item)
+
+        * :green:`(Novo)` clv.lab_test.unit (clv.lab_test.unit)
+        * :green:`(Novo)` clv.lab_test.type (clv.lab_test.type)
+        * :green:`(Novo)` clv.lab_test.request (clv.lab_test.request)
+        * :green:`(Novo)` clv.lab_test.result (clv.lab_test.result)
+        * :green:`(Novo)` clv.lab_test.report (clv.lab_test.report)
+        * :red:`(Não processado)` clv.lab_test.criterion (clv.lab_test.criterion)
+
+Executar o *External Sync Batch* "*Default Batch*" (2019-07-07 (a))
 -------------------------------------------------------------------
 
-    #. [tkl-odoo12-jcafb-vm] Configurar os :bi:`External Sync Schedules` disponíveis:
+    #. [tkl-odoo12-jcafb-vm] Configurar os :bi:`External Sync Schedules` :green:`novos`:
 
         #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
 
-        #. Configurar, com a ajuda da ação :bi:`External Sync Schedule Mass Edit`, os :bi:`External Sync Schedules` disponíveis:
+        #. Configurar, com a ajuda da ação :bi:`External Sync Schedule Mass Edit`, os :bi:`External Sync Schedules` :green:`novos`:
 
             * Lista de *Schedules*:
-                * :ref:`Lista de Schedules 20190706b`
+                * :ref:`Lista de Schedules 20190707a`
 
             * Menu de acesso:
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Schedules` » **Ação** » :bi:`External Sync Schedule Mass Edit`
@@ -179,21 +194,23 @@ Executar o *External Sync Batch* "*Default Batch*" (2019-07-06 (b))
                 * *External Host*: "**https://192.168.25.152**"
                 * *Max Task Registers*: "**200.000**"
 
-    #. Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-vm** e executar o *Odoo* no modo manual:
+    #. [tkl-odoo12-jcafb-vm] Configurar os :bi:`External Sync Schedules` :red:`não processados`:
 
-        ::
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
 
-            # ***** tkl-odoo12-jcafb-vm
-            #
+        #. Configurar, com a ajuda da ação :bi:`External Sync Schedule Mass Edit`, os :bi:`External Sync Schedules` :red:`não processados`:
 
-            ssh tkl-odoo12-jcafb-vm -l root
+            * Lista de *Schedules*:
+            * *Members*:
+                * :ref:`Lista de Schedules 20190707a`
 
-            /etc/init.d/odoo stop
+            * Menu de acesso:
+                * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Schedules` » **Ação** » :bi:`External Sync Schedule Mass Edit`
 
-            su odoo
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+            * Parâmetros alterados:
+                * *External Host*: "**https://192.168.25.152**"
+                * *Max Task Registers*: "**0**"
+                * *Disable Identification*: "**marcado**"
 
     #. [tkl-odoo12-jcafb-vm] Executar o :bi:`External Sync Batch` "**Default Batch**":
 
@@ -205,20 +222,20 @@ Executar o *External Sync Batch* "*Default Batch*" (2019-07-06 (b))
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
 
             * *Members*:
-                * :ref:`Lista de Schedules 20190706b`
+                * :ref:`Lista de Schedules 20190707a`
 
             * *Synchronization Log*:
-                * :ref:`External Sync Batch - Default Batch - 20190706b`
+                * :ref:`External Sync Batch - Default Batch - 20190707a`
 
-    #. [tkl-odoo12-jcafb-vm] Configurar os :bi:`External Sync Schedules` disponíveis:
+    #. [tkl-odoo12-jcafb-vm] Configurar os :bi:`External Sync Schedules` :green:`novos`:
 
         #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
 
-        #. Configurar, com a ajuda da ação :bi:`External Sync Schedule Mass Edit`, os :bi:`External Sync Schedules` disponíveis:
+        #. Configurar, com a ajuda da ação :bi:`External Sync Schedule Mass Edit`, os :bi:`External Sync Schedules` :green:`novos`:
 
             * Lista de *Schedules*:
             * *Members*:
-                * :ref:`Lista de Schedules 20190706b`
+                * :ref:`Lista de Schedules 20190707a`
 
             * Menu de acesso:
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Schedules` » **Ação** » :bi:`External Sync Schedule Mass Edit`
@@ -226,12 +243,28 @@ Executar o *External Sync Batch* "*Default Batch*" (2019-07-06 (b))
             * Parâmetros alterados:
                 * *Disable Identification*: "**marcado**"
 
+    #. [tkl-odoo12-jcafb-vm] Executar o :bi:`External Sync Batch` "**Default Batch**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
+
+        #. Executar a ação :bi:`External Sync Batch Exec` para o "**Default Batch**":
+
+            * Menu de acesso:
+                * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
+
+            * *Members*:
+                * :ref:`Lista de Schedules 20190707a`
+
+            * *Synchronization Log*:
+                * :ref:`External Sync Batch - Default Batch - 20190707b`
+
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo padrão:
 
         ::
 
             # ***** tkl-odoo12-jcafb-vm
-            #
+            #                * *Disable Identification*: "**marcado**"
+
 
             ^C
 
@@ -239,7 +272,7 @@ Executar o *External Sync Batch* "*Default Batch*" (2019-07-06 (b))
 
             /etc/init.d/odoo start
 
-Criar um backup do *CLVhealth-JCAFB-2020* (2019-07-06b)
+Criar um backup do *CLVhealth-JCAFB-2020* (2019-07-07b)
 -------------------------------------------------------
 
     * Referência: :doc:`/setup/clvhealth_jcafb_backup`.
@@ -267,16 +300,16 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-07-06b)
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-07-06b.sql
+            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-07-07b.sql
 
-            gzip clvhealth_jcafb_2020_2019-07-06b.sql
-            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-07-06b.sql
+            gzip clvhealth_jcafb_2020_2019-07-07b.sql
+            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-07-07b.sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-07-06b.tar.gz clvhealth_jcafb_2020
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-07-07b.tar.gz clvhealth_jcafb_2020
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-07-06b.tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-07-07b.tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
 
@@ -295,17 +328,17 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-07-06b)
             /etc/init.d/odoo start
 
     Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2020_2019-07-06b.sql
-        * /opt/odoo/clvhealth_jcafb_2020_2019-07-06b.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2020_2019-07-06b.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-07-06b.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2020_2019-07-07b.sql
+        * /opt/odoo/clvhealth_jcafb_2020_2019-07-07b.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2020_2019-07-07b.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-07-07b.tar.gz
 
-.. index:: clvhealth_jcafb_2020_2019-07-06b.sql
-.. index:: filestore_clvhealth_jcafb_2020_2019-07-06b
-.. index:: clvsol_filestore_clvhealth_jcafb_2019-07-06b
+.. index:: clvhealth_jcafb_2020_2019-07-07b.sql
+.. index:: filestore_clvhealth_jcafb_2020_2019-07-07b
+.. index:: clvsol_filestore_clvhealth_jcafb_2019-07-07b
 
 .. toctree::
    :maxdepth: 2
 
-   jcafb_2020_history_003_sync_log
+   jcafb_2020_history_006_sync_log
 
