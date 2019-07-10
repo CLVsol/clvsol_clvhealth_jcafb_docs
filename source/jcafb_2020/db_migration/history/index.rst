@@ -16,3 +16,4 @@ Histórico (Migração do Banco de Dados - JCAFB-2020)
    jcafb_2020_history_008
    jcafb_2020_history_009
    jcafb_2020_history_010
+   jcafb_2020_history_011
