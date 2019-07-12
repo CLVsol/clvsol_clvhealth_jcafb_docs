@@ -6,14 +6,15 @@
 .. role:: red
 .. role:: bi
 
-.. index:: Employees
+.. index:: Employee
 
-===============
-:bi:`Employees`
-===============
+==============
+:bi:`Employee`
+==============
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Ações:
 
-   employeee
+   employee_mass_edit
+   employee_employee_history_updt
