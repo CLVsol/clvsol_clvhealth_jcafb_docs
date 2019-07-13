@@ -9,3 +9,4 @@ Histórico (Migração do Banco de Dados - JCAFB-2020)
    jcafb_2020_history_001
    jcafb_2020_history_002
    jcafb_2020_history_003
+   jcafb_2020_history_004
