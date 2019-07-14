@@ -81,7 +81,7 @@ Executar o *External Sync Batch* "*Default Batch*" (2019-07-07 (d))
         #. Configurar, com a ajuda da ação :bi:`External Sync Schedule Mass Edit`, o :bi:`External Sync Schedule` "**clv.document.item (clv.document.item)**":
 
             * Lista de *Schedules*:
-                * :ref:`Lista de Schedules  20190707b`
+                * :ref:`Lista de Schedules  20190714b`
 
             * Menu de acesso:
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Schedules` » **Ação** » :bi:`External Sync Schedule Mass Edit`
@@ -117,7 +117,7 @@ Executar o *External Sync Batch* "*Default Batch*" (2019-07-07 (d))
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
 
             * *Members*:
-                * :ref:`Lista de Schedules 20190707b`
+                * :ref:`Lista de Schedules 20190714b`
 
             * *Synchronization Log*:
                 * :ref:`External Sync Batch - Default Batch - 20190707e`
@@ -130,7 +130,7 @@ Executar o *External Sync Batch* "*Default Batch*" (2019-07-07 (d))
 
             * Lista de *Schedules*:
             * *Members*:
-                * :ref:`Lista de Schedules 20190707b`
+                * :ref:`Lista de Schedules 20190714b`
 
             * Menu de acesso:
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Schedules` » **Ação** » :bi:`External Sync Schedule Mass Edit`
