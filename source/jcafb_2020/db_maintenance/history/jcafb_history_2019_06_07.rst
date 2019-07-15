@@ -4,11 +4,11 @@
 
 .. role:: red
 
-=================
-2019-06-(07 a 08)
-=================
+==========
+2019-07-15
+==========
 
-Restaurar um backup do *CLVhealth-JCAFB-2020* [clvheatlh-jcafb-2020-aws-tst] (2019-06-05a)
+Restaurar um backup do *CLVhealth-JCAFB-2020* [clvheatlh-jcafb-2020-aws-tst] (2019-07-15b)
 ------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
@@ -34,22 +34,41 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* [clvheatlh-jcafb-2020-aws-tst] (20
             #
 
             cd /opt/odoo
-            gzip -d clvhealth_jcafb_2020_2019-06-05a.sql.gz
+            gzip -d clvhealth_jcafb_2020_2019-07-15b.sql.gz
 
             dropdb -i clvhealth_jcafb_2020
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2020
-            psql -f clvhealth_jcafb_2020_2019-06-05a.sql -d clvhealth_jcafb_2020 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2020_2019-07-15b.sql -d clvhealth_jcafb_2020 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2020
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-06-05a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-07-15b.tar.gz
 
             mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-06-05a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-07-15b.tar.gz
+
+    #. [clvheatlh-jcafb-2020-aws-tst] **Atualizar** os fontes do projeto
+
+        ::
+
+            # ***** clvheatlh-jcafb-2020-aws-tst
+            #
+
+            cd /opt/odoo/clvsol_clvhealth_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_api
+            git pull
 
     #. Retornar a execução do *Odoo* do servidor **clvheatlh-jcafb-2020-aws-tst** ao modo desejado:
 
