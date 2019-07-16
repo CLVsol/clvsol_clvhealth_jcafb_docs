@@ -384,7 +384,7 @@ Replace the Odoo installation (Odoo 12.0)
 
         /etc/init.d/odoo start
 
-#. Configure Odoo Server timeouts
+#. Configure Odoo Server :bi:`timeouts`
 
     #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
 
@@ -403,6 +403,39 @@ Replace the Odoo installation (Odoo 12.0)
             limit_time_cpu = 36000
             # limit_time_real = 120
             limit_time_real = 72000
+
+#. Configure Odoo Server :bi:`workers`
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        * `Sample odoo.conf file  <https://gist.github.com/Guidoom/d5db0a76ce669b139271a528a8a2a27f>`_
+        * `How to Speed up Odoo <https://www.rosehosting.com/blog/how-to-speed-up-odoo/>`_
+        * `What is a “worker” in Odoo? <https://stackoverflow.com/questions/35918633/what-is-a-worker-in-odoo>`_
+
+        ::
+
+            workers = 1
+
+        ::
+
+            # workers = 1
+            workers = 5
+
+#. :red:`(Não Executado)` Configure Odoo Server :bi:`data_dir`
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        * `Filestore and Session Physical Location – Odoo/OpenERP  <https://www.technaureus.com/filestore-and-session-physical-location/>`_
+        * `Odoo 12 Development Cookbook <https://books.google.com.br/books?id=KfeVDwAAQBAJ&pg=PA75&lpg=PA75&dq=odoo+data_dir&source=bl&ots=I1OW2GaxYr&sig=ACfU3U0gBkE_N64J6HcHFP337yJTHA8PYA&hl=pt-BR&sa=X&ved=2ahUKEwi_uv7ihrXjAhV4D7kGHfaIAKMQ6AEwBXoECAgQAQ#v=onepage&q=odoo%20data_dir&f=false>`_
+
+        ::
+
+            data_dir = /var/lib/odoo/.local/share/Odoo
+
+        ::
+
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            data_dir = /var/lib/odoo/.local/share/Odoo
 
 Installation of project modules
 -------------------------------
