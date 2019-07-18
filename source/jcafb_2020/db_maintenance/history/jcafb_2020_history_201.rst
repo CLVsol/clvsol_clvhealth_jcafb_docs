@@ -4,11 +4,11 @@
 
 .. role:: red
 
-==========
-2019-07-15
-==========
+=======================
+2019-07-18 (JCAFB-2020)
+=======================
 
-Restaurar um backup do *CLVhealth-JCAFB-2020* [clvheatlh-jcafb-2020-aws-tst] (2019-07-15b)
+Restaurar um backup do *CLVhealth-JCAFB-2020* [clvheatlh-jcafb-2020-aws-tst] (2019-07-18a)
 ------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
@@ -34,22 +34,22 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* [clvheatlh-jcafb-2020-aws-tst] (20
             #
 
             cd /opt/odoo
-            gzip -d clvhealth_jcafb_2020_2019-07-15b.sql.gz
+            gzip -d clvhealth_jcafb_2020_2019-07-18a.sql.gz
 
             dropdb -i clvhealth_jcafb_2020
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2020
-            psql -f clvhealth_jcafb_2020_2019-07-15b.sql -d clvhealth_jcafb_2020 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2020_2019-07-18a.sql -d clvhealth_jcafb_2020 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2020
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-07-15b.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-07-18a.tar.gz
 
-            mkdir /opt/odoo/clvsol_filestore
+            # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-07-15b.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-07-18a.tar.gz
 
     #. [clvheatlh-jcafb-2020-aws-tst] **Atualizar** os fontes do projeto
 
