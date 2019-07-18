@@ -18,3 +18,4 @@
 
    employee_mass_edit
    employee_employee_history_updt
+   employee_user_groups_updt
