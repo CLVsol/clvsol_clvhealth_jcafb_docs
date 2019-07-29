@@ -34,6 +34,8 @@
 
             * Parâmetros apresentados:
                 * *Create new Person (Off)* (**Observação**: Parâmetro não modificável)
+                * *Create new Family (Off)* (**Observação**: Parâmetro não modificável)
+                * *Create new Address (Off)* (**Observação**: Parâmetro não modificável)
 
             #. Utilize o botão :bi:`Associate do Perton (Off)` para executar a Ação.
 
