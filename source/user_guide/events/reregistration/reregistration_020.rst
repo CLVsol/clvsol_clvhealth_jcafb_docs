@@ -6,17 +6,17 @@
 .. role:: red
 .. role:: bi
 
-.. index:: Criação do Cadastro Auxiliar da Pessoa
+.. index:: Criação do Cadastro Auxiliar de uma Pessoa
 
-======================================
-Criação do Cadastro Auxiliar da Pessoa
-======================================
+==========================================
+Criação do Cadastro Auxiliar de uma Pessoa
+==========================================
 
-    Se, após a execução da :doc:`/user_guide/community/person_aux/person_aux_reregistration_010` não for identificado um registro associado à Pessoa pesquisada no **Cadastro Auxiliar**, independentemente da Pessoa ter sido declarada "**já cadastrada**" ou "**não cadastrada**", essa Pessoa deve ser cadastrada no **Cadastro Auxiliar**.
+    Se, após a execução da :doc:`/user_guide/events/reregistration/reregistration_010` não for identificado um registro associado à Pessoa pesquisada no **Cadastro Auxiliar**, independentemente da Pessoa ter sido declarada "**já cadastrada**" ou "**não cadastrada**", essa Pessoa deve ser cadastrada inicialmente no **Cadastro Auxiliar**.
 
-    #. :ref:`Criação do Cadastro Aux de uma Pessoa já cadastrada`
+    #. :doc:`/user_guide/events/reregistration/reregistration_020_010`
 
-        Este procedimento pode ser utilizado somente quando **for identificado** um registro :bi:`Person` para a Pessoa a ser recadastrada, utilizando-se um dos métodos: :ref:`Procura pela Pessoa a ser recadastrada (via view Contatos)` ou :ref:`Procura pela Pessoa a ser recadastrada (via view Persons)`.
+        Este procedimento pode ser utilizado somente quando **for identificado** um registro :bi:`Person` para a Pessoa, utilizando-se um dos métodos: :doc:`/user_guide/events/reregistration/reregistration_010_010` ou :doc:`/user_guide/events/reregistration/reregistration_010_020`.
 
         Por esse método, quando não existir ainda um Cadastro *Aux* para a Pessoa, o mesmo será automaticamente criado como uma cópia do Cadastro dessa Pessoa.
 
@@ -46,9 +46,9 @@ Criação do Cadastro Auxiliar da Pessoa
                 * :bi:`Related Family` » :bi:`Family`
                 * :bi:`Contact Information` = Dados do registro :bi:`Address`
 
-    #. :ref:`Criação do Cadastro Aux de uma Pessoa não cadastrada`
+    #. :doc:`/user_guide/events/reregistration/reregistration_020_020`
 
-        Este procedimento pode ser utilizado somente quando **não for identificado** um registro :bi:`Person` para a Pessoa a ser recadastrada, utilizando-se um dos métodos: :ref:`Procura pela Pessoa a ser recadastrada (via view Contatos)` ou :ref:`Procura pela Pessoa a ser recadastrada (via view Persons)`.
+        Este procedimento pode ser utilizado somente quando **não for identificado** um registro :bi:`Person` para a Pessoa, utilizando-se um dos métodos: :doc:`/user_guide/events/reregistration/reregistration_010_010` ou :doc:`/user_guide/events/reregistration/reregistration_010_020`.
 
         Por esse método, quando não existir ainda um Cadastro *Aux* para a Pessoa, o mesmo deverá ser manualmente criado para conter as informações coletadas para a Pessoa. Essas informações coletadas serão manualmente inseridas nos registros pertinentes.
 
@@ -78,16 +78,9 @@ Criação do Cadastro Auxiliar da Pessoa
                 * :bi:`Related Family` » **vazio**
                 * :bi:`Contact Information` = Dados do Endereço da Pessoa
 
-.. _Criação do Cadastro Aux de uma Pessoa já cadastrada:
-
-Criação do Cadastro *Aux* de uma Pessoa já cadastrada
------------------------------------------------------
-
-.. _Criação do Cadastro Aux de uma Pessoa não cadastrada:
-
-Criação do Cadastro *Aux* de uma Pessoa não cadastrada
-------------------------------------------------------
-
 .. toctree::
    :maxdepth: 2
    :caption: Índice:
+
+   reregistration_020_010
+   reregistration_020_020

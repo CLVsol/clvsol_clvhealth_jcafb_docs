@@ -15,4 +15,5 @@ Guia do Usuário
    export/index
    survey/index
    employee/index
+   events/index
    menu

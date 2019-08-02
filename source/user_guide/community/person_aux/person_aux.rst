@@ -27,7 +27,3 @@
 .. toctree::
    :maxdepth: 2
    :caption: Eventos:
-
-   person_aux_reregistration
-   person_aux_campaign
-   person_aux_task_force
