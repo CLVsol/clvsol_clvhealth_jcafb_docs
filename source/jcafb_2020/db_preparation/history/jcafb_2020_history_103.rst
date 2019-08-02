@@ -117,8 +117,8 @@ Desabilitar a instalação do(s) módulo(s) [aux, export, verification, processi
         * clv_report
         * clv_report_jcafb
 
-Atualizar o(s) módulo(s) [clv_family, clv_base_jcafb] (2019-08-02]
-------------------------------------------------------------------
+Atualizar o(s) módulo(s) [clv_partner_entity, clv_address, clv_family, clv_person, clv_base_jcafb] (2019-08-02]
+---------------------------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_update`.
 
@@ -151,7 +151,7 @@ Atualizar o(s) módulo(s) [clv_family, clv_base_jcafb] (2019-08-02]
 
                 cd /opt/odoo/clvsol_clvhealth_jcafb/project
                 
-                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_family
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_partner_entity
                 python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_base_jcafb
 
             
