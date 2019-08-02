@@ -23,11 +23,11 @@ De forma geral, serão objeto do recadastramento somente Pessoas residentes em E
 
 Pessoas residentes em outros locais, mesmo que tenham participado de alguma atividade durante o ciclo atual da JCAFB em anos anteriores, não necessitam ser recadastradas, a menos que a alteração no cadastro seja para sinalizar a mudança de status de residente para não residente na comunidade atendida ou que tenham falecido no período anterior ao recadastramento.
 
-O recadastramento é realizado inicialmente utilizando o **Cadastro Auxiliar** (ou :bi:`Cadastro (Off)`) composto pelos 3 objetos básicos de cadastro:
+O recadastramento é realizado inicialmente utilizando o **Cadastro Auxiliar** (ou :bi:`Cadastro (Aux)`) composto pelos 3 objetos básicos de cadastro:
 
-    * :bi:`Person (Off)`,
-    * :bi:`Family (Off)` e 
-    * :bi:`Address (Off)`.
+    * :bi:`Person (Aux)`,
+    * :bi:`Family (Aux)` e 
+    * :bi:`Address (Aux)`.
 
 Na fase final do recadastramento, todos os dados do **Cadastro Auxiliar** são consolidados no **Cadastro Geral** (ou simplesmente :bi:`Cadastro`) composto pelos 3 objetos básicos de cadastro:
 
@@ -44,7 +44,7 @@ Fluxo de Trabalho (*Workflow*) do Recadastramento de Pessoas
 
 Em linhas gerais, o processo de recadastramento de uma Pessoa segue o seguinte fluxo de trabalho (*workflow*):
 
-    #. :doc:`/user_guide/community/person_off/person_off_reregistration_010`
+    #. :doc:`/user_guide/community/person_aux/person_aux_reregistration_010`
 
         De posse dos dados de uma Pessoa a ser recadastrada, é necessário pesquisar pela existência prévia de registros relaltivos a essa Pessoa no **Cadastro** e/ou no **Cadastro Auxiliar**.
 
@@ -52,19 +52,19 @@ Em linhas gerais, o processo de recadastramento de uma Pessoa segue o seguinte f
 
         Uma Pessoa será declarada como "**não cadastrada**" quando **não possuir um registro prévio** no **Cadastro**, independentemente de possuir ou não um registro prévio no **Cadastro Auxiliar**. 
 
-    #. :doc:`/user_guide/community/person_off/person_off_reregistration_020`
+    #. :doc:`/user_guide/community/person_aux/person_aux_reregistration_020`
 
-        Se, após a execução da :doc:`/user_guide/community/person_off/person_off_reregistration_010` não for identificado um registro associado à Pessoa pesquisada no **Cadastro Auxiliar**, independentemente da Pessoa ter sido declarada "**já cadastrada**" ou "**não cadastrada**", essa Pessoa deve ser cadastrada no **Cadastro Auxiliar**.
+        Se, após a execução da :doc:`/user_guide/community/person_aux/person_aux_reregistration_010` não for identificado um registro associado à Pessoa pesquisada no **Cadastro Auxiliar**, independentemente da Pessoa ter sido declarada "**já cadastrada**" ou "**não cadastrada**", essa Pessoa deve ser cadastrada no **Cadastro Auxiliar**.
 
-    #. :doc:`/user_guide/community/person_off/person_off_reregistration_030`
+    #. :doc:`/user_guide/community/person_aux/person_aux_reregistration_030`
 
-    #. :doc:`/user_guide/community/person_off/person_off_reregistration_040`
+    #. :doc:`/user_guide/community/person_aux/person_aux_reregistration_040`
 
 .. toctree::
    :maxdepth: 2
    :caption: Índice:
 
-   person_off_reregistration_010
-   person_off_reregistration_020
-   person_off_reregistration_030
-   person_off_reregistration_040
+   person_aux_reregistration_010
+   person_aux_reregistration_020
+   person_aux_reregistration_030
+   person_aux_reregistration_040

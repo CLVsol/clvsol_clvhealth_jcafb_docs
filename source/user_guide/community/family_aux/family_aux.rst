@@ -6,10 +6,10 @@
 .. role:: red
 .. role:: bi
 
-.. index:: Family (Off)
+.. index:: Family (Aux)
 
 ==================
-:bi:`Family (Off)`
+:bi:`Family (Aux)`
 ==================
 
 	#. Atualização de :bi:`Contact Information`:
@@ -18,7 +18,7 @@
 
 			* Os campos de *Address* de :bi:`Contact Information` da Família serão atualizados com os respectivos campos de :bi:`Contact Information` do **Endereço** (*Reference* :doc:`/user_guide/community/address/address`) atual da Família.
 
-		* Como alternativa, executar a ação ":doc:`/user_guide/community/family_off/family_off_contact_info_updt`".
+		* Como alternativa, executar a ação ":doc:`/user_guide/community/family_aux/family_aux_contact_info_updt`".
 
 			* Os campos de *Address* de :bi:`Contact Information` da Família serão atualizados com os respectivos campos de :bi:`Contact Information` do **Endereço** (*Reference* :doc:`/user_guide/community/address/address`) atual da Família.
 
@@ -28,11 +28,11 @@
    :maxdepth: 2
    :caption: Ações:
 
-   family_off_mass_edit
-   family_off_contact_info_updt
+   family_aux_mass_edit
+   family_aux_contact_info_updt
 
 .. toctree::
    :maxdepth: 2
    :caption: Eventos:
 
-   family_off_reregistration
+   family_aux_reregistration
