@@ -6,22 +6,22 @@
 .. role:: red
 .. role:: bi
 
-.. index:: Person (Off) Contact Information Update
+.. index:: Person (Aux) Contact Information Update
 
 =============================================
-:bi:`Person (Off) Contact Information Update`
+:bi:`Person (Aux) Contact Information Update`
 =============================================
 
-    #. Executar a Ação *Person (Off) Contact Information Update* para todas as Pessoas:
+    #. Executar a Ação *Person (Aux) Contact Information Update* para todas as Pessoas:
 
-        #. Acessar a *View* :bi:`Persons (Off)`:
+        #. Acessar a *View* :bi:`Persons (Aux)`:
 
             * Menu de acesso:
-                * :bi:`Community` » :bi:`Community` » :bi:`Persons (Off)`
+                * :bi:`Community` » :bi:`Community` » :bi:`Persons (Aux)`
 
         #. Selecionar a(s) Pessoa(s) desejada(s).
 
-        #. Exercutar a Ação "**Person (Off) Contact Information Update**":
+        #. Exercutar a Ação "**Person (Aux) Contact Information Update**":
 
             * Parâmetros apresentados:
                 * *Update Phone*

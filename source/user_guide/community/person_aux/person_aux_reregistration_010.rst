@@ -33,7 +33,7 @@ Identificação da Pessoa nos Cadastros existentes
 
         A procura pela Pessoa utilizando a *view* :bi:`Persons` é realizada quando se dispõe da informação do **Código** dessa Pessoa (situação em que é certa a existência de um cadastro para essa Pessoa).
 
-        Este método pode ser utilizado também para pesquisas utilizando o Nome da Pessoa, quando não se conhece o Código da Pessoa. Mas neste caso é mais conveniente usar o método anterior :ref:`Procura pela Pessoa a ser recadastrada (via view Contatos)` que é mais abrangente, e permite a identificação do Cadatro *Off* da Pessoa, quando já existente.
+        Este método pode ser utilizado também para pesquisas utilizando o Nome da Pessoa, quando não se conhece o Código da Pessoa. Mas neste caso é mais conveniente usar o método anterior :ref:`Procura pela Pessoa a ser recadastrada (via view Contatos)` que é mais abrangente, e permite a identificação do Cadatro *Aux* da Pessoa, quando já existente.
 
 .. _Procura pela Pessoa a ser recadastrada (via view Contatos):
 
@@ -61,33 +61,33 @@ Procura pela Pessoa a ser recadastrada (via *view* **Contatos**)
 
                 #. Abrir o registro da Pessoa apresentado na *view* :bi:`Persons`.
 
-                #. Executar o procedimento ":doc:`/user_guide/community/person/person_associate_to_person_off`" para o registro aberto:
+                #. Executar o procedimento ":doc:`/user_guide/community/person/person_associate_to_person_aux`" para o registro aberto:
 
-                    #. Exercutar a Ação ":bi:`Person Associate to Person (Off)`":
+                    #. Exercutar a Ação ":bi:`Person Associate to Person (Aux)`":
 
                         #. Parâmetros apresentados:
-                            * *Create new Person (Off)* (**Observação**: Parâmetro não modificável)
-                            * *Create new Family (Off)* (**Observação**: Parâmetro não modificável)
-                            * *Create new Address (Off)* (**Observação**: Parâmetro não modificável)
+                            * *Create new Person (Aux)* (**Observação**: Parâmetro não modificável)
+                            * *Create new Family (Aux)* (**Observação**: Parâmetro não modificável)
+                            * *Create new Address (Aux)* (**Observação**: Parâmetro não modificável)
 
-                        #. Utilize o botão :bi:`Associate do Perton (Off)` para executar a Ação.
+                        #. Utilize o botão :bi:`Associate do Perton (Aux)` para executar a Ação.
 
-                    #. Abrir o registro da Pessoa apresentado na *view* :bi:`Persons (Off)`.
+                    #. Abrir o registro da Pessoa apresentado na *view* :bi:`Persons (Aux)`.
 
-            #. Se a Pessoa for encontrada com *Address Type* :bi:`Person (Off)`:
+            #. Se a Pessoa for encontrada com *Address Type* :bi:`Person (Aux)`:
 
-                #. Abrir o registro de contato encontrado com *Address Type* :bi:`Person (Off)` .
+                #. Abrir o registro de contato encontrado com *Address Type* :bi:`Person (Aux)` .
 
-                #. Acionar o botão da *view* :bi:`Persons (Off)`.
+                #. Acionar o botão da *view* :bi:`Persons (Aux)`.
 
-                #. Abrir o registro da Pessoa apresentado na *view* :bi:`Persons (Off)`.
+                #. Abrir o registro da Pessoa apresentado na *view* :bi:`Persons (Aux)`.
 
-            #. Se a Pessoa **não for encontrada** com *Address Type* :bi:`Person` ou :bi:`Person (Off)`:
+            #. Se a Pessoa **não for encontrada** com *Address Type* :bi:`Person` ou :bi:`Person (Aux)`:
 
                 #. Acessar a *view* :bi:`Persons`:
 
                     * Menu de acesso:
-                        * :bi:`Community` » :bi:`Off` » :bi:`Persons (Off)`
+                        * :bi:`Community` » :bi:`Aux` » :bi:`Persons (Aux)`
 
                 #. Criar um novo registro da Pessoa a ser recadastrada.
 
@@ -105,31 +105,31 @@ Procura pela Pessoa a ser recadastrada (via *view* :bi:`Persons`)
 
         #. Pesquisar pela Pessoa a ser recadastrada.
 
-    #. **Caso o registro dessa Pessoa seja encontrado** na *view* :bi:`Persons`, executar o procedimento ":doc:`/user_guide/community/person/person_associate_to_person_off`" para o registro encontrado.
+    #. **Caso o registro dessa Pessoa seja encontrado** na *view* :bi:`Persons`, executar o procedimento ":doc:`/user_guide/community/person/person_associate_to_person_aux`" para o registro encontrado.
 
         #. Selecionar o registro da Pessoa encontrado.
 
-        #. Exercutar a Ação ":bi:`Person Associate to Person (Off)`":
+        #. Exercutar a Ação ":bi:`Person Associate to Person (Aux)`":
 
             * Parâmetros apresentados:
-                * *Create new Person (Off)* (**Observação**: Parâmetro não modificável)
-                * *Create new Family (Off)* (**Observação**: Parâmetro não modificável)
-                * *Create new Address (Off)* (**Observação**: Parâmetro não modificável)
+                * *Create new Person (Aux)* (**Observação**: Parâmetro não modificável)
+                * *Create new Family (Aux)* (**Observação**: Parâmetro não modificável)
+                * *Create new Address (Aux)* (**Observação**: Parâmetro não modificável)
 
-            #. Utilize o botão :bi:`Associate do Perton (Off)` para executar a Ação.
+            #. Utilize o botão :bi:`Associate do Perton (Aux)` para executar a Ação.
 
-    #. **Caso um registro dessa Pessoa NÃO seja encontrado** na *view* :bi:`Persons`, Procurar pela Pessoa a ser recadastrada na *view* :bi:`Persons (Off)`:
+    #. **Caso um registro dessa Pessoa NÃO seja encontrado** na *view* :bi:`Persons`, Procurar pela Pessoa a ser recadastrada na *view* :bi:`Persons (Aux)`:
 
-        #. Acessar a *view* :bi:`Persons (Off)`:
+        #. Acessar a *view* :bi:`Persons (Aux)`:
 
             * Menu de acesso:
-                * :bi:`Community` » :bi:`Off` » :bi:`Persons (Off)`
+                * :bi:`Community` » :bi:`Aux` » :bi:`Persons (Aux)`
 
         #. Pesquisar pela Pessoa a ser recadastrada.
 
-    	#. **Caso o registro dessa Pessoa seja encontrado** na *view* :bi:`Persons (Off)`,
+    	#. **Caso o registro dessa Pessoa seja encontrado** na *view* :bi:`Persons (Aux)`,
 
-    	#. **Caso um registro dessa Pessoa NÃO seja encontrado** na *view* :bi:`Persons (Off)`,
+    	#. **Caso um registro dessa Pessoa NÃO seja encontrado** na *view* :bi:`Persons (Aux)`,
 
 .. toctree::
    :maxdepth: 2

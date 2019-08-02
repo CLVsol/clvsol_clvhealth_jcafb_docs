@@ -19,6 +19,6 @@
    person/person
    family/family
    address/address
-   person_off/person_off
-   family_off/family_off
-   address_off/address_off
+   person_aux/person_aux
+   family_aux/family_aux
+   address_aux/address_aux

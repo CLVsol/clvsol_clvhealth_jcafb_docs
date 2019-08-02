@@ -26,29 +26,29 @@
 
         #. Pesquisar pelo Endereço a ser recadastrado.
 
-    #. **Caso o registro desse Endereço seja encontrado** na *view* :bi:`Addresses`, executar o procedimento ":doc:`/user_guide/community/address/address_associate_to_address_off`" para o registro encontrado.
+    #. **Caso o registro desse Endereço seja encontrado** na *view* :bi:`Addresses`, executar o procedimento ":doc:`/user_guide/community/address/address_associate_to_address_aux`" para o registro encontrado.
 
         #. Selecionar o registro do Endereço encontrado.
 
-        #. Exercutar a Ação ":bi:`Address Associate to Address (Off)`":
+        #. Exercutar a Ação ":bi:`Address Associate to Address (Aux)`":
 
             * Parâmetros apresentados:
-                * *Create new Address (Off)* (**Observação**: Parâmetro não modificável)
+                * *Create new Address (Aux)* (**Observação**: Parâmetro não modificável)
 
-            #. Utilize o botão :bi:`Associate do Perton (Off)` para executar a Ação.
+            #. Utilize o botão :bi:`Associate do Perton (Aux)` para executar a Ação.
 
-    #. **Caso um registro desse Endereço NÃO seja encontrado** na *view* :bi:`Addresses`, Procurar pelo Endereço a ser recadastrado na *view* :bi:`Addresses (Off)`:
+    #. **Caso um registro desse Endereço NÃO seja encontrado** na *view* :bi:`Addresses`, Procurar pelo Endereço a ser recadastrado na *view* :bi:`Addresses (Aux)`:
 
-        #. Acessar a *view* :bi:`Addresses (Off)`:
+        #. Acessar a *view* :bi:`Addresses (Aux)`:
 
             * Menu de acesso:
-                * :bi:`Community` » :bi:`Off` » :bi:`Addresses (Off)`
+                * :bi:`Community` » :bi:`Aux` » :bi:`Addresses (Aux)`
 
         #. Pesquisar pelo Endereço a ser recadastrado.
 
-    	#. **Caso o registro desse Endereço seja encontrado** na *view* :bi:`Addresses (Off)`,
+    	#. **Caso o registro desse Endereço seja encontrado** na *view* :bi:`Addresses (Aux)`,
 
-    	#. **Caso um registro desse Endereço NÃO seja encontrado** na *view* :bi:`Addresses (Off)`,
+    	#. **Caso um registro desse Endereço NÃO seja encontrado** na *view* :bi:`Addresses (Aux)`,
 
 .. _(2) Recadastramento de um Endereço já existente:
 

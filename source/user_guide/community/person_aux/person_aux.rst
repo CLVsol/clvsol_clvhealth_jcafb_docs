@@ -6,28 +6,28 @@
 .. role:: red
 .. role:: bi
 
-.. index:: Person (Off)
+.. index:: Person (Aux)
 
 ==================
-:bi:`Person (Off)`
+:bi:`Person (Aux)`
 ==================
 
-    Para acessar a *view* :bi:`Persons (Off)`:
+    Para acessar a *view* :bi:`Persons (Aux)`:
 
         * Menu de acesso:
-            * :bi:`Community` » :bi:`Off` » :bi:`Persons (Off)`
+            * :bi:`Community` » :bi:`Aux` » :bi:`Persons (Aux)`
 
 .. toctree::
    :maxdepth: 2
    :caption: Ações:
 
-   person_off_mass_edit
-   person_off_contact_info_updt
+   person_aux_mass_edit
+   person_aux_contact_info_updt
 
 .. toctree::
    :maxdepth: 2
    :caption: Eventos:
 
-   person_off_reregistration
-   person_off_campaign
-   person_off_task_force
+   person_aux_reregistration
+   person_aux_campaign
+   person_aux_task_force

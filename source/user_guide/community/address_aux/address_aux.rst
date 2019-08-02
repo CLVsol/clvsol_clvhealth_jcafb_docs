@@ -6,20 +6,20 @@
 .. role:: red
 .. role:: bi
 
-.. index:: Address (Off)
+.. index:: Address (Aux)
 
 ===================
-:bi:`Address (Off)`
+:bi:`Address (Aux)`
 ===================
 
 .. toctree::
    :maxdepth: 2
    :caption: Ações:
 
-   address_off_mass_edit
+   address_aux_mass_edit
 
 .. toctree::
    :maxdepth: 2
    :caption: Eventos:
 
-   address_off_reregistration
+   address_aux_reregistration

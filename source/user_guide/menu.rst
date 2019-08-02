@@ -77,10 +77,10 @@
 			* Histories
 		* Address
 			* Histories
-	* Off
-		* Persons (Off) [:doc:`/user_guide/community/person_off/person_off`]
-		* Addresses (Off) [:doc:`/user_guide/community/address_off/address_off`]
-		* Families (Off) [:doc:`/user_guide/community/family_off/family_off`]
+	* Aux
+		* Persons (Aux) [:doc:`/user_guide/community/person_aux/person_aux`]
+		* Addresses (Aux) [:doc:`/user_guide/community/address_aux/address_aux`]
+		* Families (Aux) [:doc:`/user_guide/community/family_aux/family_aux`]
 	* Configuration
 		* Person
 			* Categories

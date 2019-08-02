@@ -48,5 +48,5 @@
    person_mass_edit
    person_contact_info_updt
    person_associate_to_family
-   person_associate_to_person_off
+   person_associate_to_person_aux
    person_associate_to_set

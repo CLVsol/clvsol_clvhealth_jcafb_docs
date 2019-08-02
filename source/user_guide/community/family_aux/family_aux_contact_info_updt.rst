@@ -6,22 +6,22 @@
 .. role:: red
 .. role:: bi
 
-.. index:: Family (Off) Contact Information Update
+.. index:: Family (Aux) Contact Information Update
 
 =======================================================================
-:red:`(Não Implementado)` :bi:`Family (Off) Contact Information Update`
+:red:`(Não Implementado)` :bi:`Family (Aux) Contact Information Update`
 =======================================================================
 
-    #. Executar a Ação :red:`Family (Off) Contact Information Update` para todas as Famílias:
+    #. Executar a Ação :red:`Family (Aux) Contact Information Update` para todas as Famílias:
 
-        #. Acessar a *View* :red:`Families (Off)`:
+        #. Acessar a *View* :red:`Families (Aux)`:
 
             * Menu de acesso:
                 * :red:`Community` » :red:`Community` » :red:`Families`
 
         #. Selecionar a(s) Família(s) desejada(s).
 
-        #. Exercutar a Ação "**Family (Off) Contact Information Update**":
+        #. Exercutar a Ação "**Family (Aux) Contact Information Update**":
 
             * Parâmetros apresentados:
                 * *Update Phone*

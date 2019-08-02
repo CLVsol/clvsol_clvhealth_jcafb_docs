@@ -6,13 +6,13 @@
 .. role:: red
 .. role:: bi
 
-.. index:: Address Associate to Address (Off)
+.. index:: Address Associate to Address (Aux)
 
 ========================================
-:bi:`Address Associate to Address (Off)`
+:bi:`Address Associate to Address (Aux)`
 ========================================
 
-    #. Executar a Ação :bi:`Address Associate to Address (Off)` para os Endereços selecionados:
+    #. Executar a Ação :bi:`Address Associate to Address (Aux)` para os Endereços selecionados:
 
         #. Acessar a *View* *Addresses*:
 
@@ -21,12 +21,12 @@
 
         #. Selecionar o(s) Endereço(s) desejado(s).
 
-        #. Exercutar a Ação ":bi:`Address Associate to Address (Off)`":
+        #. Exercutar a Ação ":bi:`Address Associate to Address (Aux)`":
 
             * Parâmetros apresentados:
-                * *Create new Address (Off)* (**Observação**: Parâmetro não modificável)
+                * *Create new Address (Aux)* (**Observação**: Parâmetro não modificável)
 
-            #. Utilize o botão :bi:`Associate do Address (Off)` para executar a Ação.
+            #. Utilize o botão :bi:`Associate do Address (Aux)` para executar a Ação.
 
             #. Utilize o botão :bi:`Cancel` para cancelar a execução da Ação.
 

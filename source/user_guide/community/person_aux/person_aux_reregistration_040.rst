@@ -12,7 +12,7 @@
 Atualização do Cadastro Auxiliar de uma Pessoa "**não cadastrada**"
 ===================================================================
 
-    #. Atualização dos dados do registro :bi:`Person (Off)` de uma **nova** Pessoa
+    #. Atualização dos dados do registro :bi:`Person (Aux)` de uma **nova** Pessoa
 
         #. A Pessoa reside em um Endereço **existente** no Cadastro Geral
 
@@ -20,7 +20,7 @@ Atualização do Cadastro Auxiliar de uma Pessoa "**não cadastrada**"
 
         #. A Pessoa reside em um Endereço **fora da comunidade** atendida pela JCAFB
 
-    #. Atualização dos dados do registro :bi:`Address (Off)` de uma **nova** Pessoa
+    #. Atualização dos dados do registro :bi:`Address (Aux)` de uma **nova** Pessoa
 
         #. A Pessoa reside em um Endereço **existente** no Cadastro Geral
 
@@ -28,7 +28,7 @@ Atualização do Cadastro Auxiliar de uma Pessoa "**não cadastrada**"
 
         #. A Pessoa reside em um Endereço **fora da comunidade** atendida pela JCAFB
 
-    #. Atualização dos dados do registro :bi:`Family (Off)` de uma **nova** Pessoa
+    #. Atualização dos dados do registro :bi:`Family (Aux)` de uma **nova** Pessoa
 
         #. A Pessoa reside em um Endereço **existente** no Cadastro Geral
 

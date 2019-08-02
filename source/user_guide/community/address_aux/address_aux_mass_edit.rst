@@ -6,22 +6,22 @@
 .. role:: red
 .. role:: bi
 
-.. index:: Address (Offf) Mass Edit
+.. index:: Address (Auxf) Mass Edit
 
 ==============================
-:bi:`Address (Offf) Mass Edit`
+:bi:`Address (Auxf) Mass Edit`
 ==============================
 
-    #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Address (Offf) Mass Edit` de Endereço(s):
+    #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Address (Auxf) Mass Edit` de Endereço(s):
 
-        #. Acessar a *View* :bi:`Address (Off)`:
+        #. Acessar a *View* :bi:`Address (Aux)`:
 
             * Menu de acesso:
                 * :bi:`Community` > :bi:`Community` > :bi:`Addresss`
 
         #. Selecionar a(s) Endereço(s) desejada(s).
 
-        #. Exercutar a Ação "**Address (Offf) Mass Edit**":
+        #. Exercutar a Ação "**Address (Auxf) Mass Edit**":
 
             * Parâmetros apresentados:
                 * *Global Tags*
