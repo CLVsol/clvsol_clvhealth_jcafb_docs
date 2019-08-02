@@ -71,7 +71,7 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
             /etc/init.d/odoo start
 
-Atualizar o(s) módulo(s) [clv_address_off, clv_family_off, clv_person_off] (2019-07-31]
+Atualizar o(s) módulo(s) [clv_address_aux, clv_family_aux, clv_person_aux] (2019-07-31]
 ---------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_update`.
@@ -105,7 +105,7 @@ Atualizar o(s) módulo(s) [clv_address_off, clv_family_off, clv_person_off] (201
 
                 cd /opt/odoo/clvsol_clvhealth_jcafb/project
                 
-                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_address_off
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_address_aux
 
             
         #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
@@ -317,21 +317,21 @@ Configurar as permissões do usuário de referência da JCAFB-2020 (2019-07-31)
         #. Configurar as permissões:
 
             * *Address*: :bi:`User (Address)`
-            * *Address (Off)*: :bi:`Manager (Address (Off))`
+            * *Address (Aux)*: :bi:`Manager (Address (Aux))`
             * Administração:  
             * *Community*: :bi:`User (Community)`
             * *Event*: :bi:`User (Event)`
             * :green:`(Novo)` *Export*: :bi:`User (Export)`
             * *External Sync*: :bi:`User (External Sync)`
             * *Family*: :bi:`User (Family)`
-            * *Family (Off)*: :bi:`Manager (Family (Off))`
+            * *Family (Aux)*: :bi:`Manager (Family (Aux))`
             * *File System User*: :bi:`(File System)`
             * *Funcionários*: :bi:`Oficial`
             * *Global Tag*: :bi:`User (Global Tag)`
             * *Media File*: :bi:`User (Media File)`
-            * *Off*: :bi:`User (Off)`
+            * *Aux*: :bi:`User (Aux)`
             * *Person*: :bi:`User (Person)`
-            * *Person (Off)*: :bi:`Manager (Person (Off))`
+            * *Person (Aux)*: :bi:`Manager (Person (Aux))`
             * *Pesquisa*: :bi:`Utilizador`
             * *Phase*: :bi:`User (Phase)`
             * :green:`(Novo)` *Processing*: :bi:`User (Processing)`

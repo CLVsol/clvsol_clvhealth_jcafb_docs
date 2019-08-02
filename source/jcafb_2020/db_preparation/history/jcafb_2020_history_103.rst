@@ -9,7 +9,7 @@
 .. role:: bi
 
 =========================================================================================
-[2019-08-01] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
+[2019-08-02] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
 =========================================================================================
 
 Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-07-28c)
@@ -71,7 +71,7 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
             /etc/init.d/odoo start
 
-Desabilitar a instalação do(s) módulo(s) [off, export, verification, processing, report] (2019-08-01)
+Desabilitar a instalação do(s) módulo(s) [aux, export, verification, processing, report] (2019-08-02)
 -----------------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
@@ -117,8 +117,8 @@ Desabilitar a instalação do(s) módulo(s) [off, export, verification, processi
         * clv_report
         * clv_report_jcafb
 
-Atualizar o(s) módulo(s) [clv_family] (2019-08-01]
-----------------------------------------------------
+Atualizar o(s) módulo(s) [clv_family, clv_base_jcafb] (2019-08-02]
+------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_update`.
 
@@ -152,6 +152,7 @@ Atualizar o(s) módulo(s) [clv_family] (2019-08-01]
                 cd /opt/odoo/clvsol_clvhealth_jcafb/project
                 
                 python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_family
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_base_jcafb
 
             
         #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
@@ -170,7 +171,7 @@ Atualizar o(s) módulo(s) [clv_family] (2019-08-01]
 
                 /etc/init.d/odoo start
 
-Instalar o(s) módulo(s) [off] (2019-08-01)
+Instalar o(s) módulo(s) [aux] (2019-08-02)
 ------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
@@ -236,7 +237,7 @@ Instalar o(s) módulo(s) [off] (2019-08-01)
 
                 /etc/init.d/odoo start
 
-Configurar as permissões do usuário de referência da JCAFB-2020 (2019-08-01)
+Configurar as permissões do usuário de referência da JCAFB-2020 (2019-08-02)
 ----------------------------------------------------------------------------
 
     #. Configurar as permissões do usuário de referência:
@@ -253,20 +254,20 @@ Configurar as permissões do usuário de referência da JCAFB-2020 (2019-08-01)
         #. Configurar as permissões:
 
             * *Address*: :bi:`User (Address)`
-            * :green:`(Novo)` *Address (Off)*: :bi:`Manager (Address (Off))`
+            * :green:`(Novo)` *Address (Aux)*: :bi:`Manager (Address (Aux))`
             * Administração:  
             * *Community*: :bi:`User (Community)`
             * *Event*: :bi:`User (Event)`
             * *External Sync*: :bi:`User (External Sync)`
             * *Family*: :bi:`User (Family)`
-            * :green:`(Novo)` *Family (Off)*: :bi:`Manager (Family (Off))`
+            * :green:`(Novo)` *Family (Aux)*: :bi:`Manager (Family (Aux))`
             * *File System User*: :bi:`(File System)`
             * *Funcionários*: :bi:`Oficial`
             * *Global Tag*: :bi:`User (Global Tag)`
             * *Media File*: :bi:`User (Media File)`
-            * :green:`(Novo)` *Off*: :bi:`User (Off)`
+            * :green:`(Novo)` *Aux*: :bi:`User (Aux)`
             * *Person*: :bi:`User (Person)`
-            * :green:`(Novo)` *Person (Off)*: :bi:`Manager (Person (Off))`
+            * :green:`(Novo)` *Person (Aux)*: :bi:`Manager (Person (Aux))`
             * *Pesquisa*: :bi:`Utilizador`
             * *Phase*: :bi:`User (Phase)`
             * *Set*: :bi:`User (Set)`
@@ -286,7 +287,7 @@ Configurar as permissões do usuário de referência da JCAFB-2020 (2019-08-01)
             * *Document*:
                 * :bi:`User (Document)` ​
             
-Atualizar as permissões de todos os Usuários da JCAFB-2020 (2019-08-01)
+Atualizar as permissões de todos os Usuários da JCAFB-2020 (2019-08-02)
 -----------------------------------------------------------------------
 
     * Referência: :doc:`/user_guide/employee/employee_user_groups_updt`.
@@ -312,7 +313,7 @@ Atualizar as permissões de todos os Usuários da JCAFB-2020 (2019-08-01)
 
             #. Utilize o botão :bi:`Update` para executar a Ação.
 
-Criar um backup do *CLVhealth-JCAFB-2020* (2019-08-01a)
+Criar um backup do *CLVhealth-JCAFB-2020* (2019-08-02a)
 -------------------------------------------------------
 
     * Referência: :doc:`/setup/clvhealth_jcafb_backup`.
@@ -340,16 +341,16 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-08-01a)
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-08-01a.sql
+            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-08-02a.sql
 
-            gzip clvhealth_jcafb_2020_2019-08-01a.sql
-            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-08-01a.sql
+            gzip clvhealth_jcafb_2020_2019-08-02a.sql
+            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-08-02a.sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-08-01a.tar.gz clvhealth_jcafb_2020
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-08-02a.tar.gz clvhealth_jcafb_2020
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-08-01a.tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-08-02a.tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
 
@@ -368,14 +369,14 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-08-01a)
             /etc/init.d/odoo start
 
     Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2020_2019-08-01a.sql
-        * /opt/odoo/clvhealth_jcafb_2020_2019-08-01a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2020_2019-08-01a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-08-01a.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2020_2019-08-02a.sql
+        * /opt/odoo/clvhealth_jcafb_2020_2019-08-02a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2020_2019-08-02a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-08-02a.tar.gz
 
-.. index:: clvhealth_jcafb_2020_2019-08-01a.sql
-.. index:: filestore_clvhealth_jcafb_2020_2019-08-01a
-.. index:: clvsol_filestore_clvhealth_jcafb_2019-08-01a
+.. index:: clvhealth_jcafb_2020_2019-08-02a.sql
+.. index:: filestore_clvhealth_jcafb_2020_2019-08-02a
+.. index:: clvsol_filestore_clvhealth_jcafb_2019-08-02a
 
 .. toctree::
    :maxdepth: 2
