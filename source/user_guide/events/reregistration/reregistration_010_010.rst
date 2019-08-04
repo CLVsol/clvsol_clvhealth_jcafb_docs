@@ -6,11 +6,11 @@
 .. role:: red
 .. role:: bi
 
-.. index:: Procura por uma Pessoa utilizando a view Contatos
+.. index:: Procura pela Pessoa utilizando a view Contatos
 
-=========================================================
-Procura por uma Pessoa utilizando a *view* "**Contatos**"
-=========================================================
+======================================================
+Procura pela Pessoa utilizando a *view* '**Contatos**'
+======================================================
 
     Este é o método de pesquisa mais abrangente, e o preferencial quando não se dispuser do Código da Pessoa a ser pesquisada.
 
@@ -25,47 +25,40 @@ Procura por uma Pessoa utilizando a *view* "**Contatos**"
 
     #. Selecionar a **visualização em lista**.
 
-    #. Aplicar o filtro **Agrupar Por** » :bi:`Address Type`.
+    #. Aplicar o filtro: **Agrupar Por** » :bi:`Address Type`.
 
     #. Pesquisar pelo nome da Pessoa:
 
-        #. Se a Pessoa for encontrada **somente** com *Address Type* :bi:`Person`:
+        #. Se a Pessoa for encontrada com *Address Type* :bi:`Person`, independentemente da existência de um registro com *Address Type* :bi:`Person (Aux)`:
 
             #. Abrir o registro de contato encontrado.
 
-            #. Acionar o botão da *view* :bi:`Persons`.
+            #. Acionar o botão **[** :bi:`Persons` **]**.
 
             #. Abrir o registro da Pessoa apresentado na *view* :bi:`Persons`.
 
-            #. Executar o procedimento ":doc:`/user_guide/community/person/person_associate_to_person_aux`" para o registro aberto:
+            #. Executar o procecimento ":doc:`reregistration_020_010`".
 
-                #. Exercutar a Ação ":bi:`Person Associate to Person (Aux)`":
-
-                    #. Parâmetros apresentados:
-                        * *Create new Person (Aux)* (**Observação**: Parâmetro não modificável)
-                        * *Create new Family (Aux)* (**Observação**: Parâmetro não modificável)
-                        * *Create new Address (Aux)* (**Observação**: Parâmetro não modificável)
-
-                    #. Utilize o botão :bi:`Associate do Perton (Aux)` para executar a Ação.
-
-                #. Abrir o registro da Pessoa apresentado na *view* :bi:`Persons (Aux)`.
-
-        #. Se a Pessoa for encontrada com *Address Type* :bi:`Person (Aux)`:
+        #. Se a Pessoa for encontrada somente com *Address Type* :bi:`Person (Aux)`:
 
             #. Abrir o registro de contato encontrado com *Address Type* :bi:`Person (Aux)` .
 
-            #. Acionar o botão da *view* :bi:`Persons (Aux)`.
+            #. Acionar o botão **[** :bi:`Persons (Aux)` **]**.
 
             #. Abrir o registro da Pessoa apresentado na *view* :bi:`Persons (Aux)`.
 
-        #. Se a Pessoa **não for encontrada** com *Address Type* :bi:`Person` ou :bi:`Person (Aux)`:
+            #. Executar o procecimento ":doc:`reregistration_020_020`".
 
-            #. Acessar a *view* :bi:`Persons`:
+        #. Se a Pessoa **não for encontrada**:
+
+            #. Acessar a *view* :bi:`Persons (Aux)`:
 
                 * Menu de acesso:
                     * :bi:`Community` » :bi:`Aux` » :bi:`Persons (Aux)`
 
-            #. Criar um novo registro da Pessoa.
+            #. Criar um novo registro para a Pessoa.
+
+            #. Executar o procecimento ":doc:`reregistration_020_020`".
 
 .. toctree::
    :maxdepth: 2

@@ -6,15 +6,15 @@
 .. role:: red
 .. role:: bi
 
-.. index:: Criação do Cadastro Auxiliar de uma Pessoa não cadastrada
+.. index:: Criação do Cadastro Auxiliar para uma Pessoa não cadastrada
 
-===============================================================
-Criação do "**Cadastro Auxiliar**" de uma Pessoa não cadastrada
-===============================================================
+=======================================================================
+Criação do "**Cadastro Auxiliar**" para uma Pessoa "**não cadastrada**"
+=======================================================================
 
-    Este procedimento pode ser utilizado somente quando **não for identificado** um registro :bi:`Person` para a Pessoa, utilizando-se um dos métodos: :doc:`/user_guide/events/reregistration/reregistration_010_010` ou :doc:`/user_guide/events/reregistration/reregistration_010_020`.
+    Este procedimento pode ser utilizado somente quando **não for identificado** um registro :bi:`Person` para a Pessoa, utilizando-se um dos métodos: :doc:`reregistration_010_010` ou :doc:`reregistration_010_020`.
 
-    Por esse método, quando não existir ainda um Cadastro *Aux* para a Pessoa, o mesmo deverá ser manualmente criado para conter as informações coletadas para a Pessoa. Essas informações coletadas serão manualmente inseridas nos registros pertinentes.
+    Por esse método, quando não existir ainda um Cadastro Auxiliar para a Pessoa, o mesmo deverá ser manualmente criado para conter as informações coletadas para a Pessoa. Essas informações coletadas serão manualmente inseridas nos registros pertinentes.
 
     O Cadastro *Aux* criado será composto por um registro de :bi:`Person (Aux)`, um registro de :bi:`Address (Aux)` (quando necessário), e um registro de :bi:`Family (Aux)` (quando necessário).
 

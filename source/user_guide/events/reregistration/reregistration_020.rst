@@ -6,21 +6,23 @@
 .. role:: red
 .. role:: bi
 
-.. index:: Criação do Cadastro Auxiliar de uma Pessoa
+.. index:: Criação do Cadastro Auxiliar para uma Pessoa
 
-==========================================
-Criação do Cadastro Auxiliar de uma Pessoa
-==========================================
+============================================
+Criação do Cadastro Auxiliar para uma Pessoa
+============================================
 
-    Se, após a execução da :doc:`/user_guide/events/reregistration/reregistration_010` não for identificado um registro associado à Pessoa pesquisada no **Cadastro Auxiliar**, independentemente da Pessoa ter sido declarada "**já cadastrada**" ou "**não cadastrada**", essa Pessoa deve ser cadastrada inicialmente no **Cadastro Auxiliar**.
+    Se, após a execução da ":doc:`reregistration_010`" não for identificado um registro associado à Pessoa pesquisada no **Cadastro Auxiliar**, independentemente da Pessoa ter sido declarada "**já cadastrada**" ou "**não cadastrada**", essa Pessoa deve ser cadastrada/recadastrada no **Cadastro Auxiliar**.
 
-    #. :doc:`/user_guide/events/reregistration/reregistration_020_010`
+    #. :doc:`reregistration_020_010`
 
-        Este procedimento pode ser utilizado somente quando **for identificado** um registro :bi:`Person` para a Pessoa, utilizando-se um dos métodos: :doc:`/user_guide/events/reregistration/reregistration_010_010` ou :doc:`/user_guide/events/reregistration/reregistration_010_020`.
+        Este procedimento pode ser utilizado somente quando **for identificado** um registro :bi:`Person` para a Pessoa, utilizando-se um dos métodos: ":doc:`reregistration_010_010`" ou ":doc:`reregistration_010_020`".
 
-        Por esse método, quando não existir ainda um Cadastro *Aux* para a Pessoa, o mesmo será automaticamente criado como uma cópia do Cadastro dessa Pessoa.
+        Por esse método, quando não existir ainda um Cadastro Auxiliar para a Pessoa, o mesmo será automaticamente criado como uma cópia do Cadastro dessa Pessoa.
 
-        O Cadastro *Aux* criado será composto por um registro de :bi:`Person (Aux)`, um registro de :bi:`Address (Aux)` (quando existir um registro de :bi:`Address` associado à Pessoa), e um registro de :bi:`Family (Aux)` (quando existir um registro de :bi:`Family` associado à Pessoa).
+        Se porventura já existir um Cadastro Auxiliar para a Pessoa, o mesmo será selecionado para dar proceguimento ao processo de recadastramento da Pessoa.
+
+        O Cadastro Auxiliar criado será composto por um registro de :bi:`Person (Aux)`, um registro de :bi:`Address (Aux)` (quando existir um registro de :bi:`Address` associado à Pessoa), e um registro de :bi:`Family (Aux)` (quando existir um registro de :bi:`Family` associado à Pessoa).
 
         O relacionamento entre os diversos registros dos Cadastros será o seguinte (quando existirem os registros, como indicado anteriormente):
 
@@ -46,11 +48,11 @@ Criação do Cadastro Auxiliar de uma Pessoa
                 * :bi:`Related Family` » :bi:`Family`
                 * :bi:`Contact Information` = Dados do registro :bi:`Address`
 
-    #. :doc:`/user_guide/events/reregistration/reregistration_020_020`
+    #. :doc:`reregistration_020_020`
 
-        Este procedimento pode ser utilizado somente quando **não for identificado** um registro :bi:`Person` para a Pessoa, utilizando-se um dos métodos: :doc:`/user_guide/events/reregistration/reregistration_010_010` ou :doc:`/user_guide/events/reregistration/reregistration_010_020`.
+        Este procedimento pode ser utilizado somente quando **não for identificado** um registro :bi:`Person` para a Pessoa, utilizando-se um dos métodos: :doc:`reregistration_010_010` ou :doc:`reregistration_010_020`.
 
-        Por esse método, quando não existir ainda um Cadastro *Aux* para a Pessoa, o mesmo deverá ser manualmente criado para conter as informações coletadas para a Pessoa. Essas informações coletadas serão manualmente inseridas nos registros pertinentes.
+        Por esse método, quando não existir ainda um Cadastro Auxiliar para a Pessoa, o mesmo deverá ser manualmente criado para conter as informações coletadas para a Pessoa. Essas informações coletadas serão manualmente inseridas nos registros pertinentes.
 
         O Cadastro *Aux* criado será composto por um registro de :bi:`Person (Aux)`, um registro de :bi:`Address (Aux)` (quando necessário), e um registro de :bi:`Family (Aux)` (quando necessário).
 

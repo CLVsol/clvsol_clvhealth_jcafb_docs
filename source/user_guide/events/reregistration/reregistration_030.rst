@@ -12,7 +12,7 @@
 Atualização do Cadastro Auxiliar de uma Pessoa "**já cadastrada**"
 ==================================================================
 
-    #. Atualização dos dados do registro :bi:`Person (Aux)` de uma Pessoa **já cadastrada**
+    #. :doc:`reregistration_030_010`
 
         #. Todos os dados de Cadastro da Pessoa serão mantidos
 
@@ -56,7 +56,7 @@ Atualização do Cadastro Auxiliar de uma Pessoa "**já cadastrada**"
 
         #. A Pessoa atualmente está ausente da comunidade atendida pela JCAFB (devido ao falecimento ou outro modivo de forma maior)
 
-    #. Atualização dos dados do registro :bi:`Address (Aux)` de uma Pessoa **já cadastrada**
+    #. :doc:`reregistration_030_020`
 
         #. Todos os dados de Cadastro do Endereço serão mantidos
 
@@ -90,7 +90,7 @@ Atualização do Cadastro Auxiliar de uma Pessoa "**já cadastrada**"
 
             As informações de :bi:`Contact Information` devem ser subistituídas por informações que indiquem o novo Endereço fora da comunidade.
 
-    #. Atualização dos dados do registro :bi:`Family (Aux)` de uma Pessoa **já cadastrada**
+    #. :doc:`reregistration_030_030`
 
         #. Todos os dados de Cadastro da Família serão mantidos
 
@@ -135,3 +135,7 @@ Atualização do Cadastro Auxiliar de uma Pessoa "**já cadastrada**"
 .. toctree::
    :maxdepth: 2
    :caption: Itens Relacionados:
+
+   reregistration_030_010
+   reregistration_030_020
+   reregistration_030_030

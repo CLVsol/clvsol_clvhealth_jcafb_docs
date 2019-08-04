@@ -8,14 +8,16 @@
 
 .. index:: Eventos
 
-=============
-:bi:`Eventos`
-=============
+===================
+**Recadastramento**
+===================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Conteúdo:
 
-   reregistration/index
-   campaign/campaign
-   task_force/task_force
+   reregistration_000
+   reregistration_010
+   reregistration_020
+   reregistration_030
+   reregistration_040
