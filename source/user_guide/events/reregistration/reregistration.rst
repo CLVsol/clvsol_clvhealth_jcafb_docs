@@ -17,7 +17,7 @@
 Recadastramento de uma Pessoa
 -----------------------------
 
-O processo de **Recadastramento de uma Pessoa** é a base de todas as tarefas de planejamento da JCAFB que antecede a realização da Jornada em janeiro de cada ano, sendo concomitante ao **Recadastramento de Endereços** e ao **Recadastramento de Famílias**.
+O processo de **Recadastramento de uma Pessoa** é a base de todas as tarefas de planejamento da JCAFB que antecedem as atividades em janeiro de cada ano, sendo concomitante ao **Recadastramento de Endereços** e ao **Recadastramento de Famílias**.
 
 De forma geral, serão objeto do recadastramento somente Pessoas residentes em Endereços localizados na comunidade atendida no ciclo atual da JCAFB.
 
@@ -62,7 +62,7 @@ Em linhas gerais, o processo de recadastramento de uma Pessoa segue o seguinte F
 
 .. toctree::
    :maxdepth: 2
-   :caption: Índice:
+   :caption: Itens Relacionados:
 
    reregistration_010
    reregistration_020

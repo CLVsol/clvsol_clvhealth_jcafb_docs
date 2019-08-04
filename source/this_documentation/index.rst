@@ -6,6 +6,6 @@ Esta Documentação
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Conteúdo:
 
    CLVhealth_JCAFB_Documentation_setup

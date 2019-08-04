@@ -80,7 +80,7 @@ Criação do Cadastro Auxiliar de uma Pessoa
 
 .. toctree::
    :maxdepth: 2
-   :caption: Índice:
+   :caption: Itens Relacionados:
 
    reregistration_020_010
    reregistration_020_020

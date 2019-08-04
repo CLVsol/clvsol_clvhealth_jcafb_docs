@@ -4,6 +4,6 @@
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Conteúdo:
 
    tkl_odoo12_jcafb_vm/index

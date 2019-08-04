@@ -69,4 +69,4 @@ Procura por uma Pessoa utilizando a *view* "**Contatos**"
 
 .. toctree::
    :maxdepth: 2
-   :caption: Índice:
+   :caption: Itens Relacionados:

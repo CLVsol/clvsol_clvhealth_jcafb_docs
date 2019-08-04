@@ -4,7 +4,7 @@ Administração do *CLVhealth-JCAFB*
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Conteúdo:
 
    clvhealth_jcafb_setup
    clvhealth_jcafb_backup

@@ -14,7 +14,7 @@
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Conteúdo:
 
    person/person
    family/family

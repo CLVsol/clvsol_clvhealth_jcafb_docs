@@ -4,7 +4,7 @@ JCAFB-2020
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Conteúdo:
 
    db_migration/index
    db_preparation/index

@@ -38,4 +38,4 @@ Atualização do Cadastro Auxiliar de uma Pessoa "**não cadastrada**"
 
 .. toctree::
    :maxdepth: 2
-   :caption: Índice:
+   :caption: Itens Relacionados:

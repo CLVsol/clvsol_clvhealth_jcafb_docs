@@ -37,7 +37,7 @@ Identificação da Pessoa nos Cadastros existentes
 
 .. toctree::
    :maxdepth: 2
-   :caption: Índice:
+   :caption: Itens Relacionados:
 
    reregistration_010_010
    reregistration_010_020
