@@ -1,18 +1,20 @@
 .. raw:: html
 
     <style> .red {color:red} </style>
+    <style> .green {color:green} </style>
     <style> .bi {font-weight: bold; font-style: italic} </style>
 
 .. role:: red
+.. role:: green
 .. role:: bi
 
 .. index:: Criação do Cadastro Auxiliar para uma Pessoa não cadastrada
 
-=======================================================================
-Criação do "**Cadastro Auxiliar**" para uma Pessoa "**não cadastrada**"
-=======================================================================
+===================================================================
+Criação do **Cadastro Auxiliar** para uma **Pessoa não cadastrada**
+===================================================================
 
-    Este procedimento pode ser utilizado somente quando **não for identificado** um registro :bi:`Person` para a Pessoa, utilizando-se um dos métodos: :doc:`reregistration_010_010` ou :doc:`reregistration_010_020`.
+    Este procedimento pode ser utilizado somente quando **não for identificado** um registro :bi:`Person` para a Pessoa, utilizando-se um dos métodos: :doc:`reregistration_procedure_010_010` ou :doc:`reregistration_procedure_010_020`.
 
     Por esse método, quando não existir ainda um Cadastro Auxiliar para a Pessoa, o mesmo deverá ser manualmente criado para conter as informações coletadas para a Pessoa. Essas informações coletadas serão manualmente inseridas nos registros pertinentes.
 
@@ -45,3 +47,5 @@ Criação do "**Cadastro Auxiliar**" para uma Pessoa "**não cadastrada**"
 .. toctree::
    :maxdepth: 2
    :caption: Itens Relacionados:
+
+   reregistration_procedure_020_020

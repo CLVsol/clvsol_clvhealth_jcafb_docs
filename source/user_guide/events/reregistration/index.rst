@@ -1,12 +1,12 @@
 .. raw:: html
 
     <style> .red {color:red} </style>
+    <style> .green {color:green} </style>
     <style> .bi {font-weight: bold; font-style: italic} </style>
 
 .. role:: red
+.. role:: green
 .. role:: bi
-
-.. index:: Eventos
 
 ===================
 **Recadastramento**
@@ -16,8 +16,6 @@
    :maxdepth: 3
    :caption: Conteúdo:
 
-   reregistration_000
-   reregistration_010
-   reregistration_020
-   reregistration_030
-   reregistration_040
+   reregistration_description
+   reregistration_workflow
+   reregistration_procedure_index

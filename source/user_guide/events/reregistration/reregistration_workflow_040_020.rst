@@ -1,16 +1,18 @@
 .. raw:: html
 
     <style> .red {color:red} </style>
+    <style> .green {color:green} </style>
     <style> .bi {font-weight: bold; font-style: italic} </style>
 
 .. role:: red
+.. role:: green
 .. role:: bi
 
-.. index:: tualização dos dados do registro Person (Aux) de uma Pessoa "não cadastrada"
+.. index:: Atualização dos dados de Address (Aux) de uma Pessoa não cadastrada
 
-=======================================================================================
-Atualização dos dados do registro :bi:`Person (Aux)` de uma Pessoa "**não cadastrada**"
-=======================================================================================
+=============================================================================
+Atualização dos dados de :bi:`Address (Aux)` de uma **Pessoa não cadastrada**
+=============================================================================
 
     #. A Pessoa reside em um Endereço **existente** no Cadastro Geral
 
