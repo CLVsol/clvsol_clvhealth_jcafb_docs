@@ -46,8 +46,8 @@ Criação do **Cadastro Auxiliar** para uma **Pessoa já cadastrada**
             * :bi:`Related Family` » :bi:`Family`
             * :bi:`Contact Information` = Dados do registro :bi:`Address`
 
+    A criação do **Cadastro Auxiliar** para uma **Pessoa já cadastrada** é feita utilizando o procedimento ":doc:`reregistration_procedure_020_010`".
+
 .. toctree::
    :maxdepth: 2
    :caption: Procedimentos:
-
-   reregistration_procedure_020_010

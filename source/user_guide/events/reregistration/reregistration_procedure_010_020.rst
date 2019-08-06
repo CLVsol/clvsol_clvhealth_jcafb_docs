@@ -10,9 +10,9 @@
 
 .. index:: Procura pela Pessoa em Persons (Procedimento)
 
-=====================================================
-Procura pela Pessoa em ':bi:`Persons`' (Procedimento)
-=====================================================
+===================================================
+Procura pela Pessoa em :bi:`Persons` (Procedimento)
+===================================================
 
     #. Procurar pela Pessoa na *view* :bi:`Persons`:
 

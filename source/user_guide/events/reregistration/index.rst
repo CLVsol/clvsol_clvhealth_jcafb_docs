@@ -16,6 +16,7 @@
    :maxdepth: 3
    :caption: Conteúdo:
 
+   reregistration_cadastro
    reregistration_description
    reregistration_workflow
    reregistration_procedure_index

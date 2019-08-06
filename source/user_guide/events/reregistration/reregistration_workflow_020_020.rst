@@ -44,8 +44,8 @@ Criação do **Cadastro Auxiliar** para uma **Pessoa não cadastrada**
             * :bi:`Related Family` » **vazio**
             * :bi:`Contact Information` = Dados do Endereço da Pessoa
 
+    A criação do **Cadastro Auxiliar** para uma **Pessoa não cadastrada** é feita utilizando o procedimento ":doc:`reregistration_procedure_020_020`".
+
 .. toctree::
    :maxdepth: 2
    :caption: Itens Relacionados:
-
-   reregistration_procedure_020_020
