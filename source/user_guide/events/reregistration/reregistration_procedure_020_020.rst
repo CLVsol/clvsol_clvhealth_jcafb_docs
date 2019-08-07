@@ -10,9 +10,9 @@
 
 .. index:: Criação do Cadastro Auxiliar para uma Pessoa não cadastrada (Procedimento)
 
-==================================================================================
-Criação do **Cadastro Auxiliar** para uma **Pessoa não cadastrada** (Procedimento)
-==================================================================================
+===================================================================
+Criação do **Cadastro Auxiliar** para uma **Pessoa não cadastrada**
+===================================================================
 
 .. toctree::
    :maxdepth: 2

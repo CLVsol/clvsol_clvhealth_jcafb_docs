@@ -20,6 +20,8 @@ Procura por um Endereço em **Contatos**
 
     Neste caso não é possível realizar a pesquisa utilizando o Codigo do Endereço.
 
+    A procura por um Endereço em **Contatos** é feita utilizando o procedimento ":doc:`reregistration_procedure_010_050`".
+
 .. toctree::
    :maxdepth: 2
    :caption: Procedimentos:

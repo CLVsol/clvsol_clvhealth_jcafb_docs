@@ -10,11 +10,11 @@
 
 .. index:: Procura pelas Entidades nos Cadastros existentes
 
-====================================================
-Procura pelas Entidades nos **Cadastros** existentes
-====================================================
+========================================================
+Procura pelas **Entidades** nos **Cadastros** existentes
+========================================================
 
-De posse dos dados de uma Pessoa, o primeiro passo é a pesquisa pela existência prévia de registros relaltivos a essa Pessoa tanto no **Cadastro** quanto no **Cadastro Auxiliar**.
+De posse dos dados de uma Pessoa, o primeiro passo é a pesquisa pela existência prévia de registros relacionados a essa Pessoa tanto no **Cadastro** quanto no **Cadastro Auxiliar**.
 
 Após a execução da pesquisa por uma Pessoa:
 

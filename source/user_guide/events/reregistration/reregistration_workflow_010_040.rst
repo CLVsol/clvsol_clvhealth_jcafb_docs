@@ -20,6 +20,8 @@ Procura por uma Família em :bi:`Families`
 
     Este método pode ser utilizado também para pesquisas utilizando o Nome da Família, quando não se conhece o Código da Família. Mas neste caso é mais conveniente usar o método anterior ":doc:`reregistration_workflow_010_030`" que é mais abrangente, e permite a identificação do Cadatro Auxiliar da Família, quando já existente.
 
+    A procura por uma Família em :bi:`Families` é feita utilizando o procedimento ":doc:`reregistration_procedure_010_040`".
+
 .. toctree::
    :maxdepth: 2
    :caption: Procedimentos:

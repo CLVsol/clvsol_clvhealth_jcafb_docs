@@ -14,7 +14,7 @@
 **Fluxo de Trabalho** (*Workflow*) do Recadastramento
 =====================================================
 
-O **Fluxo de Trabalho** (*Workflow*) do Recadastramento concomitante de :bi:`Person`, :bi:`Family` e :bi:`Address` deve seguir as etapas listadas no conteúdo apresentado a seguir.
+O **Fluxo de Trabalho** (*Workflow*) do Recadastramento concomitante de **Pessoas**, **Famílias** e **Endereços** deve seguir as etapas listadas a seguir.
 
 É importante salientar que, dependendo do contexto e/ou dos parâmetros alterados, nem todas as etapas precisarão ser seguidas durante o recadastramento de uma Pessoa.
 

@@ -20,6 +20,8 @@ Procura por um Endereço em :bi:`Addresses`
 
     Este método pode ser utilizado também para pesquisas utilizando o Nome do Endereço, quando não se conhece o Código do Endereço. Mas neste caso é mais conveniente usar o método anterior ":doc:`reregistration_workflow_010_030`" que é mais abrangente, e permite a identificação do Cadatro Auxiliar do Endereço, quando já existente.
 
+    A procura por um Endereço em :bi:`Addresses` é feita utilizando o procedimento ":doc:`reregistration_procedure_010_060`".
+
 .. toctree::
    :maxdepth: 2
    :caption: Procedimentos:

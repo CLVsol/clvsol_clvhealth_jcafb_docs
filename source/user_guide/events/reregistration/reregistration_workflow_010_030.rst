@@ -20,6 +20,8 @@ Procura por uma Família em **Contatos**
 
     Neste caso não é possível realizar a pesquisa utilizando o Codigo da Família.
 
+    A procura por uma Família em **Contatos** é feita utilizando o procedimento ":doc:`reregistration_procedure_010_030`".
+
 .. toctree::
    :maxdepth: 2
    :caption: Procedimentos:

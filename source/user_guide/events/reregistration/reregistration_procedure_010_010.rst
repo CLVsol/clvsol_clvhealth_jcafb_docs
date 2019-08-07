@@ -10,51 +10,46 @@
 
 .. index:: Procura pela Pessoa em Contatos (Procedimento)
 
-==================================================
-Procura pela Pessoa em **Contatos** (Procedimento)
-==================================================
+===================================
+Procura pela Pessoa em **Contatos**
+===================================
 
-    #. Acessar a *view* **Contatos**:
+    #. Procurar pela Pessoa na *view* :bi:`Contatos`:
 
-        * Menu de acesso:
-            * **Contatos** » **Contatos**
+        #. Acessar a *view* **Contatos**:
 
-    #. Selecionar a **visualização em lista**.
+            * Menu de acesso:
+                * **Contatos** » **Contatos**
 
-    #. Aplicar o filtro: **Agrupar Por** » :bi:`Address Type`.
+        #. Selecionar a **visualização em lista**.
 
-    #. Pesquisar pelo nome da Pessoa:
+        #. Aplicar o filtro: **Agrupar Por** » :bi:`Address Type`.
 
-        #. Se a Pessoa for encontrada com *Address Type* :bi:`Person`, independentemente da existência de um registro com *Address Type* :bi:`Person (Aux)`:
+        #. Pesquisar pelo nome da Pessoa:
 
-            #. Abrir o registro de contato encontrado.
+    #. **Caso um registro dessa Pessoa seja encontrado** com *Address Type* :bi:`Person`, independentemente da existência de um registro com *Address Type* :bi:`Person (Aux)`:
 
-            #. Acionar o botão **[** :bi:`Persons` **]**.
+        #. Abrir o registro de contato encontrado.
 
-            #. Abrir o registro da Pessoa apresentado na *view* :bi:`Persons`.
+        #. Acionar o botão **[** :bi:`Person` **]**.
 
-            #. Executar o procecimento ":doc:`reregistration_procedure_020_010`".
+        #. Utilizar o registro da Pessoa apresentado na *view* :bi:`Persons`.
 
-        #. Se a Pessoa for encontrada somente com *Address Type* :bi:`Person (Aux)`:
+        #. A Pessoa é declarada como "**já cadastrada**".
 
-            #. Abrir o registro de contato encontrado com *Address Type* :bi:`Person (Aux)` .
+    #. **Caso o registro dessa Pessoa seja encontrado** somente com *Address Type* :bi:`Person (Aux)`:
 
-            #. Acionar o botão **[** :bi:`Persons (Aux)` **]**.
+        #. Abrir o registro de contato encontrado com *Address Type* :bi:`Person (Aux)` .
 
-            #. Abrir o registro da Pessoa apresentado na *view* :bi:`Persons (Aux)`.
+        #. Acionar o botão **[** :bi:`Person (Aux)` **]**.
 
-            #. Executar o procecimento ":doc:`reregistration_procedure_020_020`".
+        #. Utilizar o registro da Pessoa apresentado na *view* :bi:`Persons (Aux)`.
 
-        #. Se a Pessoa **não for encontrada**:
+        #. A Pessoa será declarada como **em fase de recadastramento**.
 
-            #. Acessar a *view* :bi:`Persons (Aux)`:
+    #.  **Caso um registro dessa Pessoa NÃO seja encontrado** com qualquer *Address Type*:
 
-                * Menu de acesso:
-                    * :bi:`Community` » :bi:`Aux` » :bi:`Persons (Aux)`
-
-            #. Criar um novo registro para a Pessoa.
-
-            #. Executar o procecimento ":doc:`reregistration_procedure_020_020`".
+        #. A Pessoa será declarada como "**não cadastrada**".
 
 .. toctree::
    :maxdepth: 2
