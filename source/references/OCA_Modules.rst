@@ -28,15 +28,32 @@
 
 * `Custom shortcut icon <https://github.com/OCA/web/tree/12.0/web_favicon>`_
 	
-		This module was written to allow you to customize your Odoo instance's shortcut
-		icon (aka favicon). This is useful for branding purposes, but also for
-		integrators who have many different Odoo instances running and need to see at a
-		glance which browser tab does what.
+	This module was written to allow you to customize your Odoo instance's shortcut
+	icon (aka favicon). This is useful for branding purposes, but also for
+	integrators who have many different Odoo instances running and need to see at a
+	glance which browser tab does what.
 
-		The icon is shown also for portal users when the website modules are not
-		installed.
+	The icon is shown also for portal users when the website modules are not
+	installed.
 
-		More info about favicon: https://en.wikipedia.org/wiki/Favicon
+	More info about favicon: https://en.wikipedia.org/wiki/Favicon
+
+* `OdooRPC <https://github.com/OCA/odoorpc>`_
+	
+	**OdooRPC** is a Python package providing an easy way to
+	pilot your **Odoo** servers through `RPC`.
+
+	Features supported:
+	    - access to all data model methods (even ``browse``) with an API similar
+	      to the server-side API,
+	    - use named parameters with model methods,
+	    - user context automatically sent providing support for
+	      internationalization,
+	    - browse records,
+	    - execute workflows,
+	    - manage databases,
+	    - reports downloading,
+	    - JSON-RPC protocol (SSL supported),
 
 .. toctree::
    :maxdepth: 2
