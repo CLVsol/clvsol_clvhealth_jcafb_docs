@@ -73,6 +73,22 @@
 
 	This page introduces the Odoo Coding Guidelines. Those aim to improve the quality of Odoo Apps code. Indeed proper code improves readability, eases maintenance, helps debugging, lowers complexity and promotes reliability. These guidelines should be applied to every new module and to all new development.
 	
+* `Widgets in Odoo <https://www.cybrosys.com/blog/widgets-in-odoo>`_
+
+	There are many widgets present in Odoo user interface to perform different functionalities. Status bar, Checkboxes, Radio button etc. make the operations in Odoo simpler. In this blog, I will be explaining about different default widgets in Odoo, its purpose, and implementation syntax.
+	
+* `Widgets in Odoo 2 <https://odooforbeginnersblog.wordpress.com/2017/03/09/widgets-in-odoo/#more-839>`_
+
+	These are the widget list used in odoo “V8.0, V9.0, V10.0” that can make our development more easy, flexible and usable. Here we have the widgets and their descriptions.
+	
+* `Odoo - Smart buttons <https://www.slideshare.net/openobject/odoo-smart-buttons>`_
+
+* `Odoo icon smart buttons <https://pt.slideshare.net/TaiebKristou/odoo-icon-smart-buttons>`_
+
+* `Mixing Pandas with Odoo <https://blog.agayon.be/tag/xml-rpc.html>`_
+
+	This article describes the use of XML-RPC API provided by Odoo, a well-known ERP system. Upgrading to version 11.0 is the occasion to update my python scripts to reduce considerably the number of requests. The improvements were done with the help of pandas, the famous data structures and data analysis library.
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
