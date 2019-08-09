@@ -26,5 +26,3 @@ O **Fluxo de Trabalho** (*Workflow*) do Recadastramento de **Pessoas**, concomit
    reregistration_workflow_020
    reregistration_workflow_030
    reregistration_workflow_040
-   reregistration_workflow_050
-   reregistration_workflow_060

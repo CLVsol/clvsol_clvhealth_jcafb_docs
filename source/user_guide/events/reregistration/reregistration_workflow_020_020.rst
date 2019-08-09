@@ -8,15 +8,15 @@
 .. role:: green
 .. role:: bi
 
-.. index:: Criação do Cadastro Auxiliar para uma Pessoa não cadastrada
+.. index:: Criação/Atualização do Cadastro Auxiliar para uma Pessoa não cadastrada
 
-===================================================================
-Criação do **Cadastro Auxiliar** para uma **Pessoa não cadastrada**
-===================================================================
+===============================================================================
+Criação/Atualização do **Cadastro Auxiliar** para uma **Pessoa não cadastrada**
+===============================================================================
 
-    Este procedimento deve ser utilizado somente quando Pessoa tiver sido declarada como **não cadastrada**.
+    O processo de criação/atualização do **Cadastro Auxiliar** para uma Pessoa **não cadastrada** é utilizado quando a Pessoa tiver sido declarada como **não cadastrada**.
 
-    Por esse método, quando não existir ainda um **Cadastro Auxiliar** para a Pessoa, o mesmo deverá ser manualmente criado para conter as informações disponíveis para a Pessoa. Essas informações serão manualmente inseridas nos registros pertinentes.
+    Portanto, quando não existir ainda um **Cadastro Auxiliar** para a Pessoa, o mesmo deverá ser manualmente criado para conter as informações disponíveis para a Pessoa. Essas informações serão manualmente inseridas nos registros pertinentes.
 
 O **Cadastro Auxiliar** criado manualmente poderá ser composto pelas **Entidades (Aux)**:
 
@@ -67,3 +67,7 @@ O **Cadastro Auxiliar** criado manualmente poderá ser composto pelas **Entidade
 .. toctree::
    :maxdepth: 2
    :caption: Itens Relacionados:
+
+   reregistration_workflow_020_020_010
+   reregistration_workflow_020_020_020
+   reregistration_workflow_020_020_030

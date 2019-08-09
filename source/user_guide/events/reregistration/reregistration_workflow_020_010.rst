@@ -75,12 +75,12 @@ A criação do **Cadastro Auxiliar** para uma **Pessoa já cadastrada** é feita
    :maxdepth: 2
    :caption: Conteúdo:
 
-   reregistration_workflow_030_010
-   reregistration_workflow_030_020
-   reregistration_workflow_030_030
-   reregistration_workflow_030_040
-   reregistration_workflow_030_050
-   reregistration_workflow_030_060
-   reregistration_workflow_030_070
-   reregistration_workflow_030_080
-   reregistration_workflow_030_090
+   reregistration_workflow_020_010_010
+   reregistration_workflow_020_010_020
+   reregistration_workflow_020_010_030
+   reregistration_workflow_020_010_040
+   reregistration_workflow_020_010_050
+   reregistration_workflow_020_010_060
+   reregistration_workflow_020_010_070
+   reregistration_workflow_020_010_080
+   reregistration_workflow_020_010_090
