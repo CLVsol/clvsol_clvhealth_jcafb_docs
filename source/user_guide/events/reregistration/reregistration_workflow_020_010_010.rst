@@ -33,7 +33,7 @@ Cadastro Auxiliar
 
             * A criação de :bi:`Family (Aux)`, **deve ser habilitada**.
 
-    O relacionamento entre os diversos registros dos Cadastros será o seguinte (quando existirem os registros, como indicado anteriormente):
+    O relacionamento entre os diversos registros dos Cadastros será o seguinte:
 
         * :bi:`Person (Aux)`: 
 
@@ -62,19 +62,19 @@ Cadastro Auxiliar
 Criações/Atualizações
 ---------------------
 
-    #. **Cadastro Auxiliar**:
+    * **Cadastro Auxiliar**:
 
         #. O **Cadastro Auxiliar** relacionado à Pessoa deve ser criado automaticamente conforme as condições descritas em ":ref:`Cadastro Auxiliar (1)`".
 
-    #. :bi:`Address (Aux)`:
+    * :bi:`Address (Aux)`:
 
         #. Não será necessário qualquer ação de atualização do registro :bi:`Address (Aux)` relacionado à Pessoa.
 
-    #. :bi:`Family (Aux)`:
+    * :bi:`Family (Aux)`:
 
         #. Não será necessário qualquer ação de atualização do registro :bi:`Family (Aux)` relacionado à Pessoa.
 
-    #. :bi:`Person (Aux)`:
+    * :bi:`Person (Aux)`:
 
         #. Não será necessário qualquer ação de atualização do registro :bi:`Person (Aux)` relacionado à Pessoa.
 

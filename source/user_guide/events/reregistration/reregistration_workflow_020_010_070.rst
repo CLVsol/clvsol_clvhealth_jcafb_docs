@@ -8,7 +8,7 @@
 .. role:: green
 .. role:: bi
 
-.. index:: [Pessoa já cadastrada] A Pessoa mudou-se para um Endereço **fora da comunidade** atendida pela JCAFB
+.. index:: [Pessoa já cadastrada] A Pessoa mudou-se para um Endereço fora da comunidade atendida pela JCAFB
 
 ====================================================================================================
 [Pessoa já cadastrada] A Pessoa mudou-se para um Endereço **fora da comunidade** atendida pela JCAFB
@@ -19,7 +19,7 @@
 Cadastro Auxiliar
 -----------------
 
-    O **Cadastro Auxiliar** criado automáticamente poderá ser composto pelas seguintes **Entidades (Aux)**:
+    O **Cadastro Auxiliar** criado poderá ser composto pelas seguintes **Entidades (Aux)**:
 
         * :bi:`Person (Aux)`:
 
@@ -33,7 +33,7 @@ Cadastro Auxiliar
 
             * A criação de :bi:`Family (Aux)`, **deve ser habilitada**.
 
-    O relacionamento entre os diversos registros dos Cadastros será o seguinte (quando existirem os registros, como indicado anteriormente):
+    O relacionamento entre os diversos registros dos Cadastros será o seguinte:
 
         * :bi:`Person (Aux)`: 
 
@@ -60,23 +60,19 @@ Cadastro Auxiliar
 Criações/Atualizações
 ---------------------
 
-    #. **Cadastro Auxiliar**:
+    * **Cadastro Auxiliar**:
 
         #. O **Cadastro Auxiliar** relacionado à Pessoa deve ser criado automaticamente conforme as condições descritas em ":ref:`Cadastro Auxiliar (7)`".
 
-    #. :bi:`Address (Aux)`:
+    * :bi:`Address (Aux)`:
 
         * Registro **não disponível**
 
-    #. :bi:`Family (Aux)`:
-
-        #. O :bi:`(Reference) Address` do registro :bi:`Family (Aux)` deve ser mantido.
+    * :bi:`Family (Aux)`:
 
         #. As informações de :bi:`Contact Information`  do registro :bi:`Family (Aux)` devem ser subistituídas por informações que indiquem o novo Endereço fora da comunidade.
 
-    #. :bi:`Person (Aux)`:
-
-        #. O :bi:`(Reference) Address` do registro :bi:`Person (Aux)` deve ser mantido.
+    * :bi:`Person (Aux)`:
 
         #. As informações de :bi:`Contact Information`  do registro :bi:`Person (Aux)` devem ser subistituídas por informações que indiquem o novo Endereço fora da comunidade.
 

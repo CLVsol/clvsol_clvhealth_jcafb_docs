@@ -19,7 +19,7 @@
 Cadastro Auxiliar
 -----------------
 
-    O **Cadastro Auxiliar** criado automáticamente poderá ser composto pelas seguintes **Entidades (Aux)**:
+    O **Cadastro Auxiliar** criado poderá ser composto pelas seguintes **Entidades (Aux)**:
 
         * :bi:`Person (Aux)`:
 
@@ -27,58 +27,52 @@ Cadastro Auxiliar
 
         * :bi:`Address (Aux)`:
 
-            * A criação de :bi:`Address (Aux)`, **deve ser habilitada**.
+            * A criação de :bi:`Address (Aux)`, **deve ser desabilitada**.
 
         * :bi:`Family (Aux)`:
 
-            * A criação de :bi:`Family (Aux)`, **deve ser habilitada**.
+            * A criação de :bi:`Family (Aux)`, **deve ser desabilitada**.
 
-    O relacionamento entre os diversos registros dos Cadastros será o seguinte (quando existirem os registros, como indicado anteriormente):
+    O relacionamento entre os diversos registros dos Cadastros será o seguinte:
 
         * :bi:`Person (Aux)`: 
 
             * :bi:`Related Person` » :bi:`Person`
             * :bi:`(Reference) Address` » :bi:`Address`
-            * :bi:`(Reference) Address (Aux)` » :bi:`Address (Aux)`
+            * :bi:`(Reference) Address (Aux)` » "**vazio**"
             * :bi:`Family` » :bi:`Family`
             * :bi:`Family (Aux)` » :bi:`Family (Aux)`
-            * :bi:`Contact Information` = Dados do registro :bi:`Address`
+            * :bi:`Contact Information` = **vazio**
             * Outros Dados = Outros Dados do registro :bi:`Person`
 
         * :bi:`Address (Aux)`:
 
-            * :bi:`Related Address` » :bi:`Address`
-            * :bi:`Contact Information` = Dados do registro :bi:`Address`
-            * Outros Dados = Outros Dados do registro :bi:`Address`
+            * Registro **não disponível**
 
         * :bi:`Family (Aux)`:
 
-            * :bi:`Related Family` » :bi:`Family`
-            * :bi:`(Reference) Address` » :bi:`Address`
-            * :bi:`(Reference) Address (Aux)` » :bi:`Address (Aux)`
-            * :bi:`Contact Information` = Dados do registro :bi:`Address`
-            * Outros Dados = Outros Dados do registro :bi:`Family`
+            * Registro **não disponível**
 
 Criações/Atualizações
 ---------------------
 
-    #. **Cadastro Auxiliar**:
+    * **Cadastro Auxiliar**:
 
         #. O **Cadastro Auxiliar** relacionado à Pessoa deve ser criado automaticamente conforme as condições descritas em ":ref:`Cadastro Auxiliar (8)`".
 
-    #. :bi:`Address (Aux)`:
+    * :bi:`Address (Aux)`:
 
-        #. Não será necessário qualquer ação de atualização do registro :bi:`Address (Aux)` relacionado à Pessoa.
+        * Registro **não disponível**
 
-    #. :bi:`Family (Aux)`:
+    * :bi:`Family (Aux)`:
 
-        #. Não será necessário qualquer ação de atualização do registro :bi:`Family (Aux)` relacionado à Pessoa.
+        * Registro **não disponível**
 
-    #. :bi:`Person (Aux)`:
+    * :bi:`Person (Aux)`:
 
-        #. :red:`(Precisa ser Modificado)` Não será necessário qualquer ação de atualização do registro :bi:`Person (Aux)` relacionado à Pessoa.
+        #. As informações de :bi:`Contact Information` do registro :bi:`Person (Aux)` devem ser **excluídas**.
 
-        #. :red:`(Precisa ser Modificado)` Indicar de alguma forma que a Pessoa está ausente da comunidade atendida pela JCAFB.
+        #. :red:`(Precisa ser Modificado)`  Pessoa está ausente da comunidade atendida pela JCAFB.
 
 .. toctree::
    :maxdepth: 2

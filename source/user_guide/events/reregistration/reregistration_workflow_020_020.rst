@@ -18,23 +18,33 @@ Criação/Atualização do **Cadastro Auxiliar** para uma **Pessoa não cadastra
 
     Portanto, quando não existir ainda um **Cadastro Auxiliar** para a Pessoa, o mesmo deverá ser manualmente criado para conter as informações disponíveis para a Pessoa. Essas informações serão manualmente inseridas nos registros pertinentes.
 
-O **Cadastro Auxiliar** criado manualmente poderá ser composto pelas **Entidades (Aux)**:
+O **Cadastro Auxiliar** criado poderá ser composto pelas **Entidades (Aux)**:
 
     * :bi:`Person (Aux)`:
+
         * O registro será preenchido com as informações coletadas para a Pessoa.
 
     * :bi:`Address (Aux)`:
+
         * O registro será preenchido com as informações coletadas para a Pessoa:
-            * Um registro :bi:`Address (Aux)` deverá ser **criado automaticamente** a partir de um registro :bi:`Address` já cadastrado quando se constatar que a Pessoa reside no Endereço associado a este registro :bi:`Address`.
-            * Um registro :bi:`Address (Aux)` deverá ser **criado manualmente** quando se constatar que a Pessoa reside em um Endereço não cadastrado da comunidade atendida.
-            * Um registro :bi:`Address (Aux)` deverá ser **vazio** quando se constatar que a Pessoa reside em um Endereço desconhecido ou fora da comunidade atendida.
-            * Um registro :bi:`Address (Aux)` deverá ser **vazio** quando se constatar que a Pessoa faleceu.
+
+            * O registro :bi:`Address (Aux)` deverá ser **criado automaticamente** a partir de um registro :bi:`Address` já cadastrado, quando se constatar que a Pessoa reside no Endereço associado a este registro :bi:`Address`.
+
+            * O registro :bi:`Address (Aux)` deverá ser **criado manualmente**, quando se constatar que a Pessoa reside em um Endereço não cadastrado.
+
+            * O registro :bi:`Address (Aux)` **não será criado**, quando se constatar que a Pessoa reside em um Endereço fora da comunidade atendida.
+
+            * O registro :bi:`Address (Aux)` **não será criado**, quando se constatar que a Pessoa faleceu.
 
     * :bi:`Family (Aux)`:
+
         * O registro será preenchido com as informações coletadas para a Pessoa:
-            * Um registro :bi:`Family (Aux)` deverá ser **criado automaticamente** a partir de um registro :bi:`Family` já cadastrado quando se constatar que a Pessoa é membro da Família associada a este registro :bi:`Family`.
-            * Um registro :bi:`Family (Aux)` deverá ser **criado manualmente** quando se constatar que a Pessoa é mebro de uma Família não cadastrada da comunidade atendida.
-            * Um registro :bi:`Family (Aux)` deverá ser **vazio** quando se constatar que a Pessoa é mebro de uma Famĩlia desconhecida ou fora da comunidade atendida.
+
+            * O registro :bi:`Family (Aux)` deverá ser **criado automaticamente** a partir de um registro :bi:`Family` já cadastrado, quando se constatar que a Pessoa é membro da Família associada a este registro :bi:`Family`.
+
+            * O registro :bi:`Family (Aux)` deverá ser **criado manualmente**, quando se constatar que a Pessoa é membro de uma Família não cadastrada.
+
+            * O registro :bi:`Family (Aux)` **não será criado**, quando se constatar que a Pessoa é mebro de uma Família fora da comunidade atendida.
 
     O relacionamento entre os diversos registros dos Cadastros será o seguinte (quando existirem os registros, como indicado anteriormente):
 

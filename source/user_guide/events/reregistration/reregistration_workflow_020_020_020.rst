@@ -8,7 +8,7 @@
 .. role:: green
 .. role:: bi
 
-.. index:: [Pessoa não cadastrada] A Pessoa reside em um Endereço **não cadastrado**
+.. index:: [Pessoa não cadastrada] A Pessoa reside em um Endereço não cadastrado
 
 =========================================================================
 [Pessoa não cadastrada] A Pessoa reside em um Endereço **não cadastrado**
@@ -19,7 +19,7 @@
 Cadastro Auxiliar
 -----------------
 
-    O **Cadastro Auxiliar** criado manualmente poderá ser composto pelas seguintes **Entidades (Aux)**:
+    O **Cadastro Auxiliar** criado poderá ser composto pelas seguintes **Entidades (Aux)**:
 
         * :bi:`Person (Aux)`:
 
@@ -33,7 +33,7 @@ Cadastro Auxiliar
 
             * Nenhum :bi:`Family (Aux)` será associado à Pessoa.
 
-    O relacionamento entre os diversos registros dos Cadastros será o seguinte (quando existirem os registros, como indicado anteriormente):
+    O relacionamento entre os diversos registros dos Cadastros será o seguinte:
 
         * :bi:`Person (Aux)`: 
 
@@ -58,23 +58,19 @@ Cadastro Auxiliar
 Atualizações
 ------------
 
-    #. **Cadastro Auxiliar**:
+    * **Cadastro Auxiliar**:
 
         #. O **Cadastro Auxiliar** relacionado à Pessoa deve ser criado manualmente conforme as condições descritas em ":ref:`Cadastro Auxiliar (11)`".
 
-    #. :bi:`Address (Aux)`:
+    * :bi:`Address (Aux)`:
 
         #. Um registro :bi:`Address (Aux)` deverá ser **criado manualmente** a partir dos dados do Endereço informado para a Pessoa.
 
-        #. O :bi:`(Reference) Address` do registro :bi:`Address (Aux)` deve ser mantido **vazio**.
-
         #. Não será necessário qualquer outra ação de atualização do registro :bi:`Address (Aux)` relacionado à Pessoa.
 
-    #. :bi:`Person (Aux)`:
+    * :bi:`Person (Aux)`:
 
         #. O :bi:`(Reference) Address (Aux)` do registro :bi:`Person (Aux)` deve ser manualmente associado ao :bi:`Address (Aux)` do Endereço informado para a Pessoa.
-
-        #. O :bi:`(Reference) Address` do registro :bi:`Person (Aux)` deve ser mantido **vazio**.
 
         #. As informações de :bi:`Contact Information` devem ser subistituídas pelas informações de :bi:`Contact Information` do :bi:`(Reference) Address (Aux)`.
 

@@ -8,7 +8,7 @@
 .. role:: green
 .. role:: bi
 
-.. index:: [Pessoa já cadastrada] A Pessoa mudou-se para um Endereço **desconhecido**
+.. index:: [Pessoa já cadastrada] A Pessoa mudou-se para um Endereço desconhecido
 
 ==========================================================================
 [Pessoa já cadastrada] A Pessoa mudou-se para um Endereço **desconhecido**
@@ -19,7 +19,7 @@
 Cadastro Auxiliar
 -----------------
 
-    O **Cadastro Auxiliar** criado automáticamente poderá ser composto pelas seguintes **Entidades (Aux)**:
+    O **Cadastro Auxiliar** criado poderá ser composto pelas seguintes **Entidades (Aux)**:
 
         * :bi:`Person (Aux)`:
 
@@ -33,7 +33,7 @@ Cadastro Auxiliar
 
             * A criação de :bi:`Family (Aux)`, **deve ser habilitada**.
 
-    O relacionamento entre os diversos registros dos Cadastros será o seguinte (quando existirem os registros, como indicado anteriormente):
+    O relacionamento entre os diversos registros dos Cadastros será o seguinte:
 
         * :bi:`Person (Aux)`: 
 
@@ -60,27 +60,23 @@ Cadastro Auxiliar
 Criações/Atualizações
 ---------------------
 
-    #. **Cadastro Auxiliar**:
+    * **Cadastro Auxiliar**:
 
         #. O **Cadastro Auxiliar** relacionado à Pessoa deve ser criado automaticamente conforme as condições descritas em ":ref:`Cadastro Auxiliar (6)`".
 
-    #. :bi:`Address (Aux)`:
+    * :bi:`Address (Aux)`:
 
         * Registro **não disponível**
 
-    #. :bi:`Family (Aux)`:
+    * :bi:`Family (Aux)`:
 
         #. O :bi:`(Reference) Address (Aux)` do registro :bi:`Family (Aux)` deve ser manualmente **excluído**.
 
-        #. O :bi:`(Reference) Address` do registro :bi:`Family (Aux)` deve ser mantido.
-
         #. As informações de :bi:`Contact Information`  do registro :bi:`Family (Aux)` devem ser subistituídas por informações que indiquem o desconhecimento do novo Endereço.
 
-    #. :bi:`Person (Aux)`:
+    * :bi:`Person (Aux)`:
 
         #. O :bi:`(Reference) Address (Aux)` do registro :bi:`Person (Aux)` deve ser manualmente **excluído**.
-
-        #. O :bi:`(Reference) Address` do registro :bi:`Person (Aux)` deve ser mantido.
 
         #. As informações de :bi:`Contact Information`  do registro :bi:`Person (Aux)` devem ser subistituídas por informações que indiquem o desconhecimento do novo Endereço.
 
