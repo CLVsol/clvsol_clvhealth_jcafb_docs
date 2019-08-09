@@ -10,13 +10,13 @@
 
 .. index:: Atualização do Cadastro Auxiliar de uma Pessoa não cadastrada
 
-=================================================================
-Atualização do Cadastro Auxiliar de uma **Pessoa não cadastrada**
-=================================================================
+===================================================================================
+:red:`(EXCLUIR!)` Atualização do Cadastro Auxiliar de uma **Pessoa não cadastrada**
+===================================================================================
 
-    O processo de atualização do **Cadastro Auxiliar** para uma Pessoa **não cadastrada** é um processo de atualização das informações de uma cópia do **Cadastro** atual da Pessoa. 
+O processo de atualização do **Cadastro Auxiliar** para uma Pessoa **não cadastrada** é um processo de atualização das informações de uma cópia do **Cadastro** atual da Pessoa. 
 
-    Todos os registros em ":bi:`Persons (Aux)`", ":bi:`Addresses (Aux)`"" e ":bi:`Families (Aux)`", quando presentes, serão concomitantemente atualizados.
+Todos os registros em ":bi:`Persons (Aux)`", ":bi:`Addresses (Aux)`"" e ":bi:`Families (Aux)`", quando presentes, serão concomitantemente atualizados.
 
 .. toctree::
    :maxdepth: 2

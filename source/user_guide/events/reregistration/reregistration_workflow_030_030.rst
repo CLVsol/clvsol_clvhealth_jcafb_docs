@@ -8,51 +8,75 @@
 .. role:: green
 .. role:: bi
 
-.. index:: Atualização dos dados de Family (Aux) de uma Pessoa já cadastrada
+.. index:: [Pessoa já cadastrada] Atualização de dados de Contato da Pessoa exceto mudança de Endereço
 
-===========================================================================
-Atualização dos dados de :bi:`Family (Aux)` de uma **Pessoa já cadastrada**
-===========================================================================
+===========================================================================================
+[Pessoa já cadastrada] Atualização de dados de Contato da Pessoa exceto mudança de Endereço
+===========================================================================================
 
-    #. Todos os dados de Cadastro da Família serão mantidos
+.. _Cadastro Auxiliar (3):
 
-        Não é necessário qualquer ação de atualização do registro :bi:`Family (Aux)` da Pessoa.
+Cadastro Auxiliar
+-----------------
 
-    #. Atualização/Correção de alguma informação de Contato da Família exceto mudança de Endereço
+    O **Cadastro Auxiliar** criado automáticamente poderá ser composto pelas seguintes **Entidades (Aux)**:
 
-        As atualizações necessárias devem ser aplicadas manualmente no registro :bi:`Family (Aux)` da Pessoa.
+        * :bi:`Person (Aux)`:
 
-    #. A Pessoa mudou-se para um outro Endereço **existente** no Cadastro Geral
+            * A criação de :bi:`Person (Aux)`, **deve ser habilitada**.
 
-        O :bi:`(Reference) Address` do registro :bi:`Family (Aux)` deve ser manualmente substituido pelo :bi:`Address` do novo Endereço para o qual a Pessoa se mudou.
+        * :bi:`Address (Aux)`:
 
-        O :bi:`(Reference) Address (Aux)` do registro :bi:`Family (Aux)` deve ser mantido.
+            * A criação de :bi:`Address (Aux)`, **deve ser habilitada**.
 
-        As informações de :bi:`Contact Information` devem ser subistituídas pelas informações de :bi:`Contact Information` do novo Endereço.
+        * :bi:`Family (Aux)`:
 
-    #. A Pessoa mudou-se para um outro Endereço **não existente** no Cadastro Geral
+            * A criação de :bi:`Family (Aux)`, **deve ser habilitada**.
 
-        O :bi:`(Reference) Address` do registro :bi:`Family (Aux)` deve ser manualmente excluído.
+    O relacionamento entre os diversos registros dos Cadastros será o seguinte (quando existirem os registros, como indicado anteriormente):
 
-        O :bi:`(Reference) Address (Aux)` do registro :bi:`FAmily (Aux)` deve ser mantido.
+        * :bi:`Person (Aux)`: 
 
-        As informações de :bi:`Contact Information` devem ser subistituídas pelas informações de :bi:`Contact Information` do novo Endereço.
+            * :bi:`Related Person` » :bi:`Person`
+            * :bi:`(Reference) Address` » :bi:`Address`
+            * :bi:`(Reference) Address (Aux)` » :bi:`Address (Aux)`
+            * :bi:`Family` » :bi:`Family`
+            * :bi:`Family (Aux)` » :bi:`Family (Aux)`
+            * :bi:`Contact Information` = Dados do registro :bi:`Address`
+            * Outros Dados = Outros Dados do registro :bi:`Person`
 
-    #. A Pessoa mudou-se para um outro Endereço **desconhecido**
+        * :bi:`Address (Aux)`:
 
-        O :bi:`(Reference) Address` do registro :bi:`Family (Aux)` deve ser manualmente excluído.
+            * :bi:`Related Address` » :bi:`Address`
+            * :bi:`Contact Information` = Dados do registro :bi:`Address`
+            * Outros Dados = Outros Dados do registro :bi:`Address`
 
-        O :bi:`(Reference) Address (Aux)` do registro :bi:`Family (Aux)` deve ser mantido.
+        * :bi:`Family (Aux)`:
 
-        As informações de :bi:`Contact Information` devem ser subistituídas por informações que indiquem o desconhecimento do novo Endereço.
+            * :bi:`Related Family` » :bi:`Family`
+            * :bi:`(Reference) Address` » :bi:`Address`
+            * :bi:`(Reference) Address (Aux)` » :bi:`Address (Aux)`
+            * :bi:`Contact Information` = Dados do registro :bi:`Address`
+            * Outros Dados = Outros Dados do registro :bi:`Family`
 
-    #. A Pessoa mudou-se para um outro Endereço **fora da comunidade** atendida pela JCAFB
+Atualizações
+------------
 
-        O :bi:`(Reference) Address` do registro :bi:`Family (Aux)` deve ser manualmente excluído.
+    #. **Cadastro Auxiliar**:
 
-        O :bi:`(Reference) Address (Aux)` do registro :bi:`Family (Aux)` deve ser mantido.
+        #. O **Cadastro Auxiliar** relacionado à Pessoa deve ser criado automaticamente conforme as condições descritas em ":ref:`Cadastro Auxiliar (3)`".
 
-        As informações de :bi:`Contact Information` devem ser subistituídas por informações que indiquem o novo Endereço fora da comunidade.
+    #. :bi:`Address (Aux)`:
+
+        #. As atualizações de dados de :bi:`Contact Information` da Pessoa devem ser aplicadas manualmente no :bi:`Contact Information`do registro :bi:`Address (Aux)`.
+
+    #. :bi:`Family (Aux)`:
+
+        #. As informações de :bi:`Contact Information` do registro :bi:`Family (Aux)` devem ser subistituídas pelas informações de :bi:`Contact Information` do :bi:`(Reference) Address (Aux)`.
+
+    #. :bi:`Person (Aux)`:
+
+        #. As informações de :bi:`Contact Information` do registro :bi:`Person (Aux)` devem ser subistituídas pelas informações de :bi:`Contact Information` do :bi:`(Reference) Address (Aux)`.
 
 .. toctree::
    :maxdepth: 2

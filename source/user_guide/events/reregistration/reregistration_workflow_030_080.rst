@@ -8,13 +8,13 @@
 .. role:: green
 .. role:: bi
 
-.. index:: [Pessoa já cadastrada] Atualização de dados da Pessoa exceto dados do Endereço e da Família
+.. index:: [Pessoa já cadastrada] A Pessoa está ausente da comunidade atendida pela JCAFB
 
-===========================================================================================
-[Pessoa já cadastrada] Atualização de dados da Pessoa exceto dados do Endereço e da Família
-===========================================================================================
+==============================================================================
+[Pessoa já cadastrada] A Pessoa está ausente da comunidade atendida pela JCAFB
+==============================================================================
 
-.. _Cadastro Auxiliar (2):
+.. _Cadastro Auxiliar (8):
 
 Cadastro Auxiliar
 -----------------
@@ -59,12 +59,12 @@ Cadastro Auxiliar
             * :bi:`Contact Information` = Dados do registro :bi:`Address`
             * Outros Dados = Outros Dados do registro :bi:`Family`
 
-Atualizações
-------------
+Criações/Atualizações
+---------------------
 
     #. **Cadastro Auxiliar**:
 
-        #. O **Cadastro Auxiliar** relacionado à Pessoa deve ser criado automaticamente conforme as condições descritas em ":ref:`Cadastro Auxiliar (2)`".
+        #. O **Cadastro Auxiliar** relacionado à Pessoa deve ser criado automaticamente conforme as condições descritas em ":ref:`Cadastro Auxiliar (8)`".
 
     #. :bi:`Address (Aux)`:
 
@@ -76,7 +76,9 @@ Atualizações
 
     #. :bi:`Person (Aux)`:
 
-        #. As atualizações necessárias devem ser aplicadas manualmente no registro :bi:`Person (Aux)` relacionado à Pessoa.
+        #. :red:`(Precisa ser Modificado)` Não será necessário qualquer ação de atualização do registro :bi:`Person (Aux)` relacionado à Pessoa.
+
+        #. :red:`(Precisa ser Modificado)` Indicar de alguma forma que a Pessoa está ausente da comunidade atendida pela JCAFB.
 
 .. toctree::
    :maxdepth: 2

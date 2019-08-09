@@ -8,13 +8,13 @@
 .. role:: green
 .. role:: bi
 
-.. index:: [Pessoa já cadastrada] Todos os dados de Cadastro da Pessoa serão mantidos
+.. index:: [Pessoa já cadastrada] A Pessoa mudou-se para um Endereço **não cadastrado**
 
-==========================================================================
-[Pessoa já cadastrada] Todos os dados de Cadastro da Pessoa serão mantidos
-==========================================================================
+============================================================================
+[Pessoa já cadastrada] A Pessoa mudou-se para um Endereço **não cadastrado**
+============================================================================
 
-.. _Cadastro Auxiliar (1):
+.. _Cadastro Auxiliar (5):
 
 Cadastro Auxiliar
 -----------------
@@ -27,7 +27,9 @@ Cadastro Auxiliar
 
         * :bi:`Address (Aux)`:
 
-            * A criação de :bi:`Address (Aux)`, **deve ser habilitada**.
+            * A criação de :bi:`Address (Aux)`, **deve ser desabilitada**.
+
+                * Um registro :bi:`Address (Aux)` deverá ser **criado manualmente** a partir dos dados do Endereço informado para a Pessoa.
 
         * :bi:`Family (Aux)`:
 
@@ -64,19 +66,31 @@ Criações/Atualizações
 
     #. **Cadastro Auxiliar**:
 
-        #. O **Cadastro Auxiliar** relacionado à Pessoa deve ser criado automaticamente conforme as condições descritas em ":ref:`Cadastro Auxiliar (1)`".
+        #. O **Cadastro Auxiliar** relacionado à Pessoa deve ser criado automaticamente conforme as condições descritas em ":ref:`Cadastro Auxiliar (5)`".
 
     #. :bi:`Address (Aux)`:
 
-        #. Não será necessário qualquer ação de atualização do registro :bi:`Address (Aux)` relacionado à Pessoa.
+        #. Um registro :bi:`Address (Aux)` deverá ser **criado manualmente** a partir dos dados do Endereço informado para a Pessoa.
+
+        #. O :bi:`(Reference) Address` do registro :bi:`Address (Aux)` deve ser mantido **vazio**.
+
+        #. Não será necessário qualquer outra ação de atualização do registro :bi:`Address (Aux)` relacionado à Pessoa.
 
     #. :bi:`Family (Aux)`:
 
-        #. Não será necessário qualquer ação de atualização do registro :bi:`Family (Aux)` relacionado à Pessoa.
+        #. O :bi:`(Reference) Address (Aux)` do registro :bi:`Family (Aux)` deve ser manualmente substituido pelo :bi:`Address (Aux)` do Endereço para o qual a Pessoa se mudou.
+
+        #. O :bi:`(Reference) Address` do registro :bi:`Family (Aux)` deve ser mantido.
+
+        #. As informações de :bi:`Contact Information` devem ser subistituídas pelas informações de :bi:`Contact Information` do :bi:`(Reference) Address (Aux)`.
 
     #. :bi:`Person (Aux)`:
 
-        #. Não será necessário qualquer ação de atualização do registro :bi:`Person (Aux)` relacionado à Pessoa.
+        #. O :bi:`(Reference) Address (Aux)` do registro :bi:`Person (Aux)` deve ser manualmente substituido pelo :bi:`Address (Aux)` do Endereço para o qual a Pessoa se mudou.
+
+        #. O :bi:`(Reference) Address` do registro :bi:`Person (Aux)` deve ser mantido.
+
+        #. As informações de :bi:`Contact Information` devem ser subistituídas pelas informações de :bi:`Contact Information` do :bi:`(Reference) Address (Aux)`.
 
 .. toctree::
    :maxdepth: 2

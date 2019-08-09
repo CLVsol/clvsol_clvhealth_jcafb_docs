@@ -8,21 +8,21 @@
 .. role:: green
 .. role:: bi
 
-.. index:: Criação do Cadastro Auxiliar para uma Pessoa
+.. index:: Criação/Atualização do Cadastro Auxiliar
 
-================================================
-Criação do **Cadastro Auxiliar** para uma Pessoa
-================================================
+============================================
+Criação/Atualização do **Cadastro Auxiliar**
+============================================
 
-    Se, após a  ':doc:`reregistration_workflow_010`' não for identificado um registro associado à Pessoa em ":bi:`Persons (Aux)`", independentemente da Pessoa ter sido declarada "**já cadastrada**" ou "**não cadastrada**", essa Pessoa deve ser cadastrada/recadastrada e, portanto, incluída no **Cadastro Auxiliar**.
+    Se, após a pesquisa por uma **Pessoa** nos **Cadastros**, não for identificado um registro associado à Pessoa em ":bi:`Persons (Aux)`", independentemente da Pessoa ter sido declarada "**já cadastrada**" ou "**não cadastrada**", essa Pessoa deve ser cadastrada/recadastrada e, portanto, incluída no **Cadastro Auxiliar**.
 
-    No caso de uma Pessoa "**já cadastrada**", os registros relativos a ela poderão ser automaticamente criados no **Cadastro Auxiliar** (:bi:`Person (Aux)`, :bi:`Address (Aux)` e :bi:`Family (Aux)`) a partir das informações dos registros equivalentes presentes no **Cadastro** (:bi:`Person`, :bi:`Addresse` e :bi:`Familiy`).
+    No caso de uma Pessoa "**já cadastrada**", os registros relativos a ela serão automaticamente criados no **Cadastro Auxiliar** (:bi:`Person (Aux)`, :bi:`Address (Aux)` e :bi:`Family (Aux)`) a partir das informações dos registros equivalentes presentes no **Cadastro** (:bi:`Person`, :bi:`Address` e :bi:`Familiy`).
 
-    Neste caso, os registros ":bi:`Addresses (Aux)`" e ":bi:`Families (Aux)`" podem já ter sido criados previamente (e serão automaticamente associados ao registro ":bi:`Person (Aux)`") caso uma outra Pessoa resitente no mesmo Endereço ou fazendo parte da mesma Família já esteja em processo de recadastramento. A ':doc:`reregistration_workflow_030`' deve ser executado em seguida.
+    Neste caso, os registros ":bi:`Address (Aux)`" e ":bi:`FamilY (Aux)`" relativos à Pessoa podem já ter sido criados previamente (e serão automaticamente associados ao registro ":bi:`Person (Aux)`") caso uma outra Pessoa resitente no mesmo Endereço e fazendo parte da mesma Família já esteja em processo de recadastramento.
 
     No caso de uma Pessoa "**não cadastrada**", os registros no **Cadastro Auxiliar** relativos a ela (:bi:`Person (Aux)`, :bi:`Addresse (Aux)` e :bi:`Family (Aux)`) serão criados com as informações apresentadas para a Pessoa.
 
-    Neste caso, os registros ":bi:`Address (Aux)`" e ":bi:`Family (Aux)`" podem já ter sido criados previamente (e poderão ser associados ao registro ":bi:`Person (Aux)`") caso uma outra Pessoa resitente no mesmo Endereço ou fazendo parte da mesma Família já esteja em processo de cadastramento/recadastramento. A ':doc:`reregistration_workflow_040`' deve ser executado em seguida.
+    Neste caso, os registros ":bi:`Address (Aux)`" e ":bi:`FamilY (Aux)`" relativos à Pessoa podem já ter sido criados previamente (e deverão ser associados ao registro ":bi:`Person (Aux)`") caso uma outra Pessoa resitente no mesmo Endereço e fazendo parte da mesma Família já esteja em processo de recadastramento.
 
 .. toctree::
    :maxdepth: 2

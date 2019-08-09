@@ -8,28 +8,30 @@
 .. role:: green
 .. role:: bi
 
-.. index:: Criação do Cadastro Auxiliar para uma Pessoa já cadastrada
+.. index:: Criação/Atualização do Cadastro Auxiliar para uma Pessoa já cadastrada
 
-==================================================================
-Criação do **Cadastro Auxiliar** para uma **Pessoa já cadastrada**
-==================================================================
+==============================================================================
+Criação/Atualização do **Cadastro Auxiliar** para uma **Pessoa já cadastrada**
+==============================================================================
 
-Este procedimento deve ser utilizado quando a Pessoa tiver sido declarada como **já cadastrada**.
+O processo de criação/atualização do **Cadastro Auxiliar** para uma Pessoa **já cadastrada** é utilizado quando a Pessoa tiver sido declarada como **já cadastrada**.
 
-Por esse método, quando não existir ainda um **Cadastro Auxiliar** para a Pessoa, o mesmo poderá ser automaticamente criado como uma cópia do **Cadastro** dessa Pessoa.
+Este processo é, basicamente, um processo de atualização das informações em uma cópia do **Cadastro** atual da Pessoa. 
 
-Se porventura já existir um **Cadastro Auxiliar** para a Pessoa, o mesmo será selecionado para dar proceguimento ao processo de recadastramento da Pessoa.
+Portanto, quando não existir ainda um **Cadastro Auxiliar** para a Pessoa, o mesmo deverá ser automaticamente criado como uma cópia do **Cadastro** dessa Pessoa.
 
-O **Cadastro Auxiliar** criado automáticamente poderá ser composto pelas **Entidades (Aux)**:
+Se porventura já existir um **Cadastro Auxiliar** para a Pessoa, o mesmo será selecionado para dar proseguimento ao processo de recadastramento da Pessoa.
+
+O **Cadastro Auxiliar** criado automáticamente poderá ser composto pelas seguintes **Entidades (Aux)**:
 
     * :bi:`Person (Aux)`:
         * quando habilitada a criação de :bi:`Person (Aux)`
-            * a criação de :bi:`Person (Aux)`, deve ser sempre habilitada
+            * A criação de :bi:`Person (Aux)`, deve ser sempre habilitada.
 
     * :bi:`Address (Aux)`:
         * quando existir um registro :bi:`Address` associado à Pessoa
         * e quando habilitada a criação de :bi:`Address (Aux)`
-            * A criação de um registro :bi:`Address (Aux)`, deve ser **habilitada** quando se constatar que da Pessoa foi mantida no Endereço atual cadastrado.
+            * A criação de um registro :bi:`Address (Aux)`, deve ser **habilitada** quando se constatar que a Pessoa foi mantida no Endereço atual cadastrado.
             * Um registro :bi:`Address (Aux)` deverá ser **criado automaticamente** a partir de um registro :bi:`Address` já cadastrado quando se constatar que a Pessoa foi transferida para o Endereço associado a este registro :bi:`Address`.
             * Um registro :bi:`Address (Aux)` deverá ser **criado manualmente** quando se constatar que a Pessoa foi transferida para um Endereço não cadastrado da comunidade atendida.
             * Um registro :bi:`Address (Aux)` deverá ser **vazio** quando se constatar que a Pessoa foi transferida para um Endereço desconhecido ou fora da comunidade atendida.
@@ -71,4 +73,14 @@ A criação do **Cadastro Auxiliar** para uma **Pessoa já cadastrada** é feita
 
 .. toctree::
    :maxdepth: 2
-   :caption: Procedimentos:
+   :caption: Conteúdo:
+
+   reregistration_workflow_030_010
+   reregistration_workflow_030_020
+   reregistration_workflow_030_030
+   reregistration_workflow_030_040
+   reregistration_workflow_030_050
+   reregistration_workflow_030_060
+   reregistration_workflow_030_070
+   reregistration_workflow_030_080
+   reregistration_workflow_030_090

@@ -8,13 +8,13 @@
 .. role:: green
 .. role:: bi
 
-.. index:: [Pessoa já cadastrada] Todos os dados de Cadastro da Pessoa serão mantidos
+.. index:: [Pessoa já cadastrada] A Pessoa mudou-se para um Endereço **desconhecido**
 
 ==========================================================================
-[Pessoa já cadastrada] Todos os dados de Cadastro da Pessoa serão mantidos
+[Pessoa já cadastrada] A Pessoa mudou-se para um Endereço **desconhecido**
 ==========================================================================
 
-.. _Cadastro Auxiliar (1):
+.. _Cadastro Auxiliar (6):
 
 Cadastro Auxiliar
 -----------------
@@ -27,7 +27,7 @@ Cadastro Auxiliar
 
         * :bi:`Address (Aux)`:
 
-            * A criação de :bi:`Address (Aux)`, **deve ser habilitada**.
+            * A criação de :bi:`Address (Aux)`, **deve ser desabilitada**.
 
         * :bi:`Family (Aux)`:
 
@@ -39,24 +39,22 @@ Cadastro Auxiliar
 
             * :bi:`Related Person` » :bi:`Person`
             * :bi:`(Reference) Address` » :bi:`Address`
-            * :bi:`(Reference) Address (Aux)` » :bi:`Address (Aux)`
+            * :bi:`(Reference) Address (Aux)` » "**vazio**"
             * :bi:`Family` » :bi:`Family`
             * :bi:`Family (Aux)` » :bi:`Family (Aux)`
-            * :bi:`Contact Information` = Dados do registro :bi:`Address`
+            * :bi:`Contact Information` = "informações que indiquem o desconhecimento do novo Endereço"
             * Outros Dados = Outros Dados do registro :bi:`Person`
 
         * :bi:`Address (Aux)`:
 
-            * :bi:`Related Address` » :bi:`Address`
-            * :bi:`Contact Information` = Dados do registro :bi:`Address`
-            * Outros Dados = Outros Dados do registro :bi:`Address`
+            * Registro **não disponível**
 
         * :bi:`Family (Aux)`:
 
             * :bi:`Related Family` » :bi:`Family`
             * :bi:`(Reference) Address` » :bi:`Address`
-            * :bi:`(Reference) Address (Aux)` » :bi:`Address (Aux)`
-            * :bi:`Contact Information` = Dados do registro :bi:`Address`
+            * :bi:`(Reference) Address (Aux)` » "**vazio**"
+            * :bi:`Contact Information` = "informações que indiquem o desconhecimento do novo Endereço"
             * Outros Dados = Outros Dados do registro :bi:`Family`
 
 Criações/Atualizações
@@ -64,19 +62,27 @@ Criações/Atualizações
 
     #. **Cadastro Auxiliar**:
 
-        #. O **Cadastro Auxiliar** relacionado à Pessoa deve ser criado automaticamente conforme as condições descritas em ":ref:`Cadastro Auxiliar (1)`".
+        #. O **Cadastro Auxiliar** relacionado à Pessoa deve ser criado automaticamente conforme as condições descritas em ":ref:`Cadastro Auxiliar (6)`".
 
     #. :bi:`Address (Aux)`:
 
-        #. Não será necessário qualquer ação de atualização do registro :bi:`Address (Aux)` relacionado à Pessoa.
+        * Registro **não disponível**
 
     #. :bi:`Family (Aux)`:
 
-        #. Não será necessário qualquer ação de atualização do registro :bi:`Family (Aux)` relacionado à Pessoa.
+        #. O :bi:`(Reference) Address (Aux)` do registro :bi:`Family (Aux)` deve ser manualmente **excluído**.
+
+        #. O :bi:`(Reference) Address` do registro :bi:`Family (Aux)` deve ser mantido.
+
+        #. As informações de :bi:`Contact Information`  do registro :bi:`Family (Aux)` devem ser subistituídas por informações que indiquem o desconhecimento do novo Endereço.
 
     #. :bi:`Person (Aux)`:
 
-        #. Não será necessário qualquer ação de atualização do registro :bi:`Person (Aux)` relacionado à Pessoa.
+        #. O :bi:`(Reference) Address (Aux)` do registro :bi:`Person (Aux)` deve ser manualmente **excluído**.
+
+        #. O :bi:`(Reference) Address` do registro :bi:`Person (Aux)` deve ser mantido.
+
+        #. As informações de :bi:`Contact Information`  do registro :bi:`Person (Aux)` devem ser subistituídas por informações que indiquem o desconhecimento do novo Endereço.
 
 .. toctree::
    :maxdepth: 2

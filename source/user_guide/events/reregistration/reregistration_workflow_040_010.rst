@@ -8,17 +8,11 @@
 .. role:: green
 .. role:: bi
 
-.. index:: Atualização dos dados de Person (Aux) de uma Pessoa não cadastrada
+.. index:: [Pessoa não cadastrada] A Pessoa reside em um Endereço **já cadastrado**
 
-============================================================================
-Atualização dos dados de :bi:`Person (Aux)` de uma **Pessoa não cadastrada**
-============================================================================
-
-    #. A Pessoa reside em um Endereço **existente** no Cadastro Geral
-
-    #. A Pessoa reside em um Endereço **não existente** no Cadastro Geral
-
-    #. A Pessoa reside em um Endereço **fora da comunidade** atendida pela JCAFB
+========================================================================
+[Pessoa não cadastrada] A Pessoa reside em um Endereço **já cadastrado**
+========================================================================
 
 .. toctree::
    :maxdepth: 2

@@ -14,14 +14,12 @@
 **Fluxo de Trabalho** (*Workflow*) do Recadastramento
 =====================================================
 
-O **Fluxo de Trabalho** (*Workflow*) do Recadastramento concomitante de **Pessoas**, **Famílias** e **Endereços** deve seguir as etapas listadas a seguir.
+O **Fluxo de Trabalho** (*Workflow*) do Recadastramento de **Pessoas**, concomitante ao de **Famílias** e **Endereços** é descrito pelas etapas apresentadas em seguida.
 
-É importante salientar que, dependendo do contexto e/ou dos parâmetros alterados, nem todas as etapas precisarão ser seguidas durante o recadastramento de uma Pessoa.
-
-Além disso as etapas específicas à :bi:`Address (Aux)` e :bi:`Family (Aux)` serão executadas somente para um dos residentes em um determinado Endereço ou para um dos componentes de uma determinada Família, respectivamente.
+É importante salientar que, etapas específicas ao recadastramento de **Endereços** ou ao recadastramento de **Famílias** precisarão ser executadas somente para uma das Pessoas residentes em um determinado Endereço ou para uma das Pessoas que compõem uma determinada Família, respectivamente.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Conteúdo:
 
    reregistration_workflow_010
