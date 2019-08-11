@@ -10,9 +10,9 @@
 
 .. index:: [Pessoa não cadastrada] A Pessoa reside em um Endereço não cadastrado
 
-=========================================================================
-[Pessoa não cadastrada] A Pessoa reside em um Endereço **não cadastrado**
-=========================================================================
+=================================================================================================
+:red:`(Não Verificado)` [Pessoa não cadastrada] A Pessoa reside em um Endereço **não cadastrado**
+=================================================================================================
 
 .. _Cadastro Auxiliar (11):
 

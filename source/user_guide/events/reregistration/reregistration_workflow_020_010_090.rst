@@ -10,9 +10,9 @@
 
 .. index:: [Pessoa já cadastrada] A Pessoa faleceu
 
-=======================================
-[Pessoa já cadastrada] A Pessoa faleceu
-=======================================
+===============================================================
+:red:`(Não Verificado)` [Pessoa já cadastrada] A Pessoa faleceu
+===============================================================
 
 .. _Cadastro Auxiliar (9):
 

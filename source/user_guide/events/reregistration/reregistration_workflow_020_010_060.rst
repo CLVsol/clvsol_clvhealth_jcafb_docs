@@ -10,9 +10,9 @@
 
 .. index:: [Pessoa já cadastrada] A Pessoa mudou-se para um Endereço desconhecido
 
-==========================================================================
-[Pessoa já cadastrada] A Pessoa mudou-se para um Endereço **desconhecido**
-==========================================================================
+==================================================================================================
+:red:`(Não Verificado)` [Pessoa já cadastrada] A Pessoa mudou-se para um Endereço **desconhecido**
+==================================================================================================
 
 .. _Cadastro Auxiliar (6):
 

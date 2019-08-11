@@ -10,9 +10,9 @@
 
 .. index:: [Pessoa já cadastrada] A Pessoa mudou-se para um Endereço não cadastrado, permanecendo na mesma Família
 
-===========================================================================================================
-[Pessoa já cadastrada] A Pessoa mudou-se para um Endereço **não cadastrado**, permanecendo na mesma Família
-===========================================================================================================
+=====================================================================================================================================
+:red:`(Não Verificado)` [Pessoa já cadastrada] A Pessoa mudou-se para um Endereço **não cadastrado**, permanecendo na mesma Família
+=====================================================================================================================================
 
 .. _Cadastro Auxiliar (5):
 

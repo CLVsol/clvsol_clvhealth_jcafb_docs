@@ -10,9 +10,9 @@
 
 .. index:: [Pessoa já cadastrada] A Pessoa está ausente da comunidade atendida pela JCAFB
 
-==============================================================================
-[Pessoa já cadastrada] A Pessoa está ausente da comunidade atendida pela JCAFB
-==============================================================================
+======================================================================================================
+:red:`(Não Verificado)` [Pessoa já cadastrada] A Pessoa está ausente da comunidade atendida pela JCAFB
+======================================================================================================
 
 .. _Cadastro Auxiliar (8):
 

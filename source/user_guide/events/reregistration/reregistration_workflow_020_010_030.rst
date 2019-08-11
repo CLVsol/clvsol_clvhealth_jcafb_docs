@@ -8,11 +8,17 @@
 .. role:: green
 .. role:: bi
 
-.. index:: [Pessoa já cadastrada] Atualização de dados de Contato da Pessoa que não caracterizem mudança de Endereço
+.. index:: [Pessoa já cadastrada] Atualização de dados Address do Contact Information da Pessoa, não caracterizando uma mudança de Endereço
 
-=========================================================================================================
-[Pessoa já cadastrada] Atualização de dados de Contato da Pessoa que não caracterizem mudança de Endereço
-=========================================================================================================
+=================================================================================================================================================================
+:red:`(Não Verificado)` [Pessoa já cadastrada] Atualização de dados *Address* do *Contact Information* da Pessoa, não caracterizando uma mudança de Endereço
+=================================================================================================================================================================
+
+Os dados :bi:`Address` do :bi:`Contact Information` são compartilhados por todas as Entidades do **Cadastro** (:bi:`Person`, :bi:`Address` e :bi:`Family`) e do **Cadastro Auxiliar** (:bi:`Person (Aux)`, :bi:`Address (Aux)` e :bi:`Family (Aux)`), descrevendo o Endereço dessas Entidades.
+
+Atualizações não caracterizando uma mudança de Endereço são aquelas que corrigem e/ou complementam a descrição do Endereço sem alterá-lo.
+
+No contexto do Recadastramento, essas atualizações devem ser aplicadas manualmente no regitro :bi:`Address (Aux)` e posteriormente replicadas nos registros :bi:`Family (Aux)` e :bi:`Person (Aux)`.
 
 .. _Cadastro Auxiliar (3):
 
@@ -37,11 +43,11 @@ Cadastro Auxiliar
 
         * :bi:`Person (Aux)`: 
 
-            * :bi:`Related Person` » :bi:`Person`
             * :bi:`(Reference) Address` » :bi:`Address`
-            * :bi:`(Reference) Address (Aux)` » :bi:`Address (Aux)`
             * :bi:`Family` » :bi:`Family`
+            * :bi:`(Reference) Address (Aux)` » :bi:`Address (Aux)`
             * :bi:`Family (Aux)` » :bi:`Family (Aux)`
+            * :bi:`Related Person` » :bi:`Person`
             * :bi:`Contact Information` = Dados do registro :bi:`Address`
             * Outros Dados = Outros Dados do registro :bi:`Person`
 
@@ -53,30 +59,41 @@ Cadastro Auxiliar
 
         * :bi:`Family (Aux)`:
 
-            * :bi:`Related Family` » :bi:`Family`
             * :bi:`(Reference) Address` » :bi:`Address`
             * :bi:`(Reference) Address (Aux)` » :bi:`Address (Aux)`
+            * :bi:`Related Family` » :bi:`Family`
             * :bi:`Contact Information` = Dados do registro :bi:`Address`
             * Outros Dados = Outros Dados do registro :bi:`Family`
 
-Atualizações
-------------
+.. Fluxo de Trabalho (*Workflow*) (3):
 
-    * **Cadastro Auxiliar**:
+Fluxo de Trabalho (*Workflow*)
+------------------------------
 
-        #. O **Cadastro Auxiliar** relacionado à Pessoa deve ser criado automaticamente conforme as condições descritas em ":ref:`Cadastro Auxiliar (3)`".
+    #. **Cadastro Auxiliar**:
 
-    * :bi:`Address (Aux)`:
+        #. Procurar pelo registro :bi:`Person` associado à Pessoa utilizando um dos métodos:
 
-        #. As atualizações de dados de :bi:`Contact Information` da Pessoa devem ser aplicadas manualmente no :bi:`Contact Information` do registro :bi:`Address (Aux)`.
+            * :doc:`reregistration_workflow_010_010`
+            * :doc:`reregistration_workflow_010_020`
 
-    * :bi:`Family (Aux)`:
+        #. O **Cadastro Auxiliar** relacionado à Pessoa deve ser criado a partir do registro :bi:`Person`, executando a Ação ":BI:`Person (Aux) Associate to Family (Aux)`":
 
-        #. As informações de :bi:`Contact Information` do registro :bi:`Family (Aux)` devem ser subistituídas pelas informações de :bi:`Contact Information` do :bi:`(Reference) Address (Aux)`.
+                * A criação de :bi:`Person (Aux)`, **deve ser habilitada**.
+                * A criação de :bi:`Address (Aux)`, **deve ser habilitada**.
+                * A criação de :bi:`Family (Aux)`, **deve ser habilitada**.
 
-    * :bi:`Person (Aux)`:
+    #. :bi:`Address (Aux)`:
 
-        #. As informações de :bi:`Contact Information` do registro :bi:`Person (Aux)` devem ser subistituídas pelas informações de :bi:`Contact Information` do :bi:`(Reference) Address (Aux)`.
+        #. As atualizações dos dados :bi:`Address` do :bi:`Contact Information` da Pessoa devem ser aplicadas manualmente nos campos :bi:`Address` do :bi:`Contact Information` do registro :bi:`Address (Aux)`.
+
+    #. :bi:`Family (Aux)`:
+
+        #. Os dados :bi:`Address` do :bi:`Contact Information` do registro :bi:`Family (Aux)` devem ser replicados dos dados :bi:`Address` do :bi:`Contact Information` do :bi:`(Reference) Address (Aux)`.
+
+    #. :bi:`Person (Aux)`:
+
+        #. Os dados :bi:`Address` do :bi:`Contact Information` do registro :bi:`Person (Aux)` devem ser replicados dos dados :bi:`Address` do :bi:`Contact Information` do :bi:`(Reference) Address (Aux)`.
 
 .. toctree::
    :maxdepth: 2
