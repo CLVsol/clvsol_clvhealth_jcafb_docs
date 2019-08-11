@@ -10,9 +10,9 @@
 
 .. index:: [Pessoa já cadastrada] A Pessoa está ausente da comunidade atendida pela JCAFB
 
-======================================================================================================
-:red:`(Não Verificado)` [Pessoa já cadastrada] A Pessoa está ausente da comunidade atendida pela JCAFB
-======================================================================================================
+==============================================================================
+[Pessoa já cadastrada] A Pessoa está ausente da comunidade atendida pela JCAFB
+==============================================================================
 
 .. _Cadastro Auxiliar (8):
 
@@ -23,25 +23,15 @@ Cadastro Auxiliar
 
         * :bi:`Person (Aux)`:
 
-            * A criação de :bi:`Person (Aux)`, **deve ser habilitada**.
-
-        * :bi:`Address (Aux)`:
-
-            * A criação de :bi:`Address (Aux)`, **deve ser desabilitada**.
-
-        * :bi:`Family (Aux)`:
-
-            * A criação de :bi:`Family (Aux)`, **deve ser desabilitada**.
-
     O relacionamento entre os diversos registros dos Cadastros será o seguinte:
 
         * :bi:`Person (Aux)`: 
 
+            * :bi:`(Reference) Address` » **vazio**
+            * :bi:`Family` » **vazio**
+            * :bi:`(Reference) Address (Aux)` » **vazio**
+            * :bi:`Family (Aux)` » **vazio**
             * :bi:`Related Person` » :bi:`Person`
-            * :bi:`(Reference) Address` » :bi:`Address`
-            * :bi:`(Reference) Address (Aux)` » "**vazio**"
-            * :bi:`Family` » :bi:`Family`
-            * :bi:`Family (Aux)` » :bi:`Family (Aux)`
             * :bi:`Contact Information` = **vazio**
             * Outros Dados = Outros Dados do registro :bi:`Person`
 
@@ -53,26 +43,33 @@ Cadastro Auxiliar
 
             * Registro **não disponível**
 
-Criações/Atualizações
----------------------
+.. Fluxo de Trabalho (*Workflow*) (8):
 
-    * **Cadastro Auxiliar**:
+Fluxo de Trabalho (*Workflow*)
+------------------------------
 
-        #. O **Cadastro Auxiliar** relacionado à Pessoa deve ser criado automaticamente conforme as condições descritas em ":ref:`Cadastro Auxiliar (8)`".
+    #. *View* **Contatos** ou *View* :bi:`Persons`:
 
-    * :bi:`Address (Aux)`:
+        #. Procurar pelo registro :bi:`Person` associado à Pessoa utilizando um dos métodos:
 
-        * Registro **não disponível**
+            * :doc:`reregistration_workflow_010_010`
+            * :doc:`reregistration_workflow_010_020`
 
-    * :bi:`Family (Aux)`:
+        #. O **Cadastro Auxiliar** relacionado à Pessoa deve ser criado a partir do registro :bi:`Person`, executando a Ação ":bi:`Person (Aux) Associate to Family (Aux)`":
 
-        * Registro **não disponível**
+                * A criação de :bi:`Person (Aux)`, deve ser **habilitada**.
+                * A criação de :bi:`Address (Aux)`, deve ser **desabilitada**.
+                * A criação de :bi:`Family (Aux)`, deve ser **desabilitada**.
 
-    * :bi:`Person (Aux)`:
+    #. Registro :bi:`Person (Aux)`:
+
+        #. O :bi:`(Reference) Address` do registro :bi:`Person (Aux)` deve ser manualmente removido.
 
         #. As informações de :bi:`Contact Information` do registro :bi:`Person (Aux)` devem ser **excluídas**.
 
-        #. :red:`(Precisa ser Modificado)`  Pessoa está ausente da comunidade atendida pela JCAFB.
+        #. O :bi:`Family` do registro :bi:`Person (Aux)` deve ser manualmente removido.
+
+        #. :red:`(Precisa ser Modificado)` Indicar de alguma forma que a Pessoa está ausente da comunidade atendida pela JCAFB.
 
 .. toctree::
    :maxdepth: 2

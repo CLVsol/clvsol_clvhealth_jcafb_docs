@@ -112,6 +112,8 @@ A criação do **Cadastro Auxiliar** para uma **Pessoa já cadastrada** é feita
    reregistration_workflow_020_010_050
    reregistration_workflow_020_010_055
    reregistration_workflow_020_010_060
+   reregistration_workflow_020_010_065
    reregistration_workflow_020_010_070
+   reregistration_workflow_020_010_075
    reregistration_workflow_020_010_080
    reregistration_workflow_020_010_090

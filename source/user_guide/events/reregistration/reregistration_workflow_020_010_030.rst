@@ -10,9 +10,9 @@
 
 .. index:: [Pessoa já cadastrada] Atualização de dados Address do Contact Information da Pessoa, não caracterizando uma mudança de Endereço
 
-=================================================================================================================================================================
-:red:`(Não Verificado)` [Pessoa já cadastrada] Atualização de dados *Address* do *Contact Information* da Pessoa, não caracterizando uma mudança de Endereço
-=================================================================================================================================================================
+====================================================================================================================================
+[Pessoa já cadastrada] Atualização de dados *Address* do *Contact Information* da Pessoa, não caracterizando uma mudança de Endereço
+====================================================================================================================================
 
 Os dados :bi:`Address` do :bi:`Contact Information` são compartilhados por todas as Entidades do **Cadastro** (:bi:`Person`, :bi:`Address` e :bi:`Family`) e do **Cadastro Auxiliar** (:bi:`Person (Aux)`, :bi:`Address (Aux)` e :bi:`Family (Aux)`), descrevendo o Endereço dessas Entidades.
 
@@ -28,16 +28,8 @@ Cadastro Auxiliar
     O **Cadastro Auxiliar** criado poderá ser composto pelas seguintes **Entidades (Aux)**:
 
         * :bi:`Person (Aux)`:
-
-            * A criação de :bi:`Person (Aux)`, **deve ser habilitada**.
-
         * :bi:`Address (Aux)`:
-
-            * A criação de :bi:`Address (Aux)`, **deve ser habilitada**.
-
         * :bi:`Family (Aux)`:
-
-            * A criação de :bi:`Family (Aux)`, **deve ser habilitada**.
 
     O relacionamento entre os diversos registros dos Cadastros será o seguinte:
 
@@ -79,9 +71,9 @@ Fluxo de Trabalho (*Workflow*)
 
         #. O **Cadastro Auxiliar** relacionado à Pessoa deve ser criado a partir do registro :bi:`Person`, executando a Ação ":BI:`Person (Aux) Associate to Family (Aux)`":
 
-                * A criação de :bi:`Person (Aux)`, **deve ser habilitada**.
-                * A criação de :bi:`Address (Aux)`, **deve ser habilitada**.
-                * A criação de :bi:`Family (Aux)`, **deve ser habilitada**.
+                * A criação de :bi:`Person (Aux)`, deve ser **habilitada**.
+                * A criação de :bi:`Address (Aux)`, deve ser **habilitada**.
+                * A criação de :bi:`Family (Aux)`, deve ser **habilitada**.
 
     #. :bi:`Address (Aux)`:
 

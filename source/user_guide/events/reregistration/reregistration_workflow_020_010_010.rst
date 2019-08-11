@@ -10,9 +10,9 @@
 
 .. index:: [Pessoa já cadastrada] Todos os dados da Pessoa serão mantidos
 
-======================================================================================
-:red:`(Não Verificado)` [Pessoa já cadastrada] Todos os dados da Pessoa serão mantidos
-======================================================================================
+==============================================================
+[Pessoa já cadastrada] Todos os dados da Pessoa serão mantidos
+==============================================================
 
 .. _Cadastro Auxiliar (1):
 
@@ -22,16 +22,8 @@ Cadastro Auxiliar
     O **Cadastro Auxiliar** criado automáticamente poderá ser composto pelas seguintes **Entidades (Aux)**:
 
         * :bi:`Person (Aux)`:
-
-            * A criação de :bi:`Person (Aux)`, **deve ser habilitada**.
-
         * :bi:`Address (Aux)`:
-
-            * A criação de :bi:`Address (Aux)`, **deve ser habilitada**.
-
         * :bi:`Family (Aux)`:
-
-            * A criação de :bi:`Family (Aux)`, **deve ser habilitada**.
 
     O relacionamento entre os diversos registros dos Cadastros será o seguinte:
 
@@ -73,9 +65,9 @@ Fluxo de Trabalho (*Workflow*)
 
         #. O **Cadastro Auxiliar** relacionado à Pessoa deve ser criado a partir do registro :bi:`Person`, executando a Ação ":BI:`Person (Aux) Associate to Family (Aux)`":
 
-                * A criação de :bi:`Person (Aux)`, **deve ser habilitada**.
-                * A criação de :bi:`Address (Aux)`, **deve ser habilitada**.
-                * A criação de :bi:`Family (Aux)`, **deve ser habilitada**.
+                * A criação de :bi:`Person (Aux)`, deve ser **habilitada**.
+                * A criação de :bi:`Address (Aux)`, deve ser **habilitada**.
+                * A criação de :bi:`Family (Aux)`, deve ser **habilitada**.
 
     #. :bi:`Address (Aux)`:
 

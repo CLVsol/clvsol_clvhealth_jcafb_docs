@@ -23,17 +23,17 @@ Cadastro Auxiliar
 
         * :bi:`Person (Aux)`:
 
-            * A criação de :bi:`Person (Aux)`, **deve ser habilitada**.
+            * A criação de :bi:`Person (Aux)`, deve ser **habilitada**.
 
         * :bi:`Address (Aux)`:
 
-            * A criação de :bi:`Address (Aux)`, **deve ser desabilitada**.
+            * A criação de :bi:`Address (Aux)`, deve ser **desabilitada**.
 
                 * Um registro :bi:`Address (Aux)` deverá ser **criado automaticamente** a partir do registro :bi:`Address` relacionado ao Endereço informado para a Pessoa.
 
         * :bi:`Family (Aux)`:
 
-            * A criação de :bi:`Family (Aux)`, **deve ser desabilitada**.
+            * A criação de :bi:`Family (Aux)`, deve ser **desabilitada**.
 
                 * Um registro :bi:`Family (Aux)` deverá ser **criado automaticamente** a partir do registro :bi:`Address` relacionado ao Endereço informado para a Pessoa.
 
