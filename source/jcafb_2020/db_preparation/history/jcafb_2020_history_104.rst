@@ -71,8 +71,8 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
             /etc/init.d/odoo start
 
-:bi:`(Não Executado)` Atualizar o(s) módulo(s) [clv_address_aux, clv_family_aux, clv_person_aux] (2019-08-11]
--------------------------------------------------------------------------------------------------------------
+:red:`(Não Executado)` Atualizar o(s) módulo(s) [clv_address_aux, clv_family_aux, clv_person_aux] (2019-08-11]
+--------------------------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_update`.
 
@@ -124,8 +124,8 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
                 /etc/init.d/odoo start
 
-:bi:`(Não Executado)` Criar um backup do *CLVhealth-JCAFB-2020* (2019-08-11a)
------------------------------------------------------------------------------
+:red:`(Não Executado)` Criar um backup do *CLVhealth-JCAFB-2020* (2019-08-11a)
+------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/clvhealth_jcafb_backup`.
 
@@ -189,8 +189,8 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 .. index:: filestore_clvhealth_jcafb_2020_2019-08-11a
 .. index:: clvsol_filestore_clvhealth_jcafb_2019-08-11a
 
-:bi:`(Não Executado)` Desabilitar a instalação do(s) módulo(s) [export, verification, processing, report] (2019-08-11)
-----------------------------------------------------------------------------------------------------------------------
+:red:`(Não Executado)` Desabilitar a instalação do(s) módulo(s) [export, verification, processing, report] (2019-08-11)
+-----------------------------------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
 
@@ -221,8 +221,8 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
         * clv_report
         * clv_report_jcafb
 
-:bi:`(Não Executado)` Instalar o(s) módulo(s) [export, verification, processing, report] (2019-07-29)
------------------------------------------------------------------------------------------------------
+:red:`(Não Executado)` Instalar o(s) módulo(s) [export, verification, processing, report] (2019-07-29)
+------------------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
 
@@ -300,8 +300,8 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
                 /etc/init.d/odoo start
 
-:bi:`(Não Executado)` Configurar as permissões do usuário de referência da JCAFB-2020 (2019-08-11)
---------------------------------------------------------------------------------------------------
+:red:`(Não Executado)` Configurar as permissões do usuário de referência da JCAFB-2020 (2019-08-11)
+---------------------------------------------------------------------------------------------------
 
     #. Configurar as permissões do usuário de referência:
 
@@ -354,8 +354,8 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
             * *Document*:
                 * :bi:`User (Document)` ​
             
-:bi:`(Não Executado)` Atualizar as permissões de todos os Usuários da JCAFB-2020 (2019-08-11)
----------------------------------------------------------------------------------------------
+:red:`(Não Executado)` Atualizar as permissões de todos os Usuários da JCAFB-2020 (2019-08-11)
+----------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/user_guide/employee/employee_user_groups_updt`.
 
@@ -380,8 +380,8 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
             #. Utilize o botão :bi:`Update` para executar a Ação.
 
-:bi:`(Não Executado)` Criar um backup do *CLVhealth-JCAFB-2020* (2019-08-11a)
------------------------------------------------------------------------------
+:red:`(Não Executado)` Criar um backup do *CLVhealth-JCAFB-2020* (2019-08-11a)
+------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/clvhealth_jcafb_backup`.
 
