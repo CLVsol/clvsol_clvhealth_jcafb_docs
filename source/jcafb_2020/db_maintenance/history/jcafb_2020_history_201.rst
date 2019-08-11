@@ -5,7 +5,7 @@
 .. role:: red
 
 =======================
-2019-08-06 (JCAFB-2020)
+2019-08-11 (JCAFB-2020)
 =======================
 
 Restaurar um backup do *CLVhealth-JCAFB-2020* [clvheatlh-jcafb-2020-aws-tst] (2019-08-06a)
