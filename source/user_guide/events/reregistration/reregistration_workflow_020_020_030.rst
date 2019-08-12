@@ -10,9 +10,9 @@
 
 .. index:: [Pessoa não cadastrada] A Pessoa reside em um Endereço fora da comunidade atendida pela JCAFB
 
-=================================================================================================
-[Pessoa não cadastrada] A Pessoa reside em um Endereço **fora da comunidade** atendida pela JCAFB
-=================================================================================================
+=============================================================================================
+[Pessoa não cadastrada] A Pessoa reside em um Endereço fora da comunidade atendida pela JCAFB
+=============================================================================================
 
 .. _Cadastro Auxiliar (13):
 
