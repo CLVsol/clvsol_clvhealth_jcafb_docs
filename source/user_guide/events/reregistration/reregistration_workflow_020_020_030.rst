@@ -10,9 +10,9 @@
 
 .. index:: [Pessoa não cadastrada] A Pessoa reside em um Endereço fora da comunidade atendida pela JCAFB
 
-=============================================================================================================================
-:red:`(Não Verificado)` [Pessoa não cadastrada] A Pessoa reside em um Endereço **fora da comunidade** atendida pela JCAFB
-=============================================================================================================================
+=================================================================================================
+[Pessoa não cadastrada] A Pessoa reside em um Endereço **fora da comunidade** atendida pela JCAFB
+=================================================================================================
 
 .. _Cadastro Auxiliar (13):
 
@@ -22,47 +22,64 @@ Cadastro Auxiliar
     O **Cadastro Auxiliar** criado poderá ser composto pelas seguintes **Entidades (Aux)**:
 
         * :bi:`Person (Aux)`:
-
-            * Um registro :bi:`Person (Aux)` deverá ser **criado manualmente** e preenchido com as informações coletadas para a Pessoa.
-
         * :bi:`Address (Aux)`:
-
-            * Nenhum :bi:`Address (Aux)` será associado à Pessoa.
-
         * :bi:`Family (Aux)`:
-
-            * Nenhum :bi:`Family (Aux)` será associado à Pessoa.
 
     O relacionamento entre os diversos registros dos Cadastros será o seguinte:
 
         * :bi:`Person (Aux)`: 
 
-            * :bi:`Related Person` » **vazio**
-            * :bi:`(Reference) Address` **vazio**
-            * :bi:`(Reference) Address (Aux)` » **vazio**
+            * :bi:`(Reference) Address` » **vazio**
+            * :bi:`(Reference) Address (Aux)` » :bi:`Address (Aux)`
             * :bi:`Family` » **vazio**
             * :bi:`Family (Aux)` » **vazio**
-            * :bi:`Contact Information` = Dados do registro :bi:`Address`
+            * :bi:`Related Person` » **vazio**
+            * :bi:`Contact Information` = Dados do registro :bi:`Address (Aux)`
             * Outros Dados = Outros Dados coletadas para a Pessoa
 
         * :bi:`Address (Aux)`:
 
-            * Nenhum :bi:`Address (Aux)` será associado à Pessoa.
+            * :bi:`Related Address` » **vazio**
+            * :bi:`Contact Information` = Dados informados para o Endereço da Pessoa
+            * Outros Dados = Outros Dados informados para o Endereço da Pessoa
 
         * :bi:`Family (Aux)`:
 
-            * Nenhum :bi:`Family (Aux)` será associado à Pessoa.
+            * Registro **não disponível**
 
-Atualizações
-------------
+.. Fluxo de Trabalho (*Workflow*) (13):
+
+Fluxo de Trabalho (*Workflow*)
+------------------------------
 
     * **Cadastro Auxiliar**:
 
-        #. O **Cadastro Auxiliar** relacionado à Pessoa deve ser criado manualmente conforme as condições descritas em ":ref:`Cadastro Auxiliar (13)`".
+    #. *View* **Contatos** ou *View* :bi:`Persons`:
 
-    * :bi:`Person (Aux)`:
+        #. Procurar pelo registro :bi:`Person` associado à Pessoa utilizando um dos métodos:
 
-        #. As informações de :bi:`Contact Information`  do registro :bi:`Person (Aux)` devem ser preenchidas com informações que indiquem o Endereço fora da comunidade.
+            * :doc:`reregistration_workflow_010_010`
+            * :doc:`reregistration_workflow_010_020`
+
+            **Observação**: Nenhum registro :bi:`Person` deverá ser encontrado, a menos que a nova Pessoa já esteja em processo de recadastramento.
+
+    #. *View* :bi:`Address (Aux)`:
+
+        #. Um registro :bi:`Address (Aux)` deverá ser **criado manualmente** a partir dos dados do Endereço informado para a Pessoa.
+
+    #. Registro :bi:`Address (Aux)`:
+
+        #. Não será necessário qualquer outra ação de atualização do registro :bi:`Address (Aux)`.
+
+    #. *View* :bi:`Person (Aux)`:
+
+        #. Um registro :bi:`Person (Aux)` deverá ser **criado manualmente** e preenchido com as informações informadas para a Pessoa, exceto as informaçôes de Endereço.
+
+    #. Registro :bi:`Person (Aux)`:
+
+        #. O :bi:`(Reference) Address (Aux)` do registro :bi:`Person (Aux)` deve ser manualmente associado ao :bi:`Address (Aux)` do Endereço informado para a Pessoa.
+
+        #. As informações de :bi:`Contact Information` devem ser subistituídas pelas informações de :bi:`Contact Information` do :bi:`(Reference) Address (Aux)`.
 
 .. toctree::
    :maxdepth: 2
