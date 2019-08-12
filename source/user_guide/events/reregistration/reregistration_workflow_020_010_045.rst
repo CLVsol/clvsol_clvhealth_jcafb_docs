@@ -10,9 +10,9 @@
 
 .. index:: [Pessoa já cadastrada] A Pessoa mudou-se para um Endereço já cadastrado, mudando de Família
 
-=======================================================================================================================
-:red:`(Não Verificado)` [Pessoa já cadastrada] A Pessoa mudou-se para um Endereço **já cadastrado**, mudando de Família
-=======================================================================================================================
+===============================================================================================
+[Pessoa já cadastrada] A Pessoa mudou-se para um Endereço **já cadastrado**, mudando de Família
+===============================================================================================
 
 .. _Cadastro Auxiliar (4.5):
 
@@ -22,30 +22,18 @@ Cadastro Auxiliar
     O **Cadastro Auxiliar** criado poderá ser composto pelas seguintes **Entidades (Aux)**:
 
         * :bi:`Person (Aux)`:
-
-            * A criação de :bi:`Person (Aux)`, deve ser **habilitada**.
-
         * :bi:`Address (Aux)`:
-
-            * A criação de :bi:`Address (Aux)`, deve ser **desabilitada**.
-
-                * Um registro :bi:`Address (Aux)` deverá ser **criado automaticamente** a partir do registro :bi:`Address` relacionado ao Endereço informado para a Pessoa.
-
         * :bi:`Family (Aux)`:
-
-            * A criação de :bi:`Family (Aux)`, deve ser **desabilitada**.
-
-                * Um registro :bi:`Family (Aux)` deverá ser **criado automaticamente** a partir do registro :bi:`Address` relacionado ao Endereço informado para a Pessoa.
 
     O relacionamento entre os diversos registros dos Cadastros será o seguinte:
 
         * :bi:`Person (Aux)`: 
 
-            * :bi:`Related Person` » :bi:`Person`
             * :bi:`(Reference) Address` » :bi:`Address`
-            * :bi:`(Reference) Address (Aux)` » :bi:`Address (Aux)`
             * :bi:`Family` » :bi:`Family`
+            * :bi:`(Reference) Address (Aux)` » :bi:`Address (Aux)`
             * :bi:`Family (Aux)` » :bi:`Family (Aux)`
+            * :bi:`Related Person` » :bi:`Person`
             * :bi:`Contact Information` = Dados do registro :bi:`Address`
             * Outros Dados = Outros Dados do registro :bi:`Person`
 
@@ -57,38 +45,70 @@ Cadastro Auxiliar
 
         * :bi:`Family (Aux)`:
 
-            * :bi:`Related Family` » :bi:`Family`
             * :bi:`(Reference) Address` » :bi:`Address`
             * :bi:`(Reference) Address (Aux)` » :bi:`Address (Aux)`
-            * :bi:`Contact Information` = Dados do registro :bi:`Address`
+            * :bi:`Related Family` » :bi:`Family`
+            * :bi:`Contact Information` = Dados do registro :bi:`Address (Aux)`
             * Outros Dados = Outros Dados do registro :bi:`Family`
 
-Atualizações
-------------
+.. Fluxo de Trabalho (*Workflow*) (4.5):
 
-    * **Cadastro Auxiliar**:
+Fluxo de Trabalho (*Workflow*)
+------------------------------
 
-        #. O **Cadastro Auxiliar** relacionado à Pessoa deve ser criado automaticamente conforme as condições descritas em ":ref:`Cadastro Auxiliar (4.5)`".
+    #. *View* **Contatos** ou *View* :bi:`Persons`:
 
-    * :bi:`Address (Aux)`:
+        #. Procurar pelo registro :bi:`Person` associado à Pessoa utilizando um dos métodos:
 
-        #. Um registro :bi:`Address (Aux)` deverá ser **criado automaticamente** a partir do registro :bi:`Address` relacionado ao Endereço informado para a Pessoa.
+            * :doc:`reregistration_workflow_010_010`
+            * :doc:`reregistration_workflow_010_020`
 
-        #. Não será necessário qualquer ação de atualização do registro :bi:`Address (Aux)` relacionado à Pessoa.
+        #. O **Cadastro Auxiliar** relacionado à Pessoa deve ser criado a partir do registro :bi:`Person`, executando a Ação ":bi:`Person (Aux) Associate to Family (Aux)`":
 
-    * :bi:`Family (Aux)`:
+                * A criação de :bi:`Person (Aux)`, deve ser **habilitada**.
+                * A criação de :bi:`Address (Aux)`, deve ser **desabilitada**.
+                * A criação de :bi:`Family (Aux)`, deve ser **desabilitada**.
 
-        #. Um registro :bi:`Family (Aux)` deverá ser **criado automaticamente** a partir do registro :bi:`Address` relacionado ao Endereço informado para a Pessoa.
+    #. *View* **Contatos** ou *View* :bi:`Addresses`:
 
-        #. Não será necessário qualquer ação de atualização do registro :bi:`Family (Aux)` relacionado à Pessoa.
+        #. Procurar pelo registro :bi:`Address` associado ao novo Endereço informado para a Pessoa utilizando um dos métodos:
 
-    * :bi:`Person (Aux)`:
+            * :doc:`reregistration_workflow_010_050`
+            * :doc:`reregistration_workflow_010_060`
 
-        #. O :bi:`(Reference) Address (Aux)` do registro :bi:`Person (Aux)` deve ser manualmente substituido pelo :bi:`Address (Aux)` do Endereço para o qual a Pessoa se mudou.
+    #. Registro :bi:`Person (Aux)`:
 
-        #. O :bi:`Family (Aux)` do registro :bi:`Person (Aux)` deve ser manualmente substituido pelo :bi:`Family (Aux)` da Família para a qual a Pessoa se mudou.
+        #. O :bi:`(Reference) Address` do registro :bi:`Person (Aux)` deve ser manualmente removido.
 
-        #. As informações de :bi:`Contact Information` do registro :bi:`Person (Aux)` devem ser subistituídas pelas informações de :bi:`Contact Information` do :bi:`(Reference) Address (Aux)`.
+        #. O :bi:`(Reference) Address` do registro :bi:`Person (Aux)` deve ser manualmente associado ao registro :bi:`Address` encontrado.
+
+        #. Um registro :bi:`Address (Aux)` deve ser criado a partir do registro :bi:`Person (Aux)`, executando a Ação ":bi:`Person (Aux) Associate to Address (Aux)`":
+
+            * A criação de :bi:`Address (Aux)`, deve ser **habilitada**.
+
+    #. Registro :bi:`Address (Aux)`:
+
+        #. Não será necessário qualquer ação de atualização do registro :bi:`Address (Aux)`.
+
+    #. Registro :bi:`Person (Aux)`:
+
+        #. Procurar pelo registro :bi:`Family` associado ao :bi:`(Reference) Address` do registro :bi:`Person (Aux)`.
+
+        #. O :bi:`Family` do registro :bi:`Person (Aux)` deve ser manualmente removido.
+
+        #. O :bi:`Family` do registro :bi:`Person (Aux)` deve ser manualmente associado ao registro :bi:`Family` encontrado.
+
+        #. Um registro :bi:`Family (Aux)` deve ser criado a partir do registro :bi:`Person (Aux)`, executando a Ação ":bi:`Person (Aux) Associate to Family (Aux)`":
+
+                * A criação de :bi:`Family (Aux)`, deve ser **habilitada**.
+
+    #. Registro :bi:`Family (Aux)`:
+
+        #. Não será necessário qualquer ação de atualização do registro :bi:`Family (Aux)`.
+
+    #. Registro :bi:`Person (Aux)`:
+
+        #. Não será necessário qualquer ação de atualização adicional do registro :bi:`Person (Aux)`.
 
 .. toctree::
    :maxdepth: 2
