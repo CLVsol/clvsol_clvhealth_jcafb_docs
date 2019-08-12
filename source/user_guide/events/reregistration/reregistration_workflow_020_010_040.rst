@@ -78,6 +78,8 @@ Fluxo de Trabalho (*Workflow*)
 
     #. Registro :bi:`Person (Aux)`:
 
+        #. O :bi:`(Reference) Address` do registro :bi:`Person (Aux)` deve ser manualmente removido.
+
         #. O :bi:`(Reference) Address` do registro :bi:`Person (Aux)` deve ser manualmente associado ao registro :bi:`Address` encontrado.
 
         #. Um registro :bi:`Address (Aux)` deve ser criado a partir do registro :bi:`Person (Aux)`, executando a Ação ":bi:`Person (Aux) Associate to Address (Aux)`":
