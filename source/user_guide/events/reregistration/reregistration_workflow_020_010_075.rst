@@ -10,9 +10,9 @@
 
 .. index:: [Pessoa já cadastrada] A Pessoa mudou-se para um Endereço fora da comunidade atendida pela JCAFB, mudando de Família
 
-====================================================================================================================================================
-:red:`(Não Verificado)` [Pessoa já cadastrada] A Pessoa mudou-se para um Endereço **fora da comunidade** atendida pela JCAFB, mudando de Família
-====================================================================================================================================================
+========================================================================================================================
+[Pessoa já cadastrada] A Pessoa mudou-se para um Endereço **fora da comunidade** atendida pela JCAFB, mudando de Família
+========================================================================================================================
 
 .. _Cadastro Auxiliar (7.5):
 
@@ -30,9 +30,9 @@ Cadastro Auxiliar
         * :bi:`Person (Aux)`: 
 
             * :bi:`(Reference) Address` » **vazio**
-            * :bi:`Family` » :bi:`Family`
+            * :bi:`Family` » **vazio**
             * :bi:`(Reference) Address (Aux)` » :bi:`Address (Aux)`
-            * :bi:`Family (Aux)` » :bi:`Family (Aux)`
+            * :bi:`Family (Aux)` » **vazio**
             * :bi:`Related Person` » :bi:`Person`
             * :bi:`Contact Information` = Dados do registro :bi:`Address (Aux)`
             * Outros Dados = Outros Dados do registro :bi:`Person`
@@ -45,11 +45,7 @@ Cadastro Auxiliar
 
         * :bi:`Family (Aux)`:
 
-            * :bi:`Related Family` » :bi:`Family`
-            * :bi:`(Reference) Address` » :bi:`Address`
-            * :bi:`(Reference) Address (Aux)` » :bi:`Address (Aux)`
-            * :bi:`Contact Information` = Dados do registro :bi:`Address (Aux)`
-            * Outros Dados = Outros Dados do registro :bi:`Family`
+            * Registro **não disponível**
 
 .. Fluxo de Trabalho (*Workflow*) (7.5):
 
@@ -83,17 +79,7 @@ Fluxo de Trabalho (*Workflow*)
 
         #. As informações de :bi:`Address` do :bi:`Contact Information` do registro :bi:`Person (Aux)` devem ser substituídas pelas informações de :bi:`Address` do :bi:`Contact Information` de :bi:`(Reference) Address (Aux)`.
 
-        #. Um registro :bi:`Family (Aux)` deve ser criado a partir do registro :bi:`Person (Aux)`, executando a Ação ":bi:`Person (Aux) Associate to Family (Aux)`":
-
-                * A criação de :bi:`Family (Aux)`, deve ser **habilitada**.
-
-    #. Registro :bi:`Family (Aux)`:
-
-        #. Não será necessário qualquer ação de atualização do registro :bi:`Family (Aux)`.
-
-    #. Registro :bi:`Person (Aux)`:
-
-        #. Não será necessário qualquer ação de atualização adicional do registro :bi:`Person (Aux)`.
+        #. O :bi:`Family` do registro :bi:`Person (Aux)` deve ser manualmente removido.
 
 .. toctree::
    :maxdepth: 2
