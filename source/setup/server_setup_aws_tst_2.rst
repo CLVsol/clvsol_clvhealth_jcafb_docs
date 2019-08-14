@@ -8,11 +8,11 @@
 .. role:: green
 .. role:: bi
 
-.. index:: (Obsoleto) Criação de um Servidor de Teste na AWS do CLVhealth-JCAFB (Turnkey Linux AWS)
+.. index:: Criação de um Servidor de Testes na AWS do CLVhealth-JCAFB (Turnkey Linux AWS)
 
-===============================================================================================
-:red:`(Obsoleto)` Criação de um Servidor de Teste na AWS do *CLVhealth-JCAFB* (*Turnkey Linux*)
-===============================================================================================
+==============================================================================
+Criação de um Servidor de Testes na AWS do *CLVhealth-JCAFB* (*Turnkey Linux*)
+==============================================================================
 
 This project will help you create a server to host the **Odoo 12 (JCAFB)** solution, based on an `Odoo <https://www.odoo.com/>`_  appliance, using the Amazon Web Services (AWS) EC2 infrastructure.
 
@@ -44,29 +44,57 @@ Glossary
        `OCA/l10n-brazil (12.0) <https://github.com/OCA/l10n-brazil/tree/12.0>`_
           Este projeto contêm os principais módulos da localização brasileira do Odoo.
 
+       `AWS <https://aws.amazon.com/>`_
+          Amazon Web Services
+
+       `TurnKey Hub <https://hub.turnkeylinux.org/>`_
+          The Hub powers TurnKey GNU/Linux
+
 Server preparation
 ------------------
 
-#. Create a new Key Pair:
+    #. Create, via TrunKey Hub, a new Key Pair:
 
-    * Key pair name: **clvheatlh-jcafb-2020-aws-tst**
-    * Private Key File: **clvheatlh-jcafb-2020-aws-tst.pem**
+        * Region: **Sao Paulo (South America)**
+        * Key pair name: **clvheatlh-jcafb-2020-aws-tst**
+        * Private Key File: **clvheatlh-jcafb-2020-aws-tst.pem**
 
-#. Create an Amazon EC2 instance:
+    #. Create, via TrunKey Hub, a new Elastic IP:
 
-        - Region: **Sao Paulo (South America)**
-        - Amazon Machine Image (AMI): **AWS Marketplace (Odoo - From ERP to CRM, eCommerce to CMS powered by TurnKey Linux (HVM))**
-        - Instance Type: **t2.micro**
-        - Root file system size (GB): **16**
-        - Root Volume Type: **General Purpose SSD (GP2)**
-        - Security group name: **clvheatlh-jcafb-2020-aws-tst**
-        - SSH key-pair: **clvheatlh-jcafb-2020-aws-tst**
+        * Region: **Sao Paulo (South America)**
+        * Label: **clvheatlh-jcafb-2020-aws-tst**
 
-    Related information:
+    #. Create, via TrunKey Hub, the Amazon EC2 instance tk-postgres-aws:
 
-        - Private Key File: **clvheatlh-jcafb-2020-aws-tst.pem**
+        * Basics:
 
-    Security Group: **clvheatlh-jcafb-2020-aws-tst** (Inbound)::
+            * TurnKey Appliance: **Odoo**
+            * Hostname: **clvheatlh-jcafb-2020-aws-tst**
+
+        * Instance:
+
+            * Region: **Sao Paulo (South America)**
+            * Size: **T2.Micro ($0.027/hour)**
+
+        * Root account:
+
+            * Root password: "*******"
+            * SSH key-pair: **clvheatlh-jcafb-2020-aws-tst**
+
+        * Application settings:
+
+            * PostgreSQL postgres password: "*******"
+            * Odoo admin password: "*******"
+
+        * Advanced configuration:
+
+            * Root file system size (GB): **16**
+            * Availability Zone: **Automatic**
+            * Install Security Updates: **Enabled**
+            * Configure Security Alerts: **Enabled**
+            * Auto-associate Elastic IP: **Automatic**
+
+    Security Group: **turnkey-odoo-5228** (Inbound)::
 
         Port (Service)   Source
         -------------------------------------
@@ -74,25 +102,9 @@ Server preparation
         22(SSH)          0.0.0.0/0
         80(HTTP)         0.0.0.0/0
         443(HTTPS)       0.0.0.0/0
-        12320(Web Shell) 0.0.0.0/0  (disable)
-        12321(Webmin)    0.0.0.0/0  (disable)
-        12322(Adminer)   0.0.0.0/0  (disable)
-
-#. Credentials (passwords set at first boot):
-
-    :red:`Note:` For the first boot, use :bi:`SecureCRT` (Private Key File: **clvheatlh-jcafb-2020-aws-tst.pem**,  username **admin**)
-
-    - Webmin, SSH: username **admin**
-    - PostgreSQL, Adminer: username **postgres**
-    - Odoo Master Account: **admin**
-
-#. Enhable login as **root** instead of **admin** (`TurnKey GNU/Linux on the AWS marketplace <https://www.turnkeylinux.org/awsmp>`_):
-
-    :red:`Note:` Use :bi:`SecureCRT` (Private Key File: **clvheatlh-jcafb-2020-aws-tst.pem**,  username **admin**)
-
-    ::
-
-        sudo turnkey-sudoadmin off
+        12320(Web Shell) 0.0.0.0/0  (enabled)
+        12321(Webmin)    0.0.0.0/0  (enabled)
+        12322(Adminer)   0.0.0.0/0  (enabled)
 
 #. Upgrade the software:
 
