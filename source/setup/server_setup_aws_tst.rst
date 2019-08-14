@@ -1,12 +1,14 @@
 .. raw:: html
 
     <style> .red {color:red} </style>
+    <style> .green {color:green} </style>
     <style> .bi {font-weight: bold; font-style: italic} </style>
 
 .. role:: red
+.. role:: green
 .. role:: bi
 
-.. index:: Criação de um Servidor do CLVhealth-JCAFB (Turnkey Linux AWS)
+.. index:: Criação de um Servidor de Teste na AWS do CLVhealth-JCAFB (Turnkey Linux AWS)
 
 =============================================================================
 Criação de um Servidor de Teste na AWS do *CLVhealth-JCAFB* (*Turnkey Linux*)
@@ -146,7 +148,7 @@ Server preparation
 
             AllowTcpForwarding yes
 
-    #. To stop and start the Odoo server, use the following commands (as root):
+    #. To restart the SSH service, use the following commands (as root):
 
         ::
 
