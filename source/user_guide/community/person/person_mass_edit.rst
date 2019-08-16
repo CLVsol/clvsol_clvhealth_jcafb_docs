@@ -27,6 +27,7 @@
                 * *Global Tags*
                 * *Categories:*
                 * *Markers*
+                * *Phase*
 
             #. Utilize o botão :bi:`Mass Edit` para executar a ação.
 
