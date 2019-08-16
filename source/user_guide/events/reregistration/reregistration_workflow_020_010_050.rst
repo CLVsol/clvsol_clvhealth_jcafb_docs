@@ -45,9 +45,9 @@ Cadastro Auxiliar
 
         * :bi:`Family (Aux)`:
 
-            * :bi:`Related Family` » :bi:`Family`
-            * :bi:`(Reference) Address` » :bi:`Address`
+            * :bi:`(Reference) Address` » **vazio**
             * :bi:`(Reference) Address (Aux)` » :bi:`Address (Aux)`
+            * :bi:`Related Family` » :bi:`Family`
             * :bi:`Contact Information` = Dados do registro :bi:`Address`
             * Outros Dados = Outros Dados do registro :bi:`Family`
 
