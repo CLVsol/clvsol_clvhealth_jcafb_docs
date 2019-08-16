@@ -50,3 +50,4 @@
    person_associate_to_family
    person_associate_to_person_aux
    person_associate_to_set
+   person_person_history_updt
