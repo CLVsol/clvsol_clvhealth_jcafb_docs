@@ -56,14 +56,15 @@ Cadastro Auxiliar
 Fluxo de Trabalho (*Workflow*)
 ------------------------------
 
-    #. *View* **Contatos** ou *View* :bi:`Persons`:
+    #. *View* **Contatos**:
 
-        #. Procurar pelo registro :bi:`Person` associado à Pessoa utilizando um dos métodos:
+        #. Procurar pelo registro :bi:`Person` e/ou :bi:`Person (Aux)` associado à Pessoa utilizando o método:
 
             * :doc:`reregistration_workflow_010_010`
-            * :doc:`reregistration_workflow_010_020`
 
-            **Observação**: Nenhum registro :bi:`Person` deverá ser encontrado, a menos que a nova Pessoa já esteja em processo de recadastramento.
+            **Observação 1**: Nenhum registro :bi:`Person` deverá ser encontrado, a menos que a nova Pessoa já esteja em processo de recadastramento.
+
+            **Observação 2**: Nenhum registro :bi:`Person (Aux)` deverá ser encontrado, a menos que a nova Pessoa já esteja em processo de recadastramento.
 
     #. *View* **Contatos** ou *View* :bi:`Addresses`:
 
@@ -71,14 +72,6 @@ Fluxo de Trabalho (*Workflow*)
 
             * :doc:`reregistration_workflow_010_050`
             * :doc:`reregistration_workflow_010_060`
-
-    #. *View* :bi:`Contatos`:
-
-        #. Procurar pelo registro :bi:`Person (Aux)` associado à Pessoa utilizando um dos métodos:
-
-            * :doc:`reregistration_workflow_010_010`
-
-            **Observação**: Nenhum registro :bi:`Person (Aux)` deverá ser encontrado, a menos que a nova Pessoa já esteja em processo de recadastramento.
 
     #. *View* :bi:`Person (Aux)`:
 
@@ -98,9 +91,7 @@ Fluxo de Trabalho (*Workflow*)
 
     #. Registro :bi:`Person (Aux)`:
 
-        #. Procurar pelo registro :bi:`Family` associado ao :bi:`(Reference) Address` do registro :bi:`Person (Aux)`.
-
-        #. O :bi:`Family` do registro :bi:`Person (Aux)` deve ser manualmente associado ao registro :bi:`Family` encontrado.
+        #. O registro :bi:`Family` associado ao :bi:`(Reference) Address` do registro :bi:`Person (Aux)` deve ser associado ao registro :bi:`Person (Aux)`, executando a Ação ":bi:`Person (Aux) Associate to Family`".
 
         #. Um registro :bi:`Family (Aux)` deve ser criado a partir do registro :bi:`Person (Aux)`, executando a Ação ":bi:`Person (Aux) Associate to Family (Aux)`":
 
