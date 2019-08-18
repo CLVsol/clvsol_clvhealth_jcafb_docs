@@ -9,7 +9,7 @@
 .. role:: bi
 
 =========================================================================================
-[2019-08-16) - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
+[2019-08-18) - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
 =========================================================================================
 
 Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-08-06a)
@@ -71,7 +71,7 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
             /etc/init.d/odoo start
 
-Atualizar o(s) módulo(s) [clv_address_aux, clv_family_aux, clv_person_aux] (2019-08-16)
+Atualizar o(s) módulo(s) [clv_address_aux, clv_family_aux, clv_person_aux] (2019-08-18)
 ---------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_update`.
@@ -124,7 +124,7 @@ Atualizar o(s) módulo(s) [clv_address_aux, clv_family_aux, clv_person_aux] (201
 
                 /etc/init.d/odoo start
 
-Atualizar o(s) módulo(s) [clv_person, clv_person_history, clv_family] (2019-08-16)
+Atualizar o(s) módulo(s) [clv_person, clv_person_history, clv_family] (2019-08-18)
 ----------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_update`.
@@ -177,7 +177,7 @@ Atualizar o(s) módulo(s) [clv_person, clv_person_history, clv_family] (2019-08-
 
                 /etc/init.d/odoo start
 
-Atualizar o *Person History* de todas as Pessoas (2019-08-16)(a))
+Atualizar o *Person History* de todas as Pessoas (2019-08-18)(a))
 -----------------------------------------------------------------
 
     * Referência: :doc:`/user_guide/community/person/person_person_history_updt`.
@@ -224,7 +224,7 @@ Remover a Fase de todas as Pessoas
 
             #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
-Atualizar o *Person History* de todas as Pessoas (2019-08-16)(b))
+Atualizar o *Person History* de todas as Pessoas (2019-08-18)(b))
 -----------------------------------------------------------------
 
     * Referência: :doc:`/user_guide/community/person/person_person_history_updt`.
@@ -248,7 +248,7 @@ Atualizar o *Person History* de todas as Pessoas (2019-08-16)(b))
 
             #. Utilize o botão :bi:`Person History Update` para executar a Ação.
 
-Criar um backup do *CLVhealth-JCAFB-2020* (2019-08-16))
+Criar um backup do *CLVhealth-JCAFB-2020* (2019-08-18))
 -------------------------------------------------------
 
     * Referência: :doc:`/setup/clvhealth_jcafb_backup`.
@@ -276,16 +276,16 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-08-16))
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-08-16).sql
+            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-08-18).sql
 
-            gzip clvhealth_jcafb_2020_2019-08-16).sql
-            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-08-16).sql
+            gzip clvhealth_jcafb_2020_2019-08-18).sql
+            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-08-18).sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-08-16).tar.gz clvhealth_jcafb_2020
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-08-18).tar.gz clvhealth_jcafb_2020
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-08-16).tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-08-18).tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
 
@@ -304,11 +304,11 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-08-16))
             /etc/init.d/odoo start
 
     Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2020_2019-08-16).sql
-        * /opt/odoo/clvhealth_jcafb_2020_2019-08-16).sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2020_2019-08-16).tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-08-16).tar.gz
+        * /opt/odoo/clvhealth_jcafb_2020_2019-08-18).sql
+        * /opt/odoo/clvhealth_jcafb_2020_2019-08-18).sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2020_2019-08-18).tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-08-18).tar.gz
 
-.. index:: clvhealth_jcafb_2020_2019-08-16).sql
-.. index:: filestore_clvhealth_jcafb_2020_2019-08-16)
-.. index:: clvsol_filestore_clvhealth_jcafb_2019-08-16)
+.. index:: clvhealth_jcafb_2020_2019-08-18).sql
+.. index:: filestore_clvhealth_jcafb_2020_2019-08-18)
+.. index:: clvsol_filestore_clvhealth_jcafb_2019-08-18)
