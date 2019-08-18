@@ -92,11 +92,9 @@ Fluxo de Trabalho (*Workflow*)
 
     #. Registro :bi:`Person (Aux)`:
 
-        #. Procurar pelo registro :bi:`Family` associado ao :bi:`(Reference) Address` do registro :bi:`Person (Aux)`.
-
         #. O :bi:`Family` do registro :bi:`Person (Aux)` deve ser manualmente removido.
 
-        #. O :bi:`Family` do registro :bi:`Person (Aux)` deve ser manualmente associado ao registro :bi:`Family` encontrado.
+        #. O registro :bi:`Family` associado ao :bi:`(Reference) Address` do registro :bi:`Person (Aux)` deve ser associado ao registro :bi:`Person (Aux)`, executando a Ação ":bi:`Person (Aux) Associate to Family`".
 
         #. Um registro :bi:`Family (Aux)` deve ser criado a partir do registro :bi:`Person (Aux)`, executando a Ação ":bi:`Person (Aux) Associate to Family (Aux)`":
 
