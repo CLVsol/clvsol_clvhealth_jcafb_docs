@@ -18,3 +18,4 @@
 
    address_mass_edit
    address_associate_to_address_aux
+   address_address_history_updt
