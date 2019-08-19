@@ -30,3 +30,4 @@
 
    family_mass_edit
    family_contact_info_updt
+   family_family_history_updt
