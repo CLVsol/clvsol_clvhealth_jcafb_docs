@@ -71,7 +71,63 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
             /etc/init.d/odoo start
 
-Atualizar o *Person History* de todas as Pessoas (2019-08-20)(a))
+Atualizar o(s) módulo(s) [clv_address_history, clv_family, clv_family_jcafb, clv_family_history, clv_family_history, clv_person_history_jcafb] (2019-08-19)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    * Referência: :doc:`/setup/module_update`.
+
+
+    #. [tkl-odoo12-jcafb-vm] **Executar** a atualização do(s) Módulo(s):
+
+        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo12-jcafb-vm** e executar o *Odoo* no modo manual:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-vm (session 1)
+                #
+
+                ssh tkl-odoo12-jcafb-vm -l root
+
+                /etc/init.d/odoo stop
+
+                su odoo
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo12-jcafb-vm** e executar o **install.py**:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-vm (session 2)
+                #
+
+                ssh tkl-odoo12-jcafb-vm -l odoo
+
+                cd /opt/odoo/clvsol_clvhealth_jcafb/project
+                
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_address_history
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_family
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_family_history
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_person_history
+
+            
+        #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-vm (session 1)
+                #
+
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+                ^C
+
+                exit
+
+                /etc/init.d/odoo start
+
+Atualizar o *Person History* de todas as Pessoas (a) (2019-08-20)
 -----------------------------------------------------------------
 
     * Referência: :doc:`/user_guide/community/person/person_person_history_updt`.
@@ -95,8 +151,8 @@ Atualizar o *Person History* de todas as Pessoas (2019-08-20)(a))
 
             #. Utilize o botão :bi:`Person History Update` para executar a Ação.
 
-Remover a Fase de todas as Pessoas
-----------------------------------
+Remover a Fase de todas as Pessoas (2019-08-20)
+-----------------------------------------------
 
     * Referência: :doc:`/user_guide/community/person/person_mass_edit`.
 
@@ -118,7 +174,7 @@ Remover a Fase de todas as Pessoas
 
             #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
-Atualizar o *Person History* de todas as Pessoas (2019-08-20)(b))
+Atualizar o *Person History* de todas as Pessoas (b) (2019-08-20)
 -----------------------------------------------------------------
 
     * Referência: :doc:`/user_guide/community/person/person_person_history_updt`.
@@ -141,6 +197,148 @@ Atualizar o *Person History* de todas as Pessoas (2019-08-20)(b))
                 * *Sign in date*: **01/11/2018**
 
             #. Utilize o botão :bi:`Person History Update` para executar a Ação.
+
+Atualizar o *Address History* de todos os Endereços (a) (2019-08-20)
+--------------------------------------------------------------------
+
+    * Referência: :doc:`/user_guide/community/address/address_address_history_updt`.
+
+    #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Address History Update` para todos os Endereços:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
+
+        #. Acessar a *View* *Addresss*:
+
+            * Menu de acesso:
+                * :bi:`Community` » :bi:`Community` » :bi:`Addresss`
+
+        #. Selecionar todos os Endereços (**575**)
+
+        #. Exercutar a Ação ":bi:`Address History Update`":
+
+            * Parâmetros utilizados:
+                * *Sign out date*: **01/07/2019**
+                * *Sign in date*: **01/11/2018**
+
+            #. Utilize o botão :bi:`Address History Update` para executar a Ação.
+
+Remover a Fase de todos os Endereços (2019-08-20)
+-------------------------------------------------
+
+    * Referência: :doc:`/user_guide/community/address/address_mass_edit`.
+
+    #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Address Mass Edit` para todas as Pessoas:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
+
+        #. Acessar a *View* *Addresses*:
+
+            * Menu de acesso:
+                * :bi:`Community` » :bi:`Community` » :bi:`Addresses`
+
+        #. Selecionar todas as Pessoas (**575**)
+
+        #. Exercutar a Ação ":bi:`Address Mass Edit`":
+
+            * Parâmetros utilizados:
+                * *Phase*: :bi:`Remove`
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Atualizar o *Address History* de todos os Endereços (b) (2019-08-20)
+--------------------------------------------------------------------
+
+    * Referência: :doc:`/user_guide/community/address/address_address_history_updt`.
+
+    #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Address History Update` para todos os Endereços:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
+
+        #. Acessar a *View* *Addresss*:
+
+            * Menu de acesso:
+                * :bi:`Community` » :bi:`Community` » :bi:`Addresss`
+
+        #. Selecionar todos os Endereços (**575**)
+
+        #. Exercutar a Ação ":bi:`Address History Update`":
+
+            * Parâmetros utilizados:
+                * *Sign out date*: **01/07/2019**
+                * *Sign in date*: **01/11/2018**
+
+            #. Utilize o botão :bi:`Address History Update` para executar a Ação.
+
+Atualizar o *Family History* de todas as Famílias (a) (2019-08-20)
+------------------------------------------------------------------
+
+    * Referência: :doc:`/user_guide/community/family/family_family_history_updt`.
+
+    #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Family History Update` para todas as Famílias:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
+
+        #. Acessar a *View* *Families*:
+
+            * Menu de acesso:
+                * :bi:`Community` » :bi:`Community` » :bi:`Families`
+
+        #. Selecionar todas as Famílias (**373**)
+
+        #. Exercutar a Ação ":bi:`Family History Update`":
+
+            * Parâmetros utilizados:
+                * *Sign out date*: **01/07/2019**
+                * *Sign in date*: **01/11/2018**
+
+            #. Utilize o botão :bi:`Family History Update` para executar a Ação.
+
+Remover a Fase de todas as Famílias (2019-08-20)
+------------------------------------------------
+
+    * Referência: :doc:`/user_guide/community/family/family_mass_edit`.
+
+    #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Family Mass Edit` para todas as Famílias:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
+
+        #. Acessar a *View* *Families*:
+
+            * Menu de acesso:
+                * :bi:`Community` » :bi:`Community` » :bi:`Families`
+
+        #. Selecionar todas as Famílias (**373**)
+
+        #. Exercutar a Ação ":bi:`Family Mass Edit`":
+
+            * Parâmetros utilizados:
+                * *Phase*: :bi:`Remove`
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Atualizar o *Family History* de todas as Famílias (b) (2019-08-20)
+------------------------------------------------------------------
+
+    * Referência: :doc:`/user_guide/community/family/family_family_history_updt`.
+
+    #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Family History Update` para todas as Famílias:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
+
+        #. Acessar a *View* *Families*:
+
+            * Menu de acesso:
+                * :bi:`Community` » :bi:`Community` » :bi:`Families`
+
+        #. Selecionar todas as Famílias (**373**)
+
+        #. Exercutar a Ação ":bi:`Family History Update`":
+
+            * Parâmetros utilizados:
+                * *Sign out date*: **01/07/2019**
+                * *Sign in date*: **01/11/2018**
+
+            #. Utilize o botão :bi:`Family History Update` para executar a Ação.
 
 Criar um backup do *CLVhealth-JCAFB-2020* (2019-08-20a)
 -------------------------------------------------------
