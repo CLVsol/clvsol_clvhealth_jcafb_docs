@@ -14,11 +14,9 @@
 Procura por uma Pessoa em **Contatos**
 ======================================
 
-    Este é o método de pesquisa mais abrangente, e o preferencial quando não se dispuser do Código da Pessoa a ser pesquisada.
+    Este é o método de pesquisa mais abrangente, possibilitando a identificação simultânea de todos os cadastros associados à Pessoa.
 
-    A procura por uma Pessoa utilizando a *view* **Contatos** é realizada quando se dispõe somente da informação do **Nome** da mesma (situação em que é incerta a existência de um cadastro para essa Pessoa).
-
-    Neste caso não é possível realizar a pesquisa utilizando o Codigo da Pessoa.
+    A procura por uma Pessoa utilizando a *view* **Contatos** é realizada tanto a partir do **Nome** da mesma (situação em que é incerta a existência de cadastro para essa Pessoa), quanto a partir do **Código** da mesma (situação em que é certa a existência de cadastros para essa Pessoa.
 
     A procura por uma Pessoa em **Contatos** é feita utilizando o procedimento ":doc:`reregistration_procedure_010_010`".
 

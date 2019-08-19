@@ -14,11 +14,11 @@
 Procura por um Endereço em :bi:`Addresses`
 ==========================================
 
-    Este é o método de pesquisa mais restrito, e o preferencial quando se dispuser do Código do Endereço a ser pesquisada.
+    Este é o método de pesquisa mais restrito, possibilitando a identificação somente do cadastro :bi:`Address` associado ao Endereço.
 
-    A procura por um Endereço utilizando a *view* :bi:`Addresses` é realizada quando se dispõe da informação do **Código** desse Enmdereço (situação em que é certa a existência de um cadastro para esse Enmdereço).
+    A procura por um Endereço utilizando a *view* :bi:`Addresses` é realizada tanto a partir do **Nome** do mesmo (situação em que é incerta a existência de cadastro para esse Endereço), quanto a partir do **Código** do mesmo (situação em que é certa a existência de cadastros para esse Endereço.
 
-    Este método pode ser utilizado também para pesquisas utilizando o Nome do Endereço, quando não se conhece o Código do Endereço. Mas neste caso é mais conveniente usar o método anterior ":doc:`reregistration_workflow_010_030`" que é mais abrangente, e permite a identificação do Cadatro Auxiliar do Endereço, quando já existente.
+    Em geral é mais conveniente usar o método ":doc:`reregistration_workflow_010_050`" que é mais abrangente, e permite a identificação do Cadatro Auxiliar do Endereço, quando já existente.
 
     A procura por um Endereço em :bi:`Addresses` é feita utilizando o procedimento ":doc:`reregistration_procedure_010_060`".
 

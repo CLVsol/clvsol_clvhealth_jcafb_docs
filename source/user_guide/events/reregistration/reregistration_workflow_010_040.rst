@@ -14,11 +14,11 @@
 Procura por uma Família em :bi:`Families`
 =========================================
 
-    Este é o método de pesquisa mais restrito, e o preferencial quando se dispuser do Código da Família a ser pesquisada.
+    Este é o método de pesquisa mais restrito, possibilitando a identificação somente do cadastro :bi:`Family` associado à Família.
 
-    A procura por uma Família utilizando a *view* :bi:`Families` é realizada quando se dispõe da informação do **Código** dessa Família (situação em que é certa a existência de um cadastro para essa Família).
+    A procura por uma Família utilizando a *view* :bi:`Families` é realizada tanto a partir do **Nome** da mesma (situação em que é incerta a existência de cadastro para essa Família), quanto a partir do **Código** da mesma (situação em que é certa a existência de cadastros para essa Família.
 
-    Este método pode ser utilizado também para pesquisas utilizando o Nome da Família, quando não se conhece o Código da Família. Mas neste caso é mais conveniente usar o método anterior ":doc:`reregistration_workflow_010_030`" que é mais abrangente, e permite a identificação do Cadatro Auxiliar da Família, quando já existente.
+    Em geral é mais conveniente usar o método ":doc:`reregistration_workflow_010_030`" que é mais abrangente, e permite a identificação do Cadatro Auxiliar da Família, quando já existente.
 
     A procura por uma Família em :bi:`Families` é feita utilizando o procedimento ":doc:`reregistration_procedure_010_040`".
 

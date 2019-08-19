@@ -25,7 +25,7 @@ Procura pela Família em **Contatos**
 
         #. Aplicar o filtro: **Agrupar Por** » :bi:`Address Type`.
 
-        #. Pesquisar pelo nome da Família:
+        #. Pesquisar pela Família:
 
     #. **Caso um registro dessa Família seja encontrado** com *Address Type* :bi:`Family`, independentemente da existência de um registro com *Address Type* :bi:`Family (Aux)`:
 

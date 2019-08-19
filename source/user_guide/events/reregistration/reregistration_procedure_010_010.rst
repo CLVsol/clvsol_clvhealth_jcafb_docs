@@ -25,7 +25,7 @@ Procura pela Pessoa em **Contatos**
 
         #. Aplicar o filtro: **Agrupar Por** » :bi:`Address Type`.
 
-        #. Pesquisar pelo nome da Pessoa:
+        #. Pesquisar pela Pessoa.
 
     #. **Caso um registro dessa Pessoa seja encontrado** com *Address Type* :bi:`Person`, independentemente da existência de um registro com *Address Type* :bi:`Person (Aux)`:
 
