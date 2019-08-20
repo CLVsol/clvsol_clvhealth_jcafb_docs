@@ -38,22 +38,22 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2020_2019-08-06a.sql.gz
+            # gzip -d clvhealth_jcafb_2020_2019-08-19a.sql.gz
 
             dropdb -i clvhealth_jcafb_2020
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2020
-            psql -f clvhealth_jcafb_2020_2019-08-06a.sql -d clvhealth_jcafb_2020 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2020_2019-08-19a.sql -d clvhealth_jcafb_2020 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2020
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-08-06a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-08-19a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-08-06a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-08-19a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
 
@@ -71,8 +71,8 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
             /etc/init.d/odoo start
 
-Atualizar o(s) módulo(s) [clv_address_history, clv_family, clv_family_jcafb, clv_family_history, clv_family_history, clv_person_history_jcafb] (2019-08-19)
------------------------------------------------------------------------------------------------------------------------------------------------------------
+Atualizar o(s) módulo(s) [clv_address_history, clv_address_jcafb, clv_family, clv_family_jcafb, clv_family_history, clv_person_jcafb, clv_person_history_jcafb] (2019-08-19)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_update`.
 
@@ -105,11 +105,7 @@ Atualizar o(s) módulo(s) [clv_address_history, clv_family, clv_family_jcafb, cl
 
                 cd /opt/odoo/clvsol_clvhealth_jcafb/project
                 
-                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_address_history
-                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_family
-                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_family_history
-                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_person_history
-
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_address
             
         #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
 
@@ -339,6 +335,52 @@ Atualizar o *Family History* de todas as Famílias (b) (2019-08-20)
                 * *Sign in date*: **01/11/2018**
 
             #. Utilize o botão :bi:`Family History Update` para executar a Ação.
+
+Remover o *Responsible Empĺoyee* de todos os Endereços (2019-08-20)
+-------------------------------------------------------------------
+
+    * Referência: :doc:`/user_guide/community/address/address_mass_edit`.
+
+    #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Address Mass Edit` para todas as Pessoas:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
+
+        #. Acessar a *View* *Addresses*:
+
+            * Menu de acesso:
+                * :bi:`Community` » :bi:`Community` » :bi:`Addresses`
+
+        #. Selecionar todas as Pessoas (**575**)
+
+        #. Exercutar a Ação ":bi:`Address Mass Edit`":
+
+            * Parâmetros utilizados:
+                * *Responsible Empĺoyee*: :bi:`Remove`
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Renovar o *Random ID* de todas as Pessoas (2019-08-20)
+------------------------------------------------------
+
+    * Referência: :doc:`/user_guide/community/person/person_mass_edit`.
+
+    #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Person Mass Edit` para todas as Pessoas:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
+
+        #. Acessar a *View* *Persons*:
+
+            * Menu de acesso:
+                * :bi:`Community` » :bi:`Community` » :bi:`Persons`
+
+        #. Selecionar todas as Pessoas (**1375**)
+
+        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+
+            * Parâmetros utilizados:
+                * *Random ID*: "**/**"
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
 Criar um backup do *CLVhealth-JCAFB-2020* (2019-08-20a)
 -------------------------------------------------------
