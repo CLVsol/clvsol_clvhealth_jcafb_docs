@@ -9,7 +9,7 @@
 .. role:: bi
 
 =========================================================================================
-[2019-08-23] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
+[2019-08-24] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
 =========================================================================================
 
 Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-08-20a)
@@ -71,7 +71,7 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
             /etc/init.d/odoo start
 
-Atualizar o(s) módulo(s) [clv_lab_test, clv_lab_test_jcafb] (2019-08-23)
+Atualizar o(s) módulo(s) [clv_lab_test, clv_lab_test_jcafb] (2019-08-24)
 ------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_update`.
@@ -126,6 +126,8 @@ Atualizar o(s) módulo(s) [clv_lab_test, clv_lab_test_jcafb] (2019-08-23)
 Criar o *Lab Test Type* "JCAFB 2020 - Exames - Detecção de Anemia" (2019-08-20)
 -------------------------------------------------------------------------------
 
+    * Referência: :doc:`/user_guide/health/lab_test_type_duplicate`.
+
     #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Lab Test Type Duplicate` para o :bi:`Lab Test Type` "**JCAFB 2019 - Exames - Detecção de Anemia**":
 
         #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
@@ -151,6 +153,8 @@ Criar o *Lab Test Type* "JCAFB 2020 - Exames - Detecção de Anemia" (2019-08-20
 
 Criar o *Lab Test Type* "JCAFB 2020 - Exames - Diabetes, Hipertensão Arterial e Hipercolesterolemia" (2019-08-20)
 -----------------------------------------------------------------------------------------------------------------
+
+    * Referência: :doc:`/user_guide/health/lab_test_type_duplicate`.
 
     #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Lab Test Type Duplicate` para o :bi:`Lab Test Type` "**JCAFB 2019 - Exames - Diabetes, Hipertensão Arterial e Hipercolesterolemia**":
 
@@ -178,6 +182,8 @@ Criar o *Lab Test Type* "JCAFB 2020 - Exames - Diabetes, Hipertensão Arterial e
 Criar o *Lab Test Type* "JCAFB 2020 - Laboratório - Parasitologia" (2019-08-20)
 -------------------------------------------------------------------------------
 
+    * Referência: :doc:`/user_guide/health/lab_test_type_duplicate`.
+
     #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Lab Test Type Duplicate` para o :bi:`Lab Test Type` "**JCAFB 2019 - Laboratório - Parasitologia**":
 
         #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
@@ -204,6 +210,8 @@ Criar o *Lab Test Type* "JCAFB 2020 - Laboratório - Parasitologia" (2019-08-20)
 Criar o *Lab Test Type* "JCAFB 2020 - Laboratório - Pesquisa de Enterobius vermicularis" (2019-08-20)
 -----------------------------------------------------------------------------------------------------
 
+    * Referência: :doc:`/user_guide/health/lab_test_type_duplicate`.
+
     #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Lab Test Type Duplicate` para o :bi:`Lab Test Type` "**JCAFB 2019 - Laboratório - Pesquisa de Enterobius vermicularis**":
 
         #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
@@ -229,6 +237,8 @@ Criar o *Lab Test Type* "JCAFB 2020 - Laboratório - Pesquisa de Enterobius verm
 
 Criar o *Lab Test Type* "JCAFB 2020 - Laboratório - Urinálise" (2019-08-20)
 ---------------------------------------------------------------------------
+
+    * Referência: :doc:`/user_guide/health/lab_test_type_duplicate`.
 
     #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Lab Test Type Duplicate` para o :bi:`Lab Test Type` "**JCAFB 2019 - Laboratório - Urinálise**":
 
