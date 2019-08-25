@@ -8,11 +8,11 @@
 .. role:: green
 .. role:: bi
 
-.. index:: Criação/Atualização do Cadastro Auxiliar para uma Pessoa não cadastrada
+.. index:: Criação/Atualização do Cadastro Auxiliar (Pessoa não cadastrada)
 
-===============================================================================
-Criação/Atualização do **Cadastro Auxiliar** para uma **Pessoa não cadastrada**
-===============================================================================
+========================================================================
+Criação/Atualização do **Cadastro Auxiliar** (**Pessoa não cadastrada**)
+========================================================================
 
     O processo de criação/atualização do **Cadastro Auxiliar** para uma Pessoa **não cadastrada** é utilizado quando a Pessoa tiver sido declarada como **não cadastrada**.
 

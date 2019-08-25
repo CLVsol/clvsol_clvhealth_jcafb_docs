@@ -14,13 +14,15 @@
 **Fluxo de Trabalho** (*Workflow*) do Recadastramento
 =====================================================
 
-O **Fluxo de Trabalho** (*Workflow*) do Recadastramento de **Pessoas**, concomitante ao de **Famílias** e **Endereços** é descrito pelas etapas apresentadas em seguida.
+O **Fluxo de Trabalho** (*Workflow*) do Recadastramento de **Pessoas**, concomitante ao de **Famílias** e de **Endereços** é descrito pelas etapas apresentadas em seguida.
 
-É importante salientar que, etapas específicas ao recadastramento de **Endereços** ou ao recadastramento de **Famílias** precisarão ser executadas somente para uma das Pessoas residentes em um determinado Endereço ou para uma das Pessoas que compõem uma determinada Família, respectivamente.
+É importante salientar que as etapas específicas ao recadastramento de um **Endereço** precisarão ser executadas somente para uma das Pessoas residentes no Endereço.
+
+Da mesma forma, as etapas específicas ao recadastramento de uma **Família** precisarão ser executadas somente para uma das Pessoas que compõem a Família. 
 
 .. toctree::
    :maxdepth: 3
-   :caption: Conteúdo:
+   :caption: Tópicos Relacionados:
 
    reregistration_workflow_010
    reregistration_workflow_020

@@ -8,15 +8,16 @@
 .. role:: green
 .. role:: bi
 
-===================
-**Recadastramento**
-===================
+.. index:: Atividades
+
+================
+:bi:`Atividades`
+================
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: Conteúdo:
 
-   reregistration_cadastro
-   reregistration_description
-   reregistration_workflow
-   reregistration_procedure_index
+   reregistration/reregistration
+   campaign/campaign
+   task_force/task_force

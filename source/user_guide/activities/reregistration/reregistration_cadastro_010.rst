@@ -14,7 +14,7 @@
 Cadastro Básico (**Cadastro**)
 ==============================
 
-O **Cadastro Básico** (**Cadastro**) é composto pelas 3 **Entidades de Cadastro** inter-relacionadas:
+O **Cadastro Básico** (**Cadastro**) é composto pelas 3 **Entidades de Cadastro**:
 
     * :bi:`Person`:
 
@@ -39,7 +39,7 @@ O **Cadastro Básico** (**Cadastro**) é composto pelas 3 **Entidades de Cadastr
 
 O :bi:`Address` associado a um registro :bi:`Family` deve ser o mesmo :bi:`Address` associado a todos os registros :bi:`Person` das Pessoas que compõem essa Família.
 
-As informações :bi:`Address` do :bi:`Contact Information` das 3 **Entidades** inter-relacionadas devem ser identicas.
+As informações de Endereço do :bi:`Contact Information` das 3 **Entidades** inter-relacionadas devem ser idênticas.
 
 .. toctree::
    :maxdepth: 2

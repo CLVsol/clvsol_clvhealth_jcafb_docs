@@ -8,13 +8,13 @@
 .. role:: green
 .. role:: bi
 
-.. index:: Relacionamento entre o Cadastro e o Cadastro Auxiliar
+.. index:: Relacionamento entre o Cadastro Auxiliar e o Cadastro
 
 =============================================================
-Relacionamento entre o **Cadastro** e o **Cadastro Auxiliar**
+Relacionamento entre o **Cadastro Auxiliar** e o **Cadastro**
 =============================================================
 
-Além do inter-relacionamento entre as **Entidades** que compõem os dois Cadastros, existe o relacionamento entre as **Entidades** do **Cadastro** e as **Entidades (Aux)** do **Cadastro Auxiliar**:
+Além do inter-relacionamento entre as **Entidades** que compõem cada um dos Cadastros, existe o relacionamento entre as **Entidades (Aux)** do **Cadastro Auxiliar** e as **Entidades** do **Cadastro**:
 
     * Um registro :bi:`Person (Aux)` possui:
 
@@ -33,7 +33,7 @@ Além do inter-relacionamento entre as **Entidades** que compõem os dois Cadast
 
 O :bi:`Address` associado a um registro :bi:`Family (Aux)` deve ser o mesmo :bi:`Address` associado a todos os registros :bi:`Person (Aux)` das Pessoas que compõem essa Família.
 
-As informações :bi:`Address` do :bi:`Contact Information` das 3 **Entidades** relacionadas com as 3 **Entidades (Aux)** devem ser as mesmas.
+As informações de Endereço do :bi:`Contact Information` das 3 **Entidades (Aux)** relacionadas com as 3 **Entidades** devem ser as mesmas.
 
 .. toctree::
    :maxdepth: 2

@@ -14,7 +14,7 @@
 Os **Cadastros**
 ================
 
-Os **Cadastros** são os elementos centrais de percistência de todas as informações geradas e coletadas durante a realização das atividades da :bi:`JCAFB`.
+Os **Cadastros** são os elementos centrais de armazenamento de todas as informações geradas e coletadas durante a realização das atividades da :bi:`JCAFB`.
 
 .. toctree::
    :maxdepth: 2

@@ -8,11 +8,12 @@
 .. role:: green
 .. role:: bi
 
+.. index:: Recadastramento
 .. index:: O Processo de Recadastramento
 
-=================================
-O Processo de **Recadastramento**
-=================================
+===================
+**Recadastramento**
+===================
 
 O Processo de **Recadastramento** é a base das atividades de planejamento e preparação, que antecedem todas as demais atividades da :bi:`JCAFB`.
 
@@ -29,5 +30,9 @@ Posteriormenbte, todos os dados do **Cadastro Auxiliar** são consolidados no **
 Essa consolidação se dá quando todas as alterações de Cadastro (atualizações de dados e/ou inclusões de Pessoas, Famílias ou Endereços) são transferidas do **Cadastro Auxiliar** para o **Cadastro Básico**.
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Itens Relacionados:
+   :maxdepth: 3
+   :caption: Tópicos Relacionados:
+
+   reregistration_cadastro
+   reregistration_workflow
+   reregistration_procedure_index

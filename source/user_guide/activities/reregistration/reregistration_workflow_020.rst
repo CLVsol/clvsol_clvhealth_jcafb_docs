@@ -26,7 +26,7 @@ Criação/Atualização do **Cadastro Auxiliar**
 
 .. toctree::
    :maxdepth: 2
-   :caption: Conteúdo:
+   :caption: Tópicos Relacionados:
 
    reregistration_workflow_020_010
    reregistration_workflow_020_020
