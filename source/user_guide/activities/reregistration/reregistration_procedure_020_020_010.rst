@@ -18,27 +18,39 @@ A Pessoa reside em um Endereço já cadastrado
 
     Caso **não exista uma Família** associada ao Endereço da Pessoa, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.
 
-    #. Procurar por registros :bi:`Person` e/ou :bi:`Person(Aux)` associado(s) à Pessoa utilizando o procedimento:
+Procedimentos
+-------------
+
+    #. Procurar pelo(s) registro(s) :bi:`Person` e/ou :bi:`Person (Aux)` associado(s) à Pessoa utilizando o procedimento:
 
         * :doc:`reregistration_procedure_010_010`
 
-    #. Confirmar que nenhum registro :bi:`Person` e/ou :bi:`Person (Aux)` seja(m) encontrado(s).
+    #. Confirmar que o(s) registro(s) :bi:`Person` e/ou :bi:`Person (Aux)` não seja(m) encontrado(s).
 
     #. Procurar por um registro :bi:`Address` associado ao Endereço da Pessoa utilizando um dos procedimentos:
 
         * :doc:`reregistration_procedure_010_050`
         * :doc:`reregistration_procedure_010_060`
 
-    #. Confirmar que todos os dados dos registros :bi:`Address` e :bi:`Family`, relacionados ao Endereço da Pessoa, serão mantidos.
+    #. Confirmar que todos os dados do registro :bi:`Address`, relacionado ao Endereço da Pessoa, serão mantidos.
+
+    #. Verificar a existência ou não de um registro :bi:`Family` associado ao registro :bi:`Address` encontrado.
+
+        #. :green:`(Opcional)` Confirmar que todos os dados do registro :bi:`Family` serão mantidos.
 
     #. Acessar a *view* :bi:`Persons (Aux)`:
 
         * Menu de acesso:
+
             * :bi:`Community` » :bi:`Auxiliary` » :bi:`Persons (Aux)`
 
     #. Criar um novo registro :bi:`Person (Aux)`:
 
         #. Preencher o registro :bi:`Person (Aux)` com as informações apresentadas para a Pessoa, exceto informaçôes relativas ao Endereço e à Família.
+
+        #. Salvar o registro.
+
+    #. Editar o registro :bi:`Person (Aux)`:
 
         #. Associar, manualmente, o campo *Address* ao registro :bi:`Address` encontrado anteriormente.
 
@@ -58,11 +70,11 @@ A Pessoa reside em um Endereço já cadastrado
 
         #. Não será necessário a execução de qualquer procedimento adicional no registro :bi:`Address (Aux)`.
 
-        #. Alterar o :bi:`Register State` para ":bi:`Verified`", utilizando o botão [:bi:`Revised`] e em seguida o botão [:bi:`Verified`].
+        #. Alterar o :bi:`Register State` para ":bi:`Verified`", utilizando o botão [:bi:`Revised`] e, em seguida, o botão [:bi:`Verified`].
 
     #. Retornar ao registro :bi:`Person (Aux)`.
 
-    #. :green:`(Opcional)` A partir do registro :bi:`Person (Aux)`, associar o campo :bi:`Family` do registro :bi:`Person (Aux)` ao registro registro :bi:`Family` associado ao registro :bi:`Address` indicado no campo :bi:`Address`, exercutando a Ação ":bi:`Person (Aux) Associate to Family`":
+    #. :green:`(Opcional)` A partir do registro :bi:`Person (Aux)`, associar o campo *Family* ao registro :bi:`Family`, exercutando a Ação ":bi:`Person (Aux) Associate to Family`":
 
         #. Utilizar o botão [:bi:`Associate do Family`] para executar a Ação.
 
@@ -78,7 +90,7 @@ A Pessoa reside em um Endereço já cadastrado
 
         #. Não será necessário a execução de qualquer procedimento adicional no registro :bi:`Family (Aux)`.
 
-        #. Alterar o :bi:`Register State` para ":bi:`Verified`", utilizando o botão [:bi:`Revised`] e em seguida o botão [:bi:`Verified`].
+        #. Alterar o :bi:`Register State` para ":bi:`Verified`", utilizando o botão [:bi:`Revised`] e, em seguida, o botão [:bi:`Verified`].
 
     #. Retornar ao registro :bi:`Person (Aux)`.
 

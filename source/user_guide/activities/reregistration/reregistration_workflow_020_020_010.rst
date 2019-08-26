@@ -41,12 +41,12 @@ Relacionamento entre os registros dos Cadastros
     * :green:`(Opcional)` :bi:`Family`:
 
         * *Address* » :bi:`Address`
-        * *Contact Information* = Dados de Endereço de :bi:`Address` (:bi:`Contact Information`)
+        * *Contact Information* = Dados de Endereço de :bi:`Address`
 
     * :bi:`Address (Aux)`:
 
         * *Related Address* » :bi:`Address`
-        * *Contact Information* = Dados de Endereço de :bi:`Address` (:bi:`Contact Information`)
+        * *Contact Information* = Dados de Endereço de :bi:`Address`
         * Outros Dados = Outros Dados de :bi:`Address`
 
     * :green:`(Opcional)` :bi:`Family (Aux)`:
@@ -54,7 +54,7 @@ Relacionamento entre os registros dos Cadastros
         * *Address* » :bi:`Address`
         * *Address (Aux)* » :bi:`Address (Aux)`
         * *Related Family* » :bi:`Family`
-        * *Contact Information* = Dados de Endereço de :bi:`Address` (:bi:`Contact Information`)
+        * *Contact Information* = Dados de Endereço de :bi:`Address`
         * Outros Dados = Outros Dados de :bi:`Family`
 
     * :bi:`Person (Aux)`:
@@ -64,7 +64,7 @@ Relacionamento entre os registros dos Cadastros
         * :green:`(Opcional)` *Family* » :bi:`Family`
         * :green:`(Opcional)` *Family (Aux)* » :bi:`Family (Aux)`
         * *Related Person* » **vazio**
-        * *Contact Information* = Dados de Endereço de :bi:`Address` (:bi:`Contact Information`)
+        * *Contact Information* = Dados de Endereço de :bi:`Address`
         * Outros Dados = Outros Dados informados para a Pessoa
 
 Fluxo de Trabalho (*Workflow*)
@@ -72,7 +72,7 @@ Fluxo de Trabalho (*Workflow*)
 
     #. *View* **Contatos**:
 
-        #. Procurar pelo registro :bi:`Person` e/ou :bi:`Person (Aux)` associado à Pessoa utilizando o método:
+        #. Procurar pelo(s) registro(s) :bi:`Person` e/ou :bi:`Person (Aux)` associado(s) à Pessoa utilizando o método:
 
             * :doc:`reregistration_workflow_010_010`
 
@@ -101,6 +101,10 @@ Fluxo de Trabalho (*Workflow*)
 
         #. Associar o registro :bi:`Address` encontrado ao campo :bi:`Address`.
 
+        #. Preencher os campos de *Contact Information* com os dados de Endereço do registro :bi:`Address`.
+
+    #. Registro :bi:`Person (Aux)`:
+
         #. Criar um novo registro :bi:`Address (Aux)`, executando a Ação ":bi:`Person (Aux) Associate to Address (Aux)`":
 
             * A criação de um registro :bi:`Address (Aux)`, deve ser **habilitada**.
@@ -111,7 +115,7 @@ Fluxo de Trabalho (*Workflow*)
 
     #. :green:`(Opcional)` Registro :bi:`Person (Aux)`:
 
-        #. Associar o registro :bi:`Family` associado ao registro :bi:`Address` ao campo :bi:`Family`, executando a Ação ":bi:`Person (Aux) Associate to Family`".
+        #. Associar o registro :bi:`Family` (associado ao registro :bi:`Address`) ao campo *Family*, executando a Ação ":bi:`Person (Aux) Associate to Family`".
 
         #. Criar um novo registro :bi:`Family (Aux)`, executando a Ação ":bi:`Person (Aux) Associate to Family (Aux)`":
 
