@@ -62,7 +62,7 @@ Relacionamento entre os registros dos Cadastros
 Fluxo de Trabalho (*Workflow*)
 ------------------------------
 
-    #. *View* **Contatos**:
+    #. **Cadastro**:
 
         #. Procurar pelo(s) registro(s) :bi:`Person` e/ou :bi:`Person (Aux)` associado(s) à Pessoa utilizando o método:
 
@@ -72,7 +72,7 @@ Fluxo de Trabalho (*Workflow*)
 
         **Observação 2**: Nenhum registro :bi:`Person (Aux)` deverá ser encontrado, a menos que a nova Pessoa já esteja em processo de recadastramento.
 
-    #. *View* **Contatos**:
+    #. **Cadastro**:
 
         #. Procurar pelo registro :bi:`Address` associado ao Endereço informado para a Pessoa utilizando um dos métodos:
 
