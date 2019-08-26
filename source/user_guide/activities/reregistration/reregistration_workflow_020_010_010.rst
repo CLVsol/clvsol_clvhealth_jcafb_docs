@@ -14,9 +14,11 @@
 Todos os dados da Pessoa serão mantidos
 =======================================
 
-    Caso **exista uma Família** associada ao Endereço da Pessoa, a Pessoa continuará associada a essa Família, e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
+    Caso **exista uma Família** associada ao Endereço da Pessoa, a Pessoa continuará associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
 
-    Caso **não exista uma Família** associada ao Endereço da Pessoa, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.
+    Caso **não exista uma Família** associada ao Endereço da Pessoa, mas se opte por associar a esse Endereço uma Família, a Pessoa será associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
+
+    Caso **não exista uma Família** associada ao Endereço da Pessoa, mas se opte por não associar a esse Endereço uma Família, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.
 
 Cadastro
 --------
@@ -60,7 +62,7 @@ Relacionamento entre os registros dos Cadastros
 
         * *Address* » :bi:`Address`
         * *Address (Aux)* » :bi:`Address (Aux)`
-        * *Related Family* » :bi:`Family`
+        * :green:`(Opcional)` *Related Family* » :bi:`Family`
         * *Contact Information* = Dados de Endereço de :bi:`Address`
         * Outros Dados = Outros Dados de :bi:`Family`
 
@@ -101,6 +103,12 @@ Fluxo de Trabalho (*Workflow*)
     #. Registro :bi:`Address (Aux)`:
 
         #. Não será necessário qualquer ação de atualização do registro :bi:`Address (Aux)`.
+
+    #. :green:`(Opcional)` Registro :bi:`Person (Aux)`:
+
+        #. Caso o campo *Family (Aux)* esteja **vazio**, criar um novo registro :bi:`Family (Aux)`, executando a Ação ":bi:`Person (Aux) Associate to Family (Aux)`":
+
+                * A criação de um registro :bi:`Family (Aux)`, deve ser **habilitada**.
 
     #. :green:`(Opcional)` Registro :bi:`Family (Aux)`:
 

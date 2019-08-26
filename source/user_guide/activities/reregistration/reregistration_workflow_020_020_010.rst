@@ -14,9 +14,11 @@
 A Pessoa reside em um Endereço já cadastrado
 ============================================
 
-    Caso **exista uma Família** associada ao Endereço da Pessoa, a Pessoa será associada a essa Família, e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
+    Caso **exista uma Família** associada ao Endereço da Pessoa, a Pessoa será associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
 
-    Caso **não exista uma Família** associada ao Endereço da Pessoa, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.
+    Caso **não exista uma Família** associada ao Endereço da Pessoa, mas se opte por associar a esse Endereço uma Família, a Pessoa será associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
+
+    Caso **não exista uma Família** associada ao Endereço da Pessoa, mas se opte por não associar a esse Endereço uma Família, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.
 
 Cadastro
 --------
@@ -24,7 +26,7 @@ Cadastro
     O **Cadastro** identificado poderá conter os seguintes registros:
 
         * :bi:`Address`: relativo ao Endereço da Pessoa
-        * :green:`(Opcional)` :bi:`Family`: relativo à Família da Pessoa
+        * :green:`(Opcional)` :bi:`Family`: relativo ao Endereço da Pessoa
 
 Cadastro Auxiliar
 -----------------
@@ -53,7 +55,7 @@ Relacionamento entre os registros dos Cadastros
 
         * *Address* » :bi:`Address`
         * *Address (Aux)* » :bi:`Address (Aux)`
-        * *Related Family* » :bi:`Family`
+        * :green:`(Opcional)` *Related Family* » :bi:`Family`
         * *Contact Information* = Dados de Endereço de :bi:`Address`
         * Outros Dados = Outros Dados de :bi:`Family`
 
@@ -76,7 +78,7 @@ Fluxo de Trabalho (*Workflow*)
 
             * :doc:`reregistration_workflow_010_010`
 
-        **Observação 1**: Nenhum registro :bi:`Person` deverá ser encontrado, a menos que a nova Pessoa já esteja em processo de recadastramento.
+        **Observação 1**: Nenhum registro :bi:`Person` deverá ser encontrado.
 
         **Observação 2**: Nenhum registro :bi:`Person (Aux)` deverá ser encontrado, a menos que a nova Pessoa já esteja em processo de recadastramento.
 
@@ -99,7 +101,7 @@ Fluxo de Trabalho (*Workflow*)
 
     #. Registro :bi:`Person (Aux)`:
 
-        #. Associar o registro :bi:`Address` encontrado ao campo :bi:`Address`.
+        #. Associar o registro :bi:`Address` encontrado ao campo *Address*.
 
         #. Preencher os campos de *Contact Information* com os dados de Endereço do registro :bi:`Address`.
 

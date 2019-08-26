@@ -14,9 +14,11 @@
 Todos os dados da Pessoa serão mantidos
 =======================================
 
-    Caso **exista uma Família** associada ao Endereço da Pessoa, a Pessoa continuará associada a essa Família, e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
+    Caso **exista uma Família** associada ao Endereço da Pessoa, a Pessoa continuará associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
 
-    Caso **não exista uma Família** associada ao Endereço da Pessoa, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.
+    Caso **não exista uma Família** associada ao Endereço da Pessoa, mas se opte por associar a esse Endereço uma Família, a Pessoa será associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
+
+    Caso **não exista uma Família** associada ao Endereço da Pessoa, mas se opte por não associar a esse Endereço uma Família, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.
 
 Procedimentos
 -------------
@@ -48,21 +50,29 @@ Procedimentos
 
         #. Não será necessário a execução de qualquer procedimento adicional no registro :bi:`Address (Aux)`.
 
-        #. Alterar o :bi:`Register State` para ":bi:`Verified`", utilizando o botão [:bi:`Revised`] e, em seguida, o botão [:bi:`Verified`].
+        #. Alterar o :bi:`Register State` para ":bi:`Revised`", utilizando o botão [:bi:`Revised`].
 
     #. Retornar ao registro :bi:`Person (Aux)`.
 
-    #. :green:`(Opcional)` Abrir o registro :bi:`Family (Aux)` associado ao campo *Family (Aux)*:
+    #. :green:`(Opcional)` A partir do registro :bi:`Person (Aux)` exercutar a Ação ":bi:`Person (Aux) Associate to Family (Aux)`":
+
+        #. Parâmetros apresentados:
+
+            * *Create new Family (Aux)*: **habilitado**
+
+        #. Utilizar o botão [:bi:`Associate do Family (Aux)`]  para executar a Ação.
+
+    #. :green:`(Opcional)` Abrir o registro :bi:`Family (Aux)` associado à Pessoa apresentado na *view* :bi:`Families (Aux)`.
 
         #. Não será necessário a execução de qualquer procedimento adicional no registro :bi:`Family (Aux)`.
 
-        #. Alterar o :bi:`Register State` para ":bi:`Verified`", utilizando o botão [:bi:`Revised`] e, em seguida, o botão [:bi:`Verified`].
+        #. Alterar o :bi:`Register State` para ":bi:`Revised`", utilizando o botão [:bi:`Revised`].
 
     #. Retornar ao registro :bi:`Person (Aux)`.
 
         #. Não será necessário a execução de qualquer procedimento adicional no registro :bi:`Person (Aux)`.
 
-        #. Alterar o :bi:`Register State` para ":bi:`Verified`", utilizando o botão [:bi:`Revised`] e, em seguida, o botão [:bi:`Verified`].
+        #. Alterar o :bi:`Register State` para ":bi:`Revised`", utilizando o botão [:bi:`Revised`].
 
 .. toctree::
    :maxdepth: 2
