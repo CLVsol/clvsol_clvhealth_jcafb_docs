@@ -14,9 +14,11 @@
 Criação/Atualização do **Cadastro Auxiliar** (**Pessoa não cadastrada**)
 ========================================================================
 
-    O processo de criação/atualização do **Cadastro Auxiliar** para uma Pessoa **não cadastrada** é utilizado quando a Pessoa tiver sido declarada como **não cadastrada**.
+O processo de criação/atualização do **Cadastro Auxiliar** para uma Pessoa **não cadastrada** é utilizado quando a Pessoa tiver sido declarada como **não cadastrada**.
 
-    Portanto, quando não existir ainda um **Cadastro Auxiliar** para a Pessoa, o mesmo deverá ser manualmente criado para conter as informações disponíveis para a Pessoa. Essas informações serão manualmente inseridas nos registros pertinentes.
+Portanto, quando não existir ainda um **Cadastro Auxiliar** para a Pessoa, o mesmo deverá ser manualmente criado para conter as informações disponíveis para a Pessoa. Essas informações serão manualmente inseridas nos registros pertinentes.
+
+Se porventura já existir um **Cadastro Auxiliar** associado à Pessoa, o mesmo será selecionado para dar proseguimento ao processo de recadastramento da mesma.
 
 O **Cadastro Auxiliar** criado poderá ser composto pelas **Entidades (Aux)**:
 
@@ -32,7 +34,7 @@ O **Cadastro Auxiliar** criado poderá ser composto pelas **Entidades (Aux)**:
 
             * O registro :bi:`Address (Aux)` deverá ser **criado manualmente**, quando se constatar que a Pessoa reside em um Endereço não cadastrado.
 
-            * O registro :bi:`Address (Aux)` **não será criado**, quando se constatar que a Pessoa reside em um Endereço fora da comunidade atendida.
+            * O registro :bi:`Address (Aux)` deverá ser **criado manualmente**, contendo informações que indiquem as condições do Endereço, quando se constatar que a Pessoa reside em um Endereço fora da comunidade atendida.
 
             * O registro :bi:`Address (Aux)` **não será criado**, quando se constatar que a Pessoa faleceu.
 
@@ -46,37 +48,9 @@ O **Cadastro Auxiliar** criado poderá ser composto pelas **Entidades (Aux)**:
 
             * O registro :bi:`Family (Aux)` **não será criado**, quando se constatar que a Pessoa é mebro de uma Família fora da comunidade atendida.
 
-    O relacionamento entre os diversos registros dos Cadastros será o seguinte (quando existirem os registros, como indicado anteriormente):
-
-        * :bi:`Person (Aux)`: 
-
-            * :bi:`Related Person` » **vazio**
-            * :bi:`(Reference) Address` » **vazio**
-            * :bi:`(Reference) Address (Aux)` » :bi:`Address (Aux)`
-            * :bi:`Family` » **vazio**
-            * :bi:`Family (Aux)` » :bi:`Family (Aux)`
-            * :bi:`Contact Information` = Dados do Endereço da Pessoa
-            * Outros Dados = Outros Dados coletados da Pessoa
-
-        * :bi:`Address (Aux)`:
-
-            * :bi:`Related Address` » **vazio**
-            * :bi:`Contact Information` = Dados do Endereço da Pessoa
-            * Outros Dados = Outros Dados coletados do Endereço
-
-        * :bi:`Family (Aux)`:
-
-            * :bi:`Related Family` » **vazio**
-            * :bi:`(Reference) Address` » **vazio**
-            * :bi:`(Reference) Address (Aux)` » :bi:`Address (Aux)`
-            * :bi:`Contact Information` = Dados do Endereço da Pessoa
-            * Outros Dados = Outros Dados coletados da Família
-
-    A criação do **Cadastro Auxiliar** para uma **Pessoa não cadastrada** é feita utilizando o procedimento ":doc:`reregistration_procedure_020_020`".
-
 .. toctree::
-   :maxdepth: 2
-   :caption: Itens Relacionados:
+   :maxdepth: 1
+   :caption: Tópicos Relacionados:
 
    reregistration_workflow_020_020_010
    reregistration_workflow_020_020_020

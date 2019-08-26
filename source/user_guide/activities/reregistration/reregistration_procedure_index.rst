@@ -26,5 +26,6 @@
    reregistration_procedure_010_060
 
    reregistration_procedure_020_010_010
-   
-   reregistration_procedure_020_020
+   reregistration_procedure_020_010_020
+
+   reregistration_procedure_020_020_010

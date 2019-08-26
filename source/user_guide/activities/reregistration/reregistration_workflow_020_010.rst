@@ -74,32 +74,6 @@ O **Cadastro Auxiliar** criado poderá ser composto pelas seguintes **Entidades 
 
             * A criação de um registro :bi:`Family (Aux)` deve ser **desabilitada**,quando se constatar que a Pessoa faleceu. 
 
-O relacionamento entre os diversos registros dos Cadastros será o seguinte (quando existirem os registros, como indicado anteriormente):
-
-    * Registro :bi:`Address (Aux)`:
-
-        * :bi:`Related Address` » registro:bi:`Address`
-        * :bi:`Contact Information` = Dados de Endereço do :bi:`Contact Information` do registro :bi:`Address`
-        * Outros Dados = Outros Dados do registro :bi:`Address`
-
-    * Registro :bi:`Family (Aux)`:
-
-        * :bi:`Address` » registro:bi:`Address`
-        * :bi:`Address (Aux)` » registro:bi:`Address (Aux)`
-        * :bi:`Related Family` » registro:bi:`Family`
-        * :bi:`Contact Information` = Dados de Endereço do :bi:`Contact Information` do registro :bi:`Address`
-        * Outros Dados = Outros Dados do registro :bi:`Family`
-
-    * Registro :bi:`Person (Aux)`: 
-
-        * :bi:`Address` » registro :bi:`Address`
-        * :bi:`Address (Aux)` » registro :bi:`Address (Aux)`
-        * :bi:`Family` » registro :bi:`Family`
-        * :bi:`Family (Aux)` » registro :bi:`Family (Aux)`
-        * :bi:`Related Person` » registro :bi:`Person`
-        * :bi:`Contact Information` = Dados de Endereço do :bi:`Contact Information` do registro :bi:`Address`
-        * Outros Dados = Outros Dados do registro :bi:`Person`
-
 .. toctree::
    :maxdepth: 1
    :caption: Tópicos Relacionados:
