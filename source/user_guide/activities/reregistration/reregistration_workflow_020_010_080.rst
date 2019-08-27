@@ -10,52 +10,73 @@
 
 .. index:: A Pessoa está ausente da comunidade atendida pela JCAFB
 
-==============================================================================
-:red:`(Revisar)` A Pessoa está ausente da comunidade atendida pela JCAFB
-==============================================================================
+=======================================================
+A Pessoa está ausente da comunidade atendida pela JCAFB
+=======================================================
 
-.. _Cadastro Auxiliar (8):
+    Caso **exista uma Família** associada ao Endereço da Pessoa, os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
+
+    Caso **não exista uma Família** associada ao Endereço da Pessoa, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.
+
+Cadastro
+--------
+
+    O **Cadastro** identificado poderá conter os seguintes registros:
+
+        * :bi:`Person`: relativo à Pessoa
+        * :bi:`Address`: relativo ao Endereço da Pessoa
+        * :green:`(Opcional)` :bi:`Family`: relativo à Família da Pessoa
 
 Cadastro Auxiliar
 -----------------
 
-    O **Cadastro Auxiliar** criado poderá ser composto pelas seguintes **Entidades (Aux)**:
+    O **Cadastro Auxiliar** criado poderá conter os seguintes registros:
 
-        * :bi:`Person (Aux)`:
+        * :bi:`Person (Aux)`
 
-    O relacionamento entre os diversos registros dos Cadastros será o seguinte:
+Relacionamento entre os registros dos Cadastros
+-----------------------------------------------
 
-        * :bi:`Person (Aux)`: 
+    * :green:`(Opcional)` :bi:`Family`:
 
-            * :bi:`(Reference) Address` » **vazio**
-            * :bi:`Family` » **vazio**
-            * :bi:`(Reference) Address (Aux)` » **vazio**
-            * :bi:`Family (Aux)` » **vazio**
-            * :bi:`Related Person` » :bi:`Person`
-            * :bi:`Contact Information` = **vazio**
-            * Outros Dados = Outros Dados do registro :bi:`Person`
+        * *Address* » :bi:`Address`
+        * *Contact Information* = Dados de Endereço de :bi:`Address`
 
-        * :bi:`Address (Aux)`:
+    * :bi:`Person`:
 
-            * Registro **não disponível**
+        * *Address* » :bi:`Address`
+        * :green:`(Opcional)` *Family* » :bi:`Family`
+        * *Contact Information* = Dados de Endereço de :bi:`Address`
 
-        * :bi:`Family (Aux)`:
+    * :bi:`Person (Aux)`:
 
-            * Registro **não disponível**
-
-.. Fluxo de Trabalho (*Workflow*) (8):
+        * *Address* » **vazio**
+        * *Address (Aux)* » **vazio**
+        * :green:`(Opcional)` *Family* » **vazio**
+        * :green:`(Opcional)` *Family (Aux)* » **vazio**
+        * *Related Person* » :bi:`Person`
+        * *Contact Information* = **vazio**
+        * Outros Dados = Outros Dados de :bi:`Person`
 
 Fluxo de Trabalho (*Workflow*)
 ------------------------------
 
-    #. *View* **Contatos** ou *View* :bi:`Persons`:
+    #. **Cadastro**:
 
         #. Procurar pelo registro :bi:`Person` associado à Pessoa utilizando um dos métodos:
 
             * :doc:`reregistration_workflow_010_010`
             * :doc:`reregistration_workflow_010_020`
 
-        #. O **Cadastro Auxiliar** relacionado à Pessoa deve ser criado a partir do registro :bi:`Person`, executando a Ação ":bi:`Person (Aux) Associate to Family (Aux)`":
+        #. Confirmar que todos os dados do registro :bi:`Person`, relacionados à Pessoa, serão mantidos.
+
+        #. Confirmar que todos os dados do registro :bi:`Address`, relacionados ao Endereço da Pessoa, serão mantidos.
+
+        #. :green:`(Opcional)` Confirmar que todos os dados do registro :bi:`Family`, relacionados à Família da Pessoa, serão mantidos.
+
+    #. **Cadastro Auxiliar**:
+
+        #. Os registros do  **Cadastro Auxiliar** relacionados à Pessoa devem ser criados a partir do registro :bi:`Person`, executando a Ação ":BI:`Person (Aux) Associate to Family (Aux)`":
 
                 * A criação de :bi:`Person (Aux)`, deve ser **habilitada**.
                 * A criação de :bi:`Address (Aux)`, deve ser **desabilitada**.
@@ -63,13 +84,15 @@ Fluxo de Trabalho (*Workflow*)
 
     #. Registro :bi:`Person (Aux)`:
 
-        #. O :bi:`(Reference) Address` do registro :bi:`Person (Aux)` deve ser manualmente removido.
+        #. Remover do campo *Address* a associação ao registro :bi:`Address`.
 
-        #. As informações de :bi:`Contact Information` do registro :bi:`Person (Aux)` devem ser **excluídas**.
+        #. Excluir as informações de *Contact Information*.
 
-        #. O :bi:`Family` do registro :bi:`Person (Aux)` deve ser manualmente removido.
+        #. :green:`(Opcional)` Remover do campo *Family* a associação ao registro :bi:`Family`.
 
-        #. :red:`(Precisa ser Modificado)` Indicar de alguma forma que a Pessoa está ausente da comunidade atendida pela JCAFB.
+        #. Indicar de alguma forma que a Pessoa está ausente da comunidade atendida pela JCAFB.
+
+    O processamento deste *Workflow* é executado utilizando o procedimento ":doc:`reregistration_procedure_020_010_080`".
 
 .. toctree::
    :maxdepth: 2
