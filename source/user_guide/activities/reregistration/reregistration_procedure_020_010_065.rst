@@ -8,11 +8,11 @@
 .. role:: green
 .. role:: bi
 
-.. index:: A Pessoa mudou-se para Endereço não cadastrado, juntamente com a Família (Procedimento)
+.. index:: A Pessoa mudou-se para um Endereço desconhecido, sem a Família (Procedimento)
 
-================================================================
-A Pessoa mudou-se para um Endereço não cadastrado, sem a Família
-================================================================
+==============================================================
+A Pessoa mudou-se para um Endereço desconhecido, sem a Família
+==============================================================
 
 Procedimentos
 -------------
@@ -28,12 +28,6 @@ Procedimentos
 
     #. Confirmar a mudança de Família da Pessoa.
 
-    #. Procurar por um registro :bi:`Address` associado ao Endereço da Pessoa utilizando o procedimento:
-
-        * :doc:`reregistration_procedure_010_050`
-
-    #. Confirmar que o(s) registro(s) :bi:`Address` e/ou :bi:`Address (Aux)` não seja(m) encontrado(s).
-
     #. Acessar a *view* :bi:`Addresses (Aux)`:
 
         * Menu de acesso:
@@ -42,7 +36,7 @@ Procedimentos
 
     #. Criar um novo registro :bi:`Address (Aux)`:
 
-        #. Preencher o registro :bi:`Address (Aux)` com as informações apresentadas para o novo Endereço da Pessoa.
+        #. Preencher o registro :bi:`Address (Aux)` com informações que indiquem o desconhecimento do novo Endereço da Pessoa.
 
         #. Salvar o registro.
 
@@ -79,22 +73,6 @@ Procedimentos
         #. Remover do campo *Family* a associação ao registro :bi:`Family` :green:`(antiga)`, utilizando o botão [:bi:`Remove Family`].
 
         #. Salvar o registro.
-
-    #. A partir do registro :bi:`Person (Aux)` exercutar a Ação ":bi:`Person (Aux) Associate to Family (Aux)`":
-
-        #. Parâmetros apresentados:
-
-            * *Create new Family (Aux)*: **habilitado**
-
-        #. Utilizar o botão [:bi:`Associate do Family (Aux)`]  para executar a Ação.
-
-    #. Abrir o registro :bi:`Family (Aux)` associado à Pessoa apresentado na *view* :bi:`Families (Aux)`.
-
-        #. Não será necessário a execução de qualquer procedimento adicional no registro :bi:`Family (Aux)`.
-
-        #. Alterar o :bi:`Register State` para ":bi:`Revised`", utilizando o botão [:bi:`Revised`].
-
-    #. Retornar ao registro :bi:`Person (Aux)`.
 
     #. A partir do registro :bi:`Person (Aux)`:
 
