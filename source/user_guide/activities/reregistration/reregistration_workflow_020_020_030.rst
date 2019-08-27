@@ -10,62 +10,68 @@
 
 .. index:: A Pessoa reside em um Endereço fora da comunidade atendida pela JCAFB
 
-=============================================================================================
-:red:`(Revisar)` A Pessoa reside em um Endereço fora da comunidade atendida pela JCAFB
-=============================================================================================
+=====================================================================
+A Pessoa reside em um Endereço fora da comunidade atendida pela JCAFB
+=====================================================================
 
-.. _Cadastro Auxiliar (13):
+Cadastro
+--------
+
+    Nenhum registro será identificado no **Cadastro**.
 
 Cadastro Auxiliar
 -----------------
 
-    O **Cadastro Auxiliar** criado poderá ser composto pelas seguintes **Entidades (Aux)**:
+    O **Cadastro Auxiliar** criado conterá os seguintes registros:
 
-        * :bi:`Person (Aux)`:
-        * :bi:`Address (Aux)`:
-        * :bi:`Family (Aux)`:
+        * :bi:`Person (Aux)`
+        * :bi:`Address (Aux)`
 
-    O relacionamento entre os diversos registros dos Cadastros será o seguinte:
+Relacionamento entre os registros dos Cadastros
+-----------------------------------------------
 
-        * :bi:`Person (Aux)`: 
+    * :bi:`Address (Aux)`:
 
-            * :bi:`(Reference) Address` » **vazio**
-            * :bi:`(Reference) Address (Aux)` » :bi:`Address (Aux)`
-            * :bi:`Family` » **vazio**
-            * :bi:`Family (Aux)` » **vazio**
-            * :bi:`Related Person` » **vazio**
-            * :bi:`Contact Information` = Dados do registro :bi:`Address (Aux)`
-            * Outros Dados = Outros Dados coletadas para a Pessoa
+        * *Related Address* » **vazio**
+        * *Contact Information* = Dados informados para o Endereço da Pessoa
+        * Outros Dados = Outros Dados informados para o Endereço da Pessoa
 
-        * :bi:`Address (Aux)`:
+    * :bi:`Person (Aux)`:
 
-            * :bi:`Related Address` » **vazio**
-            * :bi:`Contact Information` = Dados informados para o Endereço da Pessoa
-            * Outros Dados = Outros Dados informados para o Endereço da Pessoa
-
-        * :bi:`Family (Aux)`:
-
-            * Registro **não disponível**
-
-.. Fluxo de Trabalho (*Workflow*) (13):
+        * *Address* » **vazio**
+        * *Address (Aux)* » :bi:`Address (Aux)`
+        * *Family* » **vazio**
+        * *Family (Aux)* » **vazio**
+        * *Related Person* » **vazio**
+        * *Contact Information* = Dados de Endereço de :bi:`Address (Aux)`
+        * Outros Dados = Outros Dados informados para a Pessoa
 
 Fluxo de Trabalho (*Workflow*)
 ------------------------------
 
-    * **Cadastro Auxiliar**:
+    #. **Cadastro**:
 
-    #. *View* **Contatos** ou *View* :bi:`Persons`:
-
-        #. Procurar pelo registro :bi:`Person` associado à Pessoa utilizando um dos métodos:
+        #. Procurar pelo(s) registro(s) :bi:`Person` e/ou :bi:`Person (Aux)` associado(s) à Pessoa utilizando o método:
 
             * :doc:`reregistration_workflow_010_010`
-            * :doc:`reregistration_workflow_010_020`
 
-            **Observação**: Nenhum registro :bi:`Person` deverá ser encontrado, a menos que a nova Pessoa já esteja em processo de recadastramento.
+        **Observação 1**: Nenhum registro :bi:`Person` deverá ser encontrado.
+
+        **Observação 2**: Nenhum registro :bi:`Person (Aux)` deverá ser encontrado, a menos que a nova Pessoa já esteja em processo de recadastramento.
+
+    #. **Cadastro**:
+
+        #. Procurar pelo registro :bi:`Address` associado ao Endereço informado para a Pessoa utilizando um dos métodos:
+
+            * :doc:`reregistration_workflow_010_050`
+
+        **Observação 1**: Nenhum registro :bi:`Address` deverá ser encontrado.
+
+        **Observação 2**: Nenhum registro :bi:`Address (Aux)` deverá ser encontrado, a menos que o novo Endereço já esteja em processo de recadastramento.
 
     #. *View* :bi:`Address (Aux)`:
 
-        #. Um registro :bi:`Address (Aux)` deverá ser **criado manualmente** a partir dos dados do Endereço informado para a Pessoa.
+        #. Criar manualmente um novo registro :bi:`Address (Aux)`, preenchido com as informações apresentadas para o Endereço da Pessoa.
 
     #. Registro :bi:`Address (Aux)`:
 
@@ -73,13 +79,15 @@ Fluxo de Trabalho (*Workflow*)
 
     #. *View* :bi:`Person (Aux)`:
 
-        #. Um registro :bi:`Person (Aux)` deverá ser **criado manualmente** e preenchido com as informações informadas para a Pessoa, exceto as informaçôes de Endereço.
+        #. Criar manualmente um novo registro :bi:`Person (Aux)`, preenchido com as informações apresentadas para a Pessoa, exceto as informaçôes do Endereço.
 
     #. Registro :bi:`Person (Aux)`:
 
-        #. O :bi:`(Reference) Address (Aux)` do registro :bi:`Person (Aux)` deve ser manualmente associado ao :bi:`Address (Aux)` do Endereço informado para a Pessoa.
+        #. Associar o registro :bi:`Address (Aux)` criado ao campo *Address (Aux)*.
 
-        #. As informações de :bi:`Contact Information` devem ser subistituídas pelas informações de :bi:`Contact Information` do :bi:`(Reference) Address (Aux)`.
+        #. Preencher os campos de *Contact Information* com os dados de Endereço do registro :bi:`Address (Aux)`.
+
+    O processamento deste *Workflow* é executado utilizando o procedimento ":doc:`reregistration_procedure_020_020_030`".
 
 .. toctree::
    :maxdepth: 2
