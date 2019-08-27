@@ -8,11 +8,11 @@
 .. role:: green
 .. role:: bi
 
-.. index:: A Pessoa mudou-se para um Endereço desconhecido, mudando de Família
+.. index:: A Pessoa mudou-se para um Endereço desconhecido, sem a Família
 
-==========================================================================================
-:red:`(Revisar)` A Pessoa mudou-se para um Endereço desconhecido, mudando de Família
-==========================================================================================
+===============================================================================
+:red:`(Revisar)` A Pessoa mudou-se para um Endereço desconhecido, sem a Família
+===============================================================================
 
 .. _Cadastro Auxiliar (6.5):
 

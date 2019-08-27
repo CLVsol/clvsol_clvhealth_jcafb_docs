@@ -8,11 +8,11 @@
 .. role:: green
 .. role:: bi
 
-.. index:: A Pessoa mudou-se para um Endereço fora da comunidade atendida pela JCAFB, mudando de Família
+.. index:: A Pessoa mudou-se para um Endereço fora da comunidade atendida pela JCAFB, sem a Família
 
-====================================================================================================================
-:red:`(Revisar)` A Pessoa mudou-se para um Endereço fora da comunidade atendida pela JCAFB, mudando de Família
-====================================================================================================================
+=========================================================================================================
+:red:`(Revisar)` A Pessoa mudou-se para um Endereço fora da comunidade atendida pela JCAFB, sem a Família
+=========================================================================================================
 
 .. _Cadastro Auxiliar (7.5):
 

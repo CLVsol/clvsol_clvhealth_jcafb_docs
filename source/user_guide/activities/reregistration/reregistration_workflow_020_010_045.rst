@@ -8,11 +8,11 @@
 .. role:: green
 .. role:: bi
 
-.. index:: A Pessoa mudou-se para um Endereço já cadastrado, mudando de Família
+.. index:: A Pessoa mudou-se para um Endereço já cadastrado, sem a Família
 
-===========================================================================================
-:red:`(Revisar)` A Pessoa mudou-se para um Endereço já cadastrado, mudando de Família
-===========================================================================================
+================================================================================
+:red:`(Revisar)` A Pessoa mudou-se para um Endereço já cadastrado, sem a Família
+================================================================================
 
 .. _Cadastro Auxiliar (4.5):
 

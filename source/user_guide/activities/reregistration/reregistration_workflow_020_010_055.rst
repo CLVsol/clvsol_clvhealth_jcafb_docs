@@ -8,11 +8,11 @@
 .. role:: green
 .. role:: bi
 
-.. index:: A Pessoa mudou-se para um Endereço não cadastrado, mudando de Família
+.. index:: A Pessoa mudou-se para um Endereço não cadastrado, sem a Família
 
-============================================================================================
-:red:`(Revisar)` A Pessoa mudou-se para um Endereço não cadastrado, mudando de Família
-============================================================================================
+=================================================================================
+:red:`(Revisar)` A Pessoa mudou-se para um Endereço não cadastrado, sem a Família
+=================================================================================
 
 .. _Cadastro Auxiliar (5.5):
 
