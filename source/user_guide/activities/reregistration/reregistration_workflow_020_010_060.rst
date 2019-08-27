@@ -8,84 +8,111 @@
 .. role:: green
 .. role:: bi
 
-.. index:: [Pessoa já cadastrada] A Pessoa mudou-se para um Endereço desconhecido, permanecendo na mesma Família
+.. index:: A Pessoa mudou-se para Endereço não cadastrado, juntamente com a Família
 
-=====================================================================================================
-[Pessoa já cadastrada] A Pessoa mudou-se para um Endereço desconhecido, permanecendo na mesma Família
-=====================================================================================================
+======================================================================
+A Pessoa mudou-se para Endereço desconhecido, juntamente com a Família
+======================================================================
 
-.. _Cadastro Auxiliar (6):
+Cadastro
+--------
+
+    O **Cadastro** identificado deverá conter os seguintes registros:
+
+        * :bi:`Person`: relativo à Pessoa
+        * :bi:`Address` :green:`(antigo)`: relativo ao antigo Endereço da Pessoa
+        * :bi:`Family`: relativo à Família da Pessoa
 
 Cadastro Auxiliar
 -----------------
 
-    O **Cadastro Auxiliar** criado poderá ser composto pelas seguintes **Entidades (Aux)**:
+    O **Cadastro Auxiliar** criado deverá conter os seguintes registros:
 
-        * :bi:`Person (Aux)`:
-        * :bi:`Address (Aux)`:
-        * :bi:`Family (Aux)`:
+        * :bi:`Person (Aux)`
+        * :bi:`Address (Aux)`
+        * :bi:`Family (Aux)``
 
-    O relacionamento entre os diversos registros dos Cadastros será o seguinte:
+Relacionamento entre os registros dos Cadastros
+-----------------------------------------------
 
-        * :bi:`Person (Aux)`: 
+    * :bi:`Family`:
 
-            * :bi:`(Reference) Address` » **vazio**
-            * :bi:`Family` » :bi:`Family`
-            * :bi:`(Reference) Address (Aux)` » :bi:`Address (Aux)`
-            * :bi:`Family (Aux)` » :bi:`Family (Aux)`
-            * :bi:`Related Person` » :bi:`Person`
-            * :bi:`Contact Information` = Dados do registro :bi:`Address (Aux)`
-            * Outros Dados = Outros Dados do registro :bi:`Person`
+        * *Address* » :bi:`Address` :green:`(antigo)`
+        * *Contact Information* = Dados de Endereço de :bi:`Address` :green:`(antigo)`
 
-        * :bi:`Address (Aux)`:
+    * :bi:`Person`:
 
-            * :bi:`Related Address` » **vazio**
-            * :bi:`Contact Information` = Dados com informações que indiquem o desconhecimento do novo Endereço
-            * Outros Dados = **sem informações**
+        * *Address* » :bi:`Address` :green:`(antigo)`
+        * *Family* » :bi:`Family`
+        * *Contact Information* = Dados de Endereço de :bi:`Address` :green:`(antigo)`
 
-        * :bi:`Family (Aux)`:
+    * :bi:`Address (Aux)`:
 
-            * :bi:`Related Family` » :bi:`Family`
-            * :bi:`(Reference) Address` » :bi:`Address`
-            * :bi:`(Reference) Address (Aux)` » :bi:`Address (Aux)`
-            * :bi:`Contact Information` = Dados do registro :bi:`Address (Aux)`
-            * Outros Dados = Outros Dados do registro :bi:`Family`
+        * *Related Address* » **vazio**
+        * *Contact Information* = Dados com informações que indiquem o desconhecimento do novo Endereço da Pessoa
+        * Outros Dados = **sem informações**
 
-.. Fluxo de Trabalho (*Workflow*) (6):
+    * :bi:`Family (Aux)`:
+
+        * *Address* » **vazio**
+        * *Address (Aux)* » :bi:`Address (Aux)`
+        * *Related Family* » :bi:`Family`
+        * *Contact Information* = Dados de Endereço de :bi:`Address (Aux)`
+        * Outros Dados = Outros Dados de :bi:`Family`
+
+    * :bi:`Person (Aux)`:
+
+        * *Address* » **vazio**
+        * *Address (Aux)* » :bi:`Address (Aux)`
+        * *Family* » :bi:`Family`
+        * *Family (Aux)* » :bi:`Family (Aux)`
+        * *Related Person* » :bi:`Person`
+        * *Contact Information* = Dados de Endereço de :bi:`Address (Aux)`
+        * Outros Dados = Outros Dados de :bi:`Person`
 
 Fluxo de Trabalho (*Workflow*)
 ------------------------------
 
-    #. *View* **Contatos** ou *View* :bi:`Persons`:
+    #. **Cadastro**:
 
         #. Procurar pelo registro :bi:`Person` associado à Pessoa utilizando um dos métodos:
 
             * :doc:`reregistration_workflow_010_010`
             * :doc:`reregistration_workflow_010_020`
 
-        #. O **Cadastro Auxiliar** relacionado à Pessoa deve ser criado a partir do registro :bi:`Person`, executando a Ação ":bi:`Person (Aux) Associate to Family (Aux)`":
+        #. Confirmar que todos os dados do registro :bi:`Person`, relacionados à Pessoa, serão mantidos.
+
+        #. Confirmar que todos os dados do registro :bi:`Family`, relacionados à Família da Pessoa, serão mantidos.
+
+    #. *View* :bi:`Address (Aux)`:
+
+        #. Criar manualmente um novo registro :bi:`Address (Aux)`, preenchido com informações que indiquem o desconhecimento do novo Endereço da Pessoa.
+
+    #. Registro :bi:`Address (Aux)`:
+
+        #. Não será necessário qualquer outra ação de atualização do registro :bi:`Address (Aux)`.
+
+    #. **Cadastro Auxiliar**:
+
+        #. Os registros do  **Cadastro Auxiliar** relacionados à Pessoa devem ser criados a partir do registro :bi:`Person`, executando a Ação ":BI:`Person Associate to Person (Aux)`":
 
                 * A criação de :bi:`Person (Aux)`, deve ser **habilitada**.
                 * A criação de :bi:`Address (Aux)`, deve ser **desabilitada**.
                 * A criação de :bi:`Family (Aux)`, deve ser **desabilitada**.
 
-    #. Registro :bi:`Address (Aux)`:
+    #. Registro :bi:`Person (Aux)`:
 
-        #. Um registro :bi:`Address (Aux)` deverá ser **criado manualmente** com informações que indiquem o desconhecimento do novo Endereço.
+        #. Remover do campo *Address* a associação ao registro :bi:`Address` :green:`(antigo)`.
 
-        #. Não será necessário qualquer outra ação de atualização do registro :bi:`Address (Aux)` relacionado à Pessoa.
+        #. Associar o registro :bi:`Address (Aux)` ao campo *Address (Aux)*.
+
+        #. Preencher os campos de *Contact Information* com os dados de Endereço do registro :bi:`Address (Aux)`.
 
     #. Registro :bi:`Person (Aux)`:
 
-        #. O :bi:`(Reference) Address` do registro :bi:`Person (Aux)` deve ser manualmente removido.
+        #. Criar um novo registro :bi:`Family (Aux)`, executando a Ação ":bi:`Person (Aux) Associate to Family (Aux)`":
 
-        #. O :bi:`(Reference) Address (Aux)` do registro :bi:`Person (Aux)` deve ser manualmente associado ao registro :bi:`Address (Aux)` criado.
-
-        #. As informações de :bi:`Address` do :bi:`Contact Information` do registro :bi:`Person (Aux)` devem ser substituídas pelas informações de :bi:`Address` do :bi:`Contact Information` de :bi:`(Reference) Address (Aux)`.
-
-        #. Um registro :bi:`Family (Aux)` deve ser criado a partir do registro :bi:`Person (Aux)`, executando a Ação ":bi:`Person (Aux) Associate to Family (Aux)`":
-
-                * A criação de :bi:`Family (Aux)`, deve ser **habilitada**.
+                * A criação de um registro :bi:`Family (Aux)`, deve ser **habilitada**.
 
     #. Registro :bi:`Family (Aux)`:
 
@@ -94,6 +121,8 @@ Fluxo de Trabalho (*Workflow*)
     #. Registro :bi:`Person (Aux)`:
 
         #. Não será necessário qualquer ação de atualização adicional do registro :bi:`Person (Aux)`.
+
+    O processamento deste *Workflow* é executado utilizando o procedimento ":doc:`reregistration_procedure_020_010_060`".
 
 .. toctree::
    :maxdepth: 2
