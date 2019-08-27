@@ -14,6 +14,8 @@
 A Pessoa está ausente da comunidade atendida pela JCAFB
 =======================================================
 
+    * *Workflow*: ":doc:`reregistration_workflow_020_010_080`".
+
     Caso **exista uma Família** associada ao Endereço da Pessoa, os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
 
     Caso **não exista uma Família** associada ao Endereço da Pessoa, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.

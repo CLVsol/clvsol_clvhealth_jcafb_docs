@@ -14,6 +14,8 @@
 Procura por uma Pessoa em :bi:`Persons`
 =======================================
 
+    * *Workflow*: ":doc:`reregistration_workflow_010_020`".
+
     #. Procurar pela Pessoa na *view* :bi:`Persons`:
 
         #. Acessar a *view* :bi:`Persons`:

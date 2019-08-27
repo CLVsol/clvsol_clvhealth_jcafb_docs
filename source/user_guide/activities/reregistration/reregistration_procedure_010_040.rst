@@ -14,6 +14,8 @@
 Procura por uma Família em :bi:`Families`
 =========================================
 
+    * *Workflow*: ":doc:`reregistration_workflow_010_040`".
+
     #. Procurar pela Família na *view* :bi:`Families`:
 
         #. Acessar a *view* :bi:`Families`:

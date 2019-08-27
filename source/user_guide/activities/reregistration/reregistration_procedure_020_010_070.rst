@@ -17,6 +17,8 @@ A Pessoa mudou-se para um Endereço fora da comunidade atendida pela JCAFB, junt
 Procedimentos
 -------------
 
+    * *Workflow*: ":doc:`reregistration_workflow_020_010_070`".
+
     #. Procurar pelo registro :bi:`Person` associado à Pessoa utilizando um dos procedimentos:
 
         * :doc:`reregistration_procedure_010_010`

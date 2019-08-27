@@ -14,6 +14,8 @@
 Procura por uma Pessoa em **Contatos**
 ======================================
 
+    * *Workflow*: ":doc:`reregistration_workflow_010_010`".
+
     #. Procurar pela Pessoa na *view* :bi:`Contatos`:
 
         #. Acessar a *view* **Contatos**:

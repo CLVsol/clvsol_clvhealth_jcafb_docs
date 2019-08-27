@@ -14,6 +14,8 @@
 A Pessoa reside em um Endereço fora da comunidade atendida pela JCAFB
 =====================================================================
 
+    * *Workflow*: ":doc:`reregistration_workflow_020_020_030`".
+
 Procedimentos
 -------------
 

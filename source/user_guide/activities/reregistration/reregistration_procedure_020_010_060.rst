@@ -17,6 +17,8 @@ A Pessoa mudou-se para Endereço desconhecido, juntamente com a Família
 Procedimentos
 -------------
 
+    * *Workflow*: ":doc:`reregistration_workflow_020_010_060`".
+
     #. Procurar pelo registro :bi:`Person` associado à Pessoa utilizando um dos procedimentos:
 
         * :doc:`reregistration_procedure_010_010`

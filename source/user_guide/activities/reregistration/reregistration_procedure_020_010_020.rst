@@ -14,6 +14,8 @@
 Atualização de dados relativos à Pessoa não relacionados ao Endereço, à Família ou às Relações Familiares
 =========================================================================================================
 
+    * *Workflow*: ":doc:`reregistration_workflow_020_010_020`".
+
     Caso **exista uma Família** associada ao Endereço da Pessoa, a Pessoa continuará associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
 
     Caso **não exista uma Família** associada ao Endereço da Pessoa, mas se opte por associar a esse Endereço uma Família, a Pessoa será associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.

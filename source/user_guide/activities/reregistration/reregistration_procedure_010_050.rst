@@ -14,6 +14,8 @@
 Procura por um Endereço em **Contatos**
 =======================================
 
+    * *Workflow*: ":doc:`reregistration_workflow_010_050`".
+
     #. Procurar pelo Endereço na *view* :bi:`Contatos`:
 
         #. Acessar a *view* **Contatos**:

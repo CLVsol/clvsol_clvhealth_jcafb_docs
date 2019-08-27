@@ -14,6 +14,8 @@
 A Pessoa reside em um Endereço não cadastrado
 =============================================
 
+    * *Workflow*: ":doc:`reregistration_workflow_020_020_020`".
+
     Caso se opte por associar ao Endereço da Pessoa uma Família, a Pessoa será associada a essa Família os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
 
     Caso se opte por não associar ao Endereço da Pessoa a uma Família, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.

@@ -14,6 +14,8 @@
 Todos os dados da Pessoa serão mantidos
 =======================================
 
+    * *Workflow*: ":doc:`reregistration_workflow_020_010_010`".
+
     Caso **exista uma Família** associada ao Endereço da Pessoa, a Pessoa continuará associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
 
     Caso **não exista uma Família** associada ao Endereço da Pessoa, mas se opte por associar a esse Endereço uma Família, a Pessoa será associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.

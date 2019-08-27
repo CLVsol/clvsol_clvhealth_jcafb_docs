@@ -14,6 +14,8 @@
 Procura por uma Família em **Contatos**
 =======================================
 
+    * *Workflow*: ":doc:`reregistration_workflow_010_030`".
+
     #. Procurar pela Família na *view* :bi:`Contatos`:
 
         #. Acessar a *view* **Contatos**:
