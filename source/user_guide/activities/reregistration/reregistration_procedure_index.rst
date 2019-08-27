@@ -31,6 +31,7 @@
    reregistration_procedure_020_010_040
    reregistration_procedure_020_010_045
    reregistration_procedure_020_010_050
+   reregistration_procedure_020_010_055
    reregistration_procedure_020_010_060
    reregistration_procedure_020_010_070
    reregistration_procedure_020_010_080
