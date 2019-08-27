@@ -15,8 +15,8 @@
 ====================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Itens Relacionados:
+   :maxdepth: 1
+   :caption: Tópicos Relacionados:
 
    reregistration_procedure_010_010
    reregistration_procedure_010_020
@@ -27,6 +27,7 @@
 
    reregistration_procedure_020_010_010
    reregistration_procedure_020_010_020
+   reregistration_procedure_020_010_030
    reregistration_procedure_020_010_040
    reregistration_procedure_020_010_050
    reregistration_procedure_020_010_060
