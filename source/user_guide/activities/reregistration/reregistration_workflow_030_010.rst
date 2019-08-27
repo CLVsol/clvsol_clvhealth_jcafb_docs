@@ -8,11 +8,11 @@
 .. role:: green
 .. role:: bi
 
-.. index:: Consoliação de Address (Aux)
+.. index:: Consolidação de Address (Aux)
 
-==================================
-Consoliação de :bi:`Address (Aux)`
-==================================
+====================================================
+:red:`(Revisar)` Consolidação de :bi:`Address (Aux)`
+====================================================
 
 .. toctree::
    :maxdepth: 2

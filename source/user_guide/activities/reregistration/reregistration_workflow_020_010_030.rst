@@ -8,10 +8,10 @@
 .. role:: green
 .. role:: bi
 
-.. index:: [Pessoa já cadastrada] Atualização de dados Address do Contact Information da Pessoa, não caracterizando uma mudança de Endereço
+.. index:: Atualização de dados Address do Contact Information da Pessoa, não caracterizando uma mudança de Endereço
 
 ====================================================================================================================================
-[Pessoa já cadastrada] Atualização de dados *Address* do *Contact Information* da Pessoa, não caracterizando uma mudança de Endereço
+:red:`(Revisar)` Atualização de dados *Address* do *Contact Information* da Pessoa, não caracterizando uma mudança de Endereço
 ====================================================================================================================================
 
 Os dados :bi:`Address` do :bi:`Contact Information` são compartilhados por todas as Entidades do **Cadastro** (:bi:`Person`, :bi:`Address` e :bi:`Family`) e do **Cadastro Auxiliar** (:bi:`Person (Aux)`, :bi:`Address (Aux)` e :bi:`Family (Aux)`), descrevendo o Endereço dessas Entidades.

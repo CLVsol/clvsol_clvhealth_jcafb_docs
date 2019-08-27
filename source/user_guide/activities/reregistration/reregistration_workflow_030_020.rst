@@ -8,11 +8,11 @@
 .. role:: green
 .. role:: bi
 
-.. index:: Consoliação de Family (Aux)
+.. index:: Consolidação de Family (Aux)
 
-=================================
-Consoliação de :bi:`Family (Aux)`
-=================================
+===================================================
+:red:`(Revisar)` Consolidação de :bi:`Family (Aux)`
+===================================================
 
 .. toctree::
    :maxdepth: 2

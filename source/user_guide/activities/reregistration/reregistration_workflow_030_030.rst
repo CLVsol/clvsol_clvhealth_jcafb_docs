@@ -8,11 +8,11 @@
 .. role:: green
 .. role:: bi
 
-.. index:: Consoliação de Person (Aux)
+.. index:: Consolidação de Person (Aux)
 
-=================================
-Consoliação de :bi:`Person (Aux)`
-=================================
+===================================================
+:red:`(Revisar)` Consolidação de :bi:`Person (Aux)`
+===================================================
 
 .. toctree::
    :maxdepth: 2

@@ -10,9 +10,9 @@
 
 .. index:: Consoliação do Cadastro Auxiliar
 
-====================================
-Consoliação do **Cadastro Auxiliar**
-====================================
+=====================================================
+:red:`(Revisar)` Consoliação do **Cadastro Auxiliar**
+=====================================================
 
 .. toctree::
    :maxdepth: 2

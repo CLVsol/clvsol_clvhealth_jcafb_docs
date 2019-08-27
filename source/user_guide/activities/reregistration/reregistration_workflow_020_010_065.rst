@@ -8,10 +8,10 @@
 .. role:: green
 .. role:: bi
 
-.. index:: [Pessoa já cadastrada] A Pessoa mudou-se para um Endereço desconhecido, mudando de Família
+.. index:: A Pessoa mudou-se para um Endereço desconhecido, mudando de Família
 
 ==========================================================================================
-[Pessoa já cadastrada] A Pessoa mudou-se para um Endereço desconhecido, mudando de Família
+:red:`(Revisar)` A Pessoa mudou-se para um Endereço desconhecido, mudando de Família
 ==========================================================================================
 
 .. _Cadastro Auxiliar (6.5):

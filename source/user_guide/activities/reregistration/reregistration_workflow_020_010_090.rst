@@ -8,10 +8,10 @@
 .. role:: green
 .. role:: bi
 
-.. index:: [Pessoa já cadastrada] A Pessoa faleceu
+.. index:: A Pessoa faleceu
 
 =======================================
-[Pessoa já cadastrada] A Pessoa faleceu
+:red:`(Revisar)` A Pessoa faleceu
 =======================================
 
 .. _Cadastro Auxiliar (9):

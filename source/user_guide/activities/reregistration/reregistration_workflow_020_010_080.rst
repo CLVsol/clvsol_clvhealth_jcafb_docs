@@ -8,10 +8,10 @@
 .. role:: green
 .. role:: bi
 
-.. index:: [Pessoa já cadastrada] A Pessoa está ausente da comunidade atendida pela JCAFB
+.. index:: A Pessoa está ausente da comunidade atendida pela JCAFB
 
 ==============================================================================
-[Pessoa já cadastrada] A Pessoa está ausente da comunidade atendida pela JCAFB
+:red:`(Revisar)` A Pessoa está ausente da comunidade atendida pela JCAFB
 ==============================================================================
 
 .. _Cadastro Auxiliar (8):

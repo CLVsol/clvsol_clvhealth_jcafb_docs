@@ -8,10 +8,10 @@
 .. role:: green
 .. role:: bi
 
-.. index:: [Pessoa já cadastrada] A Pessoa mudou-se para um Endereço fora da comunidade atendida pela JCAFB, mudando de Família
+.. index:: A Pessoa mudou-se para um Endereço fora da comunidade atendida pela JCAFB, mudando de Família
 
 ====================================================================================================================
-[Pessoa já cadastrada] A Pessoa mudou-se para um Endereço fora da comunidade atendida pela JCAFB, mudando de Família
+:red:`(Revisar)` A Pessoa mudou-se para um Endereço fora da comunidade atendida pela JCAFB, mudando de Família
 ====================================================================================================================
 
 .. _Cadastro Auxiliar (7.5):

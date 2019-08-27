@@ -10,9 +10,9 @@
 
 .. index:: Exclusão dos dados do Cadastro Auxiliar
 
-===========================================
-Exclusão dos dados do **Cadastro Auxiliar**
-===========================================
+============================================================
+:red:`(Revisar)` Exclusão dos dados do **Cadastro Auxiliar**
+============================================================
 
 .. toctree::
    :maxdepth: 2

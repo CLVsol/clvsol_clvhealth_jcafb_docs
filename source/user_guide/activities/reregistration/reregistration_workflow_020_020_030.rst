@@ -8,10 +8,10 @@
 .. role:: green
 .. role:: bi
 
-.. index:: [Pessoa não cadastrada] A Pessoa reside em um Endereço fora da comunidade atendida pela JCAFB
+.. index:: A Pessoa reside em um Endereço fora da comunidade atendida pela JCAFB
 
 =============================================================================================
-[Pessoa não cadastrada] A Pessoa reside em um Endereço fora da comunidade atendida pela JCAFB
+:red:`(Revisar)` A Pessoa reside em um Endereço fora da comunidade atendida pela JCAFB
 =============================================================================================
 
 .. _Cadastro Auxiliar (13):
