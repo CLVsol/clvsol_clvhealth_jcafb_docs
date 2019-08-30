@@ -17,4 +17,5 @@
    :caption: Conteúdo:
 
    survey_duplicate
+   survey_code_renew
    survey_export_xls
