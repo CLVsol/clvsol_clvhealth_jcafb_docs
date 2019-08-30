@@ -9,10 +9,10 @@
 .. role:: bi
 
 =========================================================================================
-[2019-08-26] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
+[2019-08-31] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
 =========================================================================================
 
-Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-08-25a)
+Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-08-30b)
 ---------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
@@ -38,22 +38,22 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2020_2019-08-25a.sql.gz
+            # gzip -d clvhealth_jcafb_2020_2019-08-30b.sql.gz
 
             dropdb -i clvhealth_jcafb_2020
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2020
-            psql -f clvhealth_jcafb_2020_2019-08-25a.sql -d clvhealth_jcafb_2020 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2020_2019-08-30b.sql -d clvhealth_jcafb_2020 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2020
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-08-25a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-08-30b.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-08-25a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-08-30b.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
 
@@ -71,71 +71,13 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
             /etc/init.d/odoo start
 
-:red:`(Não Executado)` Desabilitar a instalação do(s) módulo(s) [export, verification, processing, report] (2019-08-11)
------------------------------------------------------------------------------------------------------------------------
+Atualizar o(s) módulo(s) [clv_survey] (2019-08-31)
+--------------------------------------------------
 
-    * Referência: :doc:`/setup/module_installation`.
+    * Referência: :doc:`/setup/module_update`.
 
-    #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, **desabilitando** o(s) Módulo(s):
 
-        * clv_export
-        * clv_document_export
-        * clv_lab_test_export
-        * clv_person_export
-        * clv_export_jcafb
-        * clv_document_export_jcafb
-        * clv_lab_test_export_jcafb
-        * clv_person_export_jcafb
-
-    #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, **desabilitando** o(s) Módulo(s):
-
-        * clv_verification
-        * clv_verification_jcafb
-        * clv_person_verification_jcafb
-
-    #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, **desabilitando** o(s) Módulo(s):
-
-        * clv_processing
-        * clv_processing_jcafb
-
-    #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, **desabilitando** o(s) Módulo(s):
-
-        * clv_report
-        * clv_report_jcafb
-
-:red:`(Não Executado)` Instalar o(s) módulo(s) [export, verification, processing, report] (2019-07-29)
-------------------------------------------------------------------------------------------------------
-
-    * Referência: :doc:`/setup/module_installation`.
-
-    #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, **habilitando** o(s) Módulo(s):
-
-        * clv_export
-        * clv_document_export
-        * clv_lab_test_export
-        * clv_person_export
-        * clv_export_jcafb
-        * clv_document_export_jcafb
-        * clv_lab_test_export_jcafb
-        * clv_person_export_jcafb
-
-    #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, **habilitando** o(s) Módulo(s):
-
-        * clv_verification
-        * clv_verification_jcafb
-        * clv_person_verification_jcafb
-
-    #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, **habilitando** o(s) Módulo(s):
-
-        * clv_processing
-        * clv_processing_jcafb
-
-    #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, **habilitando** o(s) Módulo(s):
-
-        * clv_report
-        * clv_report_jcafb
-
-    #. [tkl-odoo12-jcafb-vm] **Executar** a instalação do(s) Módulo(s) adicionado(s)/habilitado(s):
+    #. [tkl-odoo12-jcafb-vm] **Executar** a atualização do(s) Módulo(s):
 
         #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo12-jcafb-vm** e executar o *Odoo* no modo manual:
 
@@ -163,8 +105,7 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
                 cd /opt/odoo/clvsol_clvhealth_jcafb/project
                 
-                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020"
-
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_survey
             
         #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
 
@@ -182,85 +123,161 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
                 /etc/init.d/odoo start
 
-:red:`(Não Executado)` Configurar as permissões do usuário de referência da JCAFB-2020 (2019-08-11)
----------------------------------------------------------------------------------------------------
+Exportar o Questionário "[QSI20]" (2019-08-31)
+----------------------------------------------
 
-    #. Configurar as permissões do usuário de referência:
+    * Referência: :doc:`/user_guide/survey/survey_export_xls`.
 
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
-
-        #. Acessar a *View* *Users*:
-
-            * Menu de acesso:
-                * :bi:`Configurações` » :bi:`Utilizadores e Empresas` » :bi:`Usuários`
-
-        #. Selecionar o usuário de referência.
-
-        #. Configurar as permissões:
-
-            * *Address*: :bi:`User (Address)`
-            * *Address (Aux)*: :bi:`Manager (Address (Aux))`
-            * Administração:  
-            * *Community*: :bi:`User (Community)`
-            * *Event*: :bi:`User (Event)`
-            * :green:`(Novo)` *Export*: :bi:`User (Export)`
-            * *External Sync*: :bi:`User (External Sync)`
-            * *Family*: :bi:`User (Family)`
-            * *Family (Aux)*: :bi:`Manager (Family (Aux))`
-            * *File System User*: :bi:`(File System)`
-            * *Funcionários*: :bi:`Oficial`
-            * *Global Tag*: :bi:`User (Global Tag)`
-            * *Media File*: :bi:`User (Media File)`
-            * *Aux*: :bi:`User (Aux)`
-            * *Person*: :bi:`User (Person)`
-            * *Person (Aux)*: :bi:`Manager (Person (Aux))`
-            * *Pesquisa*: :bi:`Utilizador`
-            * *Phase*: :bi:`User (Phase)`
-            * :green:`(Novo)` *Processing*: :bi:`User (Processing)`
-            * :green:`(Novo)` *Report*: :bi:`User (Report)`
-            * *Set*: :bi:`User (Set)`
-            * *Survey*: :bi:`User (Survey)`
-            * :green:`(Novo)` *Verification*: :bi:`User (Verification)`
-            *
-            * *Lab Test*:
-                * :bi:`User (Lab Test) ​`
-            *
-            * *Base*:
-                * :bi:`Annotation User (Base)`,
-                * :bi:`Log User (Base)`,
-                * :bi:`Register User (Base)`,
-                * :bi:`User (Base)`,
-                * :bi:`Super User (Base)`,
-                * :bi:`Manager (Base)` ​
-            *
-            * *Document*:
-                * :bi:`User (Document)` ​
-            
-:red:`(Não Executado)` Atualizar as permissões de todos os Usuários da JCAFB-2020 (2019-08-11)
-----------------------------------------------------------------------------------------------
-
-    * Referência: :doc:`/user_guide/employee/employee_user_groups_updt`.
-
-    #. [tkl-odoo12-jcafb-vm] Executar a Ação *Employee User Groups Update* para os *Employees* da JCAFB-2020:
+    #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Survey Export XLS` para a Pesquisa "**[QSI20]**":
 
         #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
 
-        #. Acessar a *View* *Employees*:
+        #. Acessar a *View* *Lab Test Types*:
 
             * Menu de acesso:
-                * *Funcionários* » *Employees* » *Employees*
+                * **Pesquisas** » **Pesquisas**
 
-        #. Selecionar os *Employees* da JCAFB-2020 (**18**)
+        #. Abrir o Formulário da Pesquisa "**[QSI20]**".
 
-        #. Exercutar a Ação "**Employee User Groups Update**":
+        #. Exercutar a Ação ":bi:`Survey Export XLS`":
 
-            #. Selecionar o :bi:`Reference Employee`: Usuário de referência (selecionado no ítem anterior).
+            * Parâmetros utilizados:
+                * *Directory Path*: **/opt/odoo/clvsol_filestore/clvhealth_jcafb/survey_files/templates**
+                * *File Name*: **<code>_nnn.nnn-dd.xls**
+                * *Password*: *******
+                * *File Format*: **Draft**
 
-            #. Selecionar o parâmetro :bi:`Access Rights:` » :bi:`Set`.
+            #. Utilize o botão :bi:`Export XLS` para executar a Ação.
 
-            #. Precionar o botão :bi:`Get Reference Employee Access Rights`.
+Exportar o Questionário "[QSC20]" (2019-08-31)
+----------------------------------------------
 
-            #. Utilize o botão :bi:`Update` para executar a Ação.
+    * Referência: :doc:`/user_guide/survey/survey_export_xls`.
+
+    #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Survey Export XLS` para a Pesquisa "**[QSC20]**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
+
+        #. Acessar a *View* *Lab Test Types*:
+
+            * Menu de acesso:
+                * **Pesquisas** » **Pesquisas**
+
+        #. Abrir o Formulário da Pesquisa "**[QSC20]**".
+
+        #. Exercutar a Ação ":bi:`Survey Export XLS`":
+
+            * Parâmetros utilizados:
+                * *Directory Path*: **/opt/odoo/clvsol_filestore/clvhealth_jcafb/survey_files/templates**
+                * *File Name*: **<code>_nnn.nnn-dd.xls**
+                * *Password*: *******
+                * *File Format*: **Draft**
+
+            #. Utilize o botão :bi:`Export XLS` para executar a Ação.
+
+Exportar o Questionário "[QSF20]" (2019-08-31)
+----------------------------------------------
+
+    * Referência: :doc:`/user_guide/survey/survey_export_xls`.
+
+    #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Survey Export XLS` para a Pesquisa "**[QSF20]**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
+
+        #. Acessar a *View* *Lab Test Types*:
+
+            * Menu de acesso:
+                * **Pesquisas** » **Pesquisas**
+
+        #. Abrir o Formulário da Pesquisa "**[QSF20]**".
+
+        #. Exercutar a Ação ":bi:`Survey Export XLS`":
+
+            * Parâmetros utilizados:
+                * *Directory Path*: **/opt/odoo/clvsol_filestore/clvhealth_jcafb/survey_files/templates**
+                * *File Name*: **<code>_nnn.nnn-dd.xls**
+                * *Password*: *******
+                * *File Format*: **Draft**
+
+            #. Utilize o botão :bi:`Export XLS` para executar a Ação.
+
+Exportar o Questionário "[QMD20]" (2019-08-31)
+----------------------------------------------
+
+    * Referência: :doc:`/user_guide/survey/survey_export_xls`.
+
+    #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Survey Export XLS` para a Pesquisa "**[QMD20]**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
+
+        #. Acessar a *View* *Lab Test Types*:
+
+            * Menu de acesso:
+                * **Pesquisas** » **Pesquisas**
+
+        #. Abrir o Formulário da Pesquisa "**[QMD20]**".
+
+        #. Exercutar a Ação ":bi:`Survey Export XLS`":
+
+            * Parâmetros utilizados:
+                * *Directory Path*: **/opt/odoo/clvsol_filestore/clvhealth_jcafb/survey_files/templates**
+                * *File Name*: **<code>_nnn.nnn-dd.xls**
+                * *Password*: *******
+                * *File Format*: **Draft**
+
+            #. Utilize o botão :bi:`Export XLS` para executar a Ação.
+
+Exportar o Questionário "[QDH20]" (2019-08-31)
+----------------------------------------------
+
+    * Referência: :doc:`/user_guide/survey/survey_export_xls`.
+
+    #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Survey Export XLS` para a Pesquisa "**[QDH20]**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
+
+        #. Acessar a *View* *Lab Test Types*:
+
+            * Menu de acesso:
+                * **Pesquisas** » **Pesquisas**
+
+        #. Abrir o Formulário da Pesquisa "**[QDH20]**".
+
+        #. Exercutar a Ação ":bi:`Survey Export XLS`":
+
+            * Parâmetros utilizados:
+                * *Directory Path*: **/opt/odoo/clvsol_filestore/clvhealth_jcafb/survey_files/templates**
+                * *File Name*: **<code>_nnn.nnn-dd.xls**
+                * *Password*: *******
+                * *File Format*: **Draft**
+
+            #. Utilize o botão :bi:`Export XLS` para executar a Ação.
+
+Exportar o Questionário "[QAN20]" (2019-08-31)
+----------------------------------------------
+
+    * Referência: :doc:`/user_guide/survey/survey_export_xls`.
+
+    #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Survey Export XLS` para a Pesquisa "**[QAN20]**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
+
+        #. Acessar a *View* *Lab Test Types*:
+
+            * Menu de acesso:
+                * **Pesquisas** » **Pesquisas**
+
+        #. Abrir o Formulário da Pesquisa "**[QAN20]**".
+
+        #. Exercutar a Ação ":bi:`Survey Export XLS`":
+
+            * Parâmetros utilizados:
+                * *Directory Path*: **/opt/odoo/clvsol_filestore/clvhealth_jcafb/survey_files/templates**
+                * *File Name*: **<code>_nnn.nnn-dd.xls**
+                * *Password*: *******
+                * *File Format*: **Draft**
+
+            #. Utilize o botão :bi:`Export XLS` para executar a Ação.
 
 .. toctree::
    :maxdepth: 2
