@@ -17,3 +17,4 @@
    :caption: Conteúdo:
 
    survey_duplicate
+   survey_export_xls
