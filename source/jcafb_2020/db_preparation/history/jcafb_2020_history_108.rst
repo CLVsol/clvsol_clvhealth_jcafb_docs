@@ -12,7 +12,7 @@
 [2019-08-31] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
 =========================================================================================
 
-Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-08-30b)
+Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-08-31b)
 ---------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
@@ -38,22 +38,22 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2020_2019-08-30b.sql.gz
+            # gzip -d clvhealth_jcafb_2020_2019-08-31b.sql.gz
 
             dropdb -i clvhealth_jcafb_2020
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2020
-            psql -f clvhealth_jcafb_2020_2019-08-30b.sql -d clvhealth_jcafb_2020 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2020_2019-08-31b.sql -d clvhealth_jcafb_2020 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2020
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-08-30b.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-08-31b.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-08-30b.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-08-31b.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
 
@@ -71,57 +71,49 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
             /etc/init.d/odoo start
 
-Atualizar o(s) módulo(s) [clv_survey] (2019-08-31)
---------------------------------------------------
+Alterar o Questionário "[QSF20]" (2019-08-31)
+---------------------------------------------
 
-    * Referência: :doc:`/setup/module_update`.
+    * Referência: :doc:`/user_guide/survey/survey_code_renew`.
 
+    #. [tkl-odoo12-jcafb-vm] Alterar o Questionário "[QSF20]" conforme sugestões da Coordenação da JCAFB-2020:
 
-    #. [tkl-odoo12-jcafb-vm] **Executar** a atualização do(s) Módulo(s):
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
 
-        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo12-jcafb-vm** e executar o *Odoo* no modo manual:
+        #. Acessar a *View* *Lab Test Types*:
 
-            ::
+            * Menu de acesso:
+                * **Pesquisas** » **Pesquisas**
 
-                # ***** tkl-odoo12-jcafb-vm (session 1)
-                #
+        #. Abrir o Formulário da Pesquisa "**[QSF20]**".
 
-                ssh tkl-odoo12-jcafb-vm -l root
+        #. Aplicar as alterações sugeridas pela Coordenação da JCAFB-2020.
 
-                /etc/init.d/odoo stop
+        #. Exercutar a Ação ":bi:`Survey Code Renew`":
 
-                su odoo
-                cd /opt/odoo
-                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+            #. Utilize o botão :bi:`Code Renew` para executar a Ação.
 
-        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo12-jcafb-vm** e executar o **install.py**:
+Alterar o Questionário "[QSI20]" (2019-08-31)
+---------------------------------------------
 
-            ::
+    * Referência: :doc:`/user_guide/survey/survey_code_renew`.
 
-                # ***** tkl-odoo12-jcafb-vm (session 2)
-                #
+    #. [tkl-odoo12-jcafb-vm] Alterar o Questionário "[QSI20]" conforme sugestões da Coordenação da JCAFB-2020:
 
-                ssh tkl-odoo12-jcafb-vm -l odoo
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
 
-                cd /opt/odoo/clvsol_clvhealth_jcafb/project
-                
-                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_survey
-            
-        #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
+        #. Acessar a *View* *Lab Test Types*:
 
-            ::
+            * Menu de acesso:
+                * **Pesquisas** » **Pesquisas**
 
-                # ***** tkl-odoo12-jcafb-vm (session 1)
-                #
+        #. Abrir o Formulário da Pesquisa "**[QSI20]**".
 
-                cd /opt/odoo
-                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+        #. Aplicar as alterações sugeridas pela Coordenação da JCAFB-2020.
 
-                ^C
+        #. Exercutar a Ação ":bi:`Survey Code Renew`":
 
-                exit
-
-                /etc/init.d/odoo start
+            #. Utilize o botão :bi:`Code Renew` para executar a Ação.
 
 Exportar o Questionário "[QSI20]" (2019-08-31)
 ----------------------------------------------
@@ -143,7 +135,7 @@ Exportar o Questionário "[QSI20]" (2019-08-31)
 
             * Parâmetros utilizados:
                 * *Directory Path*: **/opt/odoo/clvsol_filestore/clvhealth_jcafb/survey_files/templates**
-                * *File Name*: **<code>_nnn.nnn-dd.xls**
+                * *File Name*: **<code>_nnn.nnn-dd_<file_format>.xls**
                 * *Password*: *******
                 * *File Format*: **Draft**
 
@@ -169,7 +161,7 @@ Exportar o Questionário "[QSC20]" (2019-08-31)
 
             * Parâmetros utilizados:
                 * *Directory Path*: **/opt/odoo/clvsol_filestore/clvhealth_jcafb/survey_files/templates**
-                * *File Name*: **<code>_nnn.nnn-dd.xls**
+                * *File Name*: **<code>_nnn.nnn-dd_<file_format>.xls**
                 * *Password*: *******
                 * *File Format*: **Draft**
 
@@ -195,7 +187,7 @@ Exportar o Questionário "[QSF20]" (2019-08-31)
 
             * Parâmetros utilizados:
                 * *Directory Path*: **/opt/odoo/clvsol_filestore/clvhealth_jcafb/survey_files/templates**
-                * *File Name*: **<code>_nnn.nnn-dd.xls**
+                * *File Name*: **<code>_nnn.nnn-dd_<file_format>.xls**
                 * *Password*: *******
                 * *File Format*: **Draft**
 
@@ -221,7 +213,7 @@ Exportar o Questionário "[QMD20]" (2019-08-31)
 
             * Parâmetros utilizados:
                 * *Directory Path*: **/opt/odoo/clvsol_filestore/clvhealth_jcafb/survey_files/templates**
-                * *File Name*: **<code>_nnn.nnn-dd.xls**
+                * *File Name*: **<code>_nnn.nnn-dd_<file_format>.xls**
                 * *Password*: *******
                 * *File Format*: **Draft**
 
@@ -247,7 +239,7 @@ Exportar o Questionário "[QDH20]" (2019-08-31)
 
             * Parâmetros utilizados:
                 * *Directory Path*: **/opt/odoo/clvsol_filestore/clvhealth_jcafb/survey_files/templates**
-                * *File Name*: **<code>_nnn.nnn-dd.xls**
+                * *File Name*: **<code>_nnn.nnn-dd_<file_format>.xls**
                 * *Password*: *******
                 * *File Format*: **Draft**
 
@@ -273,11 +265,76 @@ Exportar o Questionário "[QAN20]" (2019-08-31)
 
             * Parâmetros utilizados:
                 * *Directory Path*: **/opt/odoo/clvsol_filestore/clvhealth_jcafb/survey_files/templates**
-                * *File Name*: **<code>_nnn.nnn-dd.xls**
+                * *File Name*: **<code>_nnn.nnn-dd_<file_format>.xls**
                 * *Password*: *******
                 * *File Format*: **Draft**
 
             #. Utilize o botão :bi:`Export XLS` para executar a Ação.
+
+Criar um backup do *CLVhealth-JCAFB-2020* (2019-08-31c)
+-------------------------------------------------------
+
+    * Referência: :doc:`/setup/clvhealth_jcafb_backup`.
+
+    #. [tkl-odoo12-jcafb-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-vm
+            #
+
+            ssh tkl-odoo12-jcafb-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo12-jcafb-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-08-31c.sql
+
+            gzip clvhealth_jcafb_2020_2019-08-31c.sql
+            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-08-31c.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-08-31c.tar.gz clvhealth_jcafb_2020
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-08-31c.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+        * /opt/odoo/clvhealth_jcafb_2020_2019-08-31c.sql
+        * /opt/odoo/clvhealth_jcafb_2020_2019-08-31c.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2020_2019-08-31c.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-08-31c.tar.gz
+
+.. index:: clvhealth_jcafb_2020_2019-08-31c.sql
+.. index:: filestore_clvhealth_jcafb_2020_2019-08-31c
+.. index:: clvsol_filestore_clvhealth_jcafb_2019-08-31c
 
 .. toctree::
    :maxdepth: 2
