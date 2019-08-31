@@ -8,7 +8,7 @@
 .. role:: green
 .. role:: bi
 
-.. index:: Atualização de dados do Endereço da Pessoa, não caracterizando uma mudança de Endereço
+.. index:: Atualização de dados do Endereço da Pessoa não caracterizando uma mudança de Endereço
 
 ======================================================================================
 Atualização de dados do Endereço da Pessoa, não caracterizando uma mudança de Endereço

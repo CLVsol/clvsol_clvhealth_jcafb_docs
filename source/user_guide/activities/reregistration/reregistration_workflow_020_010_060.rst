@@ -8,7 +8,7 @@
 .. role:: green
 .. role:: bi
 
-.. index:: A Pessoa mudou-se para Endereço não cadastrado, juntamente com a Família
+.. index:: A Pessoa mudou-se para Endereço não cadastrado juntamente com a Família
 
 ======================================================================
 A Pessoa mudou-se para Endereço desconhecido, juntamente com a Família

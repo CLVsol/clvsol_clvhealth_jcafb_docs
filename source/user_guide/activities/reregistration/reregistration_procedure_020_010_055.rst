@@ -8,7 +8,7 @@
 .. role:: green
 .. role:: bi
 
-.. index:: A Pessoa mudou-se para Endereço não cadastrado, juntamente com a Família (Procedimento)
+.. index:: A Pessoa mudou-se para Endereço não cadastrado juntamente com a Família (Procedimento)
 
 ================================================================
 A Pessoa mudou-se para um Endereço não cadastrado, sem a Família

@@ -8,7 +8,7 @@
 .. role:: green
 .. role:: bi
 
-.. index:: Atualização de dados relativos à Pessoa não relacionados ao Endereço, à Família ou às Relações Familiares (Procedimento)
+.. index:: Atualização de dados relativos à Pessoa não relacionados ao Endereço à Família ou às Relações Familiares (Procedimento)
 
 =========================================================================================================
 Atualização de dados relativos à Pessoa não relacionados ao Endereço, à Família ou às Relações Familiares

@@ -8,7 +8,7 @@
 .. role:: green
 .. role:: bi
 
-.. index:: A Pessoa mudou-se para Endereço desconhecido, juntamente com a Família (Procedimento)
+.. index:: A Pessoa mudou-se para Endereço desconhecido juntamente com a Família (Procedimento)
 
 ======================================================================
 A Pessoa mudou-se para Endereço desconhecido, juntamente com a Família
