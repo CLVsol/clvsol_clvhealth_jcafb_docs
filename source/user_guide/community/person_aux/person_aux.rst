@@ -23,6 +23,7 @@
 
    person_aux_mass_edit
    person_aux_contact_info_updt
+   person_aux_lab_test_request_setup
 
 .. toctree::
    :maxdepth: 2
