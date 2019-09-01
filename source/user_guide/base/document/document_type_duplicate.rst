@@ -28,7 +28,7 @@
             * Parâmetros apresentados:
                 * *New Document Type*
                 * *New Document Type Code*
-                * *New Document Type Notes*
+                * *New Document Type Description*
 
             #. Utilize o botão :bi:`Duplicate` para executar a Ação.
 
