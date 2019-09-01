@@ -17,3 +17,4 @@
    :caption: Ações:
 
    document_mass_edit
+   document_type_duplicate
