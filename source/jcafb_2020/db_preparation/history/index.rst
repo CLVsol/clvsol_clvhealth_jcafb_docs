@@ -16,3 +16,4 @@ Histórico (Preparação do Banco de Dados - JCAFB-2020)
    jcafb_2020_history_108
    jcafb_2020_history_109
    jcafb_2020_history_110
+   jcafb_2020_history_111
