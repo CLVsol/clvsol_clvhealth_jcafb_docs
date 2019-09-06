@@ -9,7 +9,7 @@
 .. role:: bi
 
 =========================================================================================
-[2019-09-05] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
+[2019-09-06] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
 =========================================================================================
 
 Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-09-04a)
@@ -71,7 +71,7 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
             /etc/init.d/odoo start
 
-Excluir o Funcionário *Administrator* adicional (2019-09-05)
+Excluir o Funcionário *Administrator* adicional (2019-09-06)
 ------------------------------------------------------------
 
     #. [tkl-odoo12-jcafb-vm] Excluir o Funcionário :bi:`Administrator` adicional:
@@ -85,7 +85,7 @@ Excluir o Funcionário *Administrator* adicional (2019-09-05)
 
         #. Excluir o segundo Fucionário da lista.
 
-Excluir *File System Files* (2019-09-05)
+Excluir *File System Files* (2019-09-06)
 ----------------------------------------
 
     #. [tkl-odoo12-jcafb-vm] Excluir :bi:`File System Files`:
@@ -99,7 +99,7 @@ Excluir *File System Files* (2019-09-05)
 
         #. Excluir todos os registros apresentados (**5270**)
 
-Excluir *File System Directories* (2019-09-05)
+Excluir *File System Directories* (2019-09-06)
 ----------------------------------------------
 
     #. [tkl-odoo12-jcafb-vm] Excluir :bi:`File System Directories`:
@@ -113,7 +113,7 @@ Excluir *File System Directories* (2019-09-05)
 
         #. Excluir todos os registros apresentados (**8**)
 
-Desabilitar a instalação do(s) módulo(s) [clv_lab_test_jcafb_2020] (2019-09-05)
+Desabilitar a instalação do(s) módulo(s) [clv_lab_test_jcafb_2020] (2019-09-06)
 -------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
@@ -122,7 +122,7 @@ Desabilitar a instalação do(s) módulo(s) [clv_lab_test_jcafb_2020] (2019-09-0
 
         * clv_lab_test_jcafb_2020
 
-Atualizar o(s) módulo(s) [clv_mfile_jcafb] (2019-09-05)
+Atualizar o(s) módulo(s) [clv_mfile_jcafb] (2019-09-06)
 -------------------------------------------------------
 
     * Referência: :doc:`/setup/module_update`.
@@ -174,7 +174,7 @@ Atualizar o(s) módulo(s) [clv_mfile_jcafb] (2019-09-05)
 
                 /etc/init.d/odoo start
 
-Atualizar o(s) módulo(s) [clv_lab_test, clv_lab_test_jcafb] (2019-09-05)
+Atualizar o(s) módulo(s) [clv_lab_test, clv_lab_test_jcafb] (2019-09-06)
 ------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_update`.
@@ -226,7 +226,7 @@ Atualizar o(s) módulo(s) [clv_lab_test, clv_lab_test_jcafb] (2019-09-05)
 
                 /etc/init.d/odoo start
 
-Instalar o(s) módulo(s) [clv_lab_test_jcafb_2020] (2019-09-05)
+Instalar o(s) módulo(s) [clv_lab_test_jcafb_2020] (2019-09-06)
 --------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
