@@ -435,6 +435,11 @@ Replace the Odoo installation (Odoo 12.0)
             # workers = 1
             workers = 5
 
+        ::
+
+            workers = 1
+            # workers = 5
+
 #. :red:`(Não Executado)` Configure Odoo Server :bi:`data_dir`
 
     #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
