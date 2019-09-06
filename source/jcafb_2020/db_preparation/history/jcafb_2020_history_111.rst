@@ -71,6 +71,20 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
             /etc/init.d/odoo start
 
+Excluir o Funcionário *Administrator* adicional (2019-09-05)
+------------------------------------------------------------
+
+    #. [tkl-odoo12-jcafb-vm] Excluir o Funcionário :bi:`Administrator` adicional:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
+
+        #. Acessar a *View* **Funcionários**:
+
+            * Menu de acesso:
+                * **Funcionários** » :bi:`Employees` » :bi:`Employees`
+
+        #. Excluir o segundo Fucionário da lista.
+
 Excluir *File System Files* (2019-09-05)
 ----------------------------------------
 
@@ -98,6 +112,15 @@ Excluir *File System Directories* (2019-09-05)
                 * **Base** » **Base** » **File System** » **Directories**
 
         #. Excluir todos os registros apresentados (**8**)
+
+Desabilitar a instalação do(s) módulo(s) [clv_lab_test_jcafb_2020] (2019-09-05)
+-------------------------------------------------------------------------------
+
+    * Referência: :doc:`/setup/module_installation`.
+
+    #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, **desabilitando** o(s) Módulo(s):
+
+        * clv_lab_test_jcafb_2020
 
 Atualizar o(s) módulo(s) [clv_mfile_jcafb] (2019-09-05)
 -------------------------------------------------------
@@ -151,8 +174,8 @@ Atualizar o(s) módulo(s) [clv_mfile_jcafb] (2019-09-05)
 
                 /etc/init.d/odoo start
 
-Atualizar o(s) módulo(s) [clv_lab_test_jcafb] (2019-09-05)
-----------------------------------------------------------
+Atualizar o(s) módulo(s) [clv_lab_test, clv_lab_test_jcafb] (2019-09-05)
+------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_update`.
 
@@ -185,7 +208,63 @@ Atualizar o(s) módulo(s) [clv_lab_test_jcafb] (2019-09-05)
 
                 cd /opt/odoo/clvsol_clvhealth_jcafb/project
                 
-                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_lab_test_jcafb
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_lab_test
+            
+        #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-vm (session 1)
+                #
+
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+                ^C
+
+                exit
+
+                /etc/init.d/odoo start
+
+Instalar o(s) módulo(s) [clv_lab_test_jcafb_2020] (2019-09-05)
+--------------------------------------------------------------
+
+    * Referência: :doc:`/setup/module_installation`.
+
+    #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, habilitando o(s) Módulo(s):
+
+        * clv_lab_test_jcafb_2020
+
+    #. [tkl-odoo12-jcafb-vm] **Executar** a instalação do(s) Módulo(s) adicionado(s)/habilitado(s):
+
+        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo12-jcafb-vm** e executar o *Odoo* no modo manual:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-vm (session 1)
+                #
+
+                ssh tkl-odoo12-jcafb-vm -l root
+
+                /etc/init.d/odoo stop
+
+                su odoo
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo12-jcafb-vm** e executar o **install.py**:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-vm (session 2)
+                #
+
+                ssh tkl-odoo12-jcafb-vm -l odoo
+
+                cd /opt/odoo/clvsol_clvhealth_jcafb/project
+                
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020"
+
             
         #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
 
