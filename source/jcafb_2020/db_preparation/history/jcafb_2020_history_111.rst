@@ -9,7 +9,7 @@
 .. role:: bi
 
 =========================================================================================
-[2019-09-06] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
+[2019-09-07] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
 =========================================================================================
 
 Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-09-04a)
@@ -71,7 +71,7 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
             /etc/init.d/odoo start
 
-Excluir o Funcionário *Administrator* adicional (2019-09-06)
+Excluir o Funcionário *Administrator* adicional (2019-09-07)
 ------------------------------------------------------------
 
     #. [tkl-odoo12-jcafb-vm] Excluir o Funcionário :bi:`Administrator` adicional:
@@ -85,7 +85,7 @@ Excluir o Funcionário *Administrator* adicional (2019-09-06)
 
         #. Excluir o segundo Fucionário da lista.
 
-Excluir *File System Files* (2019-09-06)
+Excluir *File System Files* (2019-09-07)
 ----------------------------------------
 
     #. [tkl-odoo12-jcafb-vm] Excluir :bi:`File System Files`:
@@ -99,7 +99,7 @@ Excluir *File System Files* (2019-09-06)
 
         #. Excluir todos os registros apresentados (**5270**)
 
-Excluir *File System Directories* (2019-09-06)
+Excluir *File System Directories* (2019-09-07)
 ----------------------------------------------
 
     #. [tkl-odoo12-jcafb-vm] Excluir :bi:`File System Directories`:
@@ -113,7 +113,7 @@ Excluir *File System Directories* (2019-09-06)
 
         #. Excluir todos os registros apresentados (**8**)
 
-Desabilitar a instalação do(s) módulo(s) [clv_lab_test_jcafb_2020] (2019-09-06)
+Desabilitar a instalação do(s) módulo(s) [clv_lab_test_jcafb_2020] (2019-09-07)
 -------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
@@ -122,7 +122,7 @@ Desabilitar a instalação do(s) módulo(s) [clv_lab_test_jcafb_2020] (2019-09-0
 
         * clv_lab_test_jcafb_2020
 
-Atualizar o(s) módulo(s) [clv_mfile_jcafb] (2019-09-06)
+Atualizar o(s) módulo(s) [clv_mfile_jcafb] (2019-09-07)
 -------------------------------------------------------
 
     * Referência: :doc:`/setup/module_update`.
@@ -174,8 +174,8 @@ Atualizar o(s) módulo(s) [clv_mfile_jcafb] (2019-09-06)
 
                 /etc/init.d/odoo start
 
-Atualizar o(s) módulo(s) [clv_lab_test, clv_lab_test_jcafb] (2019-09-06)
-------------------------------------------------------------------------
+Atualizar o(s) módulo(s) [clv_lab_test, clv_lab_test_jcafb, clv_lab_test_sync_jcafb] (2019-09-07)
+-------------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_update`.
 
@@ -226,7 +226,7 @@ Atualizar o(s) módulo(s) [clv_lab_test, clv_lab_test_jcafb] (2019-09-06)
 
                 /etc/init.d/odoo start
 
-Instalar o(s) módulo(s) [clv_lab_test_jcafb_2020] (2019-09-06)
+Instalar o(s) módulo(s) [clv_lab_test_jcafb_2020] (2019-09-07)
 --------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
@@ -282,5 +282,121 @@ Instalar o(s) módulo(s) [clv_lab_test_jcafb_2020] (2019-09-06)
 
                 /etc/init.d/odoo start
 
+Executar o *External Sync Schedule* "clv.lab_test.result (clv.lab_test.result)" (2019-09-07)
+--------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo12-jcafb-vm] Marcar como :bi:`Updated` o :bi:`External Synchronization` de todos os :bi:`External Syncs` do *Model* "**clv.lab_test.result**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
+
+        #. Configurar, com a ajuda da ação :bi:`External Sync Mass Edit`, todos os :bi:`External Syncs` do *Model* "**clv.lab_test.result**" (**2191**):
+
+            * Menu de acesso:
+                * :bi:`External Sync` » :bi:`External Syncs` » **Ação** » :bi:`External Sync Mass Edit`
+
+            * Parâmetros alterados:
+                * *External Synchronization*: **Set** "**Updated**"
+
+    #. Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-vm** e executar o *Odoo* no modo manual:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-vm
+            #
+
+            ssh tkl-odoo12-jcafb-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+    #. [tkl-odoo12-jcafb-vm] Executar o :bi:`External Sync Schedule` "**clv.lab_test.result (clv.lab_test.result)**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
+
+        #. Executar a ação :bi:`External Sync Schedule Exec` para o "**clv.lab_test.result (clv.lab_test.result)**":
+
+            * Menu de acesso:
+                * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Schedules` » **Ação** » :bi:`External Sync Schedule Exec`
+
+            * *Synchronization Log*:
+                * :ref:`External Sync Schedule - clv.lab_test.result (clv.lab_test.result) - 20190907a`
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo padrão:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-vm
+            #                * *Disable Identification*: "**marcado**"
+
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+Executar o *External Sync Schedule* "clv.lab_test.report (clv.lab_test.report)" (2019-09-07)
+--------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo12-jcafb-vm] Marcar como :bi:`Updated` o :bi:`External Synchronization` de todos os :bi:`External Syncs` do *Model* "**clv.lab_test.report**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
+
+        #. Configurar, com a ajuda da ação :bi:`External Sync Mass Edit`, todos os :bi:`External Syncs` do *Model* "**clv.lab_test.report**" (**1452**):
+
+            * Menu de acesso:
+                * :bi:`External Sync` » :bi:`External Syncs` » **Ação** » :bi:`External Sync Mass Edit`
+
+            * Parâmetros alterados:
+                * *External Synchronization*: **Set** "**Updated**"
+
+    #. Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-vm** e executar o *Odoo* no modo manual:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-vm
+            #
+
+            ssh tkl-odoo12-jcafb-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+    #. [tkl-odoo12-jcafb-vm] Executar o :bi:`External Sync Schedule` "**clv.lab_test.report (clv.lab_test.report)**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
+
+        #. Executar a ação :bi:`External Sync Schedule Exec` para o "**clv.lab_test.report (clv.lab_test.report)**":
+
+            * Menu de acesso:
+                * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Schedules` » **Ação** » :bi:`External Sync Schedule Exec`
+
+            * *Synchronization Log*:
+                * :ref:`External Sync Schedule - clv.lab_test.report (clv.lab_test.report) - 20190907b`
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo padrão:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-vm
+            #                * *Disable Identification*: "**marcado**"
+
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
 .. toctree::
    :maxdepth: 2
+
+   jcafb_2020_history_111_sync_log
