@@ -10,9 +10,9 @@
 *External Sync Schedule Log* [*clv.lab_test.result (clv.lab_test.result)*, *clv.lab_test.report (clv.lab_test.report)*]
 =======================================================================================================================
 
-.. _External Sync Schedule - clv.lab_test.result (clv.lab_test.result) - 20190907a:
+.. _External Sync Schedule - clv.lab_test.result (clv.lab_test.result) - 20190918a:
 
-*External Sync Schedule* - *clv.lab_test.result (clv.lab_test.result)* 12 (Execution time: 0:09:16.90)
+*External Sync Schedule* - *clv.lab_test.result (clv.lab_test.result)* 12 (Execution time: 0:09:45.113)
 -------------------------------------------------------------------------------------------------------
 
     ::
@@ -45,17 +45,17 @@
 
 		task_count: 2191
 
-		date_last_sync: 2019-09-07 18:31:02
+		date_last_sync: 2019-09-18 16:14:51
 		upmost_last_update: 2019-03-24 01:59:00
 
 		sequence_code: clv.lab_test.result.code
 		sequence_number_next_actual: 2519
 
-		Execution time: 0:09:16.908
+		Execution time: 0:09:45.113
 
-.. _External Sync Schedule - clv.lab_test.report (clv.lab_test.report) - 20190907b:
+.. _External Sync Schedule - clv.lab_test.report (clv.lab_test.report) - 20190918b:
 
-*External Sync Schedule* - *clv.lab_test.report (clv.lab_test.report)* 13 (Execution time: 0:06:01.314)
+*External Sync Schedule* - *clv.lab_test.report (clv.lab_test.report)* 13 (Execution time: 0:06:28.758)
 -------------------------------------------------------------------------------------------------------
 
     ::
@@ -88,10 +88,10 @@
 
 		task_count: 1452
 
-		date_last_sync: 2019-09-07 19:08:19
+		date_last_sync: 2019-09-18 16:30:58
 		upmost_last_update: 2019-01-25 20:57:19
 
 		sequence_code: clv.lab_test.report.code
 		sequence_number_next_actual: 1846
 
-		Execution time: 0:06:01.314
+		Execution time: 0:06:28.758
