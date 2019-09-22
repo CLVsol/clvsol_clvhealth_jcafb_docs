@@ -9,7 +9,7 @@
 .. role:: bi
 
 =========================================================================================
-[2019-09-19] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
+[2019-09-22] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
 =========================================================================================
 
 Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-09-18b)
@@ -71,7 +71,7 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
             /etc/init.d/odoo start
 
-Desabilitar a instalação do(s) módulo(s) [export, verification, processing, report] (2019-09-19)
+Desabilitar a instalação do(s) módulo(s) [export, verification, processing, report] (2019-09-22)
 ------------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
@@ -103,7 +103,59 @@ Desabilitar a instalação do(s) módulo(s) [export, verification, processing, r
         * clv_report
         * clv_report_jcafb
 
-Instalar o(s) módulo(s) [export] (2019-09-19)
+Atualizar o(s) módulo(s) [clv_external_sync] (2019-09-22)
+---------------------------------------------------------
+
+    * Referência: :doc:`/setup/module_update`.
+
+
+    #. [tkl-odoo12-jcafb-vm] **Executar** a atualização do(s) Módulo(s):
+
+        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo12-jcafb-vm** e executar o *Odoo* no modo manual:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-vm (session 1)
+                #
+
+                ssh tkl-odoo12-jcafb-vm -l root
+
+                /etc/init.d/odoo stop
+
+                su odoo
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo12-jcafb-vm** e executar o **install.py**:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-vm (session 2)
+                #
+
+                ssh tkl-odoo12-jcafb-vm -l odoo
+
+                cd /opt/odoo/clvsol_clvhealth_jcafb/project
+                
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_external_sync
+            
+        #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-vm (session 1)
+                #
+
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+                ^C
+
+                exit
+
+                /etc/init.d/odoo start
+
+Instalar o(s) módulo(s) [export] (2019-09-22)
 ---------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
@@ -166,7 +218,7 @@ Instalar o(s) módulo(s) [export] (2019-09-19)
 
                 /etc/init.d/odoo start
 
-Instalar o(s) módulo(s) [verification] (2019-09-19)
+Instalar o(s) módulo(s) [verification] (2019-09-22)
 ---------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
