@@ -9,7 +9,7 @@
 .. role:: bi
 
 =========================================================================================
-[2019-09-22] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
+[2019-09-23] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
 =========================================================================================
 
 Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-09-18b)
@@ -71,10 +71,16 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
             /etc/init.d/odoo start
 
-Desabilitar a instalação do(s) módulo(s) [export, verification, processing, report] (2019-09-22)
+Desabilitar a instalação do(s) módulo(s) [verification, export, processing, report] (2019-09-23)
 ------------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
+
+    #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, **desabilitando** o(s) Módulo(s):
+
+        * clv_verification
+        * clv_verification_jcafb
+        * clv_person_verification_jcafb
 
     #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, **desabilitando** o(s) Módulo(s):
 
@@ -89,12 +95,6 @@ Desabilitar a instalação do(s) módulo(s) [export, verification, processing, r
 
     #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, **desabilitando** o(s) Módulo(s):
 
-        * clv_verification
-        * clv_verification_jcafb
-        * clv_person_verification_jcafb
-
-    #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, **desabilitando** o(s) Módulo(s):
-
         * clv_processing
         * clv_processing_jcafb
 
@@ -103,7 +103,7 @@ Desabilitar a instalação do(s) módulo(s) [export, verification, processing, r
         * clv_report
         * clv_report_jcafb
 
-Atualizar o(s) módulo(s) [clv_external_sync] (2019-09-22)
+Atualizar o(s) módulo(s) [clv_external_sync] (2019-09-23)
 ---------------------------------------------------------
 
     * Referência: :doc:`/setup/module_update`.
@@ -155,21 +155,16 @@ Atualizar o(s) módulo(s) [clv_external_sync] (2019-09-22)
 
                 /etc/init.d/odoo start
 
-Instalar o(s) módulo(s) [export] (2019-09-22)
----------------------------------------------
+Instalar o(s) módulo(s) [verification] (2019-09-23)
+---------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
 
     #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, **habilitando** o(s) Módulo(s):
 
-        * clv_export
-        * clv_document_export
-        * clv_lab_test_export
-        * clv_person_export
-        * clv_export_jcafb
-        * clv_document_export_jcafb
-        * clv_lab_test_export_jcafb
-        * clv_person_export_jcafb
+        * clv_verification
+        * clv_verification_jcafb
+        * clv_person_verification_jcafb
 
     #. [tkl-odoo12-jcafb-vm] **Executar** a instalação do(s) Módulo(s) adicionado(s)/habilitado(s):
 
@@ -218,16 +213,21 @@ Instalar o(s) módulo(s) [export] (2019-09-22)
 
                 /etc/init.d/odoo start
 
-Instalar o(s) módulo(s) [verification] (2019-09-22)
----------------------------------------------------
+:red:`(Não Executado)` Instalar o(s) módulo(s) [export] (2019-09-23)
+--------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
 
     #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, **habilitando** o(s) Módulo(s):
 
-        * clv_verification
-        * clv_verification_jcafb
-        * clv_person_verification_jcafb
+        * clv_export
+        * clv_document_export
+        * clv_lab_test_export
+        * clv_person_export
+        * clv_export_jcafb
+        * clv_document_export_jcafb
+        * clv_lab_test_export_jcafb
+        * clv_person_export_jcafb
 
     #. [tkl-odoo12-jcafb-vm] **Executar** a instalação do(s) Módulo(s) adicionado(s)/habilitado(s):
 
