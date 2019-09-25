@@ -9,7 +9,7 @@
 .. role:: bi
 
 =========================================================================================
-[2019-09-24] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
+[2019-09-25] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
 =========================================================================================
 
 Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-09-24a)
@@ -71,7 +71,7 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
             /etc/init.d/odoo start
 
-Desabilitar a instalação do(s) módulo(s) [verification, export, processing, report] (2019-09-24)
+Desabilitar a instalação do(s) módulo(s) [verification, export, processing, report] (2019-09-25)
 ------------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
@@ -104,7 +104,7 @@ Desabilitar a instalação do(s) módulo(s) [verification, export, processing, r
         * clv_report
         * clv_report_jcafb
 
-Atualizar o(s) módulo(s) [clv_external_sync] (2019-09-24)
+Atualizar o(s) módulo(s) [clv_external_sync] (2019-09-25)
 ---------------------------------------------------------
 
     * Referência: :doc:`/setup/module_update`.
@@ -156,7 +156,7 @@ Atualizar o(s) módulo(s) [clv_external_sync] (2019-09-24)
 
                 /etc/init.d/odoo start
 
-Instalar o(s) módulo(s) [verification] (2019-09-24)
+Instalar o(s) módulo(s) [verification] (2019-09-25)
 ---------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
@@ -215,7 +215,7 @@ Instalar o(s) módulo(s) [verification] (2019-09-24)
 
                 /etc/init.d/odoo start
 
-:red:`(Não Executado)` Instalar o(s) módulo(s) [export] (2019-09-24)
+:red:`(Não Executado)` Instalar o(s) módulo(s) [export] (2019-09-25)
 --------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
