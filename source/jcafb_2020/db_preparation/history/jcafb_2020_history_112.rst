@@ -9,10 +9,10 @@
 .. role:: bi
 
 =========================================================================================
-[2019-09-26] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
+[2019-09-27] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
 =========================================================================================
 
-Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-09-26a)
+Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-09-27a)
 ---------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
@@ -38,22 +38,22 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2020_2019-09-26a.sql.gz
+            # gzip -d clvhealth_jcafb_2020_2019-09-27a.sql.gz
 
             dropdb -i clvhealth_jcafb_2020
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2020
-            psql -f clvhealth_jcafb_2020_2019-09-26a.sql -d clvhealth_jcafb_2020 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2020_2019-09-27a.sql -d clvhealth_jcafb_2020 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2020
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-09-26a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-09-27a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-09-26a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-09-27a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
 
@@ -71,7 +71,7 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
             /etc/init.d/odoo start
 
-Desabilitar a instalação do(s) módulo(s) [verification, export, processing, report] (2019-09-26)
+Desabilitar a instalação do(s) módulo(s) [verification, export, processing, report] (2019-09-27)
 ------------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
@@ -80,7 +80,11 @@ Desabilitar a instalação do(s) módulo(s) [verification, export, processing, r
 
         * clv_verification
         * clv_verification_jcafb
+        * clv_address_verification_jcafb
+        * clv_family_verification_jcafb
         * clv_person_verification_jcafb
+        * clv_address_aux_verification_jcafb
+        * clv_family_aux_verification_jcafb
         * clv_person_aux_verification_jcafb
 
     #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, **desabilitando** o(s) Módulo(s):
@@ -104,7 +108,7 @@ Desabilitar a instalação do(s) módulo(s) [verification, export, processing, r
         * clv_report
         * clv_report_jcafb
 
-Atualizar o(s) módulo(s) [clv_external_sync] (2019-09-26)
+Atualizar o(s) módulo(s) [clv_external_sync] (2019-09-27)
 ---------------------------------------------------------
 
     * Referência: :doc:`/setup/module_update`.
@@ -156,7 +160,7 @@ Atualizar o(s) módulo(s) [clv_external_sync] (2019-09-26)
 
                 /etc/init.d/odoo start
 
-Instalar o(s) módulo(s) [verification] (2019-09-26)
+Instalar o(s) módulo(s) [verification] (2019-09-27)
 ---------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
@@ -165,7 +169,11 @@ Instalar o(s) módulo(s) [verification] (2019-09-26)
 
         * clv_verification
         * clv_verification_jcafb
+        * clv_address_verification_jcafb
+        * clv_family_verification_jcafb
         * clv_person_verification_jcafb
+        * clv_address_aux_verification_jcafb
+        * clv_family_aux_verification_jcafb
         * clv_person_aux_verification_jcafb
 
     #. [tkl-odoo12-jcafb-vm] **Executar** a instalação do(s) Módulo(s) adicionado(s)/habilitado(s):
@@ -215,7 +223,7 @@ Instalar o(s) módulo(s) [verification] (2019-09-26)
 
                 /etc/init.d/odoo start
 
-:red:`(Não Executado)` Instalar o(s) módulo(s) [export] (2019-09-26)
+:red:`(Não Executado)` Instalar o(s) módulo(s) [export] (2019-09-27)
 --------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
