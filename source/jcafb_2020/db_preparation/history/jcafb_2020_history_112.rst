@@ -9,10 +9,10 @@
 .. role:: bi
 
 =========================================================================================
-[2019-09-28] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
+[2019-09-29] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
 =========================================================================================
 
-Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-09-27a)
+Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-09-29a)
 ---------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
@@ -38,22 +38,22 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2020_2019-09-27a.sql.gz
+            # gzip -d clvhealth_jcafb_2020_2019-09-29a.sql.gz
 
             dropdb -i clvhealth_jcafb_2020
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2020
-            psql -f clvhealth_jcafb_2020_2019-09-27a.sql -d clvhealth_jcafb_2020 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2020_2019-09-29a.sql -d clvhealth_jcafb_2020 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2020
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-09-27a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-09-29a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-09-27a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-09-29a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
 
@@ -71,7 +71,7 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
             /etc/init.d/odoo start
 
-Desabilitar a instalação do(s) módulo(s) [verification, export, processing, report] (2019-09-28)
+Desabilitar a instalação do(s) módulo(s) [verification, export, processing, report] (2019-09-29)
 ------------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
@@ -79,6 +79,8 @@ Desabilitar a instalação do(s) módulo(s) [verification, export, processing, r
     #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, **desabilitando** o(s) Módulo(s):
 
         * clv_address_aux_history
+        * clv_family_aux_history
+        * clv_person_aux_history
 
     #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, **desabilitando** o(s) Módulo(s):
 
@@ -112,7 +114,7 @@ Desabilitar a instalação do(s) módulo(s) [verification, export, processing, r
         * clv_report
         * clv_report_jcafb
 
-Atualizar o(s) módulo(s) [clv_external_sync] (2019-09-28)
+Atualizar o(s) módulo(s) [clv_external_sync] (2019-09-29)
 ---------------------------------------------------------
 
     * Referência: :doc:`/setup/module_update`.
@@ -164,7 +166,7 @@ Atualizar o(s) módulo(s) [clv_external_sync] (2019-09-28)
 
                 /etc/init.d/odoo start
 
-Atualizar o(s) módulo(s) [clv_address_history] (2019-09-28)
+Atualizar o(s) módulo(s) [clv_address_history] (2019-09-29)
 -----------------------------------------------------------
 
     * Referência: :doc:`/setup/module_update`.
@@ -216,14 +218,175 @@ Atualizar o(s) módulo(s) [clv_address_history] (2019-09-28)
 
                 /etc/init.d/odoo start
 
-Instalar o(s) módulo(s) [clv_address_aux_history] (2019-09-28)
---------------------------------------------------------------
+Atualizar o(s) módulo(s) [clv_address_jcafb, clv_address_aux_jcafb] (2019-09-29)
+--------------------------------------------------------------------------------
+
+    * Referência: :doc:`/setup/module_update`.
+
+
+    #. [tkl-odoo12-jcafb-vm] **Executar** a atualização do(s) Módulo(s):
+
+        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo12-jcafb-vm** e executar o *Odoo* no modo manual:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-vm (session 1)
+                #
+
+                ssh tkl-odoo12-jcafb-vm -l root
+
+                /etc/init.d/odoo stop
+
+                su odoo
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo12-jcafb-vm** e executar o **install.py**:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-vm (session 2)
+                #
+
+                ssh tkl-odoo12-jcafb-vm -l odoo
+
+                cd /opt/odoo/clvsol_clvhealth_jcafb/project
+                
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_address_jcafb
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_address_aux_jcafb
+            
+        #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-vm (session 1)
+                #
+
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+                ^C
+
+                exit
+
+                /etc/init.d/odoo start
+
+Atualizar o(s) módulo(s) [clv_family_jcafb, clv_family_aux_jcafb] (2019-09-29)
+------------------------------------------------------------------------------
+
+    * Referência: :doc:`/setup/module_update`.
+
+
+    #. [tkl-odoo12-jcafb-vm] **Executar** a atualização do(s) Módulo(s):
+
+        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo12-jcafb-vm** e executar o *Odoo* no modo manual:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-vm (session 1)
+                #
+
+                ssh tkl-odoo12-jcafb-vm -l root
+
+                /etc/init.d/odoo stop
+
+                su odoo
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo12-jcafb-vm** e executar o **install.py**:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-vm (session 2)
+                #
+
+                ssh tkl-odoo12-jcafb-vm -l odoo
+
+                cd /opt/odoo/clvsol_clvhealth_jcafb/project
+                
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_family_jcafb
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_family_aux_jcafb
+            
+        #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-vm (session 1)
+                #
+
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+                ^C
+
+                exit
+
+                /etc/init.d/odoo start
+
+Atualizar o(s) módulo(s) [clv_person_jcafb, clv_person_aux_jcafb] (2019-09-29)
+------------------------------------------------------------------------------
+
+    * Referência: :doc:`/setup/module_update`.
+
+
+    #. [tkl-odoo12-jcafb-vm] **Executar** a atualização do(s) Módulo(s):
+
+        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo12-jcafb-vm** e executar o *Odoo* no modo manual:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-vm (session 1)
+                #
+
+                ssh tkl-odoo12-jcafb-vm -l root
+
+                /etc/init.d/odoo stop
+
+                su odoo
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo12-jcafb-vm** e executar o **install.py**:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-vm (session 2)
+                #
+
+                ssh tkl-odoo12-jcafb-vm -l odoo
+
+                cd /opt/odoo/clvsol_clvhealth_jcafb/project
+                
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_person_jcafb
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_person_aux_jcafb
+            
+        #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-vm (session 1)
+                #
+
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+                ^C
+
+                exit
+
+                /etc/init.d/odoo start
+
+Instalar o(s) módulo(s) [aux_history] (2019-09-29)
+--------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
 
     #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, **habilitando** o(s) Módulo(s):
 
         * clv_address_aux_history
+        * clv_family_aux_history
+        * clv_person_aux_history
 
     #. [tkl-odoo12-jcafb-vm] **Executar** a instalação do(s) Módulo(s) adicionado(s)/habilitado(s):
 
@@ -272,7 +435,7 @@ Instalar o(s) módulo(s) [clv_address_aux_history] (2019-09-28)
 
                 /etc/init.d/odoo start
 
-Instalar o(s) módulo(s) [verification] (2019-09-28)
+Instalar o(s) módulo(s) [verification] (2019-09-29)
 ---------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
@@ -335,7 +498,7 @@ Instalar o(s) módulo(s) [verification] (2019-09-28)
 
                 /etc/init.d/odoo start
 
-:red:`(Não Executado)` Instalar o(s) módulo(s) [export] (2019-09-28)
+:red:`(Não Executado)` Instalar o(s) módulo(s) [export] (2019-09-29)
 --------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
