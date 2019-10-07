@@ -9,10 +9,10 @@
 .. role:: bi
 
 =========================================================================================
-[2019-10-04] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
+[2019-10-07] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
 =========================================================================================
 
-Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-10-04a)
+Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-10-07a)
 ---------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
@@ -71,7 +71,7 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
             /etc/init.d/odoo start
 
-Desabilitar a instalação do(s) módulo(s) [verification, export, processing, report] (2019-10-04)
+Desabilitar a instalação do(s) módulo(s) [verification, export, processing, report] (2019-10-07)
 ------------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
@@ -108,7 +108,7 @@ Desabilitar a instalação do(s) módulo(s) [verification, export, processing, r
         * clv_report
         * clv_report_jcafb
 
-Atualizar o(s) módulo(s) [ver lista] (2019-10-04)
+Atualizar o(s) módulo(s) [ver lista] (2019-10-07)
 -------------------------------------------------
 
     * Referência: :doc:`/setup/module_update`.
@@ -170,7 +170,7 @@ Atualizar o(s) módulo(s) [ver lista] (2019-10-04)
 
                 /etc/init.d/odoo start
 
-Instalar o(s) módulo(s) [verification] (2019-10-04)
+Instalar o(s) módulo(s) [verification] (2019-10-07)
 ---------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
@@ -233,7 +233,7 @@ Instalar o(s) módulo(s) [verification] (2019-10-04)
 
                 /etc/init.d/odoo start
 
-:red:`(Não Executado)` Instalar o(s) módulo(s) [export] (2019-10-04)
+:red:`(Não Executado)` Instalar o(s) módulo(s) [export] (2019-10-07)
 --------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
