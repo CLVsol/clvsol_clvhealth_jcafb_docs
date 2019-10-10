@@ -71,6 +71,34 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
             /etc/init.d/odoo start
 
+Criar o *Person Marker* "**Falecido(a)**" (2019-10-10)
+------------------------------------------------------
+
+    #. Acessar a *View* *Person Markers*:
+
+        * Menu de acesso:
+            
+            * :bi:`Community` » :bi:`Configuration` » :bi:`Person` » :bi:`Markers`
+
+        * Parâmetros:
+
+            * *Name*: **Falecido(a)**
+            * *Description*: **A Pessoa Faleceu.**
+
+Criar o *Verification Marker* "**Atualizar "Related Person"**" (2019-10-10)
+---------------------------------------------------------------------------
+
+    #. Acessar a *View* *Person Markers*:
+
+        * Menu de acesso:
+            
+            * :bi:`Verification` » :bi:`Configuration` » :bi:`Verification` » :bi:`Markers`
+
+        * Parâmetros:
+
+            * *Name*: **Atualizar "Related Person"**
+            * *Description*:
+
 :red:`(Não Executado)` Instalar o(s) módulo(s) [export] (2019-10-10)
 --------------------------------------------------------------------
 
