@@ -9,7 +9,7 @@
 .. role:: bi
 
 ==============================================================================================
-[2019-10-(09-11)] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
+[2019-10-(09-12)] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
 ==============================================================================================
 
 Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-10-09a)
@@ -835,78 +835,8 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-10-11c)
 .. index:: filestore_clvhealth_jcafb_2020_2019-10-11c
 .. index:: clvsol_filestore_clvhealth_jcafb_2019-10-11c
 
-:red:`(Não Executado)` Criar o *Verification Marker* "**Address [Local fora da Comunidade]**" (2019-10-11)
-----------------------------------------------------------------------------------------------------------
-
-    #. Acessar a *View* *Person Markers*:
-
-        * Menu de acesso:
-            
-            * :bi:`Verification` » :bi:`Configuration` » :bi:`Verification` » :bi:`Markers`
-
-        * Parâmetros:
-
-            * *Name*: **Address [Local fora da Comunidade]**
-            * *Description*:
-
-:red:`(Não Executado)` Criar o *Verification Marker* "**Address [Local Desconhecido]**" (2019-10-11)
-----------------------------------------------------------------------------------------------------
-
-    #. Acessar a *View* *Person Markers*:
-
-        * Menu de acesso:
-            
-            * :bi:`Verification` » :bi:`Configuration` » :bi:`Verification` » :bi:`Markers`
-
-        * Parâmetros:
-
-            * *Name*: **Address [Local Desconhecido]**
-            * *Description*:
-
-:red:`(Não Executado)` Criar o *Verification Marker* "**Address [Confirmar Cadastro]**" (2019-10-11)
-----------------------------------------------------------------------------------------------------
-
-    #. Acessar a *View* *Person Markers*:
-
-        * Menu de acesso:
-            
-            * :bi:`Verification` » :bi:`Configuration` » :bi:`Verification` » :bi:`Markers`
-
-        * Parâmetros:
-
-            * *Name*: **Address [Confirmar Cadastro]**
-            * *Description*:
-
-:red:`(Não Executado)` Criar o *Verification Marker* "**Address [Atualizar Cadastro]**" (2019-10-11)
-----------------------------------------------------------------------------------------------------
-
-    #. Acessar a *View* *Person Markers*:
-
-        * Menu de acesso:
-            
-            * :bi:`Verification` » :bi:`Configuration` » :bi:`Verification` » :bi:`Markers`
-
-        * Parâmetros:
-
-            * *Name*: **Person [Address Cadastro]**
-            * *Description*:
-
-:red:`(Não Executado)` Criar o *Verification Marker* "**Address [Incluir no Cadastro]**" (2019-10-11)
------------------------------------------------------------------------------------------------------
-
-    #. Acessar a *View* *Person Markers*:
-
-        * Menu de acesso:
-            
-            * :bi:`Verification` » :bi:`Configuration` » :bi:`Verification` » :bi:`Markers`
-
-        * Parâmetros:
-
-            * *Name*: **Address [Incluir no Cadastro]**
-            * *Description*:
-
-:red:`(Não Executado)` Executar o processo de verificação para todas as Pessoas (2019-10-09)
---------------------------------------------------------------------------------------------
+Executar o processo de verificação para todas as Pessoas (2019-10-12)
+---------------------------------------------------------------------
 
     #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Person Verification Execute` para todas as Pessoas:
 
@@ -923,8 +853,8 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-10-11c)
 
             #. Utilize o botão :bi:`Person Verification Execute` para executar a Ação.
 
-:red:`(Não Executado)` Executar o processo de verificação para todas as Famílias (2019-10-09)
----------------------------------------------------------------------------------------------
+Executar o processo de verificação para todas as Famílias (2019-10-12)
+----------------------------------------------------------------------
 
     #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Family Verification Execute` para todas as Pessoas:
 
@@ -941,8 +871,8 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-10-11c)
 
             #. Utilize o botão :bi:`Family Verification Execute` para executar a Ação.
 
-:red:`(Não Executado)` Executar o processo de verificação para todas os Endereços (2019-10-09)
-----------------------------------------------------------------------------------------------
+Executar o processo de verificação para todos os Endereços (2019-10-12)
+-----------------------------------------------------------------------
 
     #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Address Verification Execute` para todas as Pessoas:
 
@@ -959,8 +889,8 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-10-11c)
 
             #. Utilize o botão :bi:`Address Verification Execute` para executar a Ação.
 
-:red:`(Não Executado)` Executar o processo de verificação para todas as Famílias (Aux) (2019-10-09)
----------------------------------------------------------------------------------------------------
+Executar o processo de verificação para todas as Famílias (Aux) (2019-10-12)
+----------------------------------------------------------------------------
 
     #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Family (Aux) Verification Execute` para todas as Pessoas:
 
@@ -977,8 +907,8 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-10-11c)
 
             #. Utilize o botão :bi:`Family (Aux) Verification Execute` para executar a Ação.
 
-:red:`(Não Executado)` Executar o processo de verificação para todas os Endereços (Aux) (2019-10-09)
-----------------------------------------------------------------------------------------------------
+Executar o processo de verificação para todos os Endereços (Aux) (2019-10-12)
+-----------------------------------------------------------------------------
 
     #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Address (Aux) Verification Execute` para todas as Pessoas:
 
@@ -994,6 +924,362 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-10-11c)
         #. Exercutar a Ação ":bi:`Address (Aux) Verification Execute`":
 
             #. Utilize o botão :bi:`Address (Aux) Verification Execute` para executar a Ação.
+
+Executar o processo de verificação para todas as Pessoas (Aux) (2019-10-12)
+---------------------------------------------------------------------------
+
+    #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Person (Aux) Verification Execute` para todas as Pessoas:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
+
+        #. Acessar a *View* *Persons (Aux)*:
+
+            * Menu de acesso:
+                * :bi:`Community` » :bi:`Community` » :bi:`Persons (Aux)`
+
+        #. Selecionar todas as Pessoas (Aux) (**1344**)
+
+        #. Exercutar a Ação ":bi:`Person (Aux) Verification Execute`":
+
+            #. Utilize o botão :bi:`Person (Aux) Verification Execute` para executar a Ação.
+
+Criar um backup do *CLVhealth-JCAFB-2020* (2019-10-12a)
+-------------------------------------------------------
+
+    * Referência: :doc:`/setup/clvhealth_jcafb_backup`.
+
+    #. [tkl-odoo12-jcafb-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-vm
+            #
+
+            ssh tkl-odoo12-jcafb-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo12-jcafb-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-10-12a.sql
+
+            gzip clvhealth_jcafb_2020_2019-10-12a.sql
+            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-10-12a.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-10-12a.tar.gz clvhealth_jcafb_2020
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-10-12a.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+        * /opt/odoo/clvhealth_jcafb_2020_2019-10-12a.sql
+        * /opt/odoo/clvhealth_jcafb_2020_2019-10-12a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2020_2019-10-12a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-10-12a.tar.gz
+
+.. index:: clvhealth_jcafb_2020_2019-10-12a.sql
+.. index:: filestore_clvhealth_jcafb_2020_2019-10-12a
+.. index:: clvsol_filestore_clvhealth_jcafb_2019-10-12a
+
+Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-10-12a)
+---------------------------------------------------------------------------------------------
+
+    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
+
+    #. [tkl-odoo12-jcafb-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-vm
+            #
+
+            ssh tkl-odoo12-jcafb-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo12-jcafb-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2020_2019-10-12a.sql.gz
+
+            dropdb -i clvhealth_jcafb_2020
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2020
+            psql -f clvhealth_jcafb_2020_2019-10-12a.sql -d clvhealth_jcafb_2020 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2020
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-10-12a.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-10-12a.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+Criar o *Verification Marker* "**Address (Aux) [Verificar Contact Information]**" (2019-10-12)
+----------------------------------------------------------------------------------------------
+
+    #. Acessar a *View* *Person Markers*:
+
+        * Menu de acesso:
+            
+            * :bi:`Verification` » :bi:`Configuration` » :bi:`Verification` » :bi:`Markers`
+
+        * Parâmetros:
+
+            * *Name*: **Address (Aux) [Verificar Contact Information]**
+            * *Description*:
+
+Criar o *Verification Marker* "**Address [Confirmar Cadastro]**" (2019-10-12)
+-----------------------------------------------------------------------------
+
+    #. Acessar a *View* *Address Markers*:
+
+        * Menu de acesso:
+            
+            * :bi:`Verification` » :bi:`Configuration` » :bi:`Verification` » :bi:`Markers`
+
+        * Parâmetros:
+
+            * *Name*: **Address [Confirmar Cadastro]**
+            * *Description*:
+
+Criar o *Verification Marker* "**Address [Atualizar Cadastro]**" (2019-10-12)
+-----------------------------------------------------------------------------
+
+    #. Acessar a *View* *Address Markers*:
+
+        * Menu de acesso:
+            
+            * :bi:`Verification` » :bi:`Configuration` » :bi:`Verification` » :bi:`Markers`
+
+        * Parâmetros:
+
+            * *Name*: **Address [Atualizar Cadastro]**
+            * *Description*:
+
+Criar o *Verification Marker* "**Address [Incluir no Cadastro]**" (2019-10-12)
+------------------------------------------------------------------------------
+
+    #. Acessar a *View* *Address Markers*:
+
+        * Menu de acesso:
+            
+            * :bi:`Verification` » :bi:`Configuration` » :bi:`Verification` » :bi:`Markers`
+
+        * Parâmetros:
+
+            * *Name*: **Address [Incluir no Cadastro]**
+            * *Description*:
+
+Criar o *Verification Marker* "**Address [Fora da Comunidade]**" (2019-10-12)
+-----------------------------------------------------------------------------
+
+    #. Acessar a *View* *Address Markers*:
+
+        * Menu de acesso:
+            
+            * :bi:`Verification` » :bi:`Configuration` » :bi:`Verification` » :bi:`Markers`
+
+        * Parâmetros:
+
+            * *Name*: **Address [Fora da Comunidade]**
+            * *Description*:
+
+Criar o *Verification Marker* "**Address [Desconhecido]**" (2019-10-12)
+-----------------------------------------------------------------------------
+
+    #. Acessar a *View* *Address Markers*:
+
+        * Menu de acesso:
+            
+            * :bi:`Verification` » :bi:`Configuration` » :bi:`Verification` » :bi:`Markers`
+
+        * Parâmetros:
+
+            * *Name*: **Address [Desconhecido]**
+            * *Description*:
+
+Criar um backup do *CLVhealth-JCAFB-2020* (2019-10-12b)
+-------------------------------------------------------
+
+    * Referência: :doc:`/setup/clvhealth_jcafb_backup`.
+
+    #. [tkl-odoo12-jcafb-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-vm
+            #
+
+            ssh tkl-odoo12-jcafb-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo12-jcafb-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-10-12b.sql
+
+            gzip clvhealth_jcafb_2020_2019-10-12b.sql
+            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-10-12b.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-10-12b.tar.gz clvhealth_jcafb_2020
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-10-12b.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+        * /opt/odoo/clvhealth_jcafb_2020_2019-10-12b.sql
+        * /opt/odoo/clvhealth_jcafb_2020_2019-10-12b.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2020_2019-10-12b.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-10-12b.tar.gz
+
+.. index:: clvhealth_jcafb_2020_2019-10-12b.sql
+.. index:: filestore_clvhealth_jcafb_2020_2019-10-12b
+.. index:: clvsol_filestore_clvhealth_jcafb_2019-10-12b
+
+Criar um backup do *CLVhealth-JCAFB-2020* (2019-10-12c)
+-------------------------------------------------------
+
+    * Referência: :doc:`/setup/clvhealth_jcafb_backup`.
+
+    #. [tkl-odoo12-jcafb-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-vm
+            #
+
+            ssh tkl-odoo12-jcafb-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo12-jcafb-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-10-12c.sql
+
+            gzip clvhealth_jcafb_2020_2019-10-12c.sql
+            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-10-12c.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-10-12c.tar.gz clvhealth_jcafb_2020
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-10-12c.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+        * /opt/odoo/clvhealth_jcafb_2020_2019-10-12c.sql
+        * /opt/odoo/clvhealth_jcafb_2020_2019-10-12c.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2020_2019-10-12c.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-10-12c.tar.gz
+
+.. index:: clvhealth_jcafb_2020_2019-10-12c.sql
+.. index:: filestore_clvhealth_jcafb_2020_2019-10-12c
+.. index:: clvsol_filestore_clvhealth_jcafb_2019-10-12c
 
 .. toctree::
    :maxdepth: 2
