@@ -12,8 +12,8 @@
 [2019-10-10] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
 =========================================================================================
 
-Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-10-09c)
----------------------------------------------------------------------------------------------
+:red:`(Não Executado)` Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-10-09c)
+--------------------------------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
 
@@ -71,8 +71,8 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
             /etc/init.d/odoo start
 
-Criar o *Person Marker* "**Falecido(a)**" (2019-10-10)
-------------------------------------------------------
+:red:`(Não Executado)` Criar o *Person Marker* "**Falecido(a)**" (2019-10-10)
+-----------------------------------------------------------------------------
 
     #. Acessar a *View* *Person Markers*:
 
@@ -85,8 +85,8 @@ Criar o *Person Marker* "**Falecido(a)**" (2019-10-10)
             * *Name*: **Falecido(a)**
             * *Description*: **A Pessoa Faleceu.**
 
-Criar o *Verification Marker* "**Atualizar "Related Person"**" (2019-10-10)
----------------------------------------------------------------------------
+:red:`(Não Executado)` Criar o *Verification Marker* "**Atualizar "Related Person"**" (2019-10-10)
+--------------------------------------------------------------------------------------------------
 
     #. Acessar a *View* *Person Markers*:
 
@@ -99,8 +99,8 @@ Criar o *Verification Marker* "**Atualizar "Related Person"**" (2019-10-10)
             * *Name*: **Atualizar "Related Person"**
             * *Description*:
 
-Criar um backup do *CLVhealth-JCAFB-2020* (2019-10-10a)
--------------------------------------------------------
+:red:`(Não Executado)` Criar um backup do *CLVhealth-JCAFB-2020* (2019-10-10a)
+------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/clvhealth_jcafb_backup`.
 
@@ -164,8 +164,8 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-10-10a)
 .. index:: filestore_clvhealth_jcafb_2020_2019-10-10a
 .. index:: clvsol_filestore_clvhealth_jcafb_2019-10-10a
 
-Criar o *Verification Marker* "**Anotações a transferir para "Related Person"**" (2019-10-10)
----------------------------------------------------------------------------------------------
+:red:`(Não Executado)` Criar o *Verification Marker* "**Anotações a transferir para "Related Person"**" (2019-10-10)
+--------------------------------------------------------------------------------------------------------------------
 
     #. Acessar a *View* *Person Markers*:
 
@@ -178,8 +178,8 @@ Criar o *Verification Marker* "**Anotações a transferir para "Related Person"*
             * *Name*: **Anotações a transferir para "Related Person"**
             * *Description*:
 
-Criar o *Person Marker* "**Residente fora da comunidade**" (2019-10-10)
------------------------------------------------------------------------
+:red:`(Não Executado)` Criar o *Person Marker* "**Residente fora da comunidade**" (2019-10-10)
+----------------------------------------------------------------------------------------------
 
     #. Acessar a *View* *Person Markers*:
 
@@ -192,8 +192,8 @@ Criar o *Person Marker* "**Residente fora da comunidade**" (2019-10-10)
             * *Name*: **Residente fora da comunidade**
             * *Description*: **A Pessoa reside em um endereço desconhecido, fora da comunidade.**
 
-Criar o *Person Marker* "**Residente em local desconhecido**" (2019-10-10)
---------------------------------------------------------------------------
+:red:`(Não Executado)` Criar o *Person Marker* "**Residente em local desconhecido**" (2019-10-10)
+-------------------------------------------------------------------------------------------------
 
     #. Acessar a *View* *Person Markers*:
 
@@ -206,8 +206,8 @@ Criar o *Person Marker* "**Residente em local desconhecido**" (2019-10-10)
             * *Name*: **Residente em local desconhecido**
             * *Description*: **A Pessoa reside em um endereço desconhecido.**
 
-Criar um backup do *CLVhealth-JCAFB-2020* (2019-10-10b)
--------------------------------------------------------
+:red:`(Não Executado)` Criar um backup do *CLVhealth-JCAFB-2020* (2019-10-10b)
+------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/clvhealth_jcafb_backup`.
 
