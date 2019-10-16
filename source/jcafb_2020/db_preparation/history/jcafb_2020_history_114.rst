@@ -8,9 +8,9 @@
 .. role:: green
 .. role:: bi
 
-=========================================================================================
-[2019-10-14] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
-=========================================================================================
+==============================================================================================
+[2019-10-(14-15)] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
+==============================================================================================
 
 Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-10-13a)
 ---------------------------------------------------------------------------------------------
@@ -440,38 +440,10 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-10-14c)
 .. index:: filestore_clvhealth_jcafb_2020_2019-10-14c
 .. index:: clvsol_filestore_clvhealth_jcafb_2019-10-14c
 
-:red:`(Não Executado)` Criar o *Person Marker* "**Falecido(a)**" (2019-10-10)
------------------------------------------------------------------------------
+Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-10-14c)
+---------------------------------------------------------------------------------------------
 
-    #. Acessar a *View* *Person Markers*:
-
-        * Menu de acesso:
-            
-            * :bi:`Community` » :bi:`Configuration` » :bi:`Person` » :bi:`Markers`
-
-        * Parâmetros:
-
-            * *Name*: **Falecido(a)**
-            * *Description*: **A Pessoa Faleceu.**
-
-:red:`(Não Executado)` Criar o *Verification Marker* "**Atualizar "Related Person"**" (2019-10-10)
---------------------------------------------------------------------------------------------------
-
-    #. Acessar a *View* *Person Markers*:
-
-        * Menu de acesso:
-            
-            * :bi:`Verification` » :bi:`Configuration` » :bi:`Verification` » :bi:`Markers`
-
-        * Parâmetros:
-
-            * *Name*: **Atualizar "Related Person"**
-            * *Description*:
-
-:red:`(Não Executado)` Criar um backup do *CLVhealth-JCAFB-2020* (2019-10-10a)
-------------------------------------------------------------------------------
-
-    * Referência: :doc:`/setup/clvhealth_jcafb_backup`.
+    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
 
     #. [tkl-odoo12-jcafb-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-vm** e paralizar o *Odoo*:
 
@@ -486,26 +458,30 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-10-14c)
 
             su odoo
 
-    #. [tkl-odoo12-jcafb-vm] Executar os comandos de criação dos arquivos de backup:
+    #. [tkl-odoo12-jcafb-vm] Executar os comandos de restauração dos arquivos de backup:
 
         ::
 
             # ***** tkl-odoo12-jcafb-vm
             #
-            # data_dir = /var/lib/odoo/.local/share/Odoo
-            #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-10-10a.sql
+            # gzip -d clvhealth_jcafb_2020_2019-10-14c.sql.gz
 
-            gzip clvhealth_jcafb_2020_2019-10-10a.sql
-            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-10-10a.sql
+            dropdb -i clvhealth_jcafb_2020
 
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2020
+            psql -f clvhealth_jcafb_2020_2019-10-14c.sql -d clvhealth_jcafb_2020 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-10-10a.tar.gz clvhealth_jcafb_2020
+            rm -rf clvhealth_jcafb_2020
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-10-14c.tar.gz
 
+            # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-10-10a.tar.gz clvhealth_jcafb
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-10-14c.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
 
@@ -523,140 +499,17 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-10-14c)
 
             /etc/init.d/odoo start
 
-    Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2020_2019-10-10a.sql
-        * /opt/odoo/clvhealth_jcafb_2020_2019-10-10a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2020_2019-10-10a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-10-10a.tar.gz
+Atualizar o(s) módulo(s) [clv_person_aux_verification_jcafb] (2019-10-15)
+-------------------------------------------------------------------------
 
-.. index:: clvhealth_jcafb_2020_2019-10-10a.sql
-.. index:: filestore_clvhealth_jcafb_2020_2019-10-10a
-.. index:: clvsol_filestore_clvhealth_jcafb_2019-10-10a
+    * Referência: :doc:`/setup/module_update`.
 
-:red:`(Não Executado)` Criar o *Verification Marker* "**Anotações a transferir para "Related Person"**" (2019-10-10)
---------------------------------------------------------------------------------------------------------------------
 
-    #. Acessar a *View* *Person Markers*:
+    #. [tkl-odoo12-jcafb-vm] Lista de Módulos:
 
-        * Menu de acesso:
-            
-            * :bi:`Verification` » :bi:`Configuration` » :bi:`Verification` » :bi:`Markers`
+        * clv_person_aux_verification_jcafb
 
-        * Parâmetros:
-
-            * *Name*: **Anotações a transferir para "Related Person"**
-            * *Description*:
-
-:red:`(Não Executado)` Criar o *Person Marker* "**Residente fora da comunidade**" (2019-10-10)
-----------------------------------------------------------------------------------------------
-
-    #. Acessar a *View* *Person Markers*:
-
-        * Menu de acesso:
-            
-            * :bi:`Community` » :bi:`Configuration` » :bi:`Person` » :bi:`Markers`
-
-        * Parâmetros:
-
-            * *Name*: **Residente fora da comunidade**
-            * *Description*: **A Pessoa reside em um endereço desconhecido, fora da comunidade.**
-
-:red:`(Não Executado)` Criar o *Person Marker* "**Residente em local desconhecido**" (2019-10-10)
--------------------------------------------------------------------------------------------------
-
-    #. Acessar a *View* *Person Markers*:
-
-        * Menu de acesso:
-            
-            * :bi:`Community` » :bi:`Configuration` » :bi:`Person` » :bi:`Markers`
-
-        * Parâmetros:
-
-            * *Name*: **Residente em local desconhecido**
-            * *Description*: **A Pessoa reside em um endereço desconhecido.**
-
-:red:`(Não Executado)` Criar um backup do *CLVhealth-JCAFB-2020* (2019-10-10b)
-------------------------------------------------------------------------------
-
-    * Referência: :doc:`/setup/clvhealth_jcafb_backup`.
-
-    #. [tkl-odoo12-jcafb-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo12-jcafb-vm
-            #
-
-            ssh tkl-odoo12-jcafb-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo12-jcafb-vm] Executar os comandos de criação dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo12-jcafb-vm
-            #
-            # data_dir = /var/lib/odoo/.local/share/Odoo
-            #
-
-            cd /opt/odoo
-            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-10-10b.sql
-
-            gzip clvhealth_jcafb_2020_2019-10-10b.sql
-            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-10-10b.sql
-
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-10-10b.tar.gz clvhealth_jcafb_2020
-
-            cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-10-10b.tar.gz clvhealth_jcafb
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo12-jcafb-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2020_2019-10-10b.sql
-        * /opt/odoo/clvhealth_jcafb_2020_2019-10-10b.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2020_2019-10-10b.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-10-10b.tar.gz
-
-.. index:: clvhealth_jcafb_2020_2019-10-10b.sql
-.. index:: filestore_clvhealth_jcafb_2020_2019-10-10b
-.. index:: clvsol_filestore_clvhealth_jcafb_2019-10-10b
-
-:red:`(Não Executado)` Instalar o(s) módulo(s) [export] (2019-10-10)
---------------------------------------------------------------------
-
-    * Referência: :doc:`/setup/module_installation`.
-
-    #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, **habilitando** o(s) Módulo(s):
-
-        * clv_export
-        * clv_document_export
-        * clv_lab_test_export
-        * clv_person_export
-        * clv_export_jcafb
-        * clv_document_export_jcafb
-        * clv_lab_test_export_jcafb
-        * clv_person_export_jcafb
-
-    #. [tkl-odoo12-jcafb-vm] **Executar** a instalação do(s) Módulo(s) adicionado(s)/habilitado(s):
+    #. [tkl-odoo12-jcafb-vm] **Executar** a atualização do(s) Módulo(s):
 
         #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo12-jcafb-vm** e executar o *Odoo* no modo manual:
 
@@ -684,8 +537,7 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-10-14c)
 
                 cd /opt/odoo/clvsol_clvhealth_jcafb/project
                 
-                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020"
-
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_person_aux_verification_jcafb
             
         #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
 
@@ -702,6 +554,206 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-10-14c)
                 exit
 
                 /etc/init.d/odoo start
+
+Criar um backup do *CLVhealth-JCAFB-2020* (2019-10-15a)
+-------------------------------------------------------
+
+    * Referência: :doc:`/setup/clvhealth_jcafb_backup`.
+
+    #. [tkl-odoo12-jcafb-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-vm
+            #
+
+            ssh tkl-odoo12-jcafb-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo12-jcafb-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-10-15a.sql
+
+            gzip clvhealth_jcafb_2020_2019-10-15a.sql
+            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-10-15a.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-10-15a.tar.gz clvhealth_jcafb_2020
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-10-15a.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+        * /opt/odoo/clvhealth_jcafb_2020_2019-10-15a.sql
+        * /opt/odoo/clvhealth_jcafb_2020_2019-10-15a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2020_2019-10-15a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-10-15a.tar.gz
+
+.. index:: clvhealth_jcafb_2020_2019-10-15a.sql
+.. index:: filestore_clvhealth_jcafb_2020_2019-10-15a
+.. index:: clvsol_filestore_clvhealth_jcafb_2019-10-15a
+
+Criar o *Person Marker* "**Person [Residente fora da comunidade]**" (2019-10-15)
+--------------------------------------------------------------------------------
+
+    #. Acessar a *View* *Person Markers*:
+
+        * Menu de acesso:
+            
+            * :bi:`Community` » :bi:`Configuration` » :bi:`Person` » :bi:`Markers`
+
+        * Parâmetros:
+
+            * *Name*: **Person [Residente fora da comunidade]**
+            * *Description*: **A Pessoa reside em um endereço fora da comunidade.**
+
+Criar o *Person Marker* "**Person [Residente em local desconhecido]**" (2019-10-15)
+-----------------------------------------------------------------------------------
+
+    #. Acessar a *View* *Person Markers*:
+
+        * Menu de acesso:
+            
+            * :bi:`Community` » :bi:`Configuration` » :bi:`Person` » :bi:`Markers`
+
+        * Parâmetros:
+
+            * *Name*: **Person [Residente em local desconhecido]**
+            * *Description*: **A Pessoa reside em um endereço desconhecido.**
+
+Criar o *Person Marker* "**Person [Falecido(a)]**" (2019-10-15)
+---------------------------------------------------------------
+
+    #. Acessar a *View* *Person Markers*:
+
+        * Menu de acesso:
+            
+            * :bi:`Community` » :bi:`Configuration` » :bi:`Person` » :bi:`Markers`
+
+        * Parâmetros:
+
+            * *Name*: **Person [Falecido(a)]**
+            * *Description*: **A Pessoa Faleceu.**
+
+Criar o *Person Marker* "**Person [Mudança para outro Endereço]**" (2019-10-15)
+-------------------------------------------------------------------------------
+
+    #. Acessar a *View* *Person Markers*:
+
+        * Menu de acesso:
+            
+            * :bi:`Community` » :bi:`Configuration` » :bi:`Person` » :bi:`Markers`
+
+        * Parâmetros:
+
+            * *Name*: **Person [Mudança para outro Endereço]**
+            * *Description*: **A Pessoa reside em um outro endereço já cadastrado.**
+
+Criar o *Person Marker* "**Person [Mudança para Endereço não cadastrado]**" (2019-10-15)
+----------------------------------------------------------------------------------------
+
+    #. Acessar a *View* *Person Markers*:
+
+        * Menu de acesso:
+            
+            * :bi:`Community` » :bi:`Configuration` » :bi:`Person` » :bi:`Markers`
+
+        * Parâmetros:
+
+            * *Name*: **Person [Mudança para Endereço não cadastrado]**
+            * *Description*: **A Pessoa reside em um endereço não cadastrado.**
+
+Criar um backup do *CLVhealth-JCAFB-2020* (2019-10-15b)
+-------------------------------------------------------
+
+    * Referência: :doc:`/setup/clvhealth_jcafb_backup`.
+
+    #. [tkl-odoo12-jcafb-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-vm
+            #
+
+            ssh tkl-odoo12-jcafb-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo12-jcafb-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-10-15b.sql
+
+            gzip clvhealth_jcafb_2020_2019-10-15b.sql
+            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-10-15b.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-10-15b.tar.gz clvhealth_jcafb_2020
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-10-15b.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+        * /opt/odoo/clvhealth_jcafb_2020_2019-10-15b.sql
+        * /opt/odoo/clvhealth_jcafb_2020_2019-10-15b.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2020_2019-10-15b.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-10-15b.tar.gz
+
+.. index:: clvhealth_jcafb_2020_2019-10-15b.sql
+.. index:: filestore_clvhealth_jcafb_2020_2019-10-15b
+.. index:: clvsol_filestore_clvhealth_jcafb_2019-10-15b
 
 .. toctree::
    :maxdepth: 2
