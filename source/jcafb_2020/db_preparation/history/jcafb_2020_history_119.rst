@@ -71,8 +71,8 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
             /etc/init.d/odoo start
 
-:red:`(Não Executado)` Desabilitar a instalação do(s) módulo(s) [export, verification, processing, report] (2019-10-25)
------------------------------------------------------------------------------------------------------------------------
+:red:`(Não Executado)` Desabilitar a instalação do(s) módulo(s) [export, processing, report] (2019-10-25)
+---------------------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
 
@@ -86,12 +86,6 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
         * clv_document_export_jcafb
         * clv_lab_test_export_jcafb
         * clv_person_export_jcafb
-
-    #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, **desabilitando** o(s) Módulo(s):
-
-        * clv_verification
-        * clv_verification_jcafb
-        * clv_person_verification_jcafb
 
     #. [tkl-odoo12-jcafb-vm] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, **desabilitando** o(s) Módulo(s):
 
