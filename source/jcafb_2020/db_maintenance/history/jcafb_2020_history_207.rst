@@ -286,10 +286,6 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-11-05b)
         * /opt/odoo/filestore_clvhealth_jcafb_2020_2019-11-05b.tar.gz
         * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-11-05b.tar.gz
 
-.. index:: clvhealth_jcafb_2020_2019-11-05b.sql
-.. index:: filestore_clvhealth_jcafb_2020_2019-11-05b
-.. index:: clvsol_filestore_clvhealth_jcafb_2019-11-05b
-
 :red:`(Não Executado)` Restaurar um backup do *CLVhealth-JCAFB-2020* [clvheatlh-jcafb-2020-aws-tst] (2019-11-03a)
 -----------------------------------------------------------------------------------------------------------------
 
