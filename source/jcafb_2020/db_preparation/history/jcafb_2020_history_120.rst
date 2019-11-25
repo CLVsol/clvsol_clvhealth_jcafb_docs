@@ -9,7 +9,7 @@
 .. role:: bi
 
 ==============================================================================================
-[2019-11-(21-23)] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
+[2019-11-(21-24)] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
 ==============================================================================================
 
 Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-11-22a)
@@ -71,7 +71,7 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
             /etc/init.d/odoo start
 
-Instalar o(s) módulo(s) [summary] (2019-11-23)
+Instalar o(s) módulo(s) [summary] (2019-11-24)
 ----------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
