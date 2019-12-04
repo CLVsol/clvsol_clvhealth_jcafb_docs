@@ -9,7 +9,7 @@
 .. role:: bi
 
 ==============================================================================================
-[2019-12-(02-03)] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
+[2019-12-(02-04)] - Preparação do Banco de Dados - JCAFB-2020 - Servidor [tkl-odoo12-jcafb-vm]
 ==============================================================================================
 
 Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-11-30a)
@@ -132,10 +132,6 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-12-03a)
         * /opt/odoo/filestore_clvhealth_jcafb_2020_2019-12-03a.tar.gz
         * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-12-03a.tar.gz
 
-.. index:: clvhealth_jcafb_2020_2019-12-03a.sql
-.. index:: filestore_clvhealth_jcafb_2020_2019-12-03a
-.. index:: clvsol_filestore_clvhealth_jcafb_2019-12-03a
-
 Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2019-12-03a)
 ---------------------------------------------------------------------------------------------
 
@@ -195,7 +191,7 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
             /etc/init.d/odoo start
 
-Atualizar o(s) módulo(s) [clv_lab_test_jcafb_2020] (2019-12-03)
+Atualizar o(s) módulo(s) [clv_lab_test_jcafb_2020] (2019-12-04)
 ---------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_update`.
@@ -250,6 +246,71 @@ Atualizar o(s) módulo(s) [clv_lab_test_jcafb_2020] (2019-12-03)
                 exit
 
                 /etc/init.d/odoo start
+
+Criar um backup do *CLVhealth-JCAFB-2020* (2019-12-04a)
+-------------------------------------------------------
+
+    * Referência: :doc:`/setup/clvhealth_jcafb_backup`.
+
+    #. [clvheatlh-jcafb-2020-aws-pro] Estabelecer uma sessão ssh com o servidor **clvheatlh-jcafb-2020-aws-pro** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** clvheatlh-jcafb-2020-aws-pro
+            #
+
+            ssh clvheatlh-jcafb-2020-aws-pro -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [clvheatlh-jcafb-2020-aws-pro] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** clvheatlh-jcafb-2020-aws-pro
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-12-04a.sql
+
+            gzip clvhealth_jcafb_2020_2019-12-04a.sql
+            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2019-12-04a.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_2019-12-04a.tar.gz clvhealth_jcafb_2020
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-12-04a.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **clvheatlh-jcafb-2020-aws-pro** ao modo desejado:
+
+        ::
+
+            # ***** clvheatlh-jcafb-2020-aws-pro
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+        * /opt/odoo/clvhealth_jcafb_2020_2019-12-04a.sql
+        * /opt/odoo/clvhealth_jcafb_2020_2019-12-04a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2020_2019-12-04a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-12-04a.tar.gz
+
+.. index:: clvhealth_jcafb_2020_2019-12-04a.sql
+.. index:: filestore_clvhealth_jcafb_2020_2019-12-04a
+.. index:: clvsol_filestore_clvhealth_jcafb_2019-12-04a
 
 :red:`(Não Executado)` Configurar as permissões do usuário de referência da JCAFB-2020 (2019-10-25)
 ---------------------------------------------------------------------------------------------------
