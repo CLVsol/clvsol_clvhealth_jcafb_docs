@@ -430,9 +430,5 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2019-11-30a)
         * /opt/odoo/filestore_clvhealth_jcafb_2020_2019-11-30a.tar.gz
         * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-11-30a.tar.gz
 
-.. index:: clvhealth_jcafb_2020_2019-11-30a.sql
-.. index:: filestore_clvhealth_jcafb_2020_2019-11-30a
-.. index:: clvsol_filestore_clvhealth_jcafb_2019-11-30a
-
 .. toctree::
    :maxdepth: 2
