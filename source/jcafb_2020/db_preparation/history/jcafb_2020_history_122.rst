@@ -71,6 +71,62 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
 
             /etc/init.d/odoo start
 
+Atualizar o(s) módulo(s) [clv_document_jcafb] (2019-12-09)
+----------------------------------------------------------
+
+    * Referência: :doc:`/setup/module_update`.
+
+
+    #. [tkl-odoo12-jcafb-vm] Lista de Módulos:
+
+        * clv_document_jcafb
+
+    #. [tkl-odoo12-jcafb-vm] **Executar** a atualização do(s) Módulo(s):
+
+        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo12-jcafb-vm** e executar o *Odoo* no modo manual:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-vm (session 1)
+                #
+
+                ssh tkl-odoo12-jcafb-vm -l root
+
+                /etc/init.d/odoo stop
+
+                su odoo
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo12-jcafb-vm** e executar o **install.py**:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-vm (session 2)
+                #
+
+                ssh tkl-odoo12-jcafb-vm -l odoo
+
+                cd /opt/odoo/clvsol_clvhealth_jcafb/project
+                
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_document_jcafb
+            
+        #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-vm (session 1)
+                #
+
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+                ^C
+
+                exit
+
+                /etc/init.d/odoo start
+
 :red:`(Não Executado)` Configurar as permissões do usuário de referência da JCAFB-2020 (2019-10-25)
 ---------------------------------------------------------------------------------------------------
 
