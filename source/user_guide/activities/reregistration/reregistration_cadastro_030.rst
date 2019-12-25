@@ -22,18 +22,11 @@ Além do inter-relacionamento entre as **Entidades** que compõem cada um dos Ca
         * um relacionamento com um registro :bi:`Address`
         * um relacionamento com um registro :bi:`Family`.
 
-    * Um registro :bi:`Family (Aux)` possui:
-
-        * um relacionamento com um registro :bi:`Family` (:bi:`Related Family`),
-        * um relacionamento com um registro :bi:`Address`.
-
     * Um registro :bi:`Address (Aux)` possui:
 
         * um relacionamento com um registro :bi:`Address` (:bi:`Related Address`).
 
-O :bi:`Address` associado a um registro :bi:`Family (Aux)` deve ser o mesmo :bi:`Address` associado a todos os registros :bi:`Person (Aux)` das Pessoas que compõem essa Família.
-
-As informações de Endereço do :bi:`Contact Information` das 3 **Entidades (Aux)** relacionadas com as 3 **Entidades** devem ser as mesmas.
+As informações de Endereço do :bi:`Contact Information` das 2 **Entidades (Aux)** relacionadas com as 3 **Entidades** devem ser as mesmas.
 
 .. toctree::
    :maxdepth: 2

@@ -8,13 +8,13 @@
 .. role:: green
 .. role:: bi
 
-.. index:: Cadastro Básico (Cadastro)
+.. index:: Cadastro Principal (Cadastro)
 
-==============================
-Cadastro Básico (**Cadastro**)
-==============================
+=================================
+Cadastro Principal (**Cadastro**)
+=================================
 
-O **Cadastro Básico** (**Cadastro**) é composto pelas 3 **Entidades de Cadastro**:
+O **Cadastro Principal** (ou simplesmente o **Cadastro**) é composto pelas 3 **Entidades de Cadastro**:
 
     * :bi:`Person`:
 

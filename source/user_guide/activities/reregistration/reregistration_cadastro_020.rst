@@ -14,7 +14,7 @@
 **Cadastro Auxiliar**
 =====================
 
-O **Cadastro Auxiliar** é composto pelas 3 **Entidades (Aux)**:
+O **Cadastro Auxiliar** é composto pelas 2 **Entidades (Aux)**:
 
     * :bi:`Person (Aux)`:
 
@@ -22,14 +22,6 @@ O **Cadastro Auxiliar** é composto pelas 3 **Entidades (Aux)**:
 
             * as informações de :bi:`Contact Information`,
             * um relacionamento com um registro :bi:`Address (Aux)`,
-            * um relacionamento com um registro :bi:`Family (Aux)`.
-
-    * :bi:`Family (Aux)`:
-
-        * Um registro :bi:`Family (Aux)` possui, além dos parâmetros específicos a uma Família:
-
-            * as informações de :bi:`Contact Information`,
-            * um relacionamento com um registro :bi:`Address (Aux)`.
 
     * :bi:`Address (Aux)`:
 
@@ -37,9 +29,7 @@ O **Cadastro Auxiliar** é composto pelas 3 **Entidades (Aux)**:
 
             * as informações de :bi:`Contact Information`.
 
-O :bi:`Address (Aux)` associado a um registro :bi:`Family (Aux)` deve ser o mesmo :bi:`Address (Aux)` associado a todos os registros :bi:`Person (Aux)` das Pessoas que compõem essa Família.
-
-As informações de Endereço do :bi:`Contact Information` das 3 **Entidades (Aux)** inter-relacionadas devem ser idênticas.
+As informações de Endereço do :bi:`Contact Information` das 2 **Entidades (Aux)** inter-relacionadas devem ser idênticas.
 
 .. toctree::
    :maxdepth: 2
