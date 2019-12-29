@@ -14,11 +14,9 @@
 Atualização de dados relativos à Pessoa não relacionados ao Endereço, à Família ou às Relações Familiares
 =========================================================================================================
 
-    Caso **exista uma Família** associada ao Endereço da Pessoa, a Pessoa continuará associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
+    Caso **exista uma Família** associada ao Endereço atual da Pessoa, a Pessoa continuará associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
 
-    Caso **não exista uma Família** associada ao Endereço da Pessoa, mas se opte por associar a esse Endereço uma Família, a Pessoa será associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
-
-    Caso **não exista uma Família** associada ao Endereço da Pessoa, mas se opte por não associar a esse Endereço uma Família, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.
+    Caso **não exista uma Família** associada ao Endereço atual da Pessoa, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.
 
     Os dados não relacionados ao Endereço, à Família ou às Relações Familiares englobam todos os dados do registro :bi:`Person` relacionado à Pessoa, **exceto**:
 
@@ -94,9 +92,9 @@ Fluxo de Trabalho (*Workflow*)
 
         #. Confirmar que dados do registro :bi:`Person`, relacionados à Pessoa mas não relacionados ao Endereço, à Família ou às Relações Familiares, necessitam ser atualizados.
 
-        #. Confirmar que todos os dados do registro :bi:`Address`, relacionados ao Endereço da Pessoa, serão mantidos.
+        #. Confirmar que todos os dados do registro :bi:`Address`, associado ao registro :bi:`Person`, serão mantidos.
 
-        #. :green:`(Opcional)` Confirmar que todos os dados do registro :bi:`Family`, relacionados à Família da Pessoa, serão mantidos.
+        #. :green:`(Opcional)` Confirmar que todos os dados do registro :bi:`Family`, associado ao registro :bi:`Person`, serão mantidos.
 
     #. **Cadastro Auxiliar**:
 

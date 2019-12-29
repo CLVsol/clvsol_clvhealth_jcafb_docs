@@ -25,25 +25,17 @@ Cadastro Auxiliar
     O **Cadastro Auxiliar** criado conterá os seguintes registros:
 
         * :bi:`Person (Aux)`
-        * :bi:`Address (Aux)`
 
 Relacionamento entre os registros dos Cadastros
 -----------------------------------------------
 
-    * :bi:`Address (Aux)`:
-
-        * *Related Address* » **vazio**
-        * *Contact Information* = Dados informados para o Endereço da Pessoa
-        * Outros Dados = Outros Dados informados para o Endereço da Pessoa
-
     * :bi:`Person (Aux)`:
 
         * *Address* » **vazio**
-        * *Address (Aux)* » :bi:`Address (Aux)`
+        * *Address (Aux)* » **vazio**
         * *Family* » **vazio**
-        * *Family (Aux)* » **vazio**
         * *Related Person* » **vazio**
-        * *Contact Information* = Dados de Endereço de :bi:`Address (Aux)`
+        * *Contact Information* = Dados com informações que indiquem o novo Endereço da Pessoa fora da comunidade.
         * Outros Dados = Outros Dados informados para a Pessoa
 
 Fluxo de Trabalho (*Workflow*)
@@ -59,24 +51,6 @@ Fluxo de Trabalho (*Workflow*)
 
         **Observação 2**: Nenhum registro :bi:`Person (Aux)` deverá ser encontrado, a menos que a nova Pessoa já esteja em processo de recadastramento.
 
-    #. **Cadastro**:
-
-        #. Procurar pelo registro :bi:`Address` associado ao Endereço informado para a Pessoa utilizando um dos métodos:
-
-            * :doc:`reregistration_workflow_010_050`
-
-        **Observação 1**: Nenhum registro :bi:`Address` deverá ser encontrado.
-
-        **Observação 2**: Nenhum registro :bi:`Address (Aux)` deverá ser encontrado, a menos que o novo Endereço já esteja em processo de recadastramento.
-
-    #. *View* :bi:`Address (Aux)`:
-
-        #. Criar manualmente um novo registro :bi:`Address (Aux)`, preenchido com as informações apresentadas para o Endereço da Pessoa.
-
-    #. Registro :bi:`Address (Aux)`:
-
-        #. Não será necessário qualquer outra ação de atualização do registro :bi:`Address (Aux)`.
-
     #. *View* :bi:`Person (Aux)`:
 
         #. Criar manualmente um novo registro :bi:`Person (Aux)`, preenchido com as informações apresentadas para a Pessoa, exceto as informaçôes do Endereço.
@@ -85,7 +59,7 @@ Fluxo de Trabalho (*Workflow*)
 
         #. Associar o registro :bi:`Address (Aux)` criado ao campo *Address (Aux)*.
 
-        #. Preencher os campos de *Contact Information* com os dados de Endereço do registro :bi:`Address (Aux)`.
+        #. Preencher os campos de *Contact Information* com informações que indiquem o novo Endereço da Pessoa fora da comunidade.
 
     O processamento deste *Workflow* é executado utilizando o procedimento ":doc:`reregistration_procedure_020_020_030`".
 

@@ -41,9 +41,19 @@ Procedimentos
 
         #. Remover do campo *Address* a associação ao registro :bi:`Address`, utilizando o botão [:bi:`Remove Reference Address`].
 
+        #. Marcar o campo :bi:`Address is unavailable`.
+
+        #. Marcar o campo :bi:`Address (Aux) is unavailable`.
+
         #. Excluir as informações de *Contact Information*, utilizando o botão [:bi:`Clear Address Data`].
 
+        #. Marcar o campo :bi:`Contact Information is unavailable`.
+
         #. :green:`(Opcional)` Remover do campo *Family* a associação ao registro :bi:`Family`, utilizando o botão [:bi:`Remove Family`].
+
+        #. Marcar o campo :bi:`Family is unavailable`.
+
+        #. Atualizar o campo :bi:`Deceased Date`, caso a data de falecimento da Pessoa seja conhecida, ou marcar o campo :bi:`Force Is Deceased`, caso a data de falecimento da Pessoa NÃO seja conhecida.
 
         #. Inserir no campo :bi:`Notes..` a informação de que a Pessoa faleceu.
 

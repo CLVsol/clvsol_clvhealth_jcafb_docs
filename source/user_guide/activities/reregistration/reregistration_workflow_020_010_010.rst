@@ -14,11 +14,9 @@
 Todos os dados da Pessoa serão mantidos
 =======================================
 
-    Caso **exista uma Família** associada ao Endereço da Pessoa, a Pessoa continuará associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
+    Caso **exista uma Família** associada ao Endereço atual da Pessoa, a Pessoa continuará associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
 
-    Caso **não exista uma Família** associada ao Endereço da Pessoa, mas se opte por associar a esse Endereço uma Família, a Pessoa será associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
-
-    Caso **não exista uma Família** associada ao Endereço da Pessoa, mas se opte por não associar a esse Endereço uma Família, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.
+    Caso **não exista uma Família** associada ao Endereço atual da Pessoa, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.
 
 Cadastro
 --------
@@ -76,15 +74,15 @@ Fluxo de Trabalho (*Workflow*)
             * :doc:`reregistration_workflow_010_010`
             * :doc:`reregistration_workflow_010_020`
 
-        #. Confirmar que todos os dados do registro :bi:`Person`, relacionados à Pessoa, serão mantidos.
+        #. Confirmar que todos os dados do registro :bi:`Person` associado à Pessoa serão mantidos.
 
-        #. Confirmar que todos os dados do registro :bi:`Address`, relacionados ao Endereço da Pessoa, serão mantidos.
+        #. Confirmar que todos os dados do registro :bi:`Address`, associado ao registro :bi:`Person`, serão mantidos.
 
-        #. :green:`(Opcional)` Confirmar que todos os dados do registro :bi:`Family`, relacionados à Família da Pessoa, serão mantidos.
+        #. :green:`(Opcional)` Confirmar que todos os dados do registro :bi:`Family`, associado ao registro :bi:`Person`, serão mantidos.
 
     #. **Cadastro Auxiliar**:
 
-        #. Os registros do  **Cadastro Auxiliar** relacionados à Pessoa devem ser criados a partir do registro :bi:`Person`, executando a Ação ":BI:`Person (Aux) Associate to Family (Aux)`":
+        #. Os registros do  **Cadastro Auxiliar** relacionados à Pessoa devem ser criados a partir do registro :bi:`Person`, executando a Ação ":BI:`Person Associate to Person (Aux)`":
 
                 * A criação de :bi:`Person (Aux)`, deve ser **habilitada**.
                 * A criação de :bi:`Address (Aux)`, deve ser **habilitada**.

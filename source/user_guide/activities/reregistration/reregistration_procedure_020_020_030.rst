@@ -25,30 +25,6 @@ Procedimentos
 
     #. Confirmar que o(s) registro(s) :bi:`Person` e/ou :bi:`Person (Aux)` não seja(m) encontrado(s).
 
-    #. Procurar por um registro :bi:`Address` associado ao Endereço da Pessoa utilizando o procedimento:
-
-        * :doc:`reregistration_procedure_010_050`
-
-    #. Confirmar que o(s) registro(s) :bi:`Address` e/ou :bi:`Address (Aux)` não seja(m) encontrado(s).
-
-    #. Acessar a *view* :bi:`Addresses (Aux)`:
-
-        * Menu de acesso:
-
-            * :bi:`Community` » :bi:`Auxiliary` » :bi:`Addresses (Aux)`
-
-    #. Criar um novo registro :bi:`Address (Aux)`:
-
-        #. Preencher o registro :bi:`Address (Aux)` com as informações apresentadas para o Endereço da Pessoa.
-
-        #. Salvar o registro.
-
-    #. Registro :bi:`Address (Aux)`.
-
-        #. Não será necessário a execução de qualquer procedimento adicional no registro :bi:`Address (Aux)`.
-
-        #. Alterar o :bi:`Register State` para ":bi:`Revised`", utilizando o botão [:bi:`Revised`].
-
     #. Acessar a *view* :bi:`Persons (Aux)`:
 
         * Menu de acesso:
@@ -63,9 +39,13 @@ Procedimentos
 
     #. Editar o registro :bi:`Person (Aux)`:
 
-        #. Associar, manualmente, o campo *Address (Aux)* ao registro :bi:`Address (Aux)` criado anteriormente.
+        #. Marcar o campo :bi:`Address is unavailable`.
 
-        #. Preencher os campos de *Contact Information* com os dados de Endereço do registro :bi:`Address (Aux)` associado ao campo *Address*, utilizando o botão [:bi:`Get Reference Address (Aux) Data`].
+        #. Marcar o campo :bi:`Address (Aux) is unavailable`.
+
+        #. Preencher os campos de *Contact Information* com informações que indiquem o novo Endereço da Pessoa fora da comunidade.
+
+        #. Marcar o campo :bi:`Family is unavailable`.
 
         #. Salvar o registro.
 

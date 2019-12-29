@@ -20,11 +20,9 @@ Atualização de dados do Endereço da Pessoa, não caracterizando uma mudança 
 
     No contexto do Recadastramento, essas atualizações devem ser aplicadas manualmente no regitro :bi:`Address (Aux)` e posteriormente replicadas no registro :bi:`Person (Aux)`.
 
-    Caso **exista uma Família** associada ao Endereço da Pessoa, a Pessoa continuará associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
+    Caso **exista uma Família** associada ao Endereço atual da Pessoa, a Pessoa continuará associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
 
-    Caso **não exista uma Família** associada ao Endereço da Pessoa, mas se opte por associar a esse Endereço uma Família, a Pessoa será associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
-
-    Caso **não exista uma Família** associada ao Endereço da Pessoa, mas se opte por não associar a esse Endereço uma Família, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.
+    Caso **não exista uma Família** associada ao Endereço atual da Pessoa, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.
 
 Cadastro
 --------
@@ -69,7 +67,7 @@ Relacionamento entre os registros dos Cadastros
         * *Address (Aux)* » :bi:`Address (Aux)`
         * :green:`(Opcional)` *Family* » :bi:`Family`
         * *Related Person* » :bi:`Person`
-        * *Contact Information* = Dados de Endereço de :bi:`Address`
+        * *Contact Information* = Dados de Endereço de :bi:`Address (Aux)`
         * Outros Dados = Outros Dados de :bi:`Person`
 
 Fluxo de Trabalho (*Workflow*)
@@ -84,9 +82,9 @@ Fluxo de Trabalho (*Workflow*)
 
         #. Confirmar que dados do registro :bi:`Person`, relacionados à Pessoa, não caracterizando uma mudança de Endereço, necessitam ser atualizados.
 
-        #. Confirmar que os dados do registro :bi:`Address`, relacionados ao Endereço da Pessoa, não caracterizando uma mudança de Endereço, necessitam ser atualizados.
+        #. Confirmar que os dados do registro :bi:`Address`, associado ao registro :bi:`Person`, não caracterizando uma mudança de Endereço, necessitam ser atualizados.
 
-        #. :green:`(Opcional)` Confirmar que os dados do registro :bi:`Family`, relacionados à Família da Pessoa, não caracterizando uma mudança de Endereço, necessitam ser atualizados.
+        #. :green:`(Opcional)` Confirmar que os dados do registro :bi:`Family`, associado ao registro :bi:`Person`, não caracterizando uma mudança de Endereço, necessitam ser atualizados.
 
     #. **Cadastro Auxiliar**:
 

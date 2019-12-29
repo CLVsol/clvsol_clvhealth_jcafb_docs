@@ -14,6 +14,10 @@
 A Pessoa mudou-se para Endereço já cadastrado
 =============================================
 
+    Caso **exista uma Família** associada ao Endereço atual da Pessoa, a Pessoa continuará associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
+
+    Caso **não exista uma Família** associada ao Endereço atual da Pessoa, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.
+
 Procedimentos
 -------------
 
@@ -28,7 +32,7 @@ Procedimentos
 
     #. Confirmar a mudança de Endereço da Pessoa.
 
-    #. Confirmar que todos os dados do registro :bi:`Family`, relacionados à Família da Pessoa, serão mantidos.
+    #. :green:`(Opcional)` Confirmar que todos os dados do registro :bi:`Family`, associado ao registro :bi:`Person`, serão mantidos.
 
     #. Procurar pelo registro :bi:`Address` :green:`(novo)` associado ao novo Endereço informado para a Pessoa utilizando um dos procedimentos:
 

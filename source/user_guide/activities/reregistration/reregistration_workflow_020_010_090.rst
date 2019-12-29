@@ -53,7 +53,6 @@ Relacionamento entre os registros dos Cadastros
         * *Address* » **vazio**
         * *Address (Aux)* » **vazio**
         * :green:`(Opcional)` *Family* » **vazio**
-        * :green:`(Opcional)` *Family (Aux)* » **vazio**
         * *Related Person* » :bi:`Person`
         * *Contact Information* = **vazio**
         * Outros Dados = Outros Dados de :bi:`Person`
@@ -70,10 +69,6 @@ Fluxo de Trabalho (*Workflow*)
 
         #. Confirmar que todos os dados do registro :bi:`Person`, relacionados à Pessoa, serão mantidos.
 
-        #. Confirmar que todos os dados do registro :bi:`Address`, relacionados ao Endereço da Pessoa, serão mantidos.
-
-        #. :green:`(Opcional)` Confirmar que todos os dados do registro :bi:`Family`, relacionados à Família da Pessoa, serão mantidos.
-
     #. **Cadastro Auxiliar**:
 
         #. Os registros do  **Cadastro Auxiliar** relacionados à Pessoa devem ser criados a partir do registro :bi:`Person`, executando a Ação ":BI:`Person (Aux) Associate to Family (Aux)`":
@@ -89,7 +84,7 @@ Fluxo de Trabalho (*Workflow*)
 
         #. :green:`(Opcional)` Remover do campo *Family* a associação ao registro :bi:`Family`.
 
-        #. Indicar de alguma forma que a Pessoa faleceu.
+        #. Indicar que a Pessoa faleceu.
 
     O processamento deste *Workflow* é executado utilizando o procedimento ":doc:`reregistration_procedure_020_010_090`".
 

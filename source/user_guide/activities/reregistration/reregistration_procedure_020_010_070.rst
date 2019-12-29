@@ -14,6 +14,10 @@
 A Pessoa mudou-se para um Endereço fora da comunidade atendida pela JCAFB
 =========================================================================
 
+    Caso **exista uma Família** associada ao Endereço atual da Pessoa, a Pessoa continuará associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
+
+    Caso **não exista uma Família** associada ao Endereço atual da Pessoa, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.
+
 Procedimentos
 -------------
 
@@ -28,7 +32,7 @@ Procedimentos
 
     #. Confirmar a mudança de Endereço da Pessoa.
 
-    #. Confirmar que todos os dados do registro :bi:`Family`, relacionados à Família da Pessoa, serão mantidos.
+    #. :green:`(Opcional)` Confirmar que todos os dados do registro :bi:`Family`, associado ao registro :bi:`Person`, serão mantidos.
 
     #. A partir do registro :bi:`Person` encontrado, exercutar a Ação ":bi:`Person Associate to Person (Aux)`":
 
@@ -45,7 +49,9 @@ Procedimentos
 
         #. Remover do campo *Address* a associação ao registro :bi:`Address` :green:`(antigo)`, utilizando o botão [:bi:`Remove Reference Address`].
 
-        #. Associar, manualmente, o campo *Address (Aux)* ao registro :bi:`Address (Aux)` criado anteriormente.
+        #. Marcar o campo :bi:`Address is unavailable`.
+
+        #. Marcar o campo :bi:`Address (Aux) is unavailable`.
 
         #. Preencher os campos de *Contact Information* com informações que indiquem o novo Endereço da Pessoa fora da comunidade.
 

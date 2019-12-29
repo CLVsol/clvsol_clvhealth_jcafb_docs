@@ -16,10 +16,6 @@ A Pessoa reside em um Endereço não cadastrado
 
     * *Workflow*: ":doc:`reregistration_workflow_020_020_020`".
 
-    Caso se opte por associar ao Endereço da Pessoa uma Família, a Pessoa será associada a essa Família os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
-
-    Caso se opte por não associar ao Endereço da Pessoa a uma Família, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.
-
 Procedimentos
 -------------
 
@@ -72,20 +68,6 @@ Procedimentos
         #. Preencher os campos de *Contact Information* com os dados de Endereço do registro :bi:`Address (Aux)` associado ao campo *Address*, utilizando o botão [:bi:`Get Reference Address (Aux) Data`].
 
         #. Salvar o registro.
-
-    #. :green:`(Opcional)` A partir do registro :bi:`Person (Aux)` exercutar a Ação ":bi:`Person (Aux) Associate to Family (Aux)`":
-
-        #. Parâmetros apresentados:
-
-            * *Create new Family (Aux)*: **habilitado**
-
-        #. Utilizar o botão [:bi:`Associate do Family (Aux)`]  para executar a Ação.
-
-    #. :green:`(Opcional)` Abrir o registro :bi:`Family (Aux)` associado à Pessoa apresentado na *view* :bi:`Families (Aux)`.
-
-        #. Não será necessário a execução de qualquer procedimento adicional no registro :bi:`Family (Aux)`.
-
-        #. Alterar o :bi:`Register State` para ":bi:`Revised`", utilizando o botão [:bi:`Revised`].
 
     #. Retornar ao registro :bi:`Person (Aux)`.
 

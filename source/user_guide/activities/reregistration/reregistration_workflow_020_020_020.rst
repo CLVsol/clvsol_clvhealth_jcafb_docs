@@ -14,10 +14,6 @@
 A Pessoa reside em um Endereço não cadastrado
 =============================================
 
-    Caso se opte por associar ao Endereço da Pessoa a uma Família, a Pessoa será associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
-
-    Caso se opte por não associar ao Endereço da Pessoa a uma Família, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.
-
 Cadastro
 --------
 
@@ -30,7 +26,6 @@ Cadastro Auxiliar
 
         * :bi:`Person (Aux)`
         * :bi:`Address (Aux)`
-        * :green:`(Opcional)` :bi:`Family (Aux)`
 
 Relacionamento entre os registros dos Cadastros
 -----------------------------------------------
@@ -41,20 +36,11 @@ Relacionamento entre os registros dos Cadastros
         * *Contact Information* = Dados informados para o Endereço da Pessoa
         * Outros Dados = Outros Dados informados para o Endereço da Pessoa
 
-    * :green:`(Opcional)` :bi:`Family (Aux)`:
-
-        * *Address* » **vazio**
-        * *Address (Aux)* » :bi:`Address (Aux)`
-        * *Related Family* » **vazio**
-        * *Contact Information* = Dados de Endereço de :bi:`Address (Aux)`
-        * Outros Dados = Outros Dados de :bi:`Family`
-
     * :bi:`Person (Aux)`:
 
         * *Address* » **vazio**
         * *Address (Aux)* » :bi:`Address (Aux)`
         * *Family* » **vazio**
-        * :green:`(Opcional)` *Family (Aux)* » :bi:`Family (Aux)`
         * *Related Person* » **vazio**
         * *Contact Information* = Dados de Endereço de :bi:`Address (Aux)`
         * Outros Dados = Outros Dados informados para a Pessoa
@@ -99,16 +85,6 @@ Fluxo de Trabalho (*Workflow*)
         #. Associar o registro :bi:`Address (Aux)` criado ao campo *Address (Aux)*.
 
         #. Preencher os campos de *Contact Information* com os dados de Endereço do registro :bi:`Address (Aux)`.
-
-    #. :green:`(Opcional)` Registro :bi:`Person (Aux)`:
-
-        #. Criar um novo registro :bi:`Family (Aux)`, executando a Ação ":bi:`Person (Aux) Associate to Family (Aux)`":
-
-                * A criação de um registro :bi:`Family (Aux)`, deve ser **habilitada**.
-
-    #. :green:`(Opcional)` Registro :bi:`Family (Aux)`:
-
-        #. Não será necessário qualquer ação de atualização do registro :bi:`Family (Aux)`.
 
     O processamento deste *Workflow* é executado utilizando o procedimento ":doc:`reregistration_procedure_020_020_020`".
 

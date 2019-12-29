@@ -14,6 +14,10 @@
 A Pessoa mudou-se para um Endereço fora da comunidade atendida pela JCAFB
 =========================================================================
 
+    Caso **exista uma Família** associada ao Endereço atual da Pessoa, a Pessoa continuará associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
+
+    Caso **não exista uma Família** associada ao Endereço atual da Pessoa, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.
+
 Cadastro
 --------
 
@@ -21,7 +25,7 @@ Cadastro
 
         * :bi:`Person`: relativo à Pessoa
         * :bi:`Address` :green:`(antigo)`: relativo ao antigo Endereço da Pessoa
-        * :bi:`Family`: relativo à Família da Pessoa
+        * :green:`(Opcional)` :bi:`Family`: relativo à Família da Pessoa
 
 Cadastro Auxiliar
 -----------------
@@ -29,12 +33,11 @@ Cadastro Auxiliar
     O **Cadastro Auxiliar** criado deverá conter os seguintes registros:
 
         * :bi:`Person (Aux)`
-        * :bi:`Address (Aux)`
 
 Relacionamento entre os registros dos Cadastros
 -----------------------------------------------
 
-    * :bi:`Family`:
+    * :green:`(Opcional)` :bi:`Family`:
 
         * *Address* » :bi:`Address` :green:`(antigo)`
         * *Contact Information* = Dados de Endereço de :bi:`Address` :green:`(antigo)`
@@ -42,16 +45,16 @@ Relacionamento entre os registros dos Cadastros
     * :bi:`Person`:
 
         * *Address* » :bi:`Address` :green:`(antigo)`
-        * *Family* » :bi:`Family`
+        * :green:`(Opcional)` *Family* » :bi:`Family`
         * *Contact Information* = Dados de Endereço de :bi:`Address` :green:`(antigo)`
 
     * :bi:`Person (Aux)`:
 
         * *Address* » **vazio**
         * *Address (Aux)* » **vazio**
-        * *Family* » :bi:`Family`
+        * :green:`(Opcional)` *Family* » :bi:`Family`
         * *Related Person* » :bi:`Person`
-        * *Contact Information* = Dados com informações que indiquem o novo Endereço da Pessoa fora da comunidade
+        * *Contact Information* = Dados com informações que indiquem o novo Endereço da Pessoa fora da comunidade, se disponível, ou **vazio**.
         * Outros Dados = Outros Dados de :bi:`Person`
 
 Fluxo de Trabalho (*Workflow*)
@@ -66,7 +69,9 @@ Fluxo de Trabalho (*Workflow*)
 
         #. Confirmar que todos os dados do registro :bi:`Person`, relacionados à Pessoa, serão mantidos.
 
-        #. Confirmar que todos os dados do registro :bi:`Family`, relacionados à Família da Pessoa, serão mantidos.
+        #. Confirmar a mudança de Endereço da Pessoa.
+
+        #. :green:`(Opcional)` Confirmar que todos os dados do registro :bi:`Family`, associado ao registro :bi:`Person`, serão mantidos.
 
     #. **Cadastro Auxiliar**:
 
@@ -79,7 +84,7 @@ Fluxo de Trabalho (*Workflow*)
 
         #. Remover do campo *Address* a associação ao registro :bi:`Address` :green:`(antigo)`.
 
-        #. Preencher os campos de *Contact Information* com os dados de Endereço do registro :bi:`Address (Aux)`.
+        #. Preencher os campos de *Contact Information* com informações que indiquem o novo Endereço da Pessoa fora da comunidade.
 
     #. Registro :bi:`Person (Aux)`:
 
