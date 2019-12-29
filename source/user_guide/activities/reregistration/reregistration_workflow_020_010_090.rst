@@ -80,7 +80,6 @@ Fluxo de Trabalho (*Workflow*)
 
                 * A criação de :bi:`Person (Aux)`, deve ser **habilitada**.
                 * A criação de :bi:`Address (Aux)`, deve ser **desabilitada**.
-                * A criação de :bi:`Family (Aux)`, deve ser **desabilitada**.
 
     #. Registro :bi:`Person (Aux)`:
 

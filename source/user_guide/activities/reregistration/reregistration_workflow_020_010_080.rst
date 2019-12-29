@@ -53,7 +53,6 @@ Relacionamento entre os registros dos Cadastros
         * *Address* » **vazio**
         * *Address (Aux)* » **vazio**
         * :green:`(Opcional)` *Family* » **vazio**
-        * :green:`(Opcional)` *Family (Aux)* » **vazio**
         * *Related Person* » :bi:`Person`
         * *Contact Information* = **vazio**
         * Outros Dados = Outros Dados de :bi:`Person`
@@ -80,7 +79,6 @@ Fluxo de Trabalho (*Workflow*)
 
                 * A criação de :bi:`Person (Aux)`, deve ser **habilitada**.
                 * A criação de :bi:`Address (Aux)`, deve ser **desabilitada**.
-                * A criação de :bi:`Family (Aux)`, deve ser **desabilitada**.
 
     #. Registro :bi:`Person (Aux)`:
 

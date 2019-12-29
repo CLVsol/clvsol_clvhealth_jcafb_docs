@@ -56,31 +56,14 @@ Procedimentos
 
             * *Create new Person (Aux)*: **habilitado**
             * *Create new Family (Aux)*: **habilitado**
-            * *Create new Address (Aux)*: **habilitado**
 
-        #. Utilizar o botão [:bi:`Associate do Perton (Aux)`] para executar a Ação.
+        #. Utilizar o botão [:bi:`Associate do Person (Aux)`] para executar a Ação.
 
     #. Abrir o registro :bi:`Person (Aux)` associado à Pessoa apresentado na *view* :bi:`Persons (Aux)`.
 
     #. Abrir o registro :bi:`Address (Aux)` associado ao campo *Address (Aux)*:
 
         #. Não será necessário a execução de qualquer procedimento adicional no registro :bi:`Address (Aux)`.
-
-        #. Alterar o :bi:`Register State` para ":bi:`Revised`", utilizando o botão [:bi:`Revised`].
-
-    #. Retornar ao registro :bi:`Person (Aux)`.
-
-    #. :green:`(Opcional)` A partir do registro :bi:`Person (Aux)` exercutar a Ação ":bi:`Person (Aux) Associate to Family (Aux)`":
-
-        #. Parâmetros apresentados:
-
-            * *Create new Family (Aux)*: **habilitado**
-
-        #. Utilizar o botão [:bi:`Associate do Family (Aux)`]  para executar a Ação.
-
-    #. :green:`(Opcional)` Abrir o registro :bi:`Family (Aux)` associado à Pessoa apresentado na *view* :bi:`Families (Aux)`.
-
-        #. Não será necessário a execução de qualquer procedimento adicional no registro :bi:`Family (Aux)`.
 
         #. Alterar o :bi:`Register State` para ":bi:`Revised`", utilizando o botão [:bi:`Revised`].
 

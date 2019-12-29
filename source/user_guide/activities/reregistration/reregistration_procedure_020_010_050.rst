@@ -8,11 +8,11 @@
 .. role:: green
 .. role:: bi
 
-.. index:: A Pessoa mudou-se para Endereço não cadastrado juntamente com a Família (Procedimento)
+.. index:: A Pessoa mudou-se para Endereço não cadastrado (Procedimento)
 
-========================================================================
-A Pessoa mudou-se para Endereço não cadastrado, juntamente com a Família
-========================================================================
+==============================================
+A Pessoa mudou-se para Endereço não cadastrado
+==============================================
 
 Procedimentos
 -------------
@@ -60,7 +60,6 @@ Procedimentos
 
             * *Create new Person (Aux)*: **habilitado**
             * *Create new Family (Aux)*: **desabilitado**
-            * *Create new Address (Aux)*: **desabilitado**
 
         #. Utilizar o botão [:bi:`Associate do Perton (Aux)`] para executar a Ação.
 
@@ -75,22 +74,6 @@ Procedimentos
         #. Preencher os campos de *Contact Information* com os dados de Endereço do registro :bi:`Address (Aux)` associado ao campo *Address*, utilizando o botão [:bi:`Get Reference Address (Aux) Data`].
 
         #. Salvar o registro.
-
-    #. A partir do registro :bi:`Person (Aux)` exercutar a Ação ":bi:`Person (Aux) Associate to Family (Aux)`":
-
-        #. Parâmetros apresentados:
-
-            * *Create new Family (Aux)*: **habilitado**
-
-        #. Utilizar o botão [:bi:`Associate do Family (Aux)`]  para executar a Ação.
-
-    #. Abrir o registro :bi:`Family (Aux)` associado à Pessoa apresentado na *view* :bi:`Families (Aux)`.
-
-        #. Não será necessário a execução de qualquer procedimento adicional no registro :bi:`Family (Aux)`.
-
-        #. Alterar o :bi:`Register State` para ":bi:`Revised`", utilizando o botão [:bi:`Revised`].
-
-    #. Retornar ao registro :bi:`Person (Aux)`.
 
     #. A partir do registro :bi:`Person (Aux)`:
 

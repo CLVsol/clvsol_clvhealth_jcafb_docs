@@ -21,6 +21,7 @@ Procura por uma Pessoa em **Contatos**
         #. Acessar a *view* **Contatos**:
 
             * Menu de acesso:
+
                 * **Contatos** » **Contatos**
 
         #. Selecionar a **visualização em lista**.

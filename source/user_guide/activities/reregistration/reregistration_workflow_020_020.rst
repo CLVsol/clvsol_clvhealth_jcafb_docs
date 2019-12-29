@@ -28,25 +28,11 @@ O **Cadastro Auxiliar** criado poderá ser composto pelas **Entidades (Aux)**:
 
     * :bi:`Address (Aux)`:
 
-        * O registro será preenchido com as informações coletadas para a Pessoa:
+        * O registro :bi:`Address (Aux)` deverá ser **criado automaticamente** a partir de um registro :bi:`Address` já cadastrado, quando se constatar que a Pessoa reside no Endereço associado a este registro :bi:`Address`.
 
-            * O registro :bi:`Address (Aux)` deverá ser **criado automaticamente** a partir de um registro :bi:`Address` já cadastrado, quando se constatar que a Pessoa reside no Endereço associado a este registro :bi:`Address`.
+        * O registro :bi:`Address (Aux)` deverá ser **criado manualmente**, quando se constatar que a Pessoa reside em um Endereço não cadastrado da comunidade atendida.
 
-            * O registro :bi:`Address (Aux)` deverá ser **criado manualmente**, quando se constatar que a Pessoa reside em um Endereço não cadastrado.
-
-            * O registro :bi:`Address (Aux)` deverá ser **criado manualmente**, contendo informações que indiquem as condições do Endereço, quando se constatar que a Pessoa reside em um Endereço fora da comunidade atendida.
-
-            * O registro :bi:`Address (Aux)` **não será criado**, quando se constatar que a Pessoa faleceu.
-
-    * :bi:`Family (Aux)`:
-
-        * O registro será preenchido com as informações coletadas para a Pessoa:
-
-            * O registro :bi:`Family (Aux)` deverá ser **criado automaticamente** a partir de um registro :bi:`Family` já cadastrado, quando se constatar que a Pessoa é membro da Família associada a este registro :bi:`Family`.
-
-            * O registro :bi:`Family (Aux)` deverá ser **criado manualmente**, quando se constatar que a Pessoa é membro de uma Família não cadastrada.
-
-            * O registro :bi:`Family (Aux)` **não será criado**, quando se constatar que a Pessoa é mebro de uma Família fora da comunidade atendida.
+        * O registro :bi:`Address (Aux)` **não será criado**, quando se constatar que a Pessoa reside em um Endereço fora da comunidade atendida.
 
 .. toctree::
    :maxdepth: 1

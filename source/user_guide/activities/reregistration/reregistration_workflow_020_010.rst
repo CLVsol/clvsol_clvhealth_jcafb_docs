@@ -26,53 +26,17 @@ O **Cadastro Auxiliar** criado poderá ser composto pelas seguintes **Entidades 
 
     * :bi:`Person (Aux)`:
 
-        * quando existir um registro :bi:`Person` associado à Pessoa
-
-        * e quando habilitada a criação de :bi:`Person (Aux)`
-
-            * A criação de :bi:`Person (Aux)`, deve ser sempre habilitada.
+        * O registro será preenchido com as informações já cadastradas para a Pessoa e atualizado com as informações coletadas para a Pessoa.
 
     * :bi:`Address (Aux)`:
 
-        * quando existir um registro :bi:`Address` associado à Pessoa
+        * O registro :bi:`Address (Aux)` deverá ser **criado automaticamente** a partir do registro :bi:`Address` associado ao Endereço da Pessoa, quando se constatar que a Pessoa foi mantida no Endereço atual cadastrado.
 
-        * e quando habilitada a criação de :bi:`Address (Aux)`
+        * O registro :bi:`Address (Aux)` deverá ser **criado automaticamente** a partir de um registro :bi:`Address` já cadastrado, quando se constatar que a Pessoa mudou-se para o Endereço associado a este registro :bi:`Address`.
 
-            * A criação de um registro :bi:`Address (Aux)` deve ser **habilitada**, quando se constatar que a Pessoa foi mantida no Endereço atual cadastrado.
+        * O registro :bi:`Address (Aux)` deverá ser **criado manualmente**, quando se constatar que a Pessoa mudou-se para um Endereço não cadastrado da comunidade atendida.
 
-            * A criação de um registro :bi:`Address (Aux)` deve ser **desabilitada**, quando se constatar que a Pessoa foi transferida para o Endereço associado a este registro :bi:`Address`.
-
-                * Neste caso, um registro :bi:`Address (Aux)` deverá ser **criado automaticamente** a partir do registro :bi:`Address` associado ao Endereço já cadastrado, 
-
-            * A criação de um registro :bi:`Address (Aux)` deve ser **desabilitada**, quando se constatar que a Pessoa foi transferida para um Endereço não cadastrado da comunidade atendida.
-
-                * Neste caso, um registro :bi:`Address (Aux)` deverá ser **criado manualmente**, contendo as informações do Endereço não cadastrado ainda.
-
-            * A criação de um registro :bi:`Address (Aux)` deve ser **desabilitada**, quando se constatar que a Pessoa foi transferida para um Endereço desconhecido ou fora da comunidade atendida.
-
-                * Neste caso, um registro :bi:`Address (Aux)` deverá ser **criado manualmente**, contendo informações que indiquem as condições do novo Endereço.
-
-            * A criação de um registro :bi:`Address (Aux)` deve ser **desabilitada**, quando se constatar que a Pessoa faleceu.
-
-    * :bi:`Family (Aux)`:
-
-        * quando existir um registro :bi:`Family` associado à Pessoa
-
-        * e quando habilitada a criação de :bi:`Family (Aux)`
-
-            * A criação de um registro :bi:`Family (Aux)` deve ser **habilitada**, quando se constatar que a Pessoa será mantida na Família atual cadastrada.
-
-            * A criação de um registro :bi:`Family (Aux)` deve ser **desabilitada**, quando se constatar que a Pessoa foi transferida para outra Família já cadastrada.
-
-                * Neste acaso, um registro :bi:`Family (Aux)` deverá ser **criado automaticamente** a partir de um registro :bi:`Family` associado à Família já cadastrada.
-
-            * A criação de um registro :bi:`Family (Aux)` deve ser **desabilitada**, quando se constatar que a Pessoa foi transferida para uma Família não cadastrada.
-
-                * Neste acaso, um registro :bi:`Family (Aux)` deverá ser **criado automaticamente** a partir do registro :bi:`Address (Aux)` associado à Família.
-
-            * A criação de um registro :bi:`Family (Aux)` deve ser **desabilitada**, quando se constatar que a Pessoa foi transferida para uma Famĩlia desconhecida ou fora da comunidade.
-
-            * A criação de um registro :bi:`Family (Aux)` deve ser **desabilitada**,quando se constatar que a Pessoa faleceu. 
+        * O registro :bi:`Address (Aux)` **não será criado**, quando se constatar que a Pessoa mudou-se para um Endereço fora da comunidade atendida ou que a Pessoa faleceu.
 
 .. toctree::
    :maxdepth: 1
@@ -82,12 +46,8 @@ O **Cadastro Auxiliar** criado poderá ser composto pelas seguintes **Entidades 
    reregistration_workflow_020_010_020
    reregistration_workflow_020_010_030
    reregistration_workflow_020_010_040
-   reregistration_workflow_020_010_045
    reregistration_workflow_020_010_050
-   reregistration_workflow_020_010_055
    reregistration_workflow_020_010_060
-   reregistration_workflow_020_010_065
    reregistration_workflow_020_010_070
-   reregistration_workflow_020_010_075
    reregistration_workflow_020_010_080
    reregistration_workflow_020_010_090

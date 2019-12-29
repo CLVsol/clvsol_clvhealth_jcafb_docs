@@ -8,17 +8,15 @@
 .. role:: green
 .. role:: bi
 
-.. index:: Fluxo de Trabalho (Workflow) do Recadastramento
+.. index:: Fluxo de Trabalho (Workflow) do Cadastramento/Recadastramento
 
-=====================================================
-**Fluxo de Trabalho** (*Workflow*) do Recadastramento
-=====================================================
+===================================================================
+**Fluxo de Trabalho** (*Workflow*) do Cadastramento/Recadastramento
+===================================================================
 
-O **Fluxo de Trabalho** (*Workflow*) do Recadastramento de **Pessoas**, concomitante ao de **Famílias** e de **Endereços** é descrito pelas etapas apresentadas em seguida.
+O **Fluxo de Trabalho** (*Workflow*) do Cadastramento/Recadastramento de **Pessoas**, concomitante ao de **Endereços** é descrito pelas etapas apresentadas em seguida.
 
-É importante salientar que as etapas específicas ao recadastramento de um **Endereço** precisarão ser executadas somente para uma das Pessoas residentes no Endereço.
-
-Da mesma forma, as etapas específicas ao recadastramento de uma **Família** precisarão ser executadas somente para uma das Pessoas que compõem a Família. 
+É importante salientar que as etapas específicas ao cadastramento/recadastramento de um **Endereço** precisarão ser executadas somente para uma das Pessoas residentes no Endereço.
 
 .. toctree::
    :maxdepth: 3

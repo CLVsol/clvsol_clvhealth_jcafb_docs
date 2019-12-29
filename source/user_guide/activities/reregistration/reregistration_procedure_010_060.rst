@@ -21,6 +21,7 @@ Procura por um Endereço em :bi:`Addresses`
         #. Acessar a *view* :bi:`Addresses`:
 
             * Menu de acesso:
+
                 * :bi:`Community` » :bi:`Community` » :bi:`Addresses`
 
         #. Pesquisar pelo Endereço.
@@ -36,7 +37,8 @@ Procura por um Endereço em :bi:`Addresses`
         #. Acessar a *view* :bi:`Addresses (Aux)`:
 
             * Menu de acesso:
-                * :bi:`Community` » :bi:`Aux` » :bi:`Addresses (Aux)`
+
+                * :bi:`Community` » :bi:`Auxiliary` » :bi:`Addresses (Aux)`
 
         #. Pesquisar pelo Endereço.
 

@@ -21,6 +21,7 @@ Procura por uma Pessoa em :bi:`Persons`
         #. Acessar a *view* :bi:`Persons`:
 
             * Menu de acesso:
+
                 * :bi:`Community` » :bi:`Community` » :bi:`Persons`
 
         #. Pesquisar pela Pessoa.
@@ -36,7 +37,8 @@ Procura por uma Pessoa em :bi:`Persons`
         #. Acessar a *view* :bi:`Persons (Aux)`:
 
             * Menu de acesso:
-                * :bi:`Community` » :bi:`Aux` » :bi:`Persons (Aux)`
+
+                * :bi:`Community` » :bi:`Auxiliary` » :bi:`Persons (Aux)`
 
         #. Pesquisar pela Pessoa.
 

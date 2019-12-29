@@ -8,11 +8,11 @@
 .. role:: green
 .. role:: bi
 
-.. index:: A Pessoa mudou-se para Endereço já cadastrado juntamente com a Família
+.. index:: A Pessoa mudou-se para Endereço já cadastrado
 
-=======================================================================
-A Pessoa mudou-se para Endereço já cadastrado, juntamente com a Família
-=======================================================================
+=============================================
+A Pessoa mudou-se para Endereço já cadastrado
+=============================================
 
 Cadastro
 --------
@@ -31,7 +31,6 @@ Cadastro Auxiliar
 
         * :bi:`Person (Aux)`
         * :bi:`Address (Aux)`
-        * :bi:`Family (Aux)``
 
 Relacionamento entre os registros dos Cadastros
 -----------------------------------------------
@@ -66,7 +65,6 @@ Relacionamento entre os registros dos Cadastros
         * *Address* » :bi:`Address` :green:`(novo)`
         * *Address (Aux)* » :bi:`Address (Aux)`
         * *Family* » :bi:`Family`
-        * *Family (Aux)* » :bi:`Family (Aux)`
         * *Related Person* » :bi:`Person`
         * *Contact Information* = Dados de Endereço de :bi:`Address` :green:`(novo)`
         * Outros Dados = Outros Dados de :bi:`Person`
@@ -100,7 +98,6 @@ Fluxo de Trabalho (*Workflow*)
 
                 * A criação de :bi:`Person (Aux)`, deve ser **habilitada**.
                 * A criação de :bi:`Address (Aux)`, deve ser **desabilitada**.
-                * A criação de :bi:`Family (Aux)`, deve ser **desabilitada**.
 
     #. Registro :bi:`Person (Aux)`:
 
@@ -117,16 +114,6 @@ Fluxo de Trabalho (*Workflow*)
     #. Registro :bi:`Address (Aux)`:
 
         #. Não será necessário qualquer ação de atualização do registro :bi:`Address (Aux)`.
-
-    #. Registro :bi:`Person (Aux)`:
-
-        #. Criar um novo registro :bi:`Family (Aux)`, executando a Ação ":bi:`Person (Aux) Associate to Family (Aux)`":
-
-                * A criação de :bi:`Family (Aux)`, deve ser **habilitada**.
-
-    #. Registro :bi:`Family (Aux)`:
-
-        #. Não será necessário qualquer ação de atualização do registro :bi:`Family (Aux)`.
 
     #. Registro :bi:`Person (Aux)`:
 

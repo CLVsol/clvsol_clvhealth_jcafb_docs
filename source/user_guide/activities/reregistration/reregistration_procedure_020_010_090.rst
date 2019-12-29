@@ -34,7 +34,6 @@ Procedimentos
 
             * *Create new Person (Aux)*: **habilitado**
             * *Create new Family (Aux)*: **desabilitado**
-            * *Create new Address (Aux)*: **desabilitado**
 
         #. Utilizar o botão [:bi:`Associate do Perton (Aux)`] para executar a Ação.
 

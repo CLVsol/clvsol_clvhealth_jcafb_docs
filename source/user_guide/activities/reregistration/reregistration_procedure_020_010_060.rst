@@ -8,11 +8,11 @@
 .. role:: green
 .. role:: bi
 
-.. index:: A Pessoa mudou-se para Endereço desconhecido juntamente com a Família (Procedimento)
+.. index:: A Pessoa mudou-se para Endereço desconhecido (Procedimento)
 
-======================================================================
-A Pessoa mudou-se para Endereço desconhecido, juntamente com a Família
-======================================================================
+============================================
+A Pessoa mudou-se para Endereço desconhecido
+============================================
 
 Procedimentos
 -------------
@@ -30,33 +30,14 @@ Procedimentos
 
     #. Confirmar que todos os dados do registro :bi:`Family`, relacionados à Família da Pessoa, serão mantidos.
 
-    #. Acessar a *view* :bi:`Addresses (Aux)`:
-
-        * Menu de acesso:
-
-            * :bi:`Community` » :bi:`Auxiliary` » :bi:`Addresses (Aux)`
-
-    #. Criar um novo registro :bi:`Address (Aux)`:
-
-        #. Preencher o registro :bi:`Address (Aux)` com informações que indiquem o desconhecimento do novo Endereço da Pessoa.
-
-        #. Salvar o registro.
-
-    #. Registro :bi:`Address (Aux)`.
-
-        #. Não será necessário a execução de qualquer procedimento adicional no registro :bi:`Address (Aux)`.
-
-        #. Alterar o :bi:`Register State` para ":bi:`Revised`", utilizando o botão [:bi:`Revised`].
-
     #. A partir do registro :bi:`Person` encontrado, exercutar a Ação ":bi:`Person Associate to Person (Aux)`":
 
         #. Parâmetros apresentados:
 
             * *Create new Person (Aux)*: **habilitado**
             * *Create new Family (Aux)*: **desabilitado**
-            * *Create new Address (Aux)*: **desabilitado**
 
-        #. Utilizar o botão [:bi:`Associate do Perton (Aux)`] para executar a Ação.
+        #. Utilizar o botão [:bi:`Associate to Person (Aux)`] para executar a Ação.
 
     #. Abrir o registro :bi:`Person (Aux)` associado à Pessoa apresentado na *view* :bi:`Persons (Aux)`.
 
@@ -64,27 +45,9 @@ Procedimentos
 
         #. Remover do campo *Address* a associação ao registro :bi:`Address` :green:`(antigo)`, utilizando o botão [:bi:`Remove Reference Address`].
 
-        #. Associar, manualmente, o campo *Address (Aux)* ao registro :bi:`Address (Aux)` criado anteriormente.
-
-        #. Preencher os campos de *Contact Information* com os dados de Endereço do registro :bi:`Address (Aux)` associado ao campo *Address*, utilizando o botão [:bi:`Get Reference Address (Aux) Data`].
+        #. Preencher os campos de *Contact Information* com informações que indiquem o desconhecimento do novo Endereço da Pessoa.
 
         #. Salvar o registro.
-
-    #. A partir do registro :bi:`Person (Aux)` exercutar a Ação ":bi:`Person (Aux) Associate to Family (Aux)`":
-
-        #. Parâmetros apresentados:
-
-            * *Create new Family (Aux)*: **habilitado**
-
-        #. Utilizar o botão [:bi:`Associate do Family (Aux)`]  para executar a Ação.
-
-    #. Abrir o registro :bi:`Family (Aux)` associado à Pessoa apresentado na *view* :bi:`Families (Aux)`.
-
-        #. Não será necessário a execução de qualquer procedimento adicional no registro :bi:`Family (Aux)`.
-
-        #. Alterar o :bi:`Register State` para ":bi:`Revised`", utilizando o botão [:bi:`Revised`].
-
-    #. Retornar ao registro :bi:`Person (Aux)`.
 
     #. A partir do registro :bi:`Person (Aux)`:
 

@@ -29,13 +29,9 @@
    reregistration_procedure_020_010_020
    reregistration_procedure_020_010_030
    reregistration_procedure_020_010_040
-   reregistration_procedure_020_010_045
    reregistration_procedure_020_010_050
-   reregistration_procedure_020_010_055
    reregistration_procedure_020_010_060
-   reregistration_procedure_020_010_065
    reregistration_procedure_020_010_070
-   reregistration_procedure_020_010_075
    reregistration_procedure_020_010_080
    reregistration_procedure_020_010_090
 

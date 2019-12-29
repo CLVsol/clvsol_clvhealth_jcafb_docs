@@ -16,11 +16,11 @@ Atualização de dados do Endereço da Pessoa, não caracterizando uma mudança 
 
     * *Workflow*: ":doc:`reregistration_workflow_020_010_030`".
 
-     Os dados :bi:`Address` do :bi:`Contact Information` são compartilhados por todas as Entidades do **Cadastro** (:bi:`Person`, :bi:`Address` e :bi:`Family`) e do **Cadastro Auxiliar** (:bi:`Person (Aux)`, :bi:`Address (Aux)` e :bi:`Family (Aux)`), descrevendo o Endereço dessas Entidades.
+     Os dados :bi:`Address` do :bi:`Contact Information` são compartilhados por todas as Entidades do **Cadastro** (:bi:`Person`, :bi:`Address` e :bi:`Family`) e do **Cadastro Auxiliar** (:bi:`Person (Aux)` e :bi:`Address (Aux)`), descrevendo o Endereço dessas Entidades.
 
     Atualizações não caracterizando uma mudança de Endereço são aquelas que corrigem e/ou complementam a descrição do Endereço sem alterá-lo.
 
-    No contexto do Recadastramento, essas atualizações devem ser aplicadas manualmente no regitro :bi:`Address (Aux)` e posteriormente replicadas nos registros :bi:`Family (Aux)` e :bi:`Person (Aux)`.
+    No contexto do Recadastramento, essas atualizações devem ser aplicadas manualmente no regitro :bi:`Address (Aux)` e posteriormente replicadas no registro :bi:`Person (Aux)`.
 
     Caso **exista uma Família** associada ao Endereço da Pessoa, a Pessoa continuará associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
 
@@ -48,9 +48,8 @@ Procedimentos
 
             * *Create new Person (Aux)*: **habilitado**
             * *Create new Family (Aux)*: **habilitado**
-            * *Create new Address (Aux)*: **habilitado**
 
-        #. Utilizar o botão [:bi:`Associate do Perton (Aux)`] para executar a Ação.
+        #. Utilizar o botão [:bi:`Associate do Person (Aux)`] para executar a Ação.
 
     #. Abrir o registro :bi:`Person (Aux)` associado à Pessoa apresentado na *view* :bi:`Persons (Aux)`.
 
@@ -65,30 +64,6 @@ Procedimentos
     #. Registro :bi:`Address (Aux)`.
 
         #. Não será necessário a execução de qualquer procedimento adicional no registro :bi:`Address (Aux)`.
-
-        #. Alterar o :bi:`Register State` para ":bi:`Revised`", utilizando o botão [:bi:`Revised`].
-
-    #. Retornar ao registro :bi:`Person (Aux)`.
-
-    #. :green:`(Opcional)` A partir do registro :bi:`Person (Aux)` exercutar a Ação ":bi:`Person (Aux) Associate to Family (Aux)`":
-
-        #. Parâmetros apresentados:
-
-            * *Create new Family (Aux)*: **habilitado**
-
-        #. Utilizar o botão [:bi:`Associate do Family (Aux)`]  para executar a Ação.
-
-    #. :green:`(Opcional)` Editar o registro :bi:`Family (Aux)` associado à Pessoa apresentado na *view* :bi:`Families (Aux)`:
-
-        #. Preencher os campos de *Contact Information* com os dados de Endereço do registro :bi:`Address (Aux)` associado ao campo *Address*, utilizando o botão [:bi:`Get Reference Address (Aux) Data`].
-
-        #. Inserir no campo :bi:`Notes..` uma descrição das atualizações aplicadas no registro.
-
-        #. Salvar o registro.
-
-    #. :green:`(Opcional)` Registro :bi:`Family (Aux)`:
-
-        #. Não será necessário a execução de qualquer procedimento adicional no registro :bi:`Family (Aux)`.
 
         #. Alterar o :bi:`Register State` para ":bi:`Revised`", utilizando o botão [:bi:`Revised`].
 

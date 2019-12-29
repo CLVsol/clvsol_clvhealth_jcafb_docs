@@ -30,11 +30,11 @@ Procedimentos
         * :doc:`reregistration_procedure_010_010`
         * :doc:`reregistration_procedure_010_020`
 
-    #. Confirmar que todos os dados dos registros :bi:`Person`, relacionados à Pessoa, serão mantidos.
+    #. Confirmar que todos os dados do registro :bi:`Person`, relacionado à Pessoa, serão mantidos.
 
-    #. Confirmar que todos os dados dos registros :bi:`Address`, relacionados ao Endereço da Pessoa, serão mantidos.
+    #. Confirmar que todos os dados do registro :bi:`Address`, relacionado ao Endereço da Pessoa, serão mantidos.
 
-    #. :green:`(Opcional)` Confirmar que todos os dados dos registros :bi:`Family`, relacionados à Família da Pessoa, serão mantidos.
+    #. :green:`(Opcional)` Confirmar que todos os dados do registro :bi:`Family`, relacionado à Família da Pessoa, serão mantidos.
 
     #. A partir do registro :bi:`Person` encontrado, exercutar a Ação ":bi:`Person Associate to Person (Aux)`":
 
@@ -42,7 +42,6 @@ Procedimentos
 
             * *Create new Person (Aux)*: **habilitado**
             * *Create new Family (Aux)*: **habilitado**
-            * *Create new Address (Aux)*: **habilitado**
 
         #. Utilizar o botão [:bi:`Associate do Perton (Aux)`] para executar a Ação.
 
@@ -51,22 +50,6 @@ Procedimentos
     #. Abrir o registro :bi:`Address (Aux)` associado ao campo *Address (Aux)*:
 
         #. Não será necessário a execução de qualquer procedimento adicional no registro :bi:`Address (Aux)`.
-
-        #. Alterar o :bi:`Register State` para ":bi:`Revised`", utilizando o botão [:bi:`Revised`].
-
-    #. Retornar ao registro :bi:`Person (Aux)`.
-
-    #. :green:`(Opcional)` A partir do registro :bi:`Person (Aux)` exercutar a Ação ":bi:`Person (Aux) Associate to Family (Aux)`":
-
-        #. Parâmetros apresentados:
-
-            * *Create new Family (Aux)*: **habilitado**
-
-        #. Utilizar o botão [:bi:`Associate do Family (Aux)`]  para executar a Ação.
-
-    #. :green:`(Opcional)` Abrir o registro :bi:`Family (Aux)` associado à Pessoa apresentado na *view* :bi:`Families (Aux)`.
-
-        #. Não será necessário a execução de qualquer procedimento adicional no registro :bi:`Family (Aux)`.
 
         #. Alterar o :bi:`Register State` para ":bi:`Revised`", utilizando o botão [:bi:`Revised`].
 

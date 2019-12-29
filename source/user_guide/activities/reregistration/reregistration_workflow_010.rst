@@ -14,7 +14,7 @@
 Procura pelas **Entidades** nos **Cadastros** existentes
 ========================================================
 
-De posse dos dados referentes a uma Pessoa, o primeiro passo é a pesquisa pela existência prévia de registros relacionados a essa Pessoa tanto no **Cadastro** quanto no **Cadastro Auxiliar**.
+De posse dos dados referentes a uma Entidade, o primeiro passo é a pesquisa pela existência prévia de registros relacionados a essa Entidade tanto no **Cadastro** quanto no **Cadastro Auxiliar**.
 
 Após a execução da pesquisa por uma Pessoa:
 
@@ -25,16 +25,6 @@ Após a execução da pesquisa por uma Pessoa:
     * Uma Pessoa será declarada como "**em fase de recadastramento**"" quando estiver associada a um registro ":bi:`Person (Aux)`" com informações que não tenham ainda sido consolidadas em um registro ":bi:`Person`" a ela asssociado.
 
     * Uma Pessoa será declarada como "**recadastrada**"" quando estiver associada a um registro ":bi:`Person (Aux)`" com informações que já tenham sido consolidadas em um registro ":bi:`Person`" a ela asssociado.
-
-Após a execução da pesquisa por uma Família:
-
-    * Uma Família será declarada como "**já cadastrada**" quando estiver associada a um registro ":bi:`Family`", independentemente de estar ou não associada a um registro ":bi:`Family (Aux)`".
-
-    * Uma Família será declarada como "**não cadastrada**" quando não estiver associada a um registro ":bi:`Family`", independentemente de estar ou não associada a um registro ":bi:`Family (Aux)`".
-
-    * Uma Família será declarada como "**em fase de recadastramento**"" quando estiver associada a um registro ":bi:`Family (Aux)`" com informações que não tenham ainda sido consolidadas em um registro ":bi:`Family`"" a ela asssociado.
-
-    * Uma Família será declarada como "**recadastrada**"" quando estiver associada a um registro ":bi:`Family (Aux)`" com informações que já tenham sido consolidadas em um registro ":bi:`Family`"" a ela asssociado.
 
 Após a execução da pesquisa por um Endereço:
 

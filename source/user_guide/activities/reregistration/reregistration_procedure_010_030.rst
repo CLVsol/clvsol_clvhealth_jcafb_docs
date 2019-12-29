@@ -21,6 +21,7 @@ Procura por uma Família em **Contatos**
         #. Acessar a *view* **Contatos**:
 
             * Menu de acesso:
+
                 * **Contatos** » **Contatos**
 
         #. Selecionar a **visualização em lista**.
@@ -29,29 +30,13 @@ Procura por uma Família em **Contatos**
 
         #. Pesquisar pela Família.
 
-    #. **Caso um registro associado a essa Família seja encontrado** com *Address Type* ":bi:`Family`", independentemente da existência ou não de um registro com *Address Type* ":bi:`Family (Aux)`":
+    #. **Caso um registro associado a essa Família seja encontrado** com *Address Type* ":bi:`Family`":
 
         #. Abrir o registro de contato encontrado com *Address Type* ":bi:`Family`.
 
         #. Acionar o botão **[** :bi:`Family` **]**.
 
         #. Utilizar o registro associado à Família apresentado na *view* :bi:`Families`.
-
-        #. A Família é declarada como "**já cadastrada**".
-
-    #. **Caso um registro associado a essa Família seja encontrado** somente com *Address Type* ":bi:`Family (Aux)`":
-
-        #. Abrir o registro de contato encontrado com *Address Type* ":bi:`Family (Aux)`".
-
-        #. Acionar o botão **[** :bi:`Family (Aux)` **]**.
-
-        #. Utilizar o registro associado à Família apresentado na *view* :bi:`Families (Aux)`.
-
-        #. A Família será declarada como **em fase de recadastramento**.
-
-    #.  **Caso um registro associado a essa Família NÃO seja encontrado** com qualquer *Address Type*:
-
-        #. A Família será declarada como "**não cadastrada**".
 
 .. toctree::
    :maxdepth: 2
