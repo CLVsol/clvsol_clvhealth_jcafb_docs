@@ -9,7 +9,7 @@
 .. role:: bi
 
 ============================
-2019-12-(12-23) (JCAFB-2020)
+2019-12-(12-31) (JCAFB-2020)
 ============================
 
 Restaurar um backup do *CLVhealth-JCAFB-2020* [clvheatlh-jcafb-2020-aws-tst] (2019-12-15a)
