@@ -57,8 +57,6 @@ Fluxo de Trabalho (*Workflow*)
 
     #. Registro :bi:`Person (Aux)`:
 
-        #. Associar o registro :bi:`Address (Aux)` criado ao campo *Address (Aux)*.
-
         #. Preencher os campos de *Contact Information* com informações que indiquem o novo Endereço da Pessoa fora da comunidade.
 
     O processamento deste *Workflow* é executado utilizando o procedimento ":doc:`reregistration_procedure_020_020_030`".
