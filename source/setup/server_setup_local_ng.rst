@@ -427,6 +427,21 @@ Replace the Odoo installation (Odoo 12.0)
             # data_dir = /var/lib/odoo/.local/share/Odoo
             data_dir = /var/lib/odoo/.local/share/Odoo
 
+#. Configure "server_wide_modules"
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        * `[odoo12.0] How the api_integration works using python3 for odoov12?  <https://www.odoo.com/fr_FR/forum/aide-1/question/odoo12-0-how-the-api-integration-works-using-python3-for-odoov12-141915>`_
+
+        ::
+
+            server_wide_modules = web
+
+        ::
+
+            # server_wide_modules = web
+            server_wide_modules = None
+
 Installation of project modules
 -------------------------------
 
@@ -589,6 +604,26 @@ Installation of external modules
         ::
 
             pip3 install suds-py3
+
+    #. To install "`erpbrasil.base <https://pypi.org/project/erpbrasil.base/>`_", use the following commands (as root):
+
+        ::
+
+            ssh tkl-odoo12-jcafb-ng-vm -l root
+
+        ::
+
+            pip3 install erpbrasil.base
+
+    #. To install "`pycep-correios <https://pypi.org/project/pycep-correios/>`_", use the following commands (as root):
+
+        ::
+
+            ssh tkl-odoo12-jcafb-ng-vm -l root
+
+        ::
+
+            pip3 install pycep-correios
 
     #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
 
