@@ -12,6 +12,7 @@ Documentação do *CLVhealth-JCAFB-2020*
    setup/index
    servers/index
    jcafb_2020/index
+   jcafb_2021/index
    this_documentation/index
    references/index
    general_index
