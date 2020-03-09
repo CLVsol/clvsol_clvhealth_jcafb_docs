@@ -18,3 +18,4 @@ Histórico (Manutenção do Banco de Dados - JCAFB-2020)
    jcafb_2020_history_210
    jcafb_2020_history_211
    jcafb_2020_history_212
+   jcafb_2020_history_213
