@@ -9,7 +9,7 @@
 .. role:: bi
 
 =============================================================
-[2020-03-(02-27)] - Preparação do Banco de Dados - JCAFB-2020
+[2020-03-(02-28)] - Preparação do Banco de Dados - JCAFB-2020
 =============================================================
 
 Atualizar os fontes do projeto (2020-03-02)
@@ -268,24 +268,24 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2020-03-02a)
 
     * Referência: :doc:`/setup/clvhealth_jcafb_backup`.
 
-    #. [clvheatlh-jcafb-2020-aws-pro] Estabelecer uma sessão ssh com o servidor **clvheatlh-jcafb-2020-aws-pro** e paralizar o *Odoo*:
+    #. [tkl-odoo12-jcafb-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-vm** e paralizar o *Odoo*:
 
         ::
 
-            # ***** clvheatlh-jcafb-2020-aws-pro
+            # ***** tkl-odoo12-jcafb-vm
             #
 
-            ssh clvheatlh-jcafb-2020-aws-pro -l root
+            ssh tkl-odoo12-jcafb-vm -l root
 
             /etc/init.d/odoo stop
 
             su odoo
 
-    #. [clvheatlh-jcafb-2020-aws-pro] Executar os comandos de criação dos arquivos de backup:
+    #. [tkl-odoo12-jcafb-vm] Executar os comandos de criação dos arquivos de backup:
 
         ::
 
-            # ***** clvheatlh-jcafb-2020-aws-pro
+            # ***** tkl-odoo12-jcafb-vm
             #
             # data_dir = /var/lib/odoo/.local/share/Odoo
             #
@@ -302,11 +302,11 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2020-03-02a)
             cd /opt/odoo/clvsol_filestore
             tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2020-03-02a.tar.gz clvhealth_jcafb
 
-    #. Retornar a execução do *Odoo* do servidor **clvheatlh-jcafb-2020-aws-pro** ao modo desejado:
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
 
         ::
 
-            # ***** clvheatlh-jcafb-2020-aws-pro
+            # ***** tkl-odoo12-jcafb-vm
             #
 
             cd /opt/odoo
@@ -395,24 +395,24 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2020-03-02b)
 
     * Referência: :doc:`/setup/clvhealth_jcafb_backup`.
 
-    #. [clvheatlh-jcafb-2020-aws-pro] Estabelecer uma sessão ssh com o servidor **clvheatlh-jcafb-2020-aws-pro** e paralizar o *Odoo*:
+    #. [tkl-odoo12-jcafb-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-vm** e paralizar o *Odoo*:
 
         ::
 
-            # ***** clvheatlh-jcafb-2020-aws-pro
+            # ***** tkl-odoo12-jcafb-vm
             #
 
-            ssh clvheatlh-jcafb-2020-aws-pro -l root
+            ssh tkl-odoo12-jcafb-vm -l root
 
             /etc/init.d/odoo stop
 
             su odoo
 
-    #. [clvheatlh-jcafb-2020-aws-pro] Executar os comandos de criação dos arquivos de backup:
+    #. [tkl-odoo12-jcafb-vm] Executar os comandos de criação dos arquivos de backup:
 
         ::
 
-            # ***** clvheatlh-jcafb-2020-aws-pro
+            # ***** tkl-odoo12-jcafb-vm
             #
             # data_dir = /var/lib/odoo/.local/share/Odoo
             #
@@ -429,11 +429,11 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2020-03-02b)
             cd /opt/odoo/clvsol_filestore
             tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2020-03-02b.tar.gz clvhealth_jcafb
 
-    #. Retornar a execução do *Odoo* do servidor **clvheatlh-jcafb-2020-aws-pro** ao modo desejado:
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
 
         ::
 
-            # ***** clvheatlh-jcafb-2020-aws-pro
+            # ***** tkl-odoo12-jcafb-vm
             #
 
             cd /opt/odoo
@@ -532,6 +532,145 @@ Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" 
             * "**http://tkl-odoo12-jcafb-vm**".
 
         #. Salvar o registro editado.
+
+Atualizar o *Person History* de todas as Pessoas (2020-03-28)
+-------------------------------------------------------------
+
+    * Referência: :doc:`/user_guide/community/person/person_person_history_updt`.
+
+    #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Person History Update` para todas as Pessoas:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
+
+        #. Acessar a *View* *Persons*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Persons`
+
+        #. Selecionar todas as Pessoas (**1540**)
+
+        #. Exercutar a Ação ":bi:`Person History Update`":
+
+            * Parâmetros utilizados:
+
+                * *Sign out date*: **01/03/2020**
+                * *Sign in date*: **01/11/2019**
+
+            #. Utilize o botão :bi:`Person History Update` para executar a Ação.
+
+Atualizar o *Address History* de todos os Endereços (2020-03-28)
+----------------------------------------------------------------
+
+    * Referência: :doc:`/user_guide/community/address/address_address_history_updt`.
+
+    #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Address History Update` para todos os Endereços:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
+
+        #. Acessar a *View* *Addresss*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Addresss`
+
+        #. Selecionar todos os Endereços (**665**)
+
+        #. Exercutar a Ação ":bi:`Address History Update`":
+
+            * Parâmetros utilizados:
+
+                * *Sign out date*: **01/03/2020**
+                * *Sign in date*: **01/11/2019**
+
+            #. Utilize o botão :bi:`Address History Update` para executar a Ação.
+
+Atualizar o *Family History* de todas as Famílias (2020-03-28)
+--------------------------------------------------------------
+
+    * Referência: :doc:`/user_guide/community/family/family_family_history_updt`.
+
+    #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Family History Update` para todas as Famílias:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
+
+        #. Acessar a *View* *Families*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Families`
+
+        #. Selecionar todas as Famílias (**441**)
+
+        #. Exercutar a Ação ":bi:`Family History Update`":
+
+            * Parâmetros utilizados:
+
+                * *Sign out date*: **01/03/2020**
+                * *Sign in date*: **01/11/2019**
+
+            #. Utilize o botão :bi:`Family History Update` para executar a Ação.
+
+Criar um backup do *CLVhealth-JCAFB-2020* (2020-03-28a)
+-------------------------------------------------------
+
+    * Referência: :doc:`/setup/clvhealth_jcafb_backup`.
+
+    #. [tkl-odoo12-jcafb-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-vm
+            #
+
+            ssh tkl-odoo12-jcafb-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo12-jcafb-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2020-03-28a.sql
+
+            gzip clvhealth_jcafb_2020_2020-03-28a.sql
+            pg_dump clvhealth_jcafb_2020 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_2020-03-28a.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_2020-03-28a.tar.gz clvhealth_jcafb_2020
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2020-03-28a.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+        * /opt/odoo/clvhealth_jcafb_2020_2020-03-28a.sql
+        * /opt/odoo/clvhealth_jcafb_2020_2020-03-28a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2020_2020-03-28a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2020-03-28a.tar.gz
 
 .. toctree::
    :maxdepth: 2
