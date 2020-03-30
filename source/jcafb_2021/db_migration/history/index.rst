@@ -7,3 +7,4 @@ Histórico (Migração do Banco de Dados - JCAFB-2021)
    :caption: Contents:
 
    jcafb_2020_ng_history_001
+   jcafb_2020_ng_history_002
