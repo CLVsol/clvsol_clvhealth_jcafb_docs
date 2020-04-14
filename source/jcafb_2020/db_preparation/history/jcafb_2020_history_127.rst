@@ -451,10 +451,6 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2020-03-02b)
         * /opt/odoo/filestore_clvhealth_jcafb_2020_2020-03-02b.tar.gz
         * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2020-03-02b.tar.gz
 
-.. index:: clvhealth_jcafb_2020_2020-03-02b.sql
-.. index:: filestore_clvhealth_jcafb_2020_2020-03-02b
-.. index:: clvsol_filestore_clvhealth_jcafb_2020-03-02b
-
 Restaurar um backup do *CLVhealth-JCAFB-2020* no servidor "tkl-odoo12-jcafb-vm" (2020-03-02b)
 ---------------------------------------------------------------------------------------------
 
