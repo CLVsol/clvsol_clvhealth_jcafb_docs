@@ -9,10 +9,10 @@
 .. role:: bi
 
 ==================================================================================================
-[2020-03-(05-30)] - Migração do Banco de Dados - JCAFB-2020-NG - Servidor [tkl-odoo12-jcafb-ng-vm]
+[2020-05-(01-02)] - Migração do Banco de Dados - JCAFB-2020-NG - Servidor [tkl-odoo12-jcafb-ng-vm]
 ==================================================================================================
 
-Atualizar o Odoo (2020-03-30)
+Atualizar o Odoo (2020-04-30)
 -----------------------------
 
 	#. [tkl-odoo12-jcafb-ng-vm] Upgrade the server software:
@@ -30,7 +30,7 @@ Atualizar o Odoo (2020-03-30)
 
 	        exit
 
-Atualizar o `OCA/l10n-brazil <https://github.com/OCA/l10n-brazil>`_ (2020-03-30)
+Atualizar o `OCA/l10n-brazil <https://github.com/OCA/l10n-brazil>`_ (2020-04-30)
 --------------------------------------------------------------------------------
 
 	#. [tkl-odoo12-jcafb-ng-vm] To install "**OCA/l10n-brazil**", use the following commands (as odoo):
@@ -48,7 +48,7 @@ Atualizar o `OCA/l10n-brazil <https://github.com/OCA/l10n-brazil>`_ (2020-03-30)
 
 	        exit
 
-:red:`(Não Executado])` Desabilitar a instalação do(s) módulo(s) [ver lista] (2020-03-30)
+:red:`(Não Executado])` Desabilitar a instalação do(s) módulo(s) [ver lista] (2020-04-30)
 -----------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
@@ -73,8 +73,10 @@ Atualizar o `OCA/l10n-brazil <https://github.com/OCA/l10n-brazil>`_ (2020-03-30)
         * clv_document_sync_jcafb
         * clv_lab_test_sync_jcafb
         * clv_verification_sync_jcafb
+        * clv_set_sync_jcafb
+        * clv_export_sync_jcafb
 
-Criar uma nova instância do *CLVhealth-JCAFB-2020-NG* (2020-03-30)
+Criar uma nova instância do *CLVhealth-JCAFB-2020-NG* (2020-04-30)
 ------------------------------------------------------------------
 
     #. [tkl-odoo12-jcafb-ng-vm] Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo12-jcafb-ng-vm** e paralizar o *Odoo*:
@@ -143,7 +145,7 @@ Criar uma nova instância do *CLVhealth-JCAFB-2020-NG* (2020-03-30)
 
             /etc/init.d/odoo start
 
-Migrar os Usuários de **clvhealth_jcafb_2020** para **clvhealth_jcafb_2020_ng** (2020-03-30)
+Migrar os Usuários de **clvhealth_jcafb_2020** para **clvhealth_jcafb_2020_ng** (2020-04-30)
 --------------------------------------------------------------------------------------------
 
     #. Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-ng-vm** e executar o **res_users_migration.py**, acessando o servidor **tkl-odoo12-jcafb-ng-vm** [base de dados **clvhealth_jcafb_2020**]:
@@ -162,7 +164,7 @@ Migrar os Usuários de **clvhealth_jcafb_2020** para **clvhealth_jcafb_2020_ng**
 
     * Os "passwords" não foram migrados.
         
-Criar o *External Sync Host* "https://192.168.25.183" (2020-03-30)
+Criar o *External Sync Host* "https://192.168.25.183" (2020-04-30)
 ------------------------------------------------------------------
 
         #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-ng-vm <https://tkl-odoo12-jcafb-ng-vm>`_
@@ -180,8 +182,8 @@ Criar o *External Sync Host* "https://192.168.25.183" (2020-03-30)
                 * External User: "**admin**"
                 * External User Password: "*******"
 
-:red:`(Não Executado])` Criar um backup do banco de dados *CLVhealth-JCAFB-2020_NG* (2020-03-30a)
--------------------------------------------------------------------------------------------------
+Criar um backup do banco de dados *CLVhealth-JCAFB-2020_NG* (2020-04-30a)
+-------------------------------------------------------------------------
 
 	* Referência: :doc:`/setup/clvhealth_jcafb_backup`.
 
@@ -208,16 +210,16 @@ Criar o *External Sync Host* "https://192.168.25.183" (2020-03-30)
 	        #
 
 	        cd /opt/odoo
-	        pg_dump clvhealth_jcafb_2020_ng -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_ng_2020-03-30a.sql
+	        pg_dump clvhealth_jcafb_2020_ng -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_ng_2020-04-30a.sql
 
-	        gzip clvhealth_jcafb_2020_ng_2020-03-30a.sql
-	        pg_dump clvhealth_jcafb_2020_ng -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_ng_2020-03-30a.sql
+	        gzip clvhealth_jcafb_2020_ng_2020-04-30a.sql
+	        pg_dump clvhealth_jcafb_2020_ng -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_ng_2020-04-30a.sql
 
 	        cd /var/lib/odoo/.local/share/Odoo/filestore
-	        tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_ng_2020-03-30a.tar.gz clvhealth_jcafb_2020_ng
+	        tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_ng_2020-04-30a.tar.gz clvhealth_jcafb_2020_ng
 
 	        cd /opt/odoo/clvsol_filestore
-	        tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2020_ng_2020-03-30a.tar.gz clvhealth_jcafb
+	        tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2020_ng_2020-04-30a.tar.gz clvhealth_jcafb
 
 	#. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-ng-vm** ao modo desejado:
 
@@ -236,16 +238,16 @@ Criar o *External Sync Host* "https://192.168.25.183" (2020-03-30)
 	        /etc/init.d/odoo start
 
     Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2020_ng_2020-03-30a.sql
-        * /opt/odoo/clvhealth_jcafb_2020_ng_2020-03-30a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2020_ng_2020-03-30a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2020_ng_2020-03-30a.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2020_ng_2020-04-30a.sql
+        * /opt/odoo/clvhealth_jcafb_2020_ng_2020-04-30a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2020_ng_2020-04-30a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2020_ng_2020-04-30a.tar.gz
 
-.. index:: clvhealth_jcafb_2020_ng_2020-03-30a.sql
-.. index:: filestore_clvhealth_jcafb_2020_ng_2020-03-30a
-.. index:: clvsol_filestore_clvhealth_jcafb_2020_ng_2020-03-30a
+.. index:: clvhealth_jcafb_2020_ng_2020-04-30a.sql
+.. index:: filestore_clvhealth_jcafb_2020_ng_2020-04-30a
+.. index:: clvsol_filestore_clvhealth_jcafb_2020_ng_2020-04-30a
 
-:red:`(Não Executado])` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2020-NG* (2020-03-30a)
+:red:`(Não Executado])` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2020-NG* (2020-04-30a)
 -----------------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
@@ -271,22 +273,22 @@ Criar o *External Sync Host* "https://192.168.25.183" (2020-03-30)
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2020_ng_2020-03-30a.sql.gz
+            # gzip -d clvhealth_jcafb_2020_ng_2020-04-30a.sql.gz
 
             dropdb -i clvhealth_jcafb_2020_ng
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2020_ng
-            psql -f clvhealth_jcafb_2020_ng_2020-03-30a.sql -d clvhealth_jcafb_2020_ng -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2020_ng_2020-04-30a.sql -d clvhealth_jcafb_2020_ng -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2020_ng
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_ng_2020-03-30a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_ng_2020-04-30a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2020_ng_2020-03-30a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2020_ng_2020-04-30a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-ng-vm** ao modo desejado:
 
@@ -324,7 +326,7 @@ Criar o *External Sync Host* "https://192.168.25.183" (2020-03-30)
 
         #. Salvar o registro editado.
 
-:red:`(Não Executado])` Instalar o(s) módulo(s) [ver lista] (2020-03-30)
+:red:`(Não Executado])` Instalar o(s) módulo(s) [ver lista] (2020-04-30)
 ------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/module_installation`.
@@ -349,6 +351,8 @@ Criar o *External Sync Host* "https://192.168.25.183" (2020-03-30)
         * clv_document_sync_jcafb
         * clv_lab_test_sync_jcafb
         * clv_verification_sync_jcafb
+        * clv_set_sync_jcafb
+        * clv_export_sync_jcafb
 
     #. [tkl-odoo12-jcafb-ng-vm] **Executar** a instalação do(s) Módulo(s) adicionado(s)/habilitado(s):
 
@@ -398,9 +402,9 @@ Criar o *External Sync Host* "https://192.168.25.183" (2020-03-30)
 
                 /etc/init.d/odoo start
 
-.. _Lista de Schedules 20200330:
+.. _Lista de Schedules 20200430:
 
-Lista de *Schedules* instalados (2020-03-30)
+Lista de *Schedules* instalados (2020-04-30)
 --------------------------------------------
 
     * Lista de *Schedules* instalados:
@@ -464,7 +468,22 @@ Lista de *Schedules* instalados (2020-03-30)
 
         * :green:`(Enabled)` clv.verification.marker (clv.verification.marker)
 
-Executar o *External Sync Batch* "*Default Batch*" (2020-03-30)
+        * :green:`(Enabled)` clv.set (clv.set)
+        * :green:`(Enabled)` clv.set.element (clv.set.element)
+
+        * :green:`(Enabled)` ir.model (ir.model)
+        * :green:`(Enabled)` ir.model.fields (ir.model.fields)
+
+        * :green:`(Enabled)` clv.model_export.template (clv.model_export.template)
+        * :green:`(Enabled)` clv.model_export.template.field (clv.model_export.template.field)
+        * :green:`(Enabled)` clv.model_export.template.document_item (clv.model_export.template.document_item)
+        * :green:`(Enabled)` clv.model_export.template.lab_test_criterion (clv.model_export.template.lab_test_criterion)
+        * :green:`(Enabled)` clv.model_export (clv.model_export)
+        * :green:`(Enabled)` clv.model_export.field (clv.model_export.field)
+        * :green:`(Enabled)` clv.model_export.document_item (clv.model_export.document_item)
+        * :green:`(Enabled)` clv.model_export.lab_test_criterion (clv.model_export.lab_test_criterion)
+
+Executar o *External Sync Batch* "*Default Batch*" (2020-04-30)
 ---------------------------------------------------------------
 
     #. [tkl-odoo12-jcafb-ng-vm] Configurar os :bi:`External Sync Schedules` :green:`Novos`:
@@ -475,7 +494,7 @@ Executar o *External Sync Batch* "*Default Batch*" (2020-03-30)
 
             * Lista de *Schedules*:
                 
-                * :ref:`Lista de Schedules 20200330`
+                * :ref:`Lista de Schedules 20200430`
 
             * Menu de acesso:
                 
@@ -514,11 +533,11 @@ Executar o *External Sync Batch* "*Default Batch*" (2020-03-30)
 
             * *Members*:
                 
-                * :ref:`Lista de Schedules 20200330`
+                * :ref:`Lista de Schedules 20200430`
 
             * *Synchronization Log*:
                 
-                * :ref:`External Sync Batch - Default Batch - 20200330`
+                * :ref:`External Sync Batch - Default Batch - 20200430`
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-ng-vm** ao modo padrão:
 
@@ -533,7 +552,230 @@ Executar o *External Sync Batch* "*Default Batch*" (2020-03-30)
 
             /etc/init.d/odoo start
 
-Executar o *External Sync Batch* "*Default Batch*" (2) (2020-03-30)
+Lista de *Schedules* executados (2020-04-30)
+--------------------------------------------
+
+    * Lista de *Schedules* instalados:
+
+        * :green:`[Execution time: 0:00:08.993]` res.country (res.country)
+        * :green:`[Execution time: 0:00:20.868]` res.country.state (res.country.state)
+        * :green:`[Execution time: 0:03:17.597]` res.city (res.city)
+
+        * :green:`[Execution time: 0:00:08.648]` res.users (res.users)
+
+        * :green:`[Execution time: 0:00:01.466]` clv.global_tag (clv.global_tag)
+
+        * :green:`[Execution time: 0:00:00.406]` clv.phase (clv.phase)
+
+        * :green:`[Execution time: 0:00:03.482]` hr.department (hr.department)
+        * :green:`[Execution time: 0:00:01.349]` hr.job (hr.job)
+        * :green:`[Execution time: 0:00:30.890]` hr.employee (hr.employee)
+        * :green:`[Execution time: 0:00:11.979]` hr.employee.history (hr.employee.history)
+
+        * :green:`[Execution time: 0:00:00.271]` clv.address.category (clv.address.category)
+        * :green:`[Execution time: 0:01:50.870]` clv.address (clv.address)
+        * :green:`[Execution time: 0:01:38.291]` clv.address.history (clv.address.history)
+
+        * :green:`[Execution time: 0:00:33.808]` clv.address.aux (clv.address.aux)
+
+        * :green:`[Execution time: 0:00:00.184]` clv.family.category (clv.family.category)
+        * :green:`[Execution time: 0:01:04.967]` clv.family (clv.family)
+        * :green:`[Execution time: 0:00:46.423]` clv.family.history (clv.family.history)
+
+        * :green:`[Execution time: 0:00:00.263]` clv.person.category (clv.person.category)
+        * :green:`[Execution time: 0:00:00.351]` clv.person.marker (clv.person.marker)
+        * :green:`[Execution time: 0:04:38.947]` clv.person (clv.person)
+        * :green:`[Execution time: 0:05:18.981]` clv.person.history (clv.person.history)
+
+        * :green:`[Execution time: 0:02:02.485]` clv.person.aux (clv.person.aux)
+
+        * :green:`[Execution time: 0:00:00.417]` survey.stage (survey.stage)
+        * :green:`[Execution time: 0:00:03.680]` survey.survey (survey.survey)
+        * :green:`[Execution time: 0:00:10.273]` survey.page (survey.page)
+        * :green:`[Execution time: 0:00:53.991]` survey.question (survey.question)
+        * :green:`[Execution time: 0:02:24.425]` survey.label (survey.label)
+        * :green:`[Execution time: 0:04:03.935]` survey.user_input (survey.user_input)
+        * :red:`[Execution time: 4:49:22.883]` survey.user_input_line (survey.user_input_line)
+
+        * :green:`[Execution time: 0:00:01.731]` clv.event (clv.event)
+        * :green:`[Execution time: 0:01:07.809]` clv.event.attendee (clv.event.attendee)
+
+        * :green:`[Execution time: 0:00:00.567]` clv.document.category (clv.document.category)
+        * :green:`[Execution time: 0:00:03.035]` clv.document.type (clv.document.type)
+        * :green:`[Execution time: 0:13:34.838]` clv.document (clv.document)
+        * :red:`[Execution time: 4:36:23.207]` clv.document.item (clv.document.item)
+
+        * :green:`[Execution time: 0:00:00.528]` clv.lab_test.unit (clv.lab_test.unit)
+        * :green:`[Execution time: 0:00:00.622]` clv.lab_test.parasite (clv.lab_test.parasite)
+        * :green:`[Execution time: 0:00:00.524]` clv.lab_test.crystal (clv.lab_test.crystal)
+        * :green:`[Execution time: 0:00:01.181]` clv.lab_test.type (clv.lab_test.type)
+        * :green:`[Execution time: 0:05:25.819]` clv.lab_test.request (clv.lab_test.request)
+        * :green:`[Execution time: 0:04:43.400]` clv.lab_test.result (clv.lab_test.result)
+        * :green:`[Execution time: 0:03:16.983]` clv.lab_test.report (clv.lab_test.report)
+        * :red:`[Execution time: 3:00:10.402]` clv.lab_test.criterion (clv.lab_test.criterion)
+
+        * :green:`[Execution time: 0:00:00.813]` clv.verification.marker (clv.verification.marker)
+
+        * :green:`[Execution time: 0:00:00.277]` clv.set (clv.set)
+        * :green:`[Execution time: 0:00:42.521]` clv.set.element (clv.set.element)
+
+        * :green:`[Execution time: 0:00:11.053]` ir.model (ir.model)
+        * :green:`[Execution time: 0:03:41.626]` ir.model.fields (ir.model.fields)
+
+        * :green:`[Execution time: 0:00:00.884]` clv.model_export.template (clv.model_export.template)
+        * :green:`[Execution time: 0:00:03.997]` clv.model_export.template.field (clv.model_export.template.field)
+        * :green:`[Execution time: 0:00:11.147]` clv.model_export.template.document_item (clv.model_export.template.document_item)
+        * :green:`[Execution time: 0:00:09.802]` clv.model_export.template.lab_test_criterion (clv.model_export.template.lab_test_criterion)
+        * :green:`[Execution time: 0:00:03.456]` clv.model_export (clv.model_export)
+        * :green:`[Execution time: 0:00:04.320]` clv.model_export.field (clv.model_export.field)
+        * :green:`[Execution time: 0:00:12.712]` clv.model_export.document_item (clv.model_export.document_item)
+        * :green:`[Execution time: 0:00:10.154]` clv.model_export.lab_test_criterion (clv.model_export.lab_test_criterion)
+
+Criar um backup do banco de dados *CLVhealth-JCAFB-2020_NG* (2020-04-30b)
+-------------------------------------------------------------------------
+
+    * Referência: :doc:`/setup/clvhealth_jcafb_backup`.
+
+    #. [tkl-odoo12-jcafb-ng-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-ng-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-ng-vm
+            #
+
+            ssh tkl-odoo12-jcafb-ng-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo12-jcafb-ng-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-ng-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2020_ng -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_ng_2020-04-30b.sql
+
+            gzip clvhealth_jcafb_2020_ng_2020-04-30b.sql
+            pg_dump clvhealth_jcafb_2020_ng -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_ng_2020-04-30b.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_ng_2020-04-30b.tar.gz clvhealth_jcafb_2020_ng
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2020_ng_2020-04-30b.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-ng-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-ng-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+        * /opt/odoo/clvhealth_jcafb_2020_ng_2020-04-30b.sql
+        * /opt/odoo/clvhealth_jcafb_2020_ng_2020-04-30b.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2020_ng_2020-04-30b.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2020_ng_2020-04-30b.tar.gz
+
+.. index:: clvhealth_jcafb_2020_ng_2020-04-30b.sql
+.. index:: filestore_clvhealth_jcafb_2020_ng_2020-04-30b
+.. index:: clvsol_filestore_clvhealth_jcafb_2020_ng_2020-04-30b
+
+:red:`(Não Executado])` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2020-NG* (2020-04-30b)
+-----------------------------------------------------------------------------------------------------
+
+    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
+
+    #. [tkl-odoo12-jcafb-ng-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-ng-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-ng-vm
+            #
+
+            ssh tkl-odoo12-jcafb-ng-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo12-jcafb-ng-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-ng-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2020_ng_2020-04-30b.sql.gz
+
+            dropdb -i clvhealth_jcafb_2020_ng
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2020_ng
+            psql -f clvhealth_jcafb_2020_ng_2020-04-30b.sql -d clvhealth_jcafb_2020_ng -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2020_ng
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_ng_2020-04-30b.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2020_ng_2020-04-30b.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-ng-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-ng-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [tkl-odoo12-jcafb-ng-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-ng-vm <https://tkl-odoo12-jcafb-ng-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**";
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**tkl-odoo12-jcafb-ng-vm**".
+
+        #. Salvar o registro editado.
+
+Executar o *External Sync Batch* "*Default Batch*" (2) (2020-04-30)
 -------------------------------------------------------------------
 
     #. [tkl-odoo12-jcafb-ng-vm] Configurar os :bi:`External Sync Schedules` :green:`Novos`:
@@ -544,7 +786,7 @@ Executar o *External Sync Batch* "*Default Batch*" (2) (2020-03-30)
 
             * Lista de *Schedules*:
                 
-                * :ref:`Lista de Schedules 20200330`
+                * :ref:`Lista de Schedules 20200430`
 
             * Menu de acesso:
                 
@@ -552,8 +794,7 @@ Executar o *External Sync Batch* "*Default Batch*" (2) (2020-03-30)
 
             * Parâmetros alterados:
                 
-                * *External Host*: "**https://192.168.25.183**"
-                * *Max Task Registers*: "**200.000**"
+                * *Disable Identification*: "*marcado**"
 
     #. Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-ng-vm** e executar o *Odoo* no modo manual:
 
@@ -583,11 +824,11 @@ Executar o *External Sync Batch* "*Default Batch*" (2) (2020-03-30)
 
             * *Members*:
                 
-                * :ref:`Lista de Schedules 20200330`
+                * :ref:`Lista de Schedules 20200430`
 
             * *Synchronization Log*:
                 
-                * :ref:`External Sync Batch - Default Batch - 20200330(2)`
+                * :ref:`External Sync Batch - Default Batch - 20200430(2)`
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-ng-vm** ao modo padrão:
 
@@ -602,69 +843,228 @@ Executar o *External Sync Batch* "*Default Batch*" (2) (2020-03-30)
 
             /etc/init.d/odoo start
 
-Lista de *Schedules* executados (2020-03-30)
---------------------------------------------
+Lista de *Schedules* executados (2) (2020-04-30)
+------------------------------------------------
 
     * Lista de *Schedules* instalados:
 
-        * :green:`[Execution time: 0:00:07.029]` res.country (res.country)
-        * :green:`[Execution time: 0:00:19.444]` res.country.state (res.country.state)
-        * :green:`[Execution time: 0:03:04.227]` res.city (res.city)
+        * :green:`[Execution time: 0:00:00.278]` res.country (res.country)
+        * :green:`[Execution time: 0:00:00.527]` res.country.state (res.country.state)
+        * :green:`[Execution time: 0:00:00.193]` res.city (res.city)
 
-        * :green:`[Execution time: 0:00:08.164]` res.users (res.users)
+        * :green:`[Execution time: 0:00:00.188]` res.users (res.users)
 
-        * :green:`[Execution time: 0:00:01.301]` clv.global_tag (clv.global_tag)
+        * :green:`[Execution time: 0:00:00.234]` clv.global_tag (clv.global_tag)
 
-        * :green:`[Execution time: 0:00:00.332]` clv.phase (clv.phase)
+        * :green:`[Execution time: 0:00:00.199]` clv.phase (clv.phase)
 
-        * :green:`[Execution time: 0:00:03.071]` hr.department (hr.department)
-        * :green:`[Execution time: 0:00:01.055]` hr.job (hr.job)
-        * :green:`[Execution time: 0:00:30.093]` hr.employee (hr.employee)
-        * :green:`[Execution time: 0:00:11.928]` hr.employee.history (hr.employee.history)
+        * :green:`[Execution time: 0:00:00.200]` hr.department (hr.department)
+        * :green:`[Execution time: 0:00:00.185]` hr.job (hr.job)
+        * :green:`[Execution time: 0:00:00.212]` hr.employee (hr.employee)
+        * :green:`[Execution time: 0:00:00.181]` hr.employee.history (hr.employee.history)
 
-        * :green:`[Execution time: 0:00:00.241]` clv.address.category (clv.address.category)
-        * :green:`[Execution time: 0:01:55.671]` clv.address (clv.address)
-        * :green:`[Execution time: 0:01:38.385]` clv.address.history (clv.address.history)
+        * :green:`[Execution time: 0:00:00.183]` clv.address.category (clv.address.category)
+        * :green:`[Execution time: 0:00:00.216]` clv.address (clv.address)
+        * :green:`[Execution time: 0:00:00.258]` clv.address.history (clv.address.history)
 
-        * :green:`[Execution time: 0:00:32.994]` clv.address.aux (clv.address.aux)
+        * :green:`[Execution time: 0:00:00.193]` clv.address.aux (clv.address.aux)
 
-        * :green:`[Execution time: 0:00:00.190]` clv.family.category (clv.family.category)
-        * :green:`[Execution time: 0:01:09.708]` clv.family (clv.family)
-        * :green:`[Execution time: 0:00:42.131]` clv.family.history (clv.family.history)
+        * :green:`[Execution time: 0:00:00.185]` clv.family.category (clv.family.category)
+        * :green:`[Execution time: 0:00:00.220]` clv.family (clv.family)
+        * :green:`[Execution time: 0:00:00.187]` clv.family.history (clv.family.history)
 
-        * :green:`[Execution time: 0:00:00.280]` clv.person.category (clv.person.category)
-        * :green:`[Execution time: 0:00:00.348]` clv.person.marker (clv.person.marker)
-        * :green:`[Execution time: 0:04:48.689]` clv.person (clv.person)
-        * :green:`[Execution time: 0:05:42.187]` clv.person.history (clv.person.history)
+        * :green:`[Execution time: 0:00:00.200]` clv.person.category (clv.person.category)
+        * :green:`[Execution time: 0:00:00.203]` clv.person.marker (clv.person.marker)
+        * :green:`[Execution time: 0:00:19.932]` clv.person (clv.person)
+        * :green:`[Execution time: 0:00:00.177]` clv.person.history (clv.person.history)
 
-        * :green:`[Execution time: 0:02:02.107]` clv.person.aux (clv.person.aux)
+        * :green:`[Execution time: 0:00:00.177]` clv.person.aux (clv.person.aux)
 
-        * :green:`[Execution time: 0:00:00.414]` survey.stage (survey.stage)
-        * :green:`[Execution time: 0:00:03.077]` survey.survey (survey.survey)
-        * :green:`[Execution time: 0:00:10.658]` survey.page (survey.page)
-        * :green:`[Execution time: 0:00:52.787]` survey.question (survey.question)
-        * :green:`[Execution time: 0:02:26.816]` survey.label (survey.label)
-        * :green:`[Execution time: 0:03:39.541]` survey.user_input (survey.user_input)
+        * :green:`[Execution time: 0:00:00.181]` survey.stage (survey.stage)
+        * :green:`[Execution time: 0:00:00.183]` survey.survey (survey.survey)
+        * :green:`[Execution time: 0:00:00.177]` survey.page (survey.page)
+        * :green:`[Execution time: 0:00:00.194]` survey.question (survey.question)
+        * :green:`[Execution time: 0:00:00.171]` survey.label (survey.label)
+        * :green:`[Execution time: 0:04:27.606]` survey.user_input (survey.user_input)
         * :red:`[Execution time: 4:49:22.883]` survey.user_input_line (survey.user_input_line)
 
-        * :green:`[Execution time: 0:00:01.786]` clv.event (clv.event)
-        * :green:`[Execution time: 0:01:02.931]` clv.event.attendee (clv.event.attendee)
+        * :green:`[Execution time: 0:00:00.215]` clv.event (clv.event)
+        * :green:`[Execution time: 0:00:00.185]` clv.event.attendee (clv.event.attendee)
 
-        * :green:`[Execution time: 0:00:00.488]` clv.document.category (clv.document.category)
-        * :green:`[Execution time: 0:00:01.904]` clv.document.type (clv.document.type)
-        * :green:`[Execution time: 0:13:26.957]` clv.document (clv.document)
+        * :green:`[Execution time: 0:00:00.187]` clv.document.category (clv.document.category)
+        * :green:`[Execution time: 0:00:00.188]` clv.document.type (clv.document.type)
+        * :green:`[Execution time: 0:00:00.216]` clv.document (clv.document)
         * :red:`[Execution time: 4:36:23.207]` clv.document.item (clv.document.item)
 
-        * :green:`[Execution time: 0:00:00.478]` clv.lab_test.unit (clv.lab_test.unit)
-        * :green:`[Execution time: 0:00:00.646]` clv.lab_test.parasite (clv.lab_test.parasite)
-        * :green:`[Execution time: 0:00:00.680]` clv.lab_test.crystal (clv.lab_test.crystal)
-        * :green:`[Execution time: 0:00:01.134]` clv.lab_test.type (clv.lab_test.type)
-        * :green:`[Execution time: 0:05:13.299]` clv.lab_test.request (clv.lab_test.request)
-        * :green:`[Execution time: 0:04:18.580]` clv.lab_test.result (clv.lab_test.result)
-        * :green:`[Execution time: 0:03:06.326]` clv.lab_test.report (clv.lab_test.report)
+        * :green:`[Execution time: 0:00:00.186]` clv.lab_test.unit (clv.lab_test.unit)
+        * :green:`[Execution time: 0:00:00.190]` clv.lab_test.parasite (clv.lab_test.parasite)
+        * :green:`[Execution time: 0:00:00.192]` clv.lab_test.crystal (clv.lab_test.crystal)
+        * :green:`[Execution time: 0:00:00.185]` clv.lab_test.type (clv.lab_test.type)
+        * :green:`[Execution time: 0:00:00.297]` clv.lab_test.request (clv.lab_test.request)
+        * :green:`[Execution time: 0:03:49.973]` clv.lab_test.result (clv.lab_test.result)
+        * :green:`[Execution time: 0:00:00.282]` clv.lab_test.report (clv.lab_test.report)
         * :red:`[Execution time: 3:00:10.402]` clv.lab_test.criterion (clv.lab_test.criterion)
 
-        * :green:`[Execution time: 0:00:00.764]` clv.verification.marker (clv.verification.marker)
+        * :green:`[Execution time: 0:00:00.290]` clv.verification.marker (clv.verification.marker)
+
+        * :green:`[Execution time: 0:00:00.244]` clv.set (clv.set)
+        * :green:`[Execution time: 0:00:00.223]` clv.set.element (clv.set.element)
+
+        * :green:`[Execution time: 0:00:00.679]` ir.model (ir.model)
+        * :green:`[Execution time: 0:00:10.256]` ir.model.fields (ir.model.fields)
+
+        * :green:`[Execution time: 0:00:00.202]` clv.model_export.template (clv.model_export.template)
+        * :green:`[Execution time: 0:00:00.196]` clv.model_export.template.field (clv.model_export.template.field)
+        * :green:`[Execution time: 0:00:10.834]` clv.model_export.template.document_item (clv.model_export.template.document_item)
+        * :green:`[Execution time: 0:00:10.219]` clv.model_export.template.lab_test_criterion (clv.model_export.template.lab_test_criterion)
+        * :green:`[Execution time: 0:00:00.171]` clv.model_export (clv.model_export)
+        * :green:`[Execution time: 0:00:00.183]` clv.model_export.field (clv.model_export.field)
+        * :green:`[Execution time: 0:00:11.125]` clv.model_export.document_item (clv.model_export.document_item)
+        * :green:`[Execution time: 0:00:10.171]` clv.model_export.lab_test_criterion (clv.model_export.lab_test_criterion)
+
+Criar um backup do banco de dados *CLVhealth-JCAFB-2020_NG* (2020-04-30c)
+-------------------------------------------------------------------------
+
+    * Referência: :doc:`/setup/clvhealth_jcafb_backup`.
+
+    #. [tkl-odoo12-jcafb-ng-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-ng-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-ng-vm
+            #
+
+            ssh tkl-odoo12-jcafb-ng-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo12-jcafb-ng-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-ng-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2020_ng -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_ng_2020-04-30c.sql
+
+            gzip clvhealth_jcafb_2020_ng_2020-04-30c.sql
+            pg_dump clvhealth_jcafb_2020_ng -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_ng_2020-04-30c.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_ng_2020-04-30c.tar.gz clvhealth_jcafb_2020_ng
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2020_ng_2020-04-30c.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-ng-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-ng-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+        * /opt/odoo/clvhealth_jcafb_2020_ng_2020-04-30c.sql
+        * /opt/odoo/clvhealth_jcafb_2020_ng_2020-04-30c.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2020_ng_2020-04-30c.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2020_ng_2020-04-30c.tar.gz
+
+.. index:: clvhealth_jcafb_2020_ng_2020-04-30c.sql
+.. index:: filestore_clvhealth_jcafb_2020_ng_2020-04-30c
+.. index:: clvsol_filestore_clvhealth_jcafb_2020_ng_2020-04-30c
+
+:red:`(Não Executado])` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2020-NG* (2020-04-30c)
+-----------------------------------------------------------------------------------------------------
+
+    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
+
+    #. [tkl-odoo12-jcafb-ng-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-ng-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-ng-vm
+            #
+
+            ssh tkl-odoo12-jcafb-ng-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo12-jcafb-ng-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-ng-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2020_ng_2020-04-30c.sql.gz
+
+            dropdb -i clvhealth_jcafb_2020_ng
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2020_ng
+            psql -f clvhealth_jcafb_2020_ng_2020-04-30c.sql -d clvhealth_jcafb_2020_ng -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2020_ng
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_ng_2020-04-30c.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2020_ng_2020-04-30c.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-ng-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-ng-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [tkl-odoo12-jcafb-ng-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-ng-vm <https://tkl-odoo12-jcafb-ng-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**";
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**tkl-odoo12-jcafb-ng-vm**".
+
+        #. Salvar o registro editado.
 
 .. toctree::
    :maxdepth: 2
