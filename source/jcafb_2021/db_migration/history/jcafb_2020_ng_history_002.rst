@@ -9,7 +9,7 @@
 .. role:: bi
 
 ==================================================================================================
-[2020-05-(01-06)] - Migração do Banco de Dados - JCAFB-2020-NG - Servidor [tkl-odoo12-jcafb-ng-vm]
+[2020-05-(01-08)] - Migração do Banco de Dados - JCAFB-2020-NG - Servidor [tkl-odoo12-jcafb-ng-vm]
 ==================================================================================================
 
 Atualizar o Odoo (2020-04-30)
@@ -167,20 +167,20 @@ Migrar os Usuários de **clvhealth_jcafb_2020** para **clvhealth_jcafb_2020_ng**
 Criar o *External Sync Host* "https://192.168.25.183" (2020-04-30)
 ------------------------------------------------------------------
 
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-ng-vm <https://tkl-odoo12-jcafb-ng-vm>`_
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-ng-vm <https://tkl-odoo12-jcafb-ng-vm>`_
 
-        #. Criar o *External Sync Host* **https://192.168.25.183**:
+    #. Criar o *External Sync Host* **https://192.168.25.183**:
 
-            * Menu de acesso:
-                
-                * *External Sync* > *Configuration* > *Hosts* > Criar
+        * Menu de acesso:
+            
+            * *External Sync* > *Configuration* > *Hosts* > Criar
 
-            * Parâmetros utilizados:
-                
-                * External Host Name: "**https://192.168.25.183**"
-                * External Database Name: "**clvhealth_jcafb_2020**"
-                * External User: "**admin**"
-                * External User Password: "*******"
+        * Parâmetros utilizados:
+            
+            * External Host Name: "**https://192.168.25.183**"
+            * External Database Name: "**clvhealth_jcafb_2020**"
+            * External User: "**admin**"
+            * External User Password: "*******"
 
 Criar um backup do banco de dados *CLVhealth-JCAFB-2020_NG* (2020-04-30a)
 -------------------------------------------------------------------------
@@ -2341,6 +2341,144 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2020_NG* (2020-05-06a)
 .. index:: clvhealth_jcafb_2020_ng_2020-05-06a.sql
 .. index:: filestore_clvhealth_jcafb_2020_ng_2020-05-06a
 .. index:: clvsol_filestore_clvhealth_jcafb_2020_ng_2020-05-06a
+
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2020-NG* (2020-05-06a)
+-----------------------------------------------------------------------------
+
+    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
+
+    #. [tkl-odoo12-jcafb-ng-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-ng-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-ng-vm
+            #
+
+            ssh tkl-odoo12-jcafb-ng-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo12-jcafb-ng-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-ng-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2020_ng_2020-05-06a.sql.gz
+
+            dropdb -i clvhealth_jcafb_2020_ng
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2020_ng
+            psql -f clvhealth_jcafb_2020_ng_2020-05-06a.sql -d clvhealth_jcafb_2020_ng -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2020_ng
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_ng_2020-05-06a.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2020_ng_2020-05-06a.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-ng-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-ng-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [tkl-odoo12-jcafb-ng-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-ng-vm <https://tkl-odoo12-jcafb-ng-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**";
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**tkl-odoo12-jcafb-ng-vm**".
+
+        #. Salvar o registro editado.
+
+Atualizar o(s) módulo(s) [ver lista] (2020-05-08)
+-------------------------------------------------
+
+    * Referência: :doc:`/setup/module_update`.
+
+
+    #. [tkl-odoo12-jcafb-ng-vm] Lista de Módulos:
+
+        * clv_external_sync_jcafb
+        * clv_base
+        * clv_address
+        * clv_address_history
+
+    #. [tkl-odoo12-jcafb-ng-vm] **Executar** a atualização do(s) Módulo(s):
+
+        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo12-jcafb-ng-vm** e executar o *Odoo* no modo manual:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-ng-vm (session 1)
+                #
+
+                ssh tkl-odoo12-jcafb-ng-vm -l root
+
+                /etc/init.d/odoo stop
+
+                su odoo
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo12-jcafb-ng-vm** e executar o **install.py**:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-ng-vm (session 2)
+                #
+
+                ssh tkl-odoo12-jcafb-ng-vm -l odoo
+
+                cd /opt/odoo/clvsol_clvhealth_jcafb/project
+                
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_base
+            
+        #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-ng-vm** ao modo desejado:
+
+            ::
+
+                # ***** tkl-odoo12-jcafb-ng-vm (session 1)
+                #
+
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+                ^C
+
+                exit
+
+                /etc/init.d/odoo start
 
 .. toctree::
    :maxdepth: 2
