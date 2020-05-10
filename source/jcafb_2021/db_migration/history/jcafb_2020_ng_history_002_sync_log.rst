@@ -11012,3 +11012,12 @@
 
         ############################################################
         Execution time: 5:01:47.983
+
+.. _External Sync Schedule - clv.address.tag (clv.global.tag) - 20200509(6):
+
+:red:`(Não Executado])` *External Sync Scheduleh* - *clv.address.tag (clv.global.tag)* (6) (Execution time: 5:01:47.983)
+------------------------------------------------------------------------------------------------------------------------
+
+    ::
+
+        ##########

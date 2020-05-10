@@ -2432,7 +2432,9 @@ Atualizar o(s) módulo(s) [ver lista] (2020-05-08)
         * clv_external_sync_jcafb
         * clv_base
         * clv_address
+        * clv_address_jcafb
         * clv_address_history
+        * clv_address_history_jcafb
 
     #. [tkl-odoo12-jcafb-ng-vm] **Executar** a atualização do(s) Módulo(s):
 
@@ -2479,6 +2481,93 @@ Atualizar o(s) módulo(s) [ver lista] (2020-05-08)
                 exit
 
                 /etc/init.d/odoo start
+
+:red:`(Não Executado])` Executar o *External Sync Schedule* "clv.address.tag (clv.global.tag)" (2020-05-09)
+-----------------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo12-jcafb-ng-vm] Marcar como :bi:`Updated` o :bi:`External Synchronization` de todos os :bi:`External Syncs` do *Model* "**clv.address.tag**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-ng-vm <https://tkl-odoo12-jcafb-ng-vm>`_
+
+        #. :red:`(Não Executado])` Configurar, com a ajuda da ação :bi:`External Sync Mass Edit`, todos os :bi:`External Syncs` do *Model* "**clv.address.tag**" (**nnnn**):
+
+            * Menu de acesso:
+                
+                * :bi:`External Sync` » :bi:`External Syncs` » **Ação** » :bi:`External Sync Mass Edit`
+
+            * Parâmetros alterados:
+                
+                * *External Synchronization*: **Set** "**Updated**"
+
+        #. Configurar, com a ajuda da ação :bi:`External Sync Schedule Mass Edit`, o :bi:`External Sync Schedule` "**clv.address.tag (clv.global.tag)**":
+
+            * Menu de acesso:
+
+                * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Schedules` » **Ação** » :bi:`External Sync Schedule Mass Edit`
+
+            * Parâmetros alterados:
+
+                * *External Host*: "**https://192.168.25.183**"
+                * *Max Task Registers*: "**250.000**"
+                * *Disable Identification*: "**desmarcado**"
+
+    #. Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-ng-vm** e executar o *Odoo* no modo manual:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-ng-vm
+            #
+
+            ssh tkl-odoo12-jcafb-ng-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+    #. [tkl-odoo12-jcafb-ng-vm] Executar o :bi:`External Sync Schedule` "**clv.address.tag (clv.global.tag)**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-ng-vm <https://tkl-odoo12-jcafb-ng-vm>`_
+
+        #. Executar a ação :bi:`External Sync Schedule Exec` para o "**clv.address.tag (clv.global.tag)**":
+
+            * Menu de acesso:
+                
+                * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Schedules` » **Ação** » :bi:`External Sync Schedule Exec`
+
+            * *Synchronization Log*:
+                
+                * :ref:`External Sync Schedule - clv.address.tag (clv.global.tag) - 20200509(6)`
+
+    #. [tkl-odoo12-jcafb-ng-vm] Configurar o :bi:`External Sync Schedule` "**clv.document.item (clv.document.item)**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-ng-vm <https://tkl-odoo12-jcafb-ng-vm>`_
+
+        #. Configurar, com a ajuda da ação :bi:`External Sync Schedule Mass Edit`, o :bi:`External Sync Schedule` "**clv.address.tag (clv.global.tag)**":
+
+            * Menu de acesso:
+
+                * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Schedules` » **Ação** » :bi:`External Sync Schedule Mass Edit`
+
+            * Parâmetros alterados:
+
+                * *Disable Identification*: "**marcado**"
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-ng-vm** ao modo padrão:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-ng-vm
+            #                * *Disable Identification*: "**marcado**"
+
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
 
 .. toctree::
    :maxdepth: 2
