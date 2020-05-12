@@ -9,7 +9,7 @@
 .. role:: bi
 
 ==================================================================================================
-[2020-05-(01-08)] - Migração do Banco de Dados - JCAFB-2020-NG - Servidor [tkl-odoo12-jcafb-ng-vm]
+[2020-05-(01-12)] - Migração do Banco de Dados - JCAFB-2020-NG - Servidor [tkl-odoo12-jcafb-ng-vm]
 ==================================================================================================
 
 Atualizar o Odoo (2020-04-30)
@@ -2338,10 +2338,6 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2020_NG* (2020-05-06a)
         * /opt/odoo/filestore_clvhealth_jcafb_2020_ng_2020-05-06a.tar.gz
         * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2020_ng_2020-05-06a.tar.gz
 
-.. index:: clvhealth_jcafb_2020_ng_2020-05-06a.sql
-.. index:: filestore_clvhealth_jcafb_2020_ng_2020-05-06a
-.. index:: clvsol_filestore_clvhealth_jcafb_2020_ng_2020-05-06a
-
 Restaurar um backup do banco de dados *CLVhealth-JCAFB-2020-NG* (2020-05-06a)
 -----------------------------------------------------------------------------
 
@@ -2481,6 +2477,150 @@ Atualizar o(s) módulo(s) [ver lista] (2020-05-08)
                 exit
 
                 /etc/init.d/odoo start
+
+Criar um backup do banco de dados *CLVhealth-JCAFB-2020_NG* (2020-05-12a)
+-------------------------------------------------------------------------
+
+    * Referência: :doc:`/setup/clvhealth_jcafb_backup`.
+
+    #. [tkl-odoo12-jcafb-ng-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-ng-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-ng-vm
+            #
+
+            ssh tkl-odoo12-jcafb-ng-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo12-jcafb-ng-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-ng-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2020_ng -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_ng_2020-05-12a.sql
+
+            gzip clvhealth_jcafb_2020_ng_2020-05-12a.sql
+            pg_dump clvhealth_jcafb_2020_ng -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_ng_2020-05-12a.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_ng_2020-05-12a.tar.gz clvhealth_jcafb_2020_ng
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2020_ng_2020-05-12a.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-ng-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-ng-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+        * /opt/odoo/clvhealth_jcafb_2020_ng_2020-05-12a.sql
+        * /opt/odoo/clvhealth_jcafb_2020_ng_2020-05-12a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2020_ng_2020-05-12a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2020_ng_2020-05-12a.tar.gz
+
+.. index:: clvhealth_jcafb_2020_ng_2020-05-12a.sql
+.. index:: filestore_clvhealth_jcafb_2020_ng_2020-05-12a
+.. index:: clvsol_filestore_clvhealth_jcafb_2020_ng_2020-05-12a
+
+:red:`(Não Executado])` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2020-NG* (2020-05-12a)
+-----------------------------------------------------------------------------------------------------
+
+    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
+
+    #. [tkl-odoo12-jcafb-ng-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo12-jcafb-ng-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-ng-vm
+            #
+
+            ssh tkl-odoo12-jcafb-ng-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo12-jcafb-ng-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-ng-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2020_ng_2020-05-12a.sql.gz
+
+            dropdb -i clvhealth_jcafb_2020_ng
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2020_ng
+            psql -f clvhealth_jcafb_2020_ng_2020-05-12a.sql -d clvhealth_jcafb_2020_ng -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2020_ng
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_ng_2020-05-12a.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2020_ng_2020-05-12a.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-ng-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo12-jcafb-ng-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [tkl-odoo12-jcafb-ng-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-ng-vm <https://tkl-odoo12-jcafb-ng-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**";
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**tkl-odoo12-jcafb-ng-vm**".
+
+        #. Salvar o registro editado.
 
 :red:`(Não Executado])` Executar o *External Sync Schedule* "clv.address.tag (clv.global.tag)" (2020-05-09)
 -----------------------------------------------------------------------------------------------------------
