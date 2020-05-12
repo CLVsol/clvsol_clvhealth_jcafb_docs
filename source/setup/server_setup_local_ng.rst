@@ -43,6 +43,12 @@ Glossary
        `clvsol_odoo_client <https://github.com/CLVsol/clvsol_odoo_client>`_
           CLVsol Odoo Client.
 
+       `clvsol_odoo_addons_sync (12.0.ng) <https://github.com/CLVsol/clvsol_odoo_addons_sync/tree/12.0.ng>`_
+          CLVsol Odoo Addons - Sync.
+
+       `clvsol_odoo_addons_sync_jcafb (12.0.ng) <https://github.com/CLVsol/clvsol_odoo_addons_sync_jcafb/tree/12.0.ng>`_
+          CLVsol Odoo Addons- Sync - JCAFB customizations.
+
        `clvsol_l10n_brazil (12.0) <https://github.com/CLVsol/clvsol_l10n_brazil/tree/12.0>`_
           Core da localização Brasileira do Odoo (used by CLVsol solutions)
           Este projeto contêm os módulos básicos da localização brasileira do Odoo, para uso exclusivo pelas soluções da CLVsol.
@@ -571,6 +577,58 @@ Installation of project modules
             ln -s /opt/odoo/clvsol_odoo_client odoo_client 
 
         * SymLink <https://wiki.debian.org/SymLink>`_
+
+#. `clvsol_odoo_addons_sync (12.0.ng) <https://github.com/CLVsol/clvsol_odoo_addons_sync/tree/12.0.ng>`_
+
+    #. To install "**clvsol_odoo_addons_sync**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo12-jcafb-ng-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_sync --branch 12.0.ng
+            cd /opt/odoo/clvsol_odoo_addons_sync
+            git branch -a
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+
+        ::
+
+                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_sync
+
+#. `clvsol_odoo_addons_sync_jcafb (12.0.ng) <https://github.com/CLVsol/clvsol_odoo_addons_sync_jcafb/tree/12.0.ng>`_
+
+    #. To install "**clvsol_odoo_addons_sync_jcafb**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo12-jcafb-ng-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_sync_jcafb --branch 12.0.ng
+            cd /opt/odoo/clvsol_odoo_addons_sync_jcafb
+            git branch -a
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+
+        ::
+
+                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_sync_jcafb
 
 Installation of external modules
 --------------------------------
