@@ -2543,8 +2543,8 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2020_NG* (2020-05-12a)
 .. index:: filestore_clvhealth_jcafb_2020_ng_2020-05-12a
 .. index:: clvsol_filestore_clvhealth_jcafb_2020_ng_2020-05-12a
 
-:red:`(Não Executado])` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2020-NG* (2020-05-12a)
------------------------------------------------------------------------------------------------------
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2020-NG* (2020-05-12a)
+-----------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
 
@@ -2622,7 +2622,7 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2020_NG* (2020-05-12a)
 
         #. Salvar o registro editado.
 
-Atualizar o(s) módulo(s) [ver lista] (2020-05-14)
+Atualizar o(s) módulo(s) [ver lista] (2020-05-15)
 -------------------------------------------------
 
     * Referência: :doc:`/setup/module_update`.
@@ -2630,8 +2630,12 @@ Atualizar o(s) módulo(s) [ver lista] (2020-05-14)
 
     #. [tkl-odoo12-jcafb-ng-vm] Lista de Módulos:
 
+        * clv_person
+        * clv_person_jcafb
+        * clv_person_verification_jcafb
         * clv_document
         * clv_lab_test
+        * clv_event
 
     #. [tkl-odoo12-jcafb-ng-vm] **Executar** a atualização do(s) Módulo(s):
 
@@ -2661,8 +2665,10 @@ Atualizar o(s) módulo(s) [ver lista] (2020-05-14)
 
                 cd /opt/odoo/clvsol_clvhealth_jcafb/project
                 
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_person
                 python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_document
                 python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_lab_test
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2020" - m clv_event
             
         #. Retornar a execução do *Odoo* do servidor **tkl-odoo12-jcafb-ng-vm** ao modo desejado:
 
