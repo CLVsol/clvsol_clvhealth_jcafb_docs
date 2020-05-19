@@ -630,6 +630,58 @@ Installation of project modules
                 # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
                 addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_sync_jcafb
 
+#. `clvsol_odoo_addons_export (12.0.ng) <https://github.com/CLVsol/clvsol_odoo_addons_export/tree/12.0.ng>`_
+
+    #. To install "**clvsol_odoo_addons_export**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo12-jcafb-ng-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_export --branch 12.0.ng
+            cd /opt/odoo/clvsol_odoo_addons_export
+            git branch -a
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+
+        ::
+
+                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_export
+
+#. `clvsol_odoo_addons_export_jcafb (12.0.ng) <https://github.com/CLVsol/clvsol_odoo_addons_export_jcafb/tree/12.0.ng>`_
+
+    #. To install "**clvsol_odoo_addons_export_jcafb**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo12-jcafb-ng-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_export_jcafb --branch 12.0.ng
+            cd /opt/odoo/clvsol_odoo_addons_export_jcafb
+            git branch -a
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+
+        ::
+
+                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_export_jcafb
+
 Installation of external modules
 --------------------------------
 
