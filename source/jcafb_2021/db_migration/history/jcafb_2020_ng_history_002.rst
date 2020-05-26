@@ -9,7 +9,7 @@
 .. role:: bi
 
 ==================================================================================================
-[2020-05-(01-20)] - Migração do Banco de Dados - JCAFB-2020-NG - Servidor [tkl-odoo12-jcafb-ng-vm]
+[2020-05-(01-25)] - Migração do Banco de Dados - JCAFB-2020-NG - Servidor [tkl-odoo12-jcafb-ng-vm]
 ==================================================================================================
 
 Atualizar o Odoo (2020-04-30)
@@ -4304,7 +4304,7 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2020_NG* (2020-05-19a)
 .. index:: filestore_clvhealth_jcafb_2020_ng_2020-05-19a
 .. index:: clvsol_filestore_clvhealth_jcafb_2020_ng_2020-05-19a
 
-Criar uma nova instância do *CLVhealth-JCAFB-2020-NG* (2020-05-20)
+Criar uma nova instância do *CLVhealth-JCAFB-2020-NG* (2020-05-25)
 ------------------------------------------------------------------
 
     #. [tkl-odoo12-jcafb-ng-vm] Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo12-jcafb-ng-vm** e paralizar o *Odoo*:
