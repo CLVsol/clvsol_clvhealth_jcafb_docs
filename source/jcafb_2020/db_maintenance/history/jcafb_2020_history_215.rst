@@ -9,7 +9,7 @@
 .. role:: bi
 
 ============================
-2020-05-(06-19) (JCAFB-2020)
+2020-05-(06-30) (JCAFB-2020)
 ============================
 
 Criar um backup do *CLVhealth-JCAFB-2020* (2020-05-06a)
@@ -331,6 +331,108 @@ Criar um backup do *CLVhealth-JCAFB-2020* (2020-05-19a)
 .. index:: clvhealth_jcafb_2020_2020-05-19a.sql
 .. index:: filestore_clvhealth_jcafb_2020_2020-05-19a
 .. index:: clvsol_filestore_clvhealth_jcafb_2020-05-19a
+
+**Atualizar** os fontes do projeto [clvheatlh-jcafb-2020-aws-pro] (2020-05-30)
+------------------------------------------------------------------------------
+
+    #. [clvheatlh-jcafb-2020-aws-pro] Estabelecer uma sessão ssh com o servidor **clvheatlh-jcafb-2020-aws-pro** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** clvheatlh-jcafb-2020-aws-pro
+            #
+
+            ssh clvheatlh-jcafb-2020-aws-pro -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [clvheatlh-jcafb-2020-aws-pro] **Atualizar** os fontes do projeto
+
+        ::
+
+            # ***** clvheatlh-jcafb-2020-aws-pro
+            #
+
+            cd /opt/odoo/clvsol_clvhealth_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_l10n_br
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_jcafb
+            git pull
+
+    #. Retornar a execução do *Odoo* do servidor **clvheatlh-jcafb-2020-aws-pro** ao modo desejado:
+
+        ::
+
+            # ***** clvheatlh-jcafb-2020-aws-pro
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+**Atualizar** os fontes do tstjeto [clvheatlh-jcafb-2020-aws-tst] (2020-05-30)
+------------------------------------------------------------------------------
+
+    #. [clvheatlh-jcafb-2020-aws-tst] Estabelecer uma sessão ssh com o servidor **clvheatlh-jcafb-2020-aws-tst** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** clvheatlh-jcafb-2020-aws-tst
+            #
+
+            ssh clvheatlh-jcafb-2020-aws-tst -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [clvheatlh-jcafb-2020-aws-tst] **Atualizar** os fontes do tstjeto
+
+        ::
+
+            # ***** clvheatlh-jcafb-2020-aws-tst
+            #
+
+            cd /opt/odoo/clvsol_clvhealth_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_l10n_br
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_jcafb
+            git pull
+
+    #. Retornar a execução do *Odoo* do servidor **clvheatlh-jcafb-2020-aws-tst** ao modo desejado:
+
+        ::
+
+            # ***** clvheatlh-jcafb-2020-aws-tst
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
 
 .. toctree::
    :maxdepth: 2
