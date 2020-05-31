@@ -49,7 +49,7 @@ Glossary
        `clvsol_odoo_addons_sync_jcafb (12.0.ng) <https://github.com/CLVsol/clvsol_odoo_addons_sync_jcafb/tree/12.0.ng>`_
           CLVsol Odoo Addons- Sync - JCAFB customizations.
 
-       `clvsol_l10n_brazil (12.0) <https://github.com/CLVsol/clvsol_l10n_brazil/tree/12.0>`_
+       `clvsol_l10n_brazil (12.0.ng) <https://github.com/CLVsol/clvsol_l10n_brazil/tree/12.0.ng>`_
           Core da localização Brasileira do Odoo (used by CLVsol solutions)
           Este projeto contêm os módulos básicos da localização brasileira do Odoo, para uso exclusivo pelas soluções da CLVsol.
           Os módulos desse projeto deverão ser substituídos pelos módulos equivalentes do repositório `OCA/l10n-brazil (12.0) <https://github.com/OCA/l10n-brazil/tree/12.0>`_, quando disponíveis para a versão do Odoo utilizada.
@@ -942,6 +942,32 @@ Installation of project modules
                 # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
                 addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_process_jcafb
 
+    #. `clvsol_l10n_brazil (12.0.ng) <https://github.com/CLVsol/clvsol_l10n_brazil/tree/12.0.ng>`_
+
+        #. To install "**clvsol_l10n_brazil**", use the following commands (as odoo):
+
+            ::
+
+                ssh tkl-odoo-160-buster-vm -l odoo
+
+            ::
+
+                cd /opt/odoo
+                git clone https://github.com/CLVsol/clvsol_l10n_brazil --branch 12.0.ng
+                cd /opt/odoo/clvsol_l10n_brazil
+                git branch -a
+
+        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+            ::
+
+                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+
+            ::
+
+                    # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_l10n_brazil
+
 Installation of external modules
 --------------------------------
 
@@ -1000,7 +1026,7 @@ Installation of external modules
 
             pip3 install pycep-correios
 
-    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+    #. :red:`(Não Executado)` Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
 
         ::
 
