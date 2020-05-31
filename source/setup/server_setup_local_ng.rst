@@ -1026,6 +1026,16 @@ Installation of external modules
 
             pip3 install pycep-correios
 
+    #. To upgrade "`pycep-correios <https://pypi.org/project/pycep-correios/>`_", use the following commands (as root):
+
+        ::
+
+            ssh tkl-odoo12-jcafb-ng-vm -l root
+
+        ::
+
+            pip3 install pycep-correios --upgrade
+
     #. :red:`(Não Executado)` Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
 
         ::
