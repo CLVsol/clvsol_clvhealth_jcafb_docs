@@ -12,7 +12,7 @@
 Migração do Banco de Dados - JCAFB-2021 - Servidor [tkl-odoo-160-buster-vm]
 ===========================================================================
 
-Inicializar o conteúdo do diretório **clvsol_filestore/clvhealth_jcafb** (2020-06-01)
+Inicializar o conteúdo do diretório **clvsol_filestore/clvhealth_jcafb** (2020-06-02)
 -------------------------------------------------------------------------------------
 
 	#. [tkl-odoo-160-buster-vm] Criar, manualmente, os diretórios:
@@ -60,7 +60,7 @@ Inicializar o conteúdo do diretório **clvsol_filestore/clvhealth_jcafb** (2020
 .. index:: clvsol_filestore/clvhealth_jcafb/summary_files
 .. index:: clvsol_filestore/clvhealth_jcafb/survey_files
 
-Criar uma nova instância do *CLVhealth-JCAFB-2021* (2020-04-30)
+Criar uma nova instância do *CLVhealth-JCAFB-2021* (2020-06-02)
 ------------------------------------------------------------------
 
     #. [tkl-odoo-160-buster-vm] Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo-160-buster-vm** e paralizar o *Odoo*:
@@ -128,6 +128,43 @@ Criar uma nova instância do *CLVhealth-JCAFB-2021* (2020-04-30)
             exit
 
             /etc/init.d/odoo start
+
+Migrar os Usuários de **clvhealth_jcafb_2020** para **clvhealth_jcafb_2021** (2020-06-02)
+-----------------------------------------------------------------------------------------
+
+    #. Estabelecer uma sessão ssh com o servidor **tkl-odoo-160-buster-vm** e executar o **res_users_migration.py**, acessando o servidor **tkl-odoo-160-buster-vm** [base de dados **clvhealth_jcafb_2020**]:
+
+        ::
+
+            # ***** tkl-odoo-160-buster-vm (session 2)
+            #
+
+            ssh tkl-odoo-160-buster-vm -l odoo
+
+            cd /opt/odoo/clvsol_clvhealth_jcafb/project
+            
+            python3 res_users_migration.py --rserver "https://192.168.25.183" --radmin_pw "***" --rdb "clvhealth_jcafb_2020" --lserver "https://192.168.25.192" --ladmin_pw "***" --ldb "clvhealth_jcafb_2021"
+            # Execution time: 0:01:10.814
+
+    * Os "passwords" não foram migrados.
+        
+Criar o *External Sync Host* "https://192.168.25.183" (2020-06-02)
+------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo-160-buster-vm <https://tkl-odoo-160-buster-vm>`_
+
+    #. Criar o *External Sync Host* **https://192.168.25.183**:
+
+        * Menu de acesso:
+            
+            * *External Sync* > *Configuration* > *Hosts* > Criar
+
+        * Parâmetros utilizados:
+            
+            * External Host Name: "**https://192.168.25.183**"
+            * External Database Name: "**clvhealth_jcafb_2020**"
+            * External User: "**admin**"
+            * External User Password: "*******"
 
 .. toctree::
    :maxdepth: 2
