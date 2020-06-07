@@ -12,7 +12,7 @@
 Migração do Banco de Dados - JCAFB-2021 - Servidor [tkl-odoo-160-buster-vm]
 ===========================================================================
 
-Inicializar o conteúdo do diretório **clvsol_filestore/clvhealth_jcafb** (2020-06-02)
+Inicializar o conteúdo do diretório **clvsol_filestore/clvhealth_jcafb** (2020-06-06)
 -------------------------------------------------------------------------------------
 
 	#. [tkl-odoo-160-buster-vm] Criar, manualmente, os diretórios:
@@ -60,7 +60,7 @@ Inicializar o conteúdo do diretório **clvsol_filestore/clvhealth_jcafb** (2020
 .. index:: clvsol_filestore/clvhealth_jcafb/summary_files
 .. index:: clvsol_filestore/clvhealth_jcafb/survey_files
 
-Criar uma nova instância do *CLVhealth-JCAFB-2021* (2020-06-02)
+Criar uma nova instância do *CLVhealth-JCAFB-2021* (2020-06-06)
 ------------------------------------------------------------------
 
     #. [tkl-odoo-160-buster-vm] Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo-160-buster-vm** e paralizar o *Odoo*:
@@ -129,7 +129,7 @@ Criar uma nova instância do *CLVhealth-JCAFB-2021* (2020-06-02)
 
             /etc/init.d/odoo start
 
-Migrar os Usuários de **clvhealth_jcafb_2020** para **clvhealth_jcafb_2021** (2020-06-02)
+Migrar os Usuários de **clvhealth_jcafb_2020** para **clvhealth_jcafb_2021** (2020-06-06)
 -----------------------------------------------------------------------------------------
 
     #. Estabelecer uma sessão ssh com o servidor **tkl-odoo-160-buster-vm** e executar o **res_users_migration.py**, acessando o servidor **tkl-odoo-160-buster-vm** [base de dados **clvhealth_jcafb_2020**]:
@@ -148,7 +148,7 @@ Migrar os Usuários de **clvhealth_jcafb_2020** para **clvhealth_jcafb_2021** (2
 
     * Os "passwords" não foram migrados.
         
-Criar o *External Sync Host* "https://192.168.25.183" (2020-06-02)
+Criar o *External Sync Host* "https://192.168.25.183" (2020-06-06)
 ------------------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo-160-buster-vm <https://tkl-odoo-160-buster-vm>`_
@@ -166,7 +166,7 @@ Criar o *External Sync Host* "https://192.168.25.183" (2020-06-02)
             * External User: "**admin**"
             * External User Password: "*******"
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021* (2020-06-05a)
+Criar um backup do banco de dados *CLVhealth-JCAFB-2021* (2020-06-06a)
 ----------------------------------------------------------------------
 
     #. [tkl-odoo-160-buster-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo-160-buster-vm** e paralizar o *Odoo*:
@@ -192,16 +192,16 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021* (2020-06-05a)
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021_2020-06-05a.sql
+            pg_dump clvhealth_jcafb_2021 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021_2020-06-06a.sql
 
-            gzip clvhealth_jcafb_2021_2020-06-05a.sql
-            pg_dump clvhealth_jcafb_2021 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021_2020-06-05a.sql
+            gzip clvhealth_jcafb_2021_2020-06-06a.sql
+            pg_dump clvhealth_jcafb_2021 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021_2020-06-06a.sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021_2020-06-05a.tar.gz clvhealth_jcafb_2021
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021_2020-06-06a.tar.gz clvhealth_jcafb_2021
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021_2020-06-05a.tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021_2020-06-06a.tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo-160-buster-vm** ao modo desejado:
 
@@ -220,17 +220,87 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021* (2020-06-05a)
             /etc/init.d/odoo start
 
     Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2021_2020-06-05a.sql
-        * /opt/odoo/clvhealth_jcafb_2021_2020-06-05a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021_2020-06-05a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021_2020-06-05a.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2021_2020-06-06a.sql
+        * /opt/odoo/clvhealth_jcafb_2021_2020-06-06a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2021_2020-06-06a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021_2020-06-06a.tar.gz
 
-.. index:: clvhealth_jcafb_2021_2020-06-05a.sql
-.. index:: filestore_clvhealth_jcafb_2021_2020-06-05a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021_2020-06-05a
+.. index:: clvhealth_jcafb_2021_2020-06-06a.sql
+.. index:: filestore_clvhealth_jcafb_2021_2020-06-06a
+.. index:: clvsol_filestore_clvhealth_jcafb_2021_2020-06-06a
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021* (2020-06-05a)
------------------------------------------------------------------------1r o registro apresentado (**Chave**: "**web.base.url**")
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021* (2020-06-06a)
+--------------------------------------------------------------------------
+
+    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
+
+    #. [tkl-odoo-160-buster-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo-160-buster-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo-160-buster-vm
+            #
+
+            ssh tkl-odoo-160-buster-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo-160-buster-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo-160-buster-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2021_2020-06-06a.sql.gz
+
+            dropdb -i clvhealth_jcafb_2021
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021
+            psql -f clvhealth_jcafb_2021_2020-06-06a.sql -d clvhealth_jcafb_2021 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2021
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021_2020-06-06a.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021_2020-06-06a.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo-160-buster-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo-160-buster-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [tkl-odoo-160-buster-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo-160-buster-vm <https://tkl-odoo-160-buster-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**";
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
 
         #. Alterar o campo **Valor** para:
 
