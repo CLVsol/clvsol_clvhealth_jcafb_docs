@@ -28,7 +28,7 @@ Glossary
        `tkl-odoo13-jcafb-vm <https://tkl-odoo13-jcafb-vm>`_
           Name of the Turnkey Linux Server.
 
-       `clvsol_odoo_client (13.0) <https://github.com/CLVsol/clvsol_odoo_client/13.0>`_
+       `clvsol_odoo_client (13.0) <https://github.com/CLVsol/clvsol_odoo_client>`_
           CLVsol Odoo Client.
 
        `clvsol_clvhealth_jcafb (13.0) <https://github.com/CLVsol/clvsol_clvhealth_jcafb/tree/13.0>`_
@@ -648,7 +648,7 @@ Replace the Odoo installation (Odoo 13.0)
 :red:`(Not Executed)` Installation of project modules
 -----------------------------------------------------
 
-    #. `clvsol_odoo_client (13.0) <https://github.com/CLVsol/clvsol_odoo_client/13.0>`_
+    #. `clvsol_odoo_client (13.0) <https://github.com/CLVsol/clvsol_odoo_client>`_
 
         #. To install "**clvsol_odoo_client**", use the following commands (as odoo):
 
@@ -659,7 +659,7 @@ Replace the Odoo installation (Odoo 13.0)
             ::
 
                 cd /opt/odoo
-                git clone https://github.com/CLVsol/clvsol_odoo_client
+                git clone https://github.com/CLVsol/clvsol_odoo_client --branch 13.0
                 cd /opt/odoo/clvsol_odoo_client
                 git branch -a
 
@@ -1198,7 +1198,7 @@ Installation of all modules
 
             cd /opt/odoo
             git clone https://github.com/OCA/l10n-brazil oca_l10n-brazil --branch 12.0
-            git clone https://github.com/CLVsol/clvsol_odoo_client
+            git clone https://github.com/CLVsol/clvsol_odoo_client --branch 13.0
             git clone https://github.com/CLVsol/clvsol_clvhealth_jcafb --branch 13.0
             git clone https://github.com/CLVsol/clvsol_l10n_brazil --branch 13.0
             git clone https://github.com/CLVsol/clvsol_odoo_addons --branch 13.0
