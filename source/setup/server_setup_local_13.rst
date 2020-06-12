@@ -501,8 +501,8 @@ Replace the Odoo installation (Odoo 13.0)
 
         ::
 
-            wget -O - https://nightly.odoo.com/odoo.key | apt-key add -
-            echo "deb http://nightly.odoo.com/13.0/nightly/deb/ ./" >> /etc/apt/sources.list.d/odoo.list
+            # wget -O - https://nightly.odoo.com/odoo.key | apt-key --keyring /usr/share/keyrings/odoo.gpg add -
+            echo "deb [signed-by=/usr/share/keyrings/odoo.gpg] http://nightly.odoo.com/13.0/nightly/deb/ ./" >> /etc/apt/sources.list.d/odoo.list
 
             apt-get update
 
