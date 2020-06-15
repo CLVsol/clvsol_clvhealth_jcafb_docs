@@ -236,9 +236,14 @@ Lista de *Schedules* instalados (1) (2020-06-10)
 
         * :green:`(Enabled)` clv.model_export.template (clv.model_export.template)
         * :green:`(Enabled)` clv.model_export.template.field (clv.model_export.template.field)
-        * :red:`(Enabled)` clv.model_export.template.document_item (clv.model_export.template.document_item)
-        * :red:`(Enabled)` clv.model_export.template.lab_test_criterion (clv.model_export.template.lab_test_criterion)
-        * :red:`(Enabled)` clv.model_export (clv.model_export)
+        * :red:`(Disabled)` clv.model_export.template.document_item (clv.model_export.template.document_item)
+        * :red:`(Disabled)` clv.model_export.template.lab_test_criterion (clv.model_export.template.lab_test_criterion)
+        * :red:`(Disabled)` clv.model_export (clv.model_export)
+
+        * :green:`(Enabled)` clv.person_sel.age_group (clv.person_sel.age_group
+        * :green:`(Enabled)` clv.person_sel.district (clv.person_sel.district)
+        * :green:`(Enabled)` clv.person_sel.group (clv.person_sel.group)
+        * :green:`(Enabled)` clv.person_sel.summary (clv.person_sel.summary)
 
 Executar o *External Sync Batch* "*Default Batch*" (1) (2020-06-08)
 -------------------------------------------------------------------
@@ -395,6 +400,11 @@ Lista de *Schedules* executados (1) (2020-06-10)
         * :red:`[Execution time: 0:00:14.603 + 0:00:23.069]` clv.model_export.template.document_item (clv.model_export.template.document_item)
         * :red:`[Execution time: 0:00:13.192 + 0:00:30.570]` clv.model_export.template.lab_test_criterion (clv.model_export.template.lab_test_criterion)
         * :red:`[Execution time: 0:00:01.088 + 0:00:03.194]` clv.model_export (clv.model_export)
+
+        * :green:`[Execution time: 0:00:09.832 + 0:00:03.216]` clv.person_sel.age_group (clv.person_sel.age_group
+        * :green:`[Execution time: 0:00:00.803 + 0:00:00.970]` clv.person_sel.district (clv.person_sel.district)
+        * :green:`[Execution time: 0:00:06.528 + 0:00:10.523]` clv.person_sel.group (clv.person_sel.group)
+        * :green:`[Execution time: 0:00:01.308 + 0:00:01.846]` clv.person_sel.summary (clv.person_sel.summary)
 
 Criar um backup do banco de dados *CLVhealth-JCAFB-2021* (2020-06-09a)
 ----------------------------------------------------------------------
@@ -1660,12 +1670,8 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021* (2020-06-13a)
         * /opt/odoo/filestore_clvhealth_jcafb_2021_2020-06-13a.tar.gz
         * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021_2020-06-13a.tar.gz
 
-.. index:: clvhealth_jcafb_2021_2020-06-13a.sql
-.. index:: filestore_clvhealth_jcafb_2021_2020-06-13a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021_2020-06-13a
-
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021* (2020-06-13a)
---------------------------------------------------------------------------
+:red:`(Não Executado])` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021* (2020-06-13a)
+--------------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
 
@@ -1706,6 +1712,650 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021* (2020-06-13a)
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
             tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021_2020-06-13a.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [tkl-odoo13-jcafb-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb-vm <https://tkl-odoo13-jcafb-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo13-jcafb-vm**".
+
+        #. Salvar o registro editado.
+
+Criar um backup do banco de dados *CLVhealth-JCAFB-2021* (2020-06-15a)
+----------------------------------------------------------------------
+
+    #. [tkl-odoo13-jcafb-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb-vm
+            #
+
+            ssh tkl-odoo13-jcafb-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo13-jcafb-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2021 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021_2020-06-15a.sql
+
+            gzip clvhealth_jcafb_2021_2020-06-15a.sql
+            pg_dump clvhealth_jcafb_2021 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021_2020-06-15a.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021_2020-06-15a.tar.gz clvhealth_jcafb_2021
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021_2020-06-15a.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+        * /opt/odoo/clvhealth_jcafb_2021_2020-06-15a.sql
+        * /opt/odoo/clvhealth_jcafb_2021_2020-06-15a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2021_2020-06-15a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021_2020-06-15a.tar.gz
+
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021* (2020-06-15a)
+--------------------------------------------------------------------------
+
+    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
+
+    #. [tkl-odoo13-jcafb-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb-vm
+            #
+
+            ssh tkl-odoo13-jcafb-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo13-jcafb-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2021_2020-06-15a.sql.gz
+
+            dropdb -i clvhealth_jcafb_2021
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021
+            psql -f clvhealth_jcafb_2021_2020-06-15a.sql -d clvhealth_jcafb_2021 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2021
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021_2020-06-15a.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021_2020-06-15a.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [tkl-odoo13-jcafb-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb-vm <https://tkl-odoo13-jcafb-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo13-jcafb-vm**".
+
+        #. Salvar o registro editado.
+
+Preparar os "*Global Settings*" para a JCAFB-2020 (2020-06-15)
+--------------------------------------------------------------
+
+    #. Acessar a *View* *Global Settings*:
+
+        * Menu de acesso:
+
+            * :bi:`Base` » :bi:`Global Settings` » :bi:`Global Settings`
+
+        #. Configurar o parâmetro :bi:`Phase` » :bi:`Phase`: **JCAFB-2020**
+
+        #. Configurar o parâmetro :bi:`Person` » :bi:`Reference Date`: **31/01/2020**
+
+Atualisar a Idade de Referência para todas as Pessoas (2020-06-15)
+------------------------------------------------------------------
+
+    #. [tkl-odoo12-jcafb-vm] Executar a Ação :bi:`Person Mass Edit` para todas as Pessoas:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
+
+        #. Acessar a *View* *Persons*:
+
+            * Menu de acesso:
+
+                * :bi:`Communities` » :bi:`Communities` » :bi:`Persons`
+
+        #. Selecionar todas as Pessoas (**1540**)
+
+        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Person Reference Age Refresh*: **marcado**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Criar um backup do banco de dados *CLVhealth-JCAFB-2021* (2020-06-15b)
+----------------------------------------------------------------------
+
+    #. [tkl-odoo13-jcafb-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb-vm
+            #
+
+            ssh tkl-odoo13-jcafb-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo13-jcafb-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2021 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021_2020-06-15b.sql
+
+            gzip clvhealth_jcafb_2021_2020-06-15b.sql
+            pg_dump clvhealth_jcafb_2021 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021_2020-06-15b.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021_2020-06-15b.tar.gz clvhealth_jcafb_2021
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021_2020-06-15b.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+        * /opt/odoo/clvhealth_jcafb_2021_2020-06-15b.sql
+        * /opt/odoo/clvhealth_jcafb_2021_2020-06-15b.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2021_2020-06-15b.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021_2020-06-15b.tar.gz
+
+:red:`(Não Executado])` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021* (2020-06-15b)
+--------------------------------------------------------------------------------------------------
+
+    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
+
+    #. [tkl-odoo13-jcafb-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb-vm
+            #
+
+            ssh tkl-odoo13-jcafb-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo13-jcafb-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2021_2020-06-15b.sql.gz
+
+            dropdb -i clvhealth_jcafb_2021
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021
+            psql -f clvhealth_jcafb_2021_2020-06-15b.sql -d clvhealth_jcafb_2021 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2021
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021_2020-06-15b.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021_2020-06-15b.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [tkl-odoo13-jcafb-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb-vm <https://tkl-odoo13-jcafb-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo13-jcafb-vm**".
+
+        #. Salvar o registro editado.
+
+Executar a Verificação para todos os Endereços (2020-06-15)
+-----------------------------------------------------------
+
+    #. [tkl-odoo12-jcafb-ng-vm] Executar a Ação :bi:`Address Verification Execute` para todos os Endereços:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-ng-vm <https://tkl-odoo12-jcafb-ng-vm>`_
+
+        #. Acessar a *View* *Employees*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Addresses`
+
+        #. Selecionar todos os Endereços (**665**)
+
+        #. Exercutar a Ação ":bi:`Address Verification Execute`":
+
+            #. Utilize o botão :bi:`Address Verification Execute` para executar a Ação.
+
+Executar a Verificação para todas as Famílias (2020-06-15)
+----------------------------------------------------------
+
+    #. [tkl-odoo12-jcafb-ng-vm] Executar a Ação :bi:`Family Verification Execute` para todos os Famílias:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-ng-vm <https://tkl-odoo12-jcafb-ng-vm>`_
+
+        #. Acessar a *View* *Employees*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Families`
+
+        #. Selecionar todos os Famílias (**441**)
+
+        #. Exercutar a Ação ":bi:`Family Verification Execute`":
+
+            #. Utilize o botão :bi:`Family Verification Execute` para executar a Ação.
+
+Executar a Verificação para todas as Pessoas (2020-06-15)
+---------------------------------------------------------
+
+    #. [tkl-odoo12-jcafb-ng-vm] Executar a Ação :bi:`Person Verification Execute` para todos os Pessoas:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-ng-vm <https://tkl-odoo12-jcafb-ng-vm>`_
+
+        #. Acessar a *View* *Employees*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Persons`
+
+        #. Selecionar todos os Pessoas (**1540**)
+
+        #. Exercutar a Ação ":bi:`Person Verification Execute`":
+
+            #. Utilize o botão :bi:`Person Verification Execute` para executar a Ação.
+
+Executar a Verificação para todos os Endereços (Aux) (2020-06-15)
+-----------------------------------------------------------------
+
+    #. [tkl-odoo12-jcafb-ng-vm] Executar a Ação :bi:`Address (Aux) Verification Execute` para todos os Endereços (Aux):
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-ng-vm <https://tkl-odoo12-jcafb-ng-vm>`_
+
+        #. Acessar a *View* *Employees*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Auxiliary` » :bi:`Addresses (Aux)`
+
+        #. Selecionar todos os Endereços (Aux) (**202**)
+
+        #. Exercutar a Ação ":bi:`Address (Aux) Verification Execute`":
+
+            #. Utilize o botão :bi:`Address (Aux) Verification Execute` para executar a Ação.
+
+Executar a Verificação para todas as Pessoas (Aux) (2020-06-15)
+---------------------------------------------------------------
+
+    #. [tkl-odoo12-jcafb-ng-vm] Executar a Ação :bi:`Person (Aux) Verification Execute` para todos os Pessoas (Aux):
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-ng-vm <https://tkl-odoo12-jcafb-ng-vm>`_
+
+        #. Acessar a *View* *Employees*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Auxiliary` » :bi:`Persons (Aux)`
+
+        #. Selecionar todos os Pessoas (Aux) (**605**)
+
+        #. Exercutar a Ação ":bi:`Person (Aux) Verification Execute`":
+
+            #. Utilize o botão :bi:`Person (Aux) Verification Execute` para executar a Ação.
+
+Criar os Sumários para todos os Grupos (JCAFB-2020) (2020-06-15)
+----------------------------------------------------------------
+
+    #. [tkl-odoo12-jcafb-ng-vm] Executar a Ação :bi:`Employee Summary Set Up` para todos os Grupos de Campo e Reserva Técnica (JCAFB-2020):
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-ng-vm <https://tkl-odoo12-jcafb-ng-vm>`_
+
+        #. Acessar a *View* *Funcionários*:
+
+            * Menu de acesso:
+
+                * :bi:`Funcionários` » :bi:`Employees` » :bi:`Employees`
+
+        #. Selecionar todos os Grupos de Campo (**16**) e Reserva Técnica (**5**)
+
+        #. Exercutar a Ação ":bi:`Employee Summary Set Up`":
+
+            #. Utilize o botão :bi:`Employee Summary Set Up` para executar a Ação.
+
+Criar os Sumários para os Endereços (JCAFB-2020) (2020-06-15)
+-------------------------------------------------------------
+
+    #. [tkl-odoo12-jcafb-ng-vm] Executar a Ação :bi:`Address Summary Set Up` para todos os Endereços (JCAFB-2020):
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-ng-vm <https://tkl-odoo12-jcafb-ng-vm>`_
+
+        #. Acessar a *View* *Endereços*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Addresses`
+
+        #. Selecionar todos os Endereços (JCAFB-2020) *Available* (**210**), *Selected* (**146**) e *Unselected* (**78**)
+
+        #. Exercutar a Ação ":bi:`Address Summary Set Up`":
+
+            #. Utilize o botão :bi:`Address Summary Set Up` para executar a Ação.
+
+Criar os Sumários para as Famílias (JCAFB-2020) (2020-06-15)
+------------------------------------------------------------
+
+    #. [tkl-odoo12-jcafb-ng-vm] Executar a Ação :bi:`Family Summary Set Up` para todos as Famílias (JCAFB-2020):
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-ng-vm <https://tkl-odoo12-jcafb-ng-vm>`_
+
+        #. Acessar a *View* *Endereços*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Families`
+
+        #. Selecionar todos as Famílias (JCAFB-2020) *Available* (**132**), *Selected* (**148**) e *Unselected* (**82**)
+
+        #. Exercutar a Ação ":bi:`Family Summary Set Up`":
+
+            #. Utilize o botão :bi:`Family Summary Set Up` para executar a Ação.
+
+Criar os Sumários para as Pessoas (JCAFB-2020) (2020-06-15)
+------------------------------------------------------------
+
+    #. [tkl-odoo12-jcafb-ng-vm] Executar a Ação :bi:`Person Summary Set Up` para todos as Pessoas (JCAFB-2020):
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-ng-vm <https://tkl-odoo12-jcafb-ng-vm>`_
+
+        #. Acessar a *View* *Endereços*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Persons`
+
+        #. Selecionar todos as Pessoas (JCAFB-2020) *Available* (**861**), *Selected* (**191**) e *Unselected* (**127**)
+
+        #. Exercutar a Ação ":bi:`Person Summary Set Up`":
+
+            #. Utilize o botão :bi:`Person Summary Set Up` para executar a Ação.
+
+Criar os Sumários para as Pessoas (Aux) (2020-06-15)
+----------------------------------------------------
+
+    #. [tkl-odoo12-jcafb-ng-vm] Executar a Ação :bi:`Person (Aux) Summary Set Up` para todos as Pessoas (Aux) (JCAFB-2020):
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo12-jcafb-ng-vm <https://tkl-odoo12-jcafb-ng-vm>`_
+
+        #. Acessar a *View* *Endereços*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Auxiliary` » :bi:`Persons (Aux)`
+
+        #. Selecionar todos as Pessoas (Aux) (JCAFB-2020) *Available* (**313**), *Selected* (**197**),  *Unselected* (**50**) e *Waiting* (**7**)
+
+        #. Exercutar a Ação ":bi:`Person (Aux) Summary Set Up`":
+
+            #. Utilize o botão :bi:`Person (Aux) Summary Set Up` para executar a Ação.
+
+Criar um backup do banco de dados *CLVhealth-JCAFB-2021* (2020-06-15c)
+----------------------------------------------------------------------
+
+    #. [tkl-odoo13-jcafb-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb-vm
+            #
+
+            ssh tkl-odoo13-jcafb-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo13-jcafb-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2021 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021_2020-06-15c.sql
+
+            gzip clvhealth_jcafb_2021_2020-06-15c.sql
+            pg_dump clvhealth_jcafb_2021 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021_2020-06-15c.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021_2020-06-15c.tar.gz clvhealth_jcafb_2021
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021_2020-06-15c.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+        * /opt/odoo/clvhealth_jcafb_2021_2020-06-15c.sql
+        * /opt/odoo/clvhealth_jcafb_2021_2020-06-15c.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2021_2020-06-15c.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021_2020-06-15c.tar.gz
+
+.. index:: clvhealth_jcafb_2021_2020-06-15c.sql
+.. index:: filestore_clvhealth_jcafb_2021_2020-06-15c
+.. index:: clvsol_filestore_clvhealth_jcafb_2021_2020-06-15c
+
+:red:`(Não Executado])` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021* (2020-06-15c)
+--------------------------------------------------------------------------------------------------
+
+    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
+
+    #. [tkl-odoo13-jcafb-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb-vm
+            #
+
+            ssh tkl-odoo13-jcafb-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo13-jcafb-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2021_2020-06-15c.sql.gz
+
+            dropdb -i clvhealth_jcafb_2021
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021
+            psql -f clvhealth_jcafb_2021_2020-06-15c.sql -d clvhealth_jcafb_2021 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2021
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021_2020-06-15c.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021_2020-06-15c.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb-vm** ao modo desejado:
 
