@@ -22,7 +22,7 @@ This project will help you create a server to host the **Odoo 12 (JCAFB-ng)** so
 
 Glossary
 --------
-
+..
     .. glossary::
 
        `tkl-odoo12-jcafb-ng-vm <https://tkl-odoo12-jcafb-ng-vm>`_

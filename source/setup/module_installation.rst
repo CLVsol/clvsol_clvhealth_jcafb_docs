@@ -12,6 +12,7 @@ Instalação de Modulo(s)
 
 Glossário
 ---------
+..
     .. glossary::
 
        odoo12-jcafb-server

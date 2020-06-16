@@ -20,7 +20,7 @@ This project will help you create a server to host the **Odoo 12 (JCAFB)** solut
 
 Glossary
 --------
-
+..
     .. glossary::
 
        `clvheatlh-jcafb-2020-aws-pro <https://clvheatlh-jcafb-2020-aws-pro>`_

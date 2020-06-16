@@ -12,6 +12,7 @@ Preparação do *CLVhealth-JCAFB*
 
 Glossário
 ---------
+..
     .. glossary::
 
        odoo12-jcafb-server

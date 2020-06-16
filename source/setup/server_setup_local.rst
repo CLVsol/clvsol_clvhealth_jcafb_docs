@@ -20,7 +20,7 @@ This project will help you create a server to host the **Odoo 12 (JCAFB)** solut
 
 Glossary
 --------
-
+..
     .. glossary::
 
        `tkl-odoo12-jcafb-vm <https://tkl-odoo12-jcafb-vm>`_
