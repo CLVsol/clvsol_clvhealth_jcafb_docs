@@ -20,80 +20,101 @@ This project will help you create a server to host the **Odoo 13 (JCAFB)** solut
 
     * ISO file: "**turnkey-odoo-16.0-buster-amd64.iso**".
 
-Glossary
---------
-..
-    .. glossary::
+Repositories
+------------
 
-       `tkl-odoo13-jcafb-vm <https://tkl-odoo13-jcafb-vm>`_
+    #. `tkl-odoo13-jcafb-vm <https://tkl-odoo13-jcafb-vm>`_
+
           Name of the Turnkey Linux Server.
 
-       `clvsol_odoo_client (13.0) <https://github.com/CLVsol/clvsol_odoo_client>`_
+    #. `clvsol_odoo_client (13.0) <https://github.com/CLVsol/clvsol_odoo_client>`_
+
           CLVsol Odoo Client.
 
-       `clvsol_clvhealth_jcafb (13.0) <https://github.com/CLVsol/clvsol_clvhealth_jcafb/tree/13.0>`_
+    #. `clvsol_clvhealth_jcafb (13.0) <https://github.com/CLVsol/clvsol_clvhealth_jcafb/tree/13.0>`_
+
           Implemantation of CLVhealth-JCAFB, the CLVsol Health Management solution for JCAFB.
 
-       `clvsol_l10n_brazil (13.0) <https://github.com/CLVsol/clvsol_l10n_brazil/tree/13.0>`_
+    #. `clvsol_l10n_brazil (13.0) <https://github.com/CLVsol/clvsol_l10n_brazil/tree/13.0>`_
+
           Core da localização Brasileira do Odoo (used by CLVsol solutions)
           Este projeto contêm os módulos básicos da localização brasileira do Odoo, para uso exclusivo pelas soluções da CLVsol.
           Os módulos desse projeto deverão ser substituídos pelos módulos equivalentes do repositório `OCA/l10n-brazil (13.0) <https://github.com/OCA/l10n-brazil/tree/13.0>`_, quando disponíveis para a versão do Odoo utilizada.
 
-       `OCA/l10n-brazil (13.0) <https://github.com/OCA/l10n-brazil/tree/13.0>`_
+    #. `OCA/l10n-brazil (12.0) <https://github.com/OCA/l10n-brazil/tree/12.0>`_
+
           Este projeto contêm os principais módulos da localização brasileira do Odoo.
 
-       `clvsol_odoo_addons (13.0) <https://github.com/CLVsol/clvsol_odoo_addons/tree/13.0>`_
+    #. `clvsol_odoo_addons (13.0) <https://github.com/CLVsol/clvsol_odoo_addons/tree/13.0>`_
+
           CLVsol Odoo Addons.
 
-       `clvsol_odoo_addons_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_jcafb/tree/13.0>`_
+    #. `clvsol_odoo_addons_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_jcafb/tree/13.0>`_
+
           CLVsol Odoo Addons - JCAFB customizations.
 
-       `clvsol_odoo_addons_history (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_history/tree/13.0>`_
+    #. `clvsol_odoo_addons_history (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_history/tree/13.0>`_
+
           CLVsol Odoo Addons - History
 
-       `clvsol_odoo_addons_history (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_history/tree/13.0>`_
+    #. `clvsol_odoo_addons_history_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_history_jcafb/tree/13.0>`_
+
           CLVsol Odoo Addons - History - JCAFB customizations
 
-       `clvsol_odoo_addons_l10n_br (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_l10n_br/tree/13.0>`_
+    #. `clvsol_odoo_addons_l10n_br (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_l10n_br/tree/13.0>`_
+
           CLVsol Odoo Addons - Brazilian Localization.
 
-       `clvsol_odoo_addons_l10n_br_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_l10n_br_jcafb/tree/13.0>`_
+    #. `clvsol_odoo_addons_l10n_br_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_l10n_br_jcafb/tree/13.0>`_
+
           CLVsol Odoo Addons - Brazilian Localization - JCAFB customizations
 
-       `clvsol_odoo_addons_verification (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_verification/tree/13.0>`_
+    #. `clvsol_odoo_addons_verification (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_verification/tree/13.0>`_
+
           CLVsol Odoo Addons - Verification
 
-       `clvsol_odoo_addons_verification_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_verification_jcafb/tree/13.0>`_
+    #. `clvsol_odoo_addons_verification_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_verification_jcafb/tree/13.0>`_
+
           CLVsol Odoo Addons - Verification - JCAFB customizations
 
-       `clvsol_odoo_addons_summary (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_summary/tree/13.0>`_
+    #. `clvsol_odoo_addons_summary (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_summary/tree/13.0>`_
+
           CLVsol Odoo Addons - Summary
 
-       `clvsol_odoo_addons_summary_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_summary_jcafb/tree/13.0>`_
+    #. `clvsol_odoo_addons_summary_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_summary_jcafb/tree/13.0>`_
+
           CLVsol Odoo Addons - Summary - JCAFB customizations
 
-       `clvsol_odoo_addons_export (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_export/tree/13.0>`_
+    #. `clvsol_odoo_addons_export (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_export/tree/13.0>`_
+
           CLVsol Odoo Addons - Export
 
-       `clvsol_odoo_addons_export_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_export_jcafb/tree/13.0>`_
+    #. `clvsol_odoo_addons_export_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_export_jcafb/tree/13.0>`_
+
           CLVsol Odoo Addons - Export - JCAFB customizations
 
-       `clvsol_odoo_addons_report (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_report/tree/13.0>`_
+    #. `clvsol_odoo_addons_report (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_report/tree/13.0>`_
+
           CLVsol Odoo Addons - Report
 
-       `clvsol_odoo_addons_report_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_report_jcafb/tree/13.0>`_
+    #. `clvsol_odoo_addons_report_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_report_jcafb/tree/13.0>`_
+
           CLVsol Odoo Addons - Report - JCAFB customizations
 
-       `clvsol_odoo_addons_process (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_process/tree/13.0>`_
+    #. `clvsol_odoo_addons_process (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_process/tree/13.0>`_
+
           CLVsol Odoo Addons - Process
 
-       `clvsol_odoo_addons_process_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_process_jcafb/tree/13.0>`_
+    #. `clvsol_odoo_addons_process_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_process_jcafb/tree/13.0>`_
+
           CLVsol Odoo Addons - Process - JCAFB customizations
 
-       `clvsol_odoo_addons_sync (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_sync/tree/13.0>`_
+    #. `clvsol_odoo_addons_sync (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_sync/tree/13.0>`_
+
           CLVsol Odoo Addons - Sync
 
-       `clvsol_odoo_addons_sync_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_sync_jcafb/tree/13.0>`_
+    #. `clvsol_odoo_addons_sync_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_sync_jcafb/tree/13.0>`_
+
           CLVsol Odoo Addons - Sync - JCAFB customizations
 
 VM preparation
@@ -140,6 +161,14 @@ VM preparation
             ssh tkl-odoo13-jcafb-vm -l root
 
             confconsole
+
+    #. To execute the **Interactive System Initialization**:
+
+        ::
+
+            ssh tkl-odoo13-jcafb-vm -l root
+
+            turnkey-init
 
     #. Upgrade the software:
 
@@ -274,8 +303,8 @@ VM preparation
 
                 ssh -L 33335:127.0.0.1:5432 root@tkl-odoo13-jcafb-vm
 
-Development (1)
----------------
+Development
+-----------
 
     #. Notes on the installation:
 
@@ -576,619 +605,10 @@ Replace the Odoo installation (Odoo 13.0)
                 # server_wide_modules = base,web
                 server_wide_modules = None
 
-:red:`(Not Executed)` Installation of external modules
-------------------------------------------------------
+Repositories Installation
+-------------------------
 
-    #. `OCA/l10n-brazil <https://github.com/OCA/l10n-brazil>`_
-
-        #. To install "**OCA/l10n-brazil**", use the following commands (as odoo):
-
-            ::
-
-                ssh tkl-odoo13-jcafb-vm -l odoo
-
-            ::
-
-                cd /opt/odoo
-                git clone https://github.com/OCA/l10n-brazil oca_l10n-brazil --branch 12.0
-                cd /opt/odoo/oca_l10n-brazil
-                git branch -a
-
-        #. To install "`node-less <https://github.com/odoo/odoo/issues/16463>`_", use the following commands (as root):
-
-            ::
-
-                ssh tkl-odoo13-jcafb-vm -l root
-
-            ::
-
-                apt-get install node-less
-
-        #. To install "`suds-py3 <https://stackoverflow.com/questions/46043345/how-use-suds-client-library-in-python-3-6-2>`_", use the following commands (as root):
-
-            ::
-
-                ssh tkl-odoo13-jcafb-vm -l root
-
-            ::
-
-                pip3 install suds-py3
-
-        #. To install "`erpbrasil.base <https://pypi.org/project/erpbrasil.base/>`_", use the following commands (as root):
-
-            ::
-
-                ssh tkl-odoo13-jcafb-vm -l root
-
-            ::
-
-                pip3 install erpbrasil.base
-
-        #. To install "`pycep-correios <https://pypi.org/project/pycep-correios/>`_", use the following commands (as root):
-
-            ::
-
-                ssh tkl-odoo13-jcafb-vm -l root
-
-            ::
-
-                pip3 install pycep-correios
-
-        #. :red:`(Not Executed)` Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
-
-            ::
-
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-
-            ::
-
-                    # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/oca_l10n-brazil
-
-:red:`(Not Executed)` Installation of project modules
------------------------------------------------------
-
-    #. `clvsol_odoo_client (13.0) <https://github.com/CLVsol/clvsol_odoo_client>`_
-
-        #. To install "**clvsol_odoo_client**", use the following commands (as odoo):
-
-            ::
-
-                ssh tkl-odoo13-jcafb-vm -l odoo
-
-            ::
-
-                cd /opt/odoo
-                git clone https://github.com/CLVsol/clvsol_odoo_client --branch 13.0
-                cd /opt/odoo/clvsol_odoo_client
-                git branch -a
-
-    #. `clvsol_clvhealth_jcafb (13.0) <https://github.com/CLVsol/clvsol_clvhealth_jcafb/tree/13.0>`_
-
-        #. To install "**clvsol_clvhealth_jcafb**", use the following commands (as odoo):
-
-            ::
-
-                ssh tkl-odoo13-jcafb-vm -l odoo
-
-            ::
-
-                cd /opt/odoo
-                git clone https://github.com/CLVsol/clvsol_clvhealth_jcafb --branch 13.0
-                cd /opt/odoo/clvsol_clvhealth_jcafb
-                git branch -a
-
-        #. To create a symbolic link "odoo_client", use the following commands (as **root**):
-
-            ::
-
-                ssh tkl-odoo13-jcafb-vm -l root
-
-            ::
-
-                cd /opt/odoo/clvsol_clvhealth_jcafb/project
-                ln -s /opt/odoo/clvsol_odoo_client odoo_client 
-
-            * SymLink <https://wiki.debian.org/SymLink>`_
-
-    #. `clvsol_l10n_brazil (13.0) <https://github.com/CLVsol/clvsol_l10n_brazil/tree/13.0>`_
-
-        #. To install "**clvsol_l10n_brazil**", use the following commands (as odoo):
-
-            ::
-
-                ssh tkl-odoo13-jcafb-vm -l odoo
-
-            ::
-
-                cd /opt/odoo
-                git clone https://github.com/CLVsol/clvsol_l10n_brazil --branch 13.0
-                cd /opt/odoo/clvsol_l10n_brazil
-                git branch -a
-
-        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
-
-            ::
-
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-
-            ::
-
-                    # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_l10n_brazil
-
-    #. `clvsol_odoo_addons (13.0) <https://github.com/CLVsol/clvsol_odoo_addons/tree/13.0>`_
-
-        #. To install "**clvsol_odoo_addons**", use the following commands (as odoo):
-
-            ::
-
-                ssh tkl-odoo13-jcafb-vm -l odoo
-
-            ::
-
-                cd /opt/odoo
-                git clone https://github.com/CLVsol/clvsol_odoo_addons --branch 13.0
-                cd /opt/odoo/clvsol_odoo_addons
-                git branch -a
-
-        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
-
-            ::
-
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-
-            ::
-
-                    # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons
-
-    #. `clvsol_odoo_addons_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_jcafb/tree/13.0>`_
-
-        #. To install "**clvsol_odoo_addons_jcafb**", use the following commands (as odoo):
-
-            ::
-
-                ssh tkl-odoo13-jcafb-vm -l odoo
-
-            ::
-
-                cd /opt/odoo
-                git clone https://github.com/CLVsol/clvsol_odoo_addons_jcafb --branch 13.0
-                cd /opt/odoo/clvsol_odoo_addons_jcafb
-                git branch -a
-
-        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
-
-            ::
-
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-
-            ::
-
-                    # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_jcafb
-
-    #. `clvsol_odoo_addons_history (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_history/tree/13.0>`_
-
-        #. To install "**clvsol_odoo_addons_history**", use the following commands (as odoo):
-
-            ::
-
-                ssh tkl-odoo13-jcafb-vm -l odoo
-
-            ::
-
-                cd /opt/odoo
-                git clone https://github.com/CLVsol/clvsol_odoo_addons_history --branch 13.0
-                cd /opt/odoo/clvsol_odoo_addons_history
-                git branch -a
-
-        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
-
-            ::
-
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-
-            ::
-
-                    # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_history
-
-    #. `clvsol_odoo_addons_history_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_history_jcafb/tree/13.0>`_
-
-        #. To install "**clvsol_odoo_addons_history_jcafb**", use the following commands (as odoo):
-
-            ::
-
-                ssh tkl-odoo13-jcafb-vm -l odoo
-
-            ::
-
-                cd /opt/odoo
-                git clone https://github.com/CLVsol/clvsol_odoo_addons_history_jcafb --branch 13.0
-                cd /opt/odoo/clvsol_odoo_addons_history_jcafb
-                git branch -a
-
-        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
-
-            ::
-
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-
-            ::
-
-                    # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_history_jcafb
-
-    #. `clvsol_odoo_addons_l10n_br (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_l10n_br/tree/13.0>`_
-
-        #. To install "**clvsol_odoo_addons_l10n_br**", use the following commands (as odoo):
-
-            ::
-
-                ssh tkl-odoo13-jcafb-vm -l odoo
-
-            ::
-
-                cd /opt/odoo
-                git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br --branch 13.0
-                cd /opt/odoo/clvsol_odoo_addons_l10n_br
-                git branch -a
-
-        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
-
-            ::
-
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-
-            ::
-
-                    # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_l10n_br
-
-    #. `clvsol_odoo_addons_l10n_br_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_l10n_br_jcafb/tree/13.0>`_
-
-        #. To install "**clvsol_odoo_addons_l10n_br_jcafb**", use the following commands (as odoo):
-
-            ::
-
-                ssh tkl-odoo13-jcafb-vm -l odoo
-
-            ::
-
-                cd /opt/odoo
-                git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br_jcafb --branch 13.0
-                cd /opt/odoo/clvsol_odoo_addons_l10n_br_jcafb
-                git branch -a
-
-        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
-
-            ::
-
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-
-            ::
-
-                    # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_l10n_br_jcafb
-
-    #. `clvsol_odoo_addons_verification (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_verification/tree/13.0>`_
-
-        #. To install "**clvsol_odoo_addons_verification**", use the following commands (as odoo):
-
-            ::
-
-                ssh tkl-odoo13-jcafb-vm -l odoo
-
-            ::
-
-                cd /opt/odoo
-                git clone https://github.com/CLVsol/clvsol_odoo_addons_verification --branch 13.0
-                cd /opt/odoo/clvsol_odoo_addons_verification
-                git branch -a
-
-        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
-
-            ::
-
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-
-            ::
-
-                    # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_verification
-
-    #. `clvsol_odoo_addons_verification_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_verification_jcafb/tree/13.0>`_
-
-        #. To install "**clvsol_odoo_addons_verification_jcafb**", use the following commands (as odoo):
-
-            ::
-
-                ssh tkl-odoo13-jcafb-vm -l odoo
-
-            ::
-
-                cd /opt/odoo
-                git clone https://github.com/CLVsol/clvsol_odoo_addons_verification_jcafb --branch 13.0
-                cd /opt/odoo/clvsol_odoo_addons_verification_jcafb
-                git branch -a
-
-        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
-
-            ::
-
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-
-            ::
-
-                    # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_verification_jcafb
-
-    #. `clvsol_odoo_addons_summary (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_summary/tree/13.0>`_
-
-        #. To install "**clvsol_odoo_addons_summary**", use the following commands (as odoo):
-
-            ::
-
-                ssh tkl-odoo13-jcafb-vm -l odoo
-
-            ::
-
-                cd /opt/odoo
-                git clone https://github.com/CLVsol/clvsol_odoo_addons_summary --branch 13.0
-                cd /opt/odoo/clvsol_odoo_addons_summary
-                git branch -a
-
-        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
-
-            ::
-
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-
-            ::
-
-                    # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_summary
-
-    #. `clvsol_odoo_addons_summary_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_summary_jcafb/tree/13.0>`_
-
-        #. To install "**clvsol_odoo_addons_summary_jcafb**", use the following commands (as odoo):
-
-            ::
-
-                ssh tkl-odoo13-jcafb-vm -l odoo
-
-            ::
-
-                cd /opt/odoo
-                git clone https://github.com/CLVsol/clvsol_odoo_addons_summary_jcafb --branch 13.0
-                cd /opt/odoo/clvsol_odoo_addons_summary_jcafb
-                git branch -a
-
-        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
-
-            ::
-
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-
-            ::
-
-                    # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_summary_jcafb
-
-    #. `clvsol_odoo_addons_export (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_export/tree/13.0>`_
-
-        #. To install "**clvsol_odoo_addons_export**", use the following commands (as odoo):
-
-            ::
-
-                ssh tkl-odoo13-jcafb-vm -l odoo
-
-            ::
-
-                cd /opt/odoo
-                git clone https://github.com/CLVsol/clvsol_odoo_addons_export --branch 13.0
-                cd /opt/odoo/clvsol_odoo_addons_export
-                git branch -a
-
-        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
-
-            ::
-
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-
-            ::
-
-                    # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_export
-
-    #. `clvsol_odoo_addons_export_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_export_jcafb/tree/13.0>`_
-
-        #. To install "**clvsol_odoo_addons_export_jcafb**", use the following commands (as odoo):
-
-            ::
-
-                ssh tkl-odoo13-jcafb-vm -l odoo
-
-            ::
-
-                cd /opt/odoo
-                git clone https://github.com/CLVsol/clvsol_odoo_addons_export_jcafb --branch 13.0
-                cd /opt/odoo/clvsol_odoo_addons_export_jcafb
-                git branch -a
-
-        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
-
-            ::
-
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-
-            ::
-
-                    # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_export_jcafb
-
-    #. `clvsol_odoo_addons_report (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_report/tree/13.0>`_
-
-        #. To install "**clvsol_odoo_addons_report**", use the following commands (as odoo):
-
-            ::
-
-                ssh tkl-odoo13-jcafb-vm -l odoo
-
-            ::
-
-                cd /opt/odoo
-                git clone https://github.com/CLVsol/clvsol_odoo_addons_report --branch 13.0
-                cd /opt/odoo/clvsol_odoo_addons_report
-                git branch -a
-
-        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
-
-            ::
-
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-
-            ::
-
-                    # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_report
-
-    #. `clvsol_odoo_addons_report_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_report_jcafb/tree/13.0>`_
-
-        #. To install "**clvsol_odoo_addons_report_jcafb**", use the following commands (as odoo):
-
-            ::
-
-                ssh tkl-odoo13-jcafb-vm -l odoo
-
-            ::
-
-                cd /opt/odoo
-                git clone https://github.com/CLVsol/clvsol_odoo_addons_report_jcafb --branch 13.0
-                cd /opt/odoo/clvsol_odoo_addons_report_jcafb
-                git branch -a
-
-        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
-
-            ::
-
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-
-            ::
-
-                    # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_report_jcafb
-
-    #. `clvsol_odoo_addons_process (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_process/tree/13.0>`_
-
-        #. To install "**clvsol_odoo_addons_process**", use the following commands (as odoo):
-
-            ::
-
-                ssh tkl-odoo13-jcafb-vm -l odoo
-
-            ::
-
-                cd /opt/odoo
-                git clone https://github.com/CLVsol/clvsol_odoo_addons_process --branch 13.0
-                cd /opt/odoo/clvsol_odoo_addons_process
-                git branch -a
-
-        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
-
-            ::
-
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-
-            ::
-
-                    # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_process
-
-    #. `clvsol_odoo_addons_process_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_process_jcafb/tree/13.0>`_
-
-        #. To install "**clvsol_odoo_addons_process_jcafb**", use the following commands (as odoo):
-
-            ::
-
-                ssh tkl-odoo13-jcafb-vm -l odoo
-
-            ::
-
-                cd /opt/odoo
-                git clone https://github.com/CLVsol/clvsol_odoo_addons_process_jcafb --branch 13.0
-                cd /opt/odoo/clvsol_odoo_addons_process_jcafb
-                git branch -a
-
-        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
-
-            ::
-
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-
-            ::
-
-                    # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_process_jcafb
-
-    #. `clvsol_odoo_addons_sync (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_sync/tree/13.0>`_
-
-        #. To install "**clvsol_odoo_addons_sync**", use the following commands (as odoo):
-
-            ::
-
-                ssh tkl-odoo13-jcafb-vm -l odoo
-
-            ::
-
-                cd /opt/odoo
-                git clone https://github.com/CLVsol/clvsol_odoo_addons_sync --branch 13.0
-                cd /opt/odoo/clvsol_odoo_addons_sync
-                git branch -a
-
-        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
-
-            ::
-
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-
-            ::
-
-                    # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_sync
-
-    #. `clvsol_odoo_addons_sync_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_sync_jcafb/tree/13.0>`_
-
-        #. To install "**clvsol_odoo_addons_sync_jcafb**", use the following commands (as odoo):
-
-            ::
-
-                ssh tkl-odoo13-jcafb-vm -l odoo
-
-            ::
-
-                cd /opt/odoo
-                git clone https://github.com/CLVsol/clvsol_odoo_addons_sync_jcafb --branch 13.0
-                cd /opt/odoo/clvsol_odoo_addons_sync_jcafb
-                git branch -a
-
-        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
-
-            ::
-
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-
-            ::
-
-                    # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_sync_jcafb
-
-Installation of all modules
----------------------------
-
-    #. To install "**all modules**", use the following commands (as odoo):
+    #. To install all "**modules**", use the following commands (as odoo):
 
         ::
 
@@ -1282,7 +702,7 @@ Installation of all modules
         ::
 
             # addons_path = /usr/lib/python3/dist-packages/odoo/addons
-            addons_path = /usr/lib/python3/dist-packages/odoo/addons,/opt/odoo/clvsol_odoo_addons,/opt/odoo/clvsol_odoo_addons_l10n_br,/opt/odoo/clvsol_odoo_addons_l10n_br_jcafb,/opt/odoo/clvsol_odoo_addons_jcafb,/opt/odoo/clvsol_l10n_brazil,/opt/odoo/clvsol_odoo_addons_sync,/opt/odoo/clvsol_odoo_addons_sync_jcafb,/opt/odoo/clvsol_odoo_addons_export,/opt/odoo/clvsol_odoo_addons_export_jcafb,/opt/odoo/clvsol_odoo_addons_verification,/opt/odoo/clvsol_odoo_addons_verification_jcafb,/opt/odoo/clvsol_odoo_addons_history,/opt/odoo/clvsol_odoo_addons_history_jcafb,/opt/odoo/clvsol_odoo_addons_summary,/opt/odoo/clvsol_odoo_addons_summary_jcafb,/opt/odoo/clvsol_odoo_addons_report,/opt/odoo/clvsol_odoo_addons_report_jcafb,/opt/odoo/clvsol_odoo_addons_process,/opt/odoo/clvsol_odoo_addons_process_jcafb
+            addons_path = /usr/lib/python3/dist-packages/odoo/addons,/opt/odoo/clvsol_odoo_addons,/opt/odoo/clvsol_odoo_addons_l10n_br,/opt/odoo/clvsol_odoo_addons_l10n_br_jcafb,/opt/odoo/clvsol_odoo_addons_jcafb,/opt/odoo/clvsol_l10n_brazil,/opt/odoo/clvsol_odoo_addons_history,/opt/odoo/clvsol_odoo_addons_history_jcafb,/opt/odoo/clvsol_odoo_addons_verification,/opt/odoo/clvsol_odoo_addons_verification_jcafb,/opt/odoo/clvsol_odoo_addons_summary,/opt/odoo/clvsol_odoo_addons_summary_jcafb,/opt/odoo/clvsol_odoo_addons_export,/opt/odoo/clvsol_odoo_addons_export_jcafb,/opt/odoo/clvsol_odoo_addons_report,/opt/odoo/clvsol_odoo_addons_report_jcafb,/opt/odoo/clvsol_odoo_addons_process,/opt/odoo/clvsol_odoo_addons_process_jcafb,/opt/odoo/clvsol_odoo_addons_sync,/opt/odoo/clvsol_odoo_addons_sync_jcafb
 
 Remote access to the server
 ---------------------------
