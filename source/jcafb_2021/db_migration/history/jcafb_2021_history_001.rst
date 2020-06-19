@@ -337,94 +337,94 @@ Lista de *Schedules* executados (1) (2020-06-18)
 
     * Lista de *Schedules* instalados:
 
-        * :green:`[Execution time: 0:00:20.769]` res.users [Migration]
+        * :green:`[Execution time: 0:00:31.625]` res.users [Migration]
 
-        * :green:`[Execution time: 0:00:07.963 + 0:00:06.295]` res.country (res.country)
-        * :green:`[Execution time: 0:00:10.561 + 0:00:21.194]` res.country.state (res.country.state)
-        * :green:`[Execution time: 0:00:28.236 + 0:03:08.519]` res.city (res.city)
+        * :green:`[Execution time: 0:00:07.963 + 0:00:10.793]` res.country (res.country)
+        * :green:`[Execution time: 0:00:10.561 + 0:00:58.500]` res.country.state (res.country.state)
+        * :green:`[Execution time: 0:00:28.236 + 0:07:54.443]` res.city (res.city)
 
-        * :green:`[Execution time: 0:00:01.412 + 0:00:08.517]` res.users (res.users)
+        * :green:`[Execution time: 0:00:01.412 + 0:00:05.831]` res.users (res.users)
 
-        * :green:`[Execution time: 0:00:00.270 + 0:00:00.453]` clv.file_system.directory (clv.file_system.directory)
+        * :green:`[Execution time: 0:00:00.270 + 0:00:00.510]` clv.file_system.directory (clv.file_system.directory)
 
-        * :green:`[Execution time: 0:00:00.342 + 0:00:01.025]` clv.global_tag (clv.global_tag)
+        * :green:`[Execution time: 0:00:00.342 + 0:00:01.149]` clv.global_tag (clv.global_tag)
 
-        * :green:`[Execution time: 0:00:00.242 + 0:00:00.289]` clv.phase (clv.phase)
+        * :green:`[Execution time: 0:00:00.242 + 0:00:00.351]` clv.phase (clv.phase)
 
-        * :green:`[Execution time: 0:00:00.580 + 0:00:01.713]` hr.department (hr.department) [rec]
-        * :green:`[Execution time: 0:00:00.390 + 0:00:02.198]` hr.department (hr.department)
-        * :green:`[Execution time: 0:00:00.313 + 0:00:00.700]` hr.job (hr.job) [rec]
-        * :green:`[Execution time: 0:00:00.244 + 0:00:00.752]` hr.job (hr.job)
-        * :green:`[Execution time: 0:00:01.614 + 0:00:08.652]` hr.employee (hr.employee) [rec]
-        * :green:`[Execution time: 0:00:00.739 + 0:00:28.781]` hr.employee (hr.employee)
-        * :green:`[Execution time: 0:00:01.494 + 0:00:11.181]` hr.employee.history (hr.employee.history)
+        * :green:`[Execution time: 0:00:00.580 + 0:00:01.730]` hr.department (hr.department) [rec]
+        * :green:`[Execution time: 0:00:00.390 + 0:00:02.074]` hr.department (hr.department)
+        * :green:`[Execution time: 0:00:00.313 + 0:00:00.636]` hr.job (hr.job) [rec]
+        * :green:`[Execution time: 0:00:00.244 + 0:00:00.926]` hr.job (hr.job)
+        * :green:`[Execution time: 0:00:01.614 + 0:00:05.732]` hr.employee (hr.employee) [rec]
+        * :green:`[Execution time: 0:00:00.739 + 0:00:40.627]` hr.employee (hr.employee)
+        * :green:`[Execution time: 0:00:01.494 + 0:00:40.159]` hr.employee.history (hr.employee.history)
 
-        * :green:`[Execution time: 0:00:00.244 + 0:00:00.249]` clv.address.category (clv.address.category)
-        * :green:`[Execution time: 0:00:03.655 + 0:01:59.476]` clv.address (clv.address)
-        * :green:`[Execution time: 0:00:08.885 + 0:01:46.101]` clv.address.history (clv.address.history)
+        * :green:`[Execution time: 0:00:00.244 + 0:00:00.339]` clv.address.category (clv.address.category)
+        * :green:`[Execution time: 0:00:03.655 + 0:04:00.290]` clv.address (clv.address)
+        * :green:`[Execution time: 0:00:08.885 + 0:04:39.341]` clv.address.history (clv.address.history)
 
-        * :green:`[Execution time: 0:00:01.327 + 0:00:41.852]` clv.address.aux (clv.address.aux)
+        * :green:`[Execution time: 0:00:01.327 + 0:01:07.540]` clv.address.aux (clv.address.aux)
 
-        * :green:`[Execution time: 0:00:00.211 + 0:00:00.168]` clv.family.category (clv.family.category)
-        * :green:`[Execution time: 0:00:02.585 + 0:00:59.237]` clv.family (clv.family)
-        * :green:`[Execution time: 0:00:04.192 + 0:00:46.405]` clv.family.history (clv.family.history)
+        * :green:`[Execution time: 0:00:00.211 + 0:00:00.194]` clv.family.category (clv.family.category)
+        * :green:`[Execution time: 0:00:02.585 + 0:02:14.771]` clv.family (clv.family)
+        * :green:`[Execution time: 0:00:04.192 + 0:02:31.712]` clv.family.history (clv.family.history)
 
-        * :green:`[Execution time: 0:00:00.233 + 0:00:00.378]` clv.person.category (clv.person.category)
-        * :green:`[Execution time: 0:00:00.246 + 0:00:00.334]` clv.person.marker (clv.person.marker)
-        * :green:`[Execution time: 0:00:09.066 + 0:04:05.660]` clv.person (clv.person)
-        * :green:`[Execution time: 0:00:04.405 + 0:00:16.221]` clv.person (clv.person) [2]
-        * :green:`[Execution time: 0:00:37.330 + 0:06:18.355]` clv.person.history (clv.person.history)
+        * :green:`[Execution time: 0:00:00.233 + 0:00:00.361]` clv.person.category (clv.person.category)
+        * :green:`[Execution time: 0:00:00.246 + 0:00:00.416]` clv.person.marker (clv.person.marker)
+        * :green:`[Execution time: 0:00:09.066 + 0:10:33.754]` clv.person (clv.person)
+        * :green:`[Execution time: 0:00:04.405 + 0:00:41.473]` clv.person (clv.person) [2]
+        * :green:`[Execution time: 0:00:37.330 + 0:15:50.246]` clv.person.history (clv.person.history)
 
-        * :green:`[Execution time: 0:00:04.346 + 0:02:04.492]` clv.person.aux (clv.person.aux)
+        * :green:`[Execution time: 0:00:04.346 + 0:04:09.338]` clv.person.aux (clv.person.aux)
 
-        * :green:`[Execution time: 0:00:00.429 + 0:00:01.908]` clv.event (clv.event)
-        * :green:`[Execution time: 0:00:09.734 + 0:01:07.189]` clv.event.attendee (clv.event.attendee)
+        * :green:`[Execution time: 0:00:00.429 + 0:00:03.033]` clv.event (clv.event)
+        * :green:`[Execution time: 0:00:09.734 + 0:02:24.325]` clv.event.attendee (clv.event.attendee)
 
-        * :green:`[Execution time: 0:00:00.294 + 0:00:00.500]` clv.document.category (clv.document.category)
-        * :green:`[Execution time: 0:00:00.512 + 0:00:01.549]` clv.document.type (clv.document.type)
-        * :green:`[Execution time: 0:00:54.980 + 0:13:15.204]` clv.document (clv.document)
+        * :green:`[Execution time: 0:00:00.294 + 0:00:00.467]` clv.document.category (clv.document.category)
+        * :green:`[Execution time: 0:00:00.512 + 0:00:01.291]` clv.document.type (clv.document.type)
+        * :green:`[Execution time: 0:00:54.980 + 0:33:23.174]` clv.document (clv.document)
         * :red:`[Execution time: 1:48:24.857 + 3:53:22.704]` clv.document.item (clv.document.item)
 
-        * :green:`[Execution time: 0:00:00.301 + 0:00:00.474]` clv.lab_test.unit (clv.lab_test.unit)
-        * :green:`[Execution time: 0:00:00.337 + 0:00:00.554]` clv.lab_test.parasite (clv.lab_test.parasite)
-        * :green:`[Execution time: 0:00:00.317 + 0:00:00.457]` clv.lab_test.crystal (clv.lab_test.crystal)
-        * :green:`[Execution time: 0:00:00.374 + 0:00:01.352]` clv.lab_test.type (clv.lab_test.type)
-        * :green:`[Execution time: 0:00:34.856 + 0:05:12.129]` clv.lab_test.request (clv.lab_test.request)
-        * :green:`[Execution time: 0:00:25.424 + 0:04:33.556]` clv.lab_test.result (clv.lab_test.result)
-        * :green:`[Execution time: 0:00:18.384 + 0:02:33.849]` clv.lab_test.report (clv.lab_test.report)
-        * :green:`[Execution time: 0:00:15.832 + 0:03:15.153]` clv.lab_test.result (clv.lab_test.result) [2]
+        * :green:`[Execution time: 0:00:00.301 + 0:00:00.489]` clv.lab_test.unit (clv.lab_test.unit)
+        * :green:`[Execution time: 0:00:00.337 + 0:00:00.597]` clv.lab_test.parasite (clv.lab_test.parasite)
+        * :green:`[Execution time: 0:00:00.317 + 0:00:00.477]` clv.lab_test.crystal (clv.lab_test.crystal)
+        * :green:`[Execution time: 0:00:00.374 + 0:00:01.609]` clv.lab_test.type (clv.lab_test.type)
+        * :green:`[Execution time: 0:00:34.856 + 0:11:52.921]` clv.lab_test.request (clv.lab_test.request)
+        * :green:`[Execution time: 0:00:25.424 + 0:13:37.395]` clv.lab_test.result (clv.lab_test.result)
+        * :green:`[Execution time: 0:00:18.384 + 0:09:23.720]` clv.lab_test.report (clv.lab_test.report)
+        * :green:`[Execution time: 0:00:15.832 + 0:10:02.002]` clv.lab_test.result (clv.lab_test.result) [2]
         * :red:`[Execution time: 1:18:08.198 + 2:38:36.031]` clv.lab_test.criterion (clv.lab_test.criterion)
 
-        * :green:`[Execution time: 0:00:00.654 + 0:00:01.736]` survey.survey (survey.survey)
+        * :green:`[Execution time: 0:00:00.654 + 0:00:04.718]` survey.survey (survey.survey)
         * :green:`[Execution time: 0:00:00.055]` survey.survey [Adapt]
-        * :green:`[Execution time: 0:00:10.825 + 0:01:12.519]` survey.question (survey.question)
-        * :green:`[Execution time: 0:00:36.318 + 0:02:48.272]` survey.label (survey.label)
-        * :green:`[Execution time: 0:00:36.673 + 0:04:21.342]` survey.user_input (survey.user_input)
-        * :green:`[Execution time: 0:00:18.624]` survey.user_input [Adapt]
-        * :green:`[Execution time: 0:00:49.742 + 0:13:13.874]` clv.document (clv.document) [2]
+        * :green:`[Execution time: 0:00:10.825 + 0:02:01.564]` survey.question (survey.question)
+        * :green:`[Execution time: 0:00:36.318 + 0:05:10.085]` survey.label (survey.label)
+        * :green:`[Execution time: 0:00:36.673 + 0:08:50.187]` survey.user_input (survey.user_input)
+        * :green:`[Execution time: 0:00:12.277]` survey.user_input [Adapt]
+        * :green:`[Execution time: 0:00:49.742 + 0:36:37.393]` clv.document (clv.document) [2]
         * :red:`[Execution time: 2:42:05.182 + 9:35:20.980]` survey.user_input_line (survey.user_input_line)
         * :red:`[Execution time: 0:00:32.476 + 0:00:38.807]` survey.question (survey.page)
         * :red:`[Execution time: 0:04:23.466]` survey.question [Adapt]
         * :red:`[Execution time: 0:05:35.303]` survey.user_input [Adapt 2]
 
-        * :green:`[Execution time: 0:00:00.394 + 0:00:00.813]` clv.verification.marker (clv.verification.marker)
+        * :green:`[Execution time: 0:00:00.394 + 0:00:00.924]` clv.verification.marker (clv.verification.marker)
 
-        * :green:`[Execution time: 0:00:00.229 + 0:00:00.243]` clv.set (clv.set)
-        * :green:`[Execution time: 0:00:08.349 + 0:00:42.521]` clv.set.element (clv.set.element)
+        * :green:`[Execution time: 0:00:00.229 + 0:00:00.360]` clv.set (clv.set)
+        * :green:`[Execution time: 0:00:08.349 + 0:01:49.136]` clv.set.element (clv.set.element)
 
-        * :green:`[Execution time: 0:00:04.322 + 0:00:09.876]` ir.model (ir.model)
-        * :green:`[Execution time: 0:01:23.325 + 0:03:31.643]` ir.model.fields (ir.model.fields)
+        * :green:`[Execution time: 0:00:04.322 + 0:00:10.745]` ir.model (ir.model)
+        * :green:`[Execution time: 0:01:23.325 + 0:03:36.888]` ir.model.fields (ir.model.fields)
 
-        * :green:`[Execution time: 0:00:00.353 + 0:00:00.743]` clv.model_export.template (clv.model_export.template)
-        * :green:`[Execution time: 0:00:00.933 + 0:00:05.147]` clv.model_export.template.field (clv.model_export.template.field)
+        * :green:`[Execution time: 0:00:00.353 + 0:00:02.044]` clv.model_export.template (clv.model_export.template)
+        * :green:`[Execution time: 0:00:00.933 + 0:00:09.512]` clv.model_export.template.field (clv.model_export.template.field)
         * :red:`[Execution time: 0:00:14.603 + 0:00:23.069]` clv.model_export.template.document_item (clv.model_export.template.document_item)
         * :red:`[Execution time: 0:00:13.192 + 0:00:30.570]` clv.model_export.template.lab_test_criterion (clv.model_export.template.lab_test_criterion)
         * :red:`[Execution time: 0:00:01.088 + 0:00:03.194]` clv.model_export (clv.model_export)
 
-        * :green:`[Execution time: 0:00:00.288 + 0:00:03.216]` clv.person_sel.age_group (clv.person_sel.age_group
-        * :green:`[Execution time: 0:00:00.330 + 0:00:00.970]` clv.person_sel.district (clv.person_sel.district)
-        * :green:`[Execution time: 0:00:01.154 + 0:00:10.523]` clv.person_sel.group (clv.person_sel.group)
-        * :green:`[Execution time: 0:00:00.415 + 0:00:01.846]` clv.person_sel.summary (clv.person_sel.summary)
+        * :green:`[Execution time: 0:00:00.288 + 0:00:01.243]` clv.person_sel.age_group (clv.person_sel.age_group
+        * :green:`[Execution time: 0:00:00.330 + 0:00:01.454]` clv.person_sel.district (clv.person_sel.district)
+        * :green:`[Execution time: 0:00:01.154 + 0:00:11.957]` clv.person_sel.group (clv.person_sel.group)
+        * :green:`[Execution time: 0:00:00.415 + 0:00:01.657]` clv.person_sel.summary (clv.person_sel.summary)
 
 Executar o *External Sync Schedule* "clv.document.item (clv.document.item)" (2020-06-18)
 ----------------------------------------------------------------------------------------
@@ -703,6 +703,216 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2020-13* (2020-06-18a)
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
             tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2020_13_2020-06-18a.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [tkl-odoo13-jcafb-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb-vm <https://tkl-odoo13-jcafb-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo13-jcafb-vm**".
+
+        #. Salvar o registro editado.
+
+Executar o *External Sync Batch* "*Default Batch*" (2) (2020-06-18)
+-------------------------------------------------------------------
+
+    #. [tkl-odoo13-jcafb-vm] Configurar todos os :bi:`External Sync Schedules`:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb-vm <https://tkl-odoo13-jcafb-vm>`_
+
+        #. Configurar, com a ajuda da ação :bi:`External Sync Schedule Mass Edit`, todos os :bi:`External Sync Schedules`:
+
+            * Lista de *Schedules*:
+                
+                * :ref:`Lista de Schedules jcafb_2021_history_001 (1)`
+
+            * Menu de acesso:
+                
+                * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Schedules` » **Ação** » :bi:`External Sync Schedule Mass Edit`
+
+            * Parâmetros alterados:
+                
+                * *Disable Inclusion*: "**desmarcado**"
+                * *Disable Sync*: "**desmarcado**"
+
+    #. Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb-vm** e executar o *Odoo* no modo manual:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb-vm
+            #
+
+            ssh tkl-odoo13-jcafb-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+    #. [tkl-odoo13-jcafb-vm] Executar o :bi:`External Sync Batch` "**Default Batch**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb-vm <https://tkl-odoo13-jcafb-vm>`_
+
+        #. Executar a ação :bi:`External Sync Batch Exec` para o "**Default Batch**":
+
+            * Menu de acesso:
+                
+                * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
+
+            * *Members*:
+                
+                * :ref:`Lista de Schedules jcafb_2021_history_001 (1)`
+
+            * :bi:`Execution time: 3:16:58.972`
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb-vm** ao modo padrão:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb-vm
+            #
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+Criar um backup do banco de dados *CLVhealth-JCAFB-2020-13* (2020-06-18b)
+-------------------------------------------------------------------------
+
+    #. [tkl-odoo13-jcafb-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb-vm
+            #
+
+            ssh tkl-odoo13-jcafb-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo13-jcafb-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2020_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_13_2020-06-18b.sql
+
+            gzip clvhealth_jcafb_2020_13_2020-06-18b.sql
+            pg_dump clvhealth_jcafb_2020_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2020_13_2020-06-18b.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2020_13_2020-06-18b.tar.gz clvhealth_jcafb_2020_13
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2020_13_2020-06-18b.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+        * /opt/odoo/clvhealth_jcafb_2020_13_2020-06-18b.sql
+        * /opt/odoo/clvhealth_jcafb_2020_13_2020-06-18b.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2020_13_2020-06-18b.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2020_13_2020-06-18b.tar.gz
+
+.. index:: clvhealth_jcafb_2020_13_2020-06-18b.sql
+.. index:: clvhealth_jcafb_2020_13_2020-06-18b.sql.gz
+.. index:: filestore_clvhealth_jcafb_2020_13_2020-06-18b
+.. index:: clvsol_filestore_clvhealth_jcafb_2020_13_2020-06-18b
+
+:red:`(Não Executado])` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2020-13* (2020-06-18b)
+-----------------------------------------------------------------------------------------------------
+
+    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
+
+    #. [tkl-odoo13-jcafb-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb-vm
+            #
+
+            ssh tkl-odoo13-jcafb-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo13-jcafb-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2020_13_2020-06-18b.sql.gz
+
+            dropdb -i clvhealth_jcafb_2020_13
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2020_13
+            psql -f clvhealth_jcafb_2020_13_2020-06-18b.sql -d clvhealth_jcafb_2020_13 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2020_13
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_13_2020-06-18b.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2020_13_2020-06-18b.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb-vm** ao modo desejado:
 
