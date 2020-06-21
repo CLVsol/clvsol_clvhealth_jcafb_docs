@@ -8,12 +8,12 @@
 .. role:: green
 .. role:: bi
 
-===========================================================================
-Migração do Banco de Dados - JCAFB-2020-13 - Servidor [tkl-odoo13-jcafb-vm]
-===========================================================================
+==========================================
+Migração do Banco de Dados - JCAFB-2020-13
+==========================================
 
-Inicializar o conteúdo do diretório **clvsol_filestore/clvhealth_jcafb** (2020-06-18)
--------------------------------------------------------------------------------------
+Inicializar o conteúdo do diretório **clvsol_filestore/clvhealth_jcafb** [tkl-odoo13-jcafb-vm] (2020-06-18)
+-----------------------------------------------------------------------------------------------------------
 
 	#. [tkl-odoo13-jcafb-vm] Criar, manualmente, os diretórios:
 
@@ -1551,6 +1551,133 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2020-13* (2020-06-20b)
         #. Alterar o campo **Valor** para:
 
             * "**http://tkl-odoo13-jcafb-vm**".
+
+        #. Salvar o registro editado.
+
+Inicializar o conteúdo do diretório **clvsol_filestore/clvhealth_jcafb** [tkl-odoo13-jcafb20-vm] (2020-06-18)
+-------------------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo13-jcafb20-vm] Criar, manualmente, os diretórios:
+
+        * /opt/odoo/**clvsol_filestore**
+
+        * /opt/odoo/clvsol_filestore/**clvhealth_jcafb**
+
+        * /opt/odoo/clvsol_filestore/clvhealth_jcafb/**export_files**
+
+        * /opt/odoo/clvsol_filestore/clvhealth_jcafb/export_files/**csv**
+
+        * /opt/odoo/clvsol_filestore/clvhealth_jcafb/export_files/**sqlite**
+
+        * /opt/odoo/clvsol_filestore/clvhealth_jcafb/export_files/**xls**
+
+        * /opt/odoo/clvsol_filestore/clvhealth_jcafb/**lab_test_files**
+
+        * /opt/odoo/clvsol_filestore/clvhealth_jcafb/lab_test_files/**reports**
+
+        * /opt/odoo/clvsol_filestore/clvhealth_jcafb/lab_test_files/reports/**templates**
+
+        * /opt/odoo/clvsol_filestore/clvhealth_jcafb/lab_test_files/reports/**xls**
+
+        * /opt/odoo/clvsol_filestore/clvhealth_jcafb/lab_test_files/**results**
+
+        * /opt/odoo/clvsol_filestore/clvhealth_jcafb/lab_test_files/results/**templates**
+
+        * /opt/odoo/clvsol_filestore/clvhealth_jcafb/lab_test_files/results/**xls**
+
+        * /opt/odoo/clvsol_filestore/clvhealth_jcafb/**summary_files**
+
+        * /opt/odoo/clvsol_filestore/clvhealth_jcafb/**survey_files**
+
+        * /opt/odoo/clvsol_filestore/clvhealth_jcafb/survey_files/**templates**
+
+    #. Copiar, manualmente, a partir do servidor **tkl-odoo13-jcafb-vm** para o servidor **tkl-odoo13-jcafb20-vm**, o conteúdo dos diretórios listados anteriormente.
+
+        * "tkl-odoo13-jcafb-vm:/opt/odoo/clvsol_filestore/clvhealth_jcafb" **->** "tkl-odoo13-jcafb20-vm:/opt/odoo/clvsol_filestore/clvhealth_jcafb"
+
+.. index:: clvsol_filestore
+.. index:: clvsol_filestore/clvhealth_jcafb
+.. index:: clvsol_filestore/clvhealth_jcafb/export_files
+.. index:: clvsol_filestore/clvhealth_jcafb/lab_test_files
+.. index:: clvsol_filestore/clvhealth_jcafb/summary_files
+.. index:: clvsol_filestore/clvhealth_jcafb/survey_files
+
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2020-13* (2020-06-20b)
+-----------------------------------------------------------------------------
+
+    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
+
+    #. [tkl-odoo13-jcafb20-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb20-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb20-vm
+            #
+
+            ssh tkl-odoo13-jcafb20-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo13-jcafb20-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb20-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2020_13_2020-06-20b.sql.gz
+
+            dropdb -i clvhealth_jcafb_2020_13
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2020_13
+            psql -f clvhealth_jcafb_2020_13_2020-06-20b.sql -d clvhealth_jcafb_2020_13 -U postgres -h localhost -p 5432 -q
+
+            mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2020_13
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2020_13_2020-06-20b.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2020_13_2020-06-20b.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb20-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb20-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [tkl-odoo13-jcafb20-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb20-vm <https://tkl-odoo13-jcafb20-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo13-jcafb20-vm**".
 
         #. Salvar o registro editado.
 
