@@ -543,46 +543,6 @@ Repositories Installation
             git clone https://github.com/CLVsol/clvsol_odoo_addons_sync --branch 13.0
             git clone https://github.com/CLVsol/clvsol_odoo_addons_sync_jcafb --branch 13.0
 
-    #. To install "`node-less <https://github.com/odoo/odoo/issues/16463>`_", use the following commands (as root):
-
-        ::
-
-            ssh tkl-odoo13-jcafb-vm -l root
-
-        ::
-
-            apt-get install node-less
-
-    #. To install "`suds-py3 <https://stackoverflow.com/questions/46043345/how-use-suds-client-library-in-python-3-6-2>`_", use the following commands (as root):
-
-        ::
-
-            ssh tkl-odoo13-jcafb-vm -l root
-
-        ::
-
-            pip3 install suds-py3
-
-    #. To install "`erpbrasil.base <https://pypi.org/project/erpbrasil.base/>`_", use the following commands (as root):
-
-        ::
-
-            ssh tkl-odoo13-jcafb-vm -l root
-
-        ::
-
-            pip3 install erpbrasil.base
-
-    #. To install "`pycep-correios <https://pypi.org/project/pycep-correios/>`_", use the following commands (as root):
-
-        ::
-
-            ssh tkl-odoo13-jcafb-vm -l root
-
-        ::
-
-            pip3 install pycep-correios
-
     #. To create a symbolic link "odoo_client", use the following commands (as **root**):
 
         ::
