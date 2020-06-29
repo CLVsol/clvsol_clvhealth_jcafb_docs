@@ -541,7 +541,7 @@ Repositories Installation
             git clone https://github.com/CLVsol/clvsol_odoo_addons_process --branch 13.0
             git clone https://github.com/CLVsol/clvsol_odoo_addons_process_jcafb --branch 13.0
             git clone https://github.com/CLVsol/clvsol_odoo_addons_sync --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_sync_jcafb --branch 12.0to13.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_sync_jcafb --branch 13.0
 
     #. To create a symbolic link "odoo_client", use the following commands (as **root**):
 
