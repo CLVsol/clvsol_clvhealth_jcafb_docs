@@ -650,7 +650,7 @@ Atualizar o(s) módulo(s) [ver lista de módulos] (2020-07-07)
 
                 cd /opt/odoo/clvsol_clvhealth_jcafb/project
                 
-                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_13" - m clv_export
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_13" - m clv_verification
             
         #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
 
@@ -1219,8 +1219,8 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-07b)
 .. index:: filestore_clvhealth_jcafb_2021v_13_2020-07-07b
 .. index:: clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-07b
 
-:red:`(Não Executado])` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-07b)
-------------------------------------------------------------------------------------------------------
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-07b)
+------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
 
@@ -1297,5 +1297,80 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-07b)
             * "**http://tkl-odoo13-jcafb21-vm**".
 
         #. Salvar o registro editado.
+
+Atualizar o(s) módulo(s) [ver lista de módulos] (2020-07-08)
+------------------------------------------------------------
+
+    #. [tkl-odoo13-jcafb21-vm] Lista de Módulos:
+
+        * clv_global_log
+        * clv_global_log_jcafb
+        * clv_address
+        * clv_address_aux
+        * clv_family
+        * clv_person
+        * clv_person_aux
+        * clv_employee
+        * clv_address_aux_sync_jcafb
+        * clv_address_sync_jcafb
+        * clv_document_sync_jcafb
+        * clv_employee_sync_jcafb
+        * clv_event_sync_jcafb
+        * clv_family_sync_jcafb
+        * clv_global_tag_sync_jcafb
+        * clv_lab_test_sync_jcafb
+        * clv_person_aux_sync_jcafb
+        * clv_person_sync_jcafb
+        * clv_phase_sync_jcafb
+        * clv_set_sync_jcafb
+        * clv_survey_sync_jcafb
+
+    #. [tkl-odoo13-jcafb21-vm] **Executar** a atualização do(s) Módulo(s):
+
+        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo13-jcafb21-vm** e executar o *Odoo* no modo manual:
+
+            ::
+
+                # ***** tkl-odoo13-jcafb21-vm (session 1)
+                #
+
+                ssh tkl-odoo13-jcafb21-vm -l root
+
+                /etc/init.d/odoo stop
+
+                su odoo
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo13-jcafb21-vm** e executar o **install.py**:
+
+            ::
+
+                # ***** tkl-odoo13-jcafb21-vm (session 2)
+                #
+
+                ssh tkl-odoo13-jcafb21-vm -l odoo
+
+                cd /opt/odoo/clvsol_clvhealth_jcafb/project
+                
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_13" - m clv_global_log
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_13" - m clv_address
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_13" - m clv_employee
+            
+        #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
+
+            ::
+
+                # ***** tkl-odoo13-jcafb21-vm (session 1)
+                #
+
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+                ^C
+
+                exit
+
+                /etc/init.d/odoo start
 
 .. toctree::   :maxdepth: 2
