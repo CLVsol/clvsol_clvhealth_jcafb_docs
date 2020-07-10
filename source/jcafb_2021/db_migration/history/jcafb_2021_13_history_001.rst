@@ -10,9 +10,9 @@
 .. role:: blue
 .. role:: bi
 
-===========================================
-Migração do Banco de Dados - JCAFB-2021v-13
-===========================================
+======================================================
+Migração do Banco de Dados - JCAFB-2021v-13 (obsoleto)
+======================================================
 
 Inicializar o conteúdo do diretório **clvsol_filestore/clvhealth_jcafb** [tkl-odoo13-jcafb21-vm] (2020-06-21)
 -------------------------------------------------------------------------------------------------------------
@@ -151,8 +151,8 @@ Criar o *External Sync Host* "https://192.168.25.188" (2020-07-03)
             * External User: "**admin**"
             * External User Password: "*******"
 
-Preparar os "*Global Settings*" para a *CLVhealth-JCAFB-2020v-13* (2020-07-03)
-------------------------------------------------------------------------------
+Preparar o "*Global Settings*" para a *CLVhealth-JCAFB-2020v-13* (2020-07-03)
+-----------------------------------------------------------------------------
 
     #. Acessar a *View* *Global Settings*:
 
@@ -455,7 +455,7 @@ Executar o *External Sync Batch* "*Default Batch*" (1) (2020-07-03)
 
             /etc/init.d/odoo start
 
-Preparar os "*Global Settings*" para a *CLVhealth-JCAFB-2021v-13* (2020-07-03)
+Atualizar o "*Global Settings*" para a *CLVhealth-JCAFB-2021v-13* (2020-07-03)
 ------------------------------------------------------------------------------
 
     #. Acessar a *View* *Global Settings*:
@@ -1536,5 +1536,33 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-09a)
             * "**http://tkl-odoo13-jcafb21-vm**".
 
         #. Salvar o registro editado.
+
+Adicionar a nova *Phase* (JCAFB-2021v) para a *CLVhealth-JCAFB-2021v-13* (2020-07-10)
+-------------------------------------------------------------------------------------
+
+    #. Incluir a nova Fase **JCAFB-2021v**:
+
+        #. Acessar a *View* *Phases*:
+
+            * Menu de acesso:
+                * :bi:`Base` » :bi:`Configuration` » :bi:`Phases`
+
+        #. Incluir uma nova Fase:
+
+            * Parâmetros editados:
+
+                * *Phase*: "**JCAFB-2021v**"
+                * *Description*: "**Jornada Virtual simulando uma quinta visita virtual à cidade de Fernão - SP**"
+
+Atualizar o "*Global Settings*" para a *CLVhealth-JCAFB-2021v-13* (2020-07-10)
+------------------------------------------------------------------------------
+
+    #. Acessar a *View* *Global Settings*:
+
+        * Menu de acesso:
+
+            * :bi:`Base` » :bi:`Global Settings` » :bi:`Global Settings`
+
+        #. Configurar o parâmetro :bi:`Phase` » :bi:`Phase`: **JCAFB-2021v**
 
 .. toctree::   :maxdepth: 2
