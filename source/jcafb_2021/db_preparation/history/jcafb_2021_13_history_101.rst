@@ -14,7 +14,7 @@
 Preparação do Banco de Dados - JCAFB-2021v-13
 =============================================
 
-:red:`(Não Executado])` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-10b)
+:red:`(Não Executado])` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-11d)
 ------------------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
@@ -40,22 +40,22 @@ Preparação do Banco de Dados - JCAFB-2021v-13
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_13_2020-07-10b.sql.gz
+            # gzip -d clvhealth_jcafb_2021v_13_2020-07-11d.sql.gz
 
             dropdb -i clvhealth_jcafb_2021v_13
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_13
-            psql -f clvhealth_jcafb_2021v_13_2020-07-10b.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2021v_13_2020-07-11d.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2021v_13
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-10b.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-11d.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-10b.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-11d.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
 
@@ -134,50 +134,6 @@ Excluir todos os Endereços do Cadastro :bi:`Address (Aux)` (2020-07-11)
         #. Exercutar a Ação "**Excluir**":
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
-
-Executar o *Verification Batch* "*Default Batch*" (1) (2020-07-11)
-------------------------------------------------------------------
-
-    #. Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e executar o *Odoo* no modo manual:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-    #. [tkl-odoo13-jcafb21-vm] Executar o :bi:`Verification Batch` "**Default Batch**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
-
-        #. Executar a ação :bi:`Verification Batch Exec` para o "**Default Batch**":
-
-            * Menu de acesso:
-                
-                * :bi:`Verification` » :bi:`Verification` » :bi:`Verification` » :bi:`Batches` » **Ação** » :bi:`Verification Batch Exec`
-
-            * :bi:`Execution time: 0:11:37.808`
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo padrão:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
 
 Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-11a)
 --------------------------------------------------------------------------
@@ -322,30 +278,6 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-11a)
 
         #. Salvar o registro editado.
 
-Atualizar o *Employee History* de todos os Funcionários (1) (2020-07-11)
-------------------------------------------------------------------------
-
-    #. [tkl-odoo13-jcafb21-vm] Executar a Ação :bi:`Employee History Update` para todos os Funcionários:
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
-
-        #. Acessar a *View* *Employees*:
-
-            * Menu de acesso:
-
-                * **Funcionários** » :bi:`Employees` » :bi:`Employees`
-
-        #. Selecionar todos os Funcionários (**248**)
-
-        #. Exercutar a Ação ":bi:`Employee History Update`":
-
-            * Parâmetros utilizados:
-
-                * *Sign out date*: **01/03/2020**
-                * *Sign in date*: **01/11/2019**
-
-            #. Utilize o botão :bi:`Employee History Update` para executar a Ação.
-
 Remover a Fase de todos os Funcionários (2020-07-11)
 ----------------------------------------------------
 
@@ -369,8 +301,8 @@ Remover a Fase de todos os Funcionários (2020-07-11)
 
             #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
-Atualizar o *Employee History* de todos os Funcionários (2) (2020-07-11)
-------------------------------------------------------------------------
+Atualizar o *Employee History* de todos os Funcionários (2020-07-11)
+--------------------------------------------------------------------
 
     #. [tkl-odoo13-jcafb21-vm] Executar a Ação :bi:`Employee History Update` para todos os Funcionários:
 
@@ -722,29 +654,6 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-11b)
             * "**http://tkl-odoo13-jcafb21-vm**".
 
         #. Salvar o registro editado.
-
-Marcar o *Active Log* de todos os Objetos (2020-07-09)
-------------------------------------------------------
-
-    #. [tkl-odoo13-jcafb21-vm] Executar a Ação :bi:`Global Log Client Mass Edit` para todos os Objetos:
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
-
-        #. Acessar a *View* *Global Log Clients*:
-
-            * Menu de acesso:
-
-                * :bi:`Base` » :bi:`Global Logs` » :bi:`Global Log Clients`
-
-        #. Selecionar todos os :bi:`Global Log Clients` (**43**)
-
-        #. Exercutar a Ação ":bi:`Global Log Client Mass Edit`":
-
-            * Parâmetros utilizados:
-
-                * *Active Log*: **Set** **marcado**
-
-            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
 Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-09a)
 --------------------------------------------------------------------------
