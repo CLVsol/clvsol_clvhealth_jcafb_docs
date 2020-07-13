@@ -19,7 +19,7 @@ import os
 
 # -- Project information -----------------------------------------------------
 
-project = 'CLVhealth-JCAFB-2020'
+project = 'CLVhealth-JCAFB-2021'
 copyright = '2019, Carlos Eduardo Vercelino - CLVsol'
 author = 'Carlos Eduardo Vercelino - CLVsol'
 
