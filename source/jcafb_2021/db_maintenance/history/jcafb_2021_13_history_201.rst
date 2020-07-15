@@ -11,11 +11,11 @@
 .. role:: bi
 
 =============================================
-Preparação do Banco de Dados - JCAFB-2021v-13
+Manutenção do Banco de Dados - JCAFB-2021v-13
 =============================================
 
-:red:`(Não Executado])` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-12b)
-------------------------------------------------------------------------------------------------------
+[clvheatlh-jcafb-2021v-13-aws-tst] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-12b)
+-----------------------------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
 
