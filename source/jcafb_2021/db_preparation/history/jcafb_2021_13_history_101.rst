@@ -10,9 +10,9 @@
 .. role:: blue
 .. role:: bi
 
-=============================================
-Preparação do Banco de Dados - JCAFB-2021v-13
-=============================================
+=================================================
+Preparação do Banco de Dados (1) - JCAFB-2021v-13
+=================================================
 
 :red:`(Não Executado])` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-11d)
 ------------------------------------------------------------------------------------------------------
@@ -967,8 +967,8 @@ Renovar o *Token* de todos os Funcionários (2020-07-15)
 
             #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
-Redefinir a **Senha** de todos os os Funcionários da **JCAFB-2021v** (2020-07-15)
----------------------------------------------------------------------------------
+Redefinir a **Senha** de todos os Funcionários da **JCAFB-2021v** (2020-07-15)
+------------------------------------------------------------------------------
 
     #. [tkl-odoo13-jcafb21-vm] Executar a Ação :bi:`Employee Mass Edit` para todas os Funcionários da **JCAFB-2021v**:
 
