@@ -12,3 +12,4 @@ Histórico (Preparação do Banco de Dados - JCAFB-2021)
    jcafb_2020_13_history_101
    
    jcafb_2021_13_history_101
+   jcafb_2021_13_history_102
