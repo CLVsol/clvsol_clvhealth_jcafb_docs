@@ -982,6 +982,52 @@ Atualizar o *Entity Code* de todas os Endereços (2020-07-17)
 
             #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
+Atualizar o *Entity Code* de todas as Pessoas (Aux) (2020-07-17)
+----------------------------------------------------------------
+
+    #. [tkl-odoo13-jcafb20-vm] Executar a Ação :bi:`Person (Aux) Mass Edit` para todas as Pessoas (Aux):
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb20-vm <https://tkl-odoo13-jcafb20-vm>`_
+
+        #. Acessar a *View* *Persons*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Auxiliary` » :bi:`Persons (Aux)`
+
+        #. Selecionar todas as Pessoas (Aux) (**605**)
+
+        #. Exercutar a Ação ":bi:`Person (Aux) Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Partner Entity Code*: **Set**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Atualizar o *Entity Code* de todas os Endereços (Aux) (2020-07-17)
+------------------------------------------------------------------
+
+    #. [tkl-odoo13-jcafb20-vm] Executar a Ação :bi:`Address (Aux) Mass Edit` para todas os Endereços (Aux):
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb20-vm <https://tkl-odoo13-jcafb20-vm>`_
+
+        #. Acessar a *View* *Addresses*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Addresses`
+
+        #. Selecionar todas os Endereços (Aux) (**202**)
+
+        #. Exercutar a Ação ":bi:`Address (Aux) Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Partner Entity Code*: **Set**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
 Criar um backup do banco de dados *CLVhealth-JCAFB-2020-13* (2020-07-17a)
 -------------------------------------------------------------------------
 
