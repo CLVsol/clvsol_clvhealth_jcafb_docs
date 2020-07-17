@@ -348,7 +348,7 @@ Remover a Fase de todos os Endereços (2020-07-12)
 
                 * :bi:`Community` » :bi:`Community` » :bi:`Addresses`
 
-        #. Selecionar todas as Pessoas (**665**)
+        #. Selecionar todos os Endereços (**665**)
 
         #. Exercutar a Ação ":bi:`Address Mass Edit`":
 
