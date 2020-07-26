@@ -292,11 +292,6 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-16a)
         * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-16a.tar.gz
         * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-16a.tar.gz
 
-.. index:: clvhealth_jcafb_2021v_13_2020-07-16a.sql
-.. index:: clvhealth_jcafb_2021v_13_2020-07-16a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_13_2020-07-16a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-16a
-
 Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-16a)
 ------------------------------------------------------------------------------
 
@@ -607,11 +602,6 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-17a)
         * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-17a.tar.gz
         * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-17a.tar.gz
 
-.. index:: clvhealth_jcafb_2021v_13_2020-07-17a.sql
-.. index:: clvhealth_jcafb_2021v_13_2020-07-17a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_13_2020-07-17a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-17a
-
 :red:`(Não Executado])` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-17a)
 ------------------------------------------------------------------------------------------------------
 
@@ -889,11 +879,6 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-18a)
         * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-18a.tar.gz
         * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-18a.tar.gz
 
-.. index:: clvhealth_jcafb_2021v_13_2020-07-18a.sql
-.. index:: clvhealth_jcafb_2021v_13_2020-07-18a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_13_2020-07-18a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-18a
-
 Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-18a)
 ------------------------------------------------------------------------------
 
@@ -1168,11 +1153,6 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-19a)
         * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-19a.sql.gz
         * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-19a.tar.gz
         * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-19a.tar.gz
-
-.. index:: clvhealth_jcafb_2021v_13_2020-07-19a.sql
-.. index:: clvhealth_jcafb_2021v_13_2020-07-19a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_13_2020-07-19a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-19a
 
 :red:`(Não Executado])` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-19a)
 ------------------------------------------------------------------------------------------------------
@@ -1580,11 +1560,6 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-20a)
         * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-20a.tar.gz
         * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-20a.tar.gz
 
-.. index:: clvhealth_jcafb_2021v_13_2020-07-20a.sql
-.. index:: clvhealth_jcafb_2021v_13_2020-07-20a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_13_2020-07-20a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-20a
-
 Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-20a)
 ------------------------------------------------------------------------------
 
@@ -1800,11 +1775,6 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-20b)
         * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-20b.sql.gz
         * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-20b.tar.gz
         * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-20b.tar.gz
-
-.. index:: clvhealth_jcafb_2021v_13_2020-07-20b.sql
-.. index:: clvhealth_jcafb_2021v_13_2020-07-20b.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_13_2020-07-20b
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-20b
 
 Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-20b)
 ------------------------------------------------------------------------------
@@ -2081,11 +2051,6 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-20c)
         * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-20c.tar.gz
         * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-20c.tar.gz
 
-.. index:: clvhealth_jcafb_2021v_13_2020-07-20c.sql
-.. index:: clvhealth_jcafb_2021v_13_2020-07-20c.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_13_2020-07-20c
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-20c
-
 Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-20c)
 ------------------------------------------------------------------------------
 
@@ -2276,11 +2241,6 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-21a)
         * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-21a.sql.gz
         * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-21a.tar.gz
         * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-21a.tar.gz
-
-.. index:: clvhealth_jcafb_2021v_13_2020-07-21a.sql
-.. index:: clvhealth_jcafb_2021v_13_2020-07-21a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_13_2020-07-21a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-21a
 
 Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-21a)
 ------------------------------------------------------------------------------
@@ -2474,11 +2434,6 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-22a)
         * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-22a.tar.gz
         * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-22a.tar.gz
 
-.. index:: clvhealth_jcafb_2021v_13_2020-07-22a.sql
-.. index:: clvhealth_jcafb_2021v_13_2020-07-22a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_13_2020-07-22a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-22a
-
 Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-22a)
 ------------------------------------------------------------------------------
 
@@ -2616,11 +2571,6 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-23a)
         * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-23a.sql.gz
         * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-23a.tar.gz
         * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-23a.tar.gz
-
-.. index:: clvhealth_jcafb_2021v_13_2020-07-23a.sql
-.. index:: clvhealth_jcafb_2021v_13_2020-07-23a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_13_2020-07-23a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-23a
 
 Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-23a)
 ------------------------------------------------------------------------------
@@ -2812,11 +2762,6 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-23b)
         * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-23b.sql.gz
         * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-23b.tar.gz
         * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-23b.tar.gz
-
-.. index:: clvhealth_jcafb_2021v_13_2020-07-23b.sql
-.. index:: clvhealth_jcafb_2021v_13_2020-07-23b.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_13_2020-07-23b
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-23b
 
 Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-23b)
 ------------------------------------------------------------------------------
@@ -3011,11 +2956,6 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-23c)
         * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-23c.tar.gz
         * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-23c.tar.gz
 
-.. index:: clvhealth_jcafb_2021v_13_2020-07-23c.sql
-.. index:: clvhealth_jcafb_2021v_13_2020-07-23c.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_13_2020-07-23c
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-23c
-
 Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-23c)
 ------------------------------------------------------------------------------
 
@@ -3201,6 +3141,149 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-25a)
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
             tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-25a.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [tkl-odoo13-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo13-jcafb21-vm**".
+
+        #. Salvar o registro editado.
+
+Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-26a)
+--------------------------------------------------------------------------
+
+    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb21-vm
+            #
+
+            ssh tkl-odoo13-jcafb21-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb21-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-26a.sql
+
+            gzip clvhealth_jcafb_2021v_13_2020-07-26a.sql
+            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-26a.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-26a.tar.gz clvhealth_jcafb_2021v_13
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-26a.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-26a.sql
+        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-26a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-26a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-26a.tar.gz
+
+.. index:: clvhealth_jcafb_2021v_13_2020-07-26a.sql
+.. index:: clvhealth_jcafb_2021v_13_2020-07-26a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2021v_13_2020-07-26a
+.. index:: clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-26a
+
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-26a)
+------------------------------------------------------------------------------
+
+    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
+
+    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb21-vm
+            #
+
+            ssh tkl-odoo13-jcafb21-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2021v_13_2020-07-26a.sql.gz
+
+            dropdb -i clvhealth_jcafb_2021v_13
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_13
+            psql -f clvhealth_jcafb_2021v_13_2020-07-26a.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2021v_13
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-26a.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-26a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
 
