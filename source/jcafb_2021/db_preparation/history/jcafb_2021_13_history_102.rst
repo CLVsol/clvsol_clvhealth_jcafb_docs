@@ -4398,4 +4398,58 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-30a)
 
         #. Salvar o registro editado.
 
+Atualizar o(s) módulo(s) [ver lista] (2020-08-01)
+-------------------------------------------------
+
+    #. [tkl-odoo13-jcafb21-vm] Lista de Módulos:
+
+        * clv_lab_test
+        * clv_lab_test_jcafb
+
+    #. [tkl-odoo13-jcafb21-vm] **Executar** a atualização do(s) Módulo(s):
+
+        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo13-jcafb21-vm** e executar o *Odoo* no modo manual:
+
+            ::
+
+                # ***** tkl-odoo13-jcafb21-vm (session 1)
+                #
+
+                ssh tkl-odoo13-jcafb21-vm -l root
+
+                /etc/init.d/odoo stop
+
+                su odoo
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo13-jcafb21-vm** e executar o **install.py**:
+
+            ::
+
+                # ***** tkl-odoo13-jcafb21-vm (session 2)
+                #
+
+                ssh tkl-odoo13-jcafb21-vm -l odoo
+
+                cd /opt/odoo/clvsol_clvhealth_jcafb/project
+                
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_13" - m clv_lab_test
+            
+        #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
+
+            ::
+
+                # ***** tkl-odoo13-jcafb21-vm (session 1)
+                #
+
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+                ^C
+
+                exit
+
+                /etc/init.d/odoo start
+
 .. toctree::   :maxdepth: 2
