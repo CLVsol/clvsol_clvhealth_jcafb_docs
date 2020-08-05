@@ -14,85 +14,6 @@
 Preparação do Banco de Dados (2) - JCAFB-2021v-13
 =================================================
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-15a)
-------------------------------------------------------------------------------
-
-    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_13_2020-07-15a.sql.gz
-
-            dropdb -i clvhealth_jcafb_2021v_13
-
-            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_13
-            psql -f clvhealth_jcafb_2021v_13_2020-07-15a.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
-
-            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            rm -rf clvhealth_jcafb_2021v_13
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-15a.tar.gz
-
-            # mkdir /opt/odoo/clvsol_filestore
-            cd /opt/odoo/clvsol_filestore
-            rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-15a.tar.gz
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    #. [tkl-odoo13-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
-
-        #. Acessar a *View* **Parâmetros do Sistema**:
-
-            * Menu de acesso:
-                
-                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
-
-        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
-
-        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
-
-        #. Alterar o campo **Valor** para:
-
-            * "**http://tkl-odoo13-jcafb21-vm**".
-
-        #. Salvar o registro editado.
-
 Executar o *Verification Batch* "*Default Batch*" (2020-07-16)
 --------------------------------------------------------------
 
@@ -232,144 +153,6 @@ Atualizar as permissões de todos os Usuários da JCAFB-2021v (2020-07-16)
             #. Precionar o botão :bi:`Get Reference Employee Access Rights`.
 
             #. Utilize o botão :bi:`Update` para executar a Ação.
-
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-16a)
---------------------------------------------------------------------------
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-            # data_dir = /var/lib/odoo/.local/share/Odoo
-            #
-
-            cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-16a.sql
-
-            gzip clvhealth_jcafb_2021v_13_2020-07-16a.sql
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-16a.sql
-
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-16a.tar.gz clvhealth_jcafb_2021v_13
-
-            cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-16a.tar.gz clvhealth_jcafb
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-16a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-16a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-16a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-16a.tar.gz
-
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-16a)
-------------------------------------------------------------------------------
-
-    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_13_2020-07-16a.sql.gz
-
-            dropdb -i clvhealth_jcafb_2021v_13
-
-            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_13
-            psql -f clvhealth_jcafb_2021v_13_2020-07-16a.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
-
-            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            rm -rf clvhealth_jcafb_2021v_13
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-16a.tar.gz
-
-            # mkdir /opt/odoo/clvsol_filestore
-            cd /opt/odoo/clvsol_filestore
-            rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-16a.tar.gz
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    #. [tkl-odoo13-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
-
-        #. Acessar a *View* **Parâmetros do Sistema**:
-
-            * Menu de acesso:
-                
-                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
-
-        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
-
-        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
-
-        #. Alterar o campo **Valor** para:
-
-            * "**http://tkl-odoo13-jcafb21-vm**".
-
-        #. Salvar o registro editado.
 
 Atualizar o(s) módulo(s) [ver lista] (2020-07-17)
 -------------------------------------------------
@@ -543,144 +326,6 @@ Atualizar o *Entity Code* de todas os Endereços (2020-07-17)
 
             #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-17a)
---------------------------------------------------------------------------
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-            # data_dir = /var/lib/odoo/.local/share/Odoo
-            #
-
-            cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-17a.sql
-
-            gzip clvhealth_jcafb_2021v_13_2020-07-17a.sql
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-17a.sql
-
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-17a.tar.gz clvhealth_jcafb_2021v_13
-
-            cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-17a.tar.gz clvhealth_jcafb
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-17a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-17a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-17a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-17a.tar.gz
-
-:red:`(Não Executado])` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-17a)
-------------------------------------------------------------------------------------------------------
-
-    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_13_2020-07-17a.sql.gz
-
-            dropdb -i clvhealth_jcafb_2021v_13
-
-            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_13
-            psql -f clvhealth_jcafb_2021v_13_2020-07-17a.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
-
-            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            rm -rf clvhealth_jcafb_2021v_13
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-17a.tar.gz
-
-            # mkdir /opt/odoo/clvsol_filestore
-            cd /opt/odoo/clvsol_filestore
-            rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-17a.tar.gz
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    #. [tkl-odoo13-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
-
-        #. Acessar a *View* **Parâmetros do Sistema**:
-
-            * Menu de acesso:
-                
-                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
-
-        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
-
-        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
-
-        #. Alterar o campo **Valor** para:
-
-            * "**http://tkl-odoo13-jcafb21-vm**".
-
-        #. Salvar o registro editado.
-
 Atualizar os fontes do projeto (2020-07-18)
 -------------------------------------------
 
@@ -820,144 +465,6 @@ Atualizar o(s) módulo(s) [clv_address_aux] (2020-07-18)
 
                 /etc/init.d/odoo start
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-18a)
---------------------------------------------------------------------------
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-            # data_dir = /var/lib/odoo/.local/share/Odoo
-            #
-
-            cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-18a.sql
-
-            gzip clvhealth_jcafb_2021v_13_2020-07-18a.sql
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-18a.sql
-
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-18a.tar.gz clvhealth_jcafb_2021v_13
-
-            cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-18a.tar.gz clvhealth_jcafb
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-18a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-18a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-18a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-18a.tar.gz
-
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-18a)
-------------------------------------------------------------------------------
-
-    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_13_2020-07-18a.sql.gz
-
-            dropdb -i clvhealth_jcafb_2021v_13
-
-            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_13
-            psql -f clvhealth_jcafb_2021v_13_2020-07-18a.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
-
-            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            rm -rf clvhealth_jcafb_2021v_13
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-18a.tar.gz
-
-            # mkdir /opt/odoo/clvsol_filestore
-            cd /opt/odoo/clvsol_filestore
-            rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-18a.tar.gz
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    #. [tkl-odoo13-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
-
-        #. Acessar a *View* **Parâmetros do Sistema**:
-
-            * Menu de acesso:
-                
-                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
-
-        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
-
-        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
-
-        #. Alterar o campo **Valor** para:
-
-            * "**http://tkl-odoo13-jcafb21-vm**".
-
-        #. Salvar o registro editado.
-
 Associar todas as Pessoas a uma Pessoa (Aux) (2020-07-19)
 ---------------------------------------------------------
 
@@ -1094,144 +601,6 @@ Executar o *Verification Batch* "*Default Batch*" (2020-07-19)
             exit
 
             /etc/init.d/odoo start
-
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-19a)
---------------------------------------------------------------------------
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-            # data_dir = /var/lib/odoo/.local/share/Odoo
-            #
-
-            cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-19a.sql
-
-            gzip clvhealth_jcafb_2021v_13_2020-07-19a.sql
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-19a.sql
-
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-19a.tar.gz clvhealth_jcafb_2021v_13
-
-            cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-19a.tar.gz clvhealth_jcafb
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-19a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-19a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-19a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-19a.tar.gz
-
-:red:`(Não Executado])` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-19a)
-------------------------------------------------------------------------------------------------------
-
-    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_13_2020-07-19a.sql.gz
-
-            dropdb -i clvhealth_jcafb_2021v_13
-
-            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_13
-            psql -f clvhealth_jcafb_2021v_13_2020-07-19a.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
-
-            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            rm -rf clvhealth_jcafb_2021v_13
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-19a.tar.gz
-
-            # mkdir /opt/odoo/clvsol_filestore
-            cd /opt/odoo/clvsol_filestore
-            rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-19a.tar.gz
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    #. [tkl-odoo13-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
-
-        #. Acessar a *View* **Parâmetros do Sistema**:
-
-            * Menu de acesso:
-                
-                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
-
-        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
-
-        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
-
-        #. Alterar o campo **Valor** para:
-
-            * "**http://tkl-odoo13-jcafb21-vm**".
-
-        #. Salvar o registro editado.
 
 Atualizar o(s) módulo(s) [clv_person_aux_verification_jcafb] (2020-07-20)
 -------------------------------------------------------------------------
@@ -1501,144 +870,6 @@ Executar o *Verification Batch* "*Default Batch*" (2020-07-20)
 
             /etc/init.d/odoo start
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-20a)
---------------------------------------------------------------------------
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-            # data_dir = /var/lib/odoo/.local/share/Odoo
-            #
-
-            cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-20a.sql
-
-            gzip clvhealth_jcafb_2021v_13_2020-07-20a.sql
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-20a.sql
-
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-20a.tar.gz clvhealth_jcafb_2021v_13
-
-            cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-20a.tar.gz clvhealth_jcafb
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-20a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-20a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-20a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-20a.tar.gz
-
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-20a)
-------------------------------------------------------------------------------
-
-    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_13_2020-07-20a.sql.gz
-
-            dropdb -i clvhealth_jcafb_2021v_13
-
-            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_13
-            psql -f clvhealth_jcafb_2021v_13_2020-07-20a.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
-
-            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            rm -rf clvhealth_jcafb_2021v_13
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-20a.tar.gz
-
-            # mkdir /opt/odoo/clvsol_filestore
-            cd /opt/odoo/clvsol_filestore
-            rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-20a.tar.gz
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    #. [tkl-odoo13-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
-
-        #. Acessar a *View* **Parâmetros do Sistema**:
-
-            * Menu de acesso:
-                
-                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
-
-        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
-
-        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
-
-        #. Alterar o campo **Valor** para:
-
-            * "**http://tkl-odoo13-jcafb21-vm**".
-
-        #. Salvar o registro editado.
-
 Excluir todas as Pessoas do Cadastro :bi:`Person (Aux)` (2020-07-20)
 --------------------------------------------------------------------
 
@@ -1716,144 +947,6 @@ Excluir todos os Endereços do Cadastro :bi:`Address (Aux)` (2020-07-20)
         #. Exercutar a Ação "**Excluir**":
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
-
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-20b)
---------------------------------------------------------------------------
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-            # data_dir = /var/lib/odoo/.local/share/Odoo
-            #
-
-            cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-20b.sql
-
-            gzip clvhealth_jcafb_2021v_13_2020-07-20b.sql
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-20b.sql
-
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-20b.tar.gz clvhealth_jcafb_2021v_13
-
-            cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-20b.tar.gz clvhealth_jcafb
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-20b.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-20b.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-20b.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-20b.tar.gz
-
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-20b)
-------------------------------------------------------------------------------
-
-    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_13_2020-07-20b.sql.gz
-
-            dropdb -i clvhealth_jcafb_2021v_13
-
-            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_13
-            psql -f clvhealth_jcafb_2021v_13_2020-07-20b.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
-
-            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            rm -rf clvhealth_jcafb_2021v_13
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-20b.tar.gz
-
-            # mkdir /opt/odoo/clvsol_filestore
-            cd /opt/odoo/clvsol_filestore
-            rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-20b.tar.gz
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    #. [tkl-odoo13-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
-
-        #. Acessar a *View* **Parâmetros do Sistema**:
-
-            * Menu de acesso:
-                
-                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
-
-        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
-
-        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
-
-        #. Alterar o campo **Valor** para:
-
-            * "**http://tkl-odoo13-jcafb21-vm**".
-
-        #. Salvar o registro editado.
 
 Associar todas as Pessoas a uma Pessoa (Aux) (2020-07-20)
 ---------------------------------------------------------
@@ -1992,144 +1085,6 @@ Executar o *Verification Batch* "*Default Batch*" (2020-07-20)
 
             /etc/init.d/odoo start
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-20c)
---------------------------------------------------------------------------
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-            # data_dir = /var/lib/odoo/.local/share/Odoo
-            #
-
-            cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-20c.sql
-
-            gzip clvhealth_jcafb_2021v_13_2020-07-20c.sql
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-20c.sql
-
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-20c.tar.gz clvhealth_jcafb_2021v_13
-
-            cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-20c.tar.gz clvhealth_jcafb
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-20c.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-20c.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-20c.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-20c.tar.gz
-
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-20c)
-------------------------------------------------------------------------------
-
-    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_13_2020-07-20c.sql.gz
-
-            dropdb -i clvhealth_jcafb_2021v_13
-
-            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_13
-            psql -f clvhealth_jcafb_2021v_13_2020-07-20c.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
-
-            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            rm -rf clvhealth_jcafb_2021v_13
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-20c.tar.gz
-
-            # mkdir /opt/odoo/clvsol_filestore
-            cd /opt/odoo/clvsol_filestore
-            rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-20c.tar.gz
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    #. [tkl-odoo13-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
-
-        #. Acessar a *View* **Parâmetros do Sistema**:
-
-            * Menu de acesso:
-                
-                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
-
-        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
-
-        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
-
-        #. Alterar o campo **Valor** para:
-
-            * "**http://tkl-odoo13-jcafb21-vm**".
-
-        #. Salvar o registro editado.
-
 Atualizar o(s) módulo(s) [clv_survey] (2020-07-21)
 --------------------------------------------------
 
@@ -2182,144 +1137,6 @@ Atualizar o(s) módulo(s) [clv_survey] (2020-07-21)
                 exit
 
                 /etc/init.d/odoo start
-
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-21a)
---------------------------------------------------------------------------
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-            # data_dir = /var/lib/odoo/.local/share/Odoo
-            #
-
-            cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-21a.sql
-
-            gzip clvhealth_jcafb_2021v_13_2020-07-21a.sql
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-21a.sql
-
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-21a.tar.gz clvhealth_jcafb_2021v_13
-
-            cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-21a.tar.gz clvhealth_jcafb
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-21a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-21a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-21a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-21a.tar.gz
-
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-21a)
-------------------------------------------------------------------------------
-
-    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_13_2020-07-21a.sql.gz
-
-            dropdb -i clvhealth_jcafb_2021v_13
-
-            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_13
-            psql -f clvhealth_jcafb_2021v_13_2020-07-21a.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
-
-            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            rm -rf clvhealth_jcafb_2021v_13
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-21a.tar.gz
-
-            # mkdir /opt/odoo/clvsol_filestore
-            cd /opt/odoo/clvsol_filestore
-            rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-21a.tar.gz
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    #. [tkl-odoo13-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
-
-        #. Acessar a *View* **Parâmetros do Sistema**:
-
-            * Menu de acesso:
-                
-                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
-
-        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
-
-        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
-
-        #. Alterar o campo **Valor** para:
-
-            * "**http://tkl-odoo13-jcafb21-vm**".
-
-        #. Salvar o registro editado.
 
 Atualizar o(s) módulo(s) [clv_survey, clv_survey_sync_jcafb] (2020-07-22)
 -------------------------------------------------------------------------
@@ -2375,282 +1192,6 @@ Atualizar o(s) módulo(s) [clv_survey, clv_survey_sync_jcafb] (2020-07-22)
 
                 /etc/init.d/odoo start
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-22a)
---------------------------------------------------------------------------
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-            # data_dir = /var/lib/odoo/.local/share/Odoo
-            #
-
-            cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-22a.sql
-
-            gzip clvhealth_jcafb_2021v_13_2020-07-22a.sql
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-22a.sql
-
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-22a.tar.gz clvhealth_jcafb_2021v_13
-
-            cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-22a.tar.gz clvhealth_jcafb
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-22a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-22a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-22a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-22a.tar.gz
-
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-22a)
-------------------------------------------------------------------------------
-
-    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_13_2020-07-22a.sql.gz
-
-            dropdb -i clvhealth_jcafb_2021v_13
-
-            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_13
-            psql -f clvhealth_jcafb_2021v_13_2020-07-22a.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
-
-            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            rm -rf clvhealth_jcafb_2021v_13
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-22a.tar.gz
-
-            # mkdir /opt/odoo/clvsol_filestore
-            cd /opt/odoo/clvsol_filestore
-            rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-22a.tar.gz
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    #. [tkl-odoo13-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
-
-        #. Acessar a *View* **Parâmetros do Sistema**:
-
-            * Menu de acesso:
-                
-                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
-
-        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
-
-        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
-
-        #. Alterar o campo **Valor** para:
-
-            * "**http://tkl-odoo13-jcafb21-vm**".
-
-        #. Salvar o registro editado.
-
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-23a)
---------------------------------------------------------------------------
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-            # data_dir = /var/lib/odoo/.local/share/Odoo
-            #
-
-            cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-23a.sql
-
-            gzip clvhealth_jcafb_2021v_13_2020-07-23a.sql
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-23a.sql
-
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-23a.tar.gz clvhealth_jcafb_2021v_13
-
-            cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-23a.tar.gz clvhealth_jcafb
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-23a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-23a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-23a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-23a.tar.gz
-
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-23a)
-------------------------------------------------------------------------------
-
-    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_13_2020-07-23a.sql.gz
-
-            dropdb -i clvhealth_jcafb_2021v_13
-
-            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_13
-            psql -f clvhealth_jcafb_2021v_13_2020-07-23a.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
-
-            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            rm -rf clvhealth_jcafb_2021v_13
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-23a.tar.gz
-
-            # mkdir /opt/odoo/clvsol_filestore
-            cd /opt/odoo/clvsol_filestore
-            rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-23a.tar.gz
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    #. [tkl-odoo13-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
-
-        #. Acessar a *View* **Parâmetros do Sistema**:
-
-            * Menu de acesso:
-                
-                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
-
-        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
-
-        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
-
-        #. Alterar o campo **Valor** para:
-
-            * "**http://tkl-odoo13-jcafb21-vm**".
-
-        #. Salvar o registro editado.
-
 Atualizar o(s) módulo(s) [clv_document_sync_jcafb] (2020-07-23)
 ---------------------------------------------------------------
 
@@ -2703,144 +1244,6 @@ Atualizar o(s) módulo(s) [clv_document_sync_jcafb] (2020-07-23)
                 exit
 
                 /etc/init.d/odoo start
-
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-23b)
---------------------------------------------------------------------------
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-            # data_dir = /var/lib/odoo/.local/share/Odoo
-            #
-
-            cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-23b.sql
-
-            gzip clvhealth_jcafb_2021v_13_2020-07-23b.sql
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-23b.sql
-
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-23b.tar.gz clvhealth_jcafb_2021v_13
-
-            cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-23b.tar.gz clvhealth_jcafb
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-23b.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-23b.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-23b.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-23b.tar.gz
-
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-23b)
-------------------------------------------------------------------------------
-
-    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_13_2020-07-23b.sql.gz
-
-            dropdb -i clvhealth_jcafb_2021v_13
-
-            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_13
-            psql -f clvhealth_jcafb_2021v_13_2020-07-23b.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
-
-            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            rm -rf clvhealth_jcafb_2021v_13
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-23b.tar.gz
-
-            # mkdir /opt/odoo/clvsol_filestore
-            cd /opt/odoo/clvsol_filestore
-            rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-23b.tar.gz
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    #. [tkl-odoo13-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
-
-        #. Acessar a *View* **Parâmetros do Sistema**:
-
-            * Menu de acesso:
-                
-                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
-
-        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
-
-        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
-
-        #. Alterar o campo **Valor** para:
-
-            * "**http://tkl-odoo13-jcafb21-vm**".
-
-        #. Salvar o registro editado.
 
 Atualizar o(s) módulo(s) [clv_survey, clv_document] (2020-07-23)
 ----------------------------------------------------------------
@@ -2897,430 +1300,6 @@ Atualizar o(s) módulo(s) [clv_survey, clv_document] (2020-07-23)
 
                 /etc/init.d/odoo start
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-23c)
---------------------------------------------------------------------------
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-            # data_dir = /var/lib/odoo/.local/share/Odoo
-            #
-
-            cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-23c.sql
-
-            gzip clvhealth_jcafb_2021v_13_2020-07-23c.sql
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-23c.sql
-
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-23c.tar.gz clvhealth_jcafb_2021v_13
-
-            cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-23c.tar.gz clvhealth_jcafb
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-23c.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-23c.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-23c.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-23c.tar.gz
-
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-23c)
-------------------------------------------------------------------------------
-
-    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_13_2020-07-23c.sql.gz
-
-            dropdb -i clvhealth_jcafb_2021v_13
-
-            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_13
-            psql -f clvhealth_jcafb_2021v_13_2020-07-23c.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
-
-            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            rm -rf clvhealth_jcafb_2021v_13
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-23c.tar.gz
-
-            # mkdir /opt/odoo/clvsol_filestore
-            cd /opt/odoo/clvsol_filestore
-            rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-23c.tar.gz
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    #. [tkl-odoo13-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
-
-        #. Acessar a *View* **Parâmetros do Sistema**:
-
-            * Menu de acesso:
-                
-                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
-
-        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
-
-        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
-
-        #. Alterar o campo **Valor** para:
-
-            * "**http://tkl-odoo13-jcafb21-vm**".
-
-        #. Salvar o registro editado.
-
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-25a)
---------------------------------------------------------------------------
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-            # data_dir = /var/lib/odoo/.local/share/Odoo
-            #
-
-            cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-25a.sql
-
-            gzip clvhealth_jcafb_2021v_13_2020-07-25a.sql
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-25a.sql
-
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-25a.tar.gz clvhealth_jcafb_2021v_13
-
-            cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-25a.tar.gz clvhealth_jcafb
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-25a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-25a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-25a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-25a.tar.gz
-
-.. index:: clvhealth_jcafb_2021v_13_2020-07-25a.sql
-.. index:: clvhealth_jcafb_2021v_13_2020-07-25a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_13_2020-07-25a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-25a
-
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-25a)
-------------------------------------------------------------------------------
-
-    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_13_2020-07-25a.sql.gz
-
-            dropdb -i clvhealth_jcafb_2021v_13
-
-            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_13
-            psql -f clvhealth_jcafb_2021v_13_2020-07-25a.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
-
-            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            rm -rf clvhealth_jcafb_2021v_13
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-25a.tar.gz
-
-            # mkdir /opt/odoo/clvsol_filestore
-            cd /opt/odoo/clvsol_filestore
-            rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-25a.tar.gz
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    #. [tkl-odoo13-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
-
-        #. Acessar a *View* **Parâmetros do Sistema**:
-
-            * Menu de acesso:
-                
-                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
-
-        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
-
-        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
-
-        #. Alterar o campo **Valor** para:
-
-            * "**http://tkl-odoo13-jcafb21-vm**".
-
-        #. Salvar o registro editado.
-
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-26a)
---------------------------------------------------------------------------
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-            # data_dir = /var/lib/odoo/.local/share/Odoo
-            #
-
-            cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-26a.sql
-
-            gzip clvhealth_jcafb_2021v_13_2020-07-26a.sql
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-26a.sql
-
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-26a.tar.gz clvhealth_jcafb_2021v_13
-
-            cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-26a.tar.gz clvhealth_jcafb
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-26a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-26a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-26a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-26a.tar.gz
-
-.. index:: clvhealth_jcafb_2021v_13_2020-07-26a.sql
-.. index:: clvhealth_jcafb_2021v_13_2020-07-26a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_13_2020-07-26a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-26a
-
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-26a)
-------------------------------------------------------------------------------
-
-    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_13_2020-07-26a.sql.gz
-
-            dropdb -i clvhealth_jcafb_2021v_13
-
-            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_13
-            psql -f clvhealth_jcafb_2021v_13_2020-07-26a.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
-
-            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            rm -rf clvhealth_jcafb_2021v_13
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-26a.tar.gz
-
-            # mkdir /opt/odoo/clvsol_filestore
-            cd /opt/odoo/clvsol_filestore
-            rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-26a.tar.gz
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    #. [tkl-odoo13-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
-
-        #. Acessar a *View* **Parâmetros do Sistema**:
-
-            * Menu de acesso:
-                
-                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
-
-        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
-
-        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
-
-        #. Alterar o campo **Valor** para:
-
-            * "**http://tkl-odoo13-jcafb21-vm**".
-
-        #. Salvar o registro editado.
-
 Atualizar o(s) módulo(s) [clv_survey] (2020-07-27)
 --------------------------------------------------
 
@@ -3374,149 +1353,6 @@ Atualizar o(s) módulo(s) [clv_survey] (2020-07-27)
 
                 /etc/init.d/odoo start
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-27a)
---------------------------------------------------------------------------
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-            # data_dir = /var/lib/odoo/.local/share/Odoo
-            #
-
-            cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-27a.sql
-
-            gzip clvhealth_jcafb_2021v_13_2020-07-27a.sql
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-27a.sql
-
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-27a.tar.gz clvhealth_jcafb_2021v_13
-
-            cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-27a.tar.gz clvhealth_jcafb
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-27a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-27a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-27a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-27a.tar.gz
-
-.. index:: clvhealth_jcafb_2021v_13_2020-07-27a.sql
-.. index:: clvhealth_jcafb_2021v_13_2020-07-27a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_13_2020-07-27a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-27a
-
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-27a)
-------------------------------------------------------------------------------
-
-    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_13_2020-07-27a.sql.gz
-
-            dropdb -i clvhealth_jcafb_2021v_13
-
-            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_13
-            psql -f clvhealth_jcafb_2021v_13_2020-07-27a.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
-
-            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            rm -rf clvhealth_jcafb_2021v_13
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-27a.tar.gz
-
-            # mkdir /opt/odoo/clvsol_filestore
-            cd /opt/odoo/clvsol_filestore
-            rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-27a.tar.gz
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    #. [tkl-odoo13-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
-
-        #. Acessar a *View* **Parâmetros do Sistema**:
-
-            * Menu de acesso:
-                
-                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
-
-        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
-
-        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
-
-        #. Alterar o campo **Valor** para:
-
-            * "**http://tkl-odoo13-jcafb21-vm**".
-
-        #. Salvar o registro editado.
-
 Atualizar o(s) módulo(s) [clv_survey] (2020-07-27)
 --------------------------------------------------
 
@@ -3569,435 +1405,6 @@ Atualizar o(s) módulo(s) [clv_survey] (2020-07-27)
                 exit
 
                 /etc/init.d/odoo start
-
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-27b)
---------------------------------------------------------------------------
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-            # data_dir = /var/lib/odoo/.local/share/Odoo
-            #
-
-            cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-27b.sql
-
-            gzip clvhealth_jcafb_2021v_13_2020-07-27b.sql
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-27b.sql
-
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-27b.tar.gz clvhealth_jcafb_2021v_13
-
-            cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-27b.tar.gz clvhealth_jcafb
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-27b.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-27b.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-27b.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-27b.tar.gz
-
-.. index:: clvhealth_jcafb_2021v_13_2020-07-27b.sql
-.. index:: clvhealth_jcafb_2021v_13_2020-07-27b.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_13_2020-07-27b
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-27b
-
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-27b)
-------------------------------------------------------------------------------
-
-    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_13_2020-07-27b.sql.gz
-
-            dropdb -i clvhealth_jcafb_2021v_13
-
-            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_13
-            psql -f clvhealth_jcafb_2021v_13_2020-07-27b.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
-
-            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            rm -rf clvhealth_jcafb_2021v_13
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-27b.tar.gz
-
-            # mkdir /opt/odoo/clvsol_filestore
-            cd /opt/odoo/clvsol_filestore
-            rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-27b.tar.gz
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    #. [tkl-odoo13-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
-
-        #. Acessar a *View* **Parâmetros do Sistema**:
-
-            * Menu de acesso:
-                
-                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
-
-        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
-
-        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
-
-        #. Alterar o campo **Valor** para:
-
-            * "**http://tkl-odoo13-jcafb21-vm**".
-
-        #. Salvar o registro editado.
-
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-28a)
---------------------------------------------------------------------------
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-            # data_dir = /var/lib/odoo/.local/share/Odoo
-            #
-
-            cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-28a.sql
-
-            gzip clvhealth_jcafb_2021v_13_2020-07-28a.sql
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-28a.sql
-
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-28a.tar.gz clvhealth_jcafb_2021v_13
-
-            cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-28a.tar.gz clvhealth_jcafb
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-28a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-28a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-28a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-28a.tar.gz
-
-.. index:: clvhealth_jcafb_2021v_13_2020-07-28a.sql
-.. index:: clvhealth_jcafb_2021v_13_2020-07-28a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_13_2020-07-28a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-28a
-
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-28a)
-------------------------------------------------------------------------------
-
-    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_13_2020-07-28a.sql.gz
-
-            dropdb -i clvhealth_jcafb_2021v_13
-
-            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_13
-            psql -f clvhealth_jcafb_2021v_13_2020-07-28a.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
-
-            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            rm -rf clvhealth_jcafb_2021v_13
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-28a.tar.gz
-
-            # mkdir /opt/odoo/clvsol_filestore
-            cd /opt/odoo/clvsol_filestore
-            rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-28a.tar.gz
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    #. [tkl-odoo13-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
-
-        #. Acessar a *View* **Parâmetros do Sistema**:
-
-            * Menu de acesso:
-                
-                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
-
-        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
-
-        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
-
-        #. Alterar o campo **Valor** para:
-
-            * "**http://tkl-odoo13-jcafb21-vm**".
-
-        #. Salvar o registro editado.
-
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-29a)
---------------------------------------------------------------------------
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-            # data_dir = /var/lib/odoo/.local/share/Odoo
-            #
-
-            cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-29a.sql
-
-            gzip clvhealth_jcafb_2021v_13_2020-07-29a.sql
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-29a.sql
-
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-29a.tar.gz clvhealth_jcafb_2021v_13
-
-            cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-29a.tar.gz clvhealth_jcafb
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-29a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-29a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-29a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-29a.tar.gz
-
-.. index:: clvhealth_jcafb_2021v_13_2020-07-29a.sql
-.. index:: clvhealth_jcafb_2021v_13_2020-07-29a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_13_2020-07-29a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-29a
-
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-29a)
-------------------------------------------------------------------------------
-
-    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_13_2020-07-29a.sql.gz
-
-            dropdb -i clvhealth_jcafb_2021v_13
-
-            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_13
-            psql -f clvhealth_jcafb_2021v_13_2020-07-29a.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
-
-            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            rm -rf clvhealth_jcafb_2021v_13
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-29a.tar.gz
-
-            # mkdir /opt/odoo/clvsol_filestore
-            cd /opt/odoo/clvsol_filestore
-            rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-29a.tar.gz
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    #. [tkl-odoo13-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
-
-        #. Acessar a *View* **Parâmetros do Sistema**:
-
-            * Menu de acesso:
-                
-                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
-
-        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
-
-        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
-
-        #. Alterar o campo **Valor** para:
-
-            * "**http://tkl-odoo13-jcafb21-vm**".
-
-        #. Salvar o registro editado.
 
 Atualizar o(s) módulo(s) [ver lista] (2020-07-29)
 -------------------------------------------------
@@ -4058,149 +1465,6 @@ Atualizar o(s) módulo(s) [ver lista] (2020-07-29)
 
                 /etc/init.d/odoo start
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-29b)
---------------------------------------------------------------------------
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-            # data_dir = /var/lib/odoo/.local/share/Odoo
-            #
-
-            cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-29b.sql
-
-            gzip clvhealth_jcafb_2021v_13_2020-07-29b.sql
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-29b.sql
-
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-29b.tar.gz clvhealth_jcafb_2021v_13
-
-            cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-29b.tar.gz clvhealth_jcafb
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-29b.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-29b.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-29b.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-29b.tar.gz
-
-.. index:: clvhealth_jcafb_2021v_13_2020-07-29b.sql
-.. index:: clvhealth_jcafb_2021v_13_2020-07-29b.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_13_2020-07-29b
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-29b
-
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-29b)
-------------------------------------------------------------------------------
-
-    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_13_2020-07-29b.sql.gz
-
-            dropdb -i clvhealth_jcafb_2021v_13
-
-            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_13
-            psql -f clvhealth_jcafb_2021v_13_2020-07-29b.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
-
-            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            rm -rf clvhealth_jcafb_2021v_13
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-29b.tar.gz
-
-            # mkdir /opt/odoo/clvsol_filestore
-            cd /opt/odoo/clvsol_filestore
-            rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-29b.tar.gz
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    #. [tkl-odoo13-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
-
-        #. Acessar a *View* **Parâmetros do Sistema**:
-
-            * Menu de acesso:
-                
-                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
-
-        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
-
-        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
-
-        #. Alterar o campo **Valor** para:
-
-            * "**http://tkl-odoo13-jcafb21-vm**".
-
-        #. Salvar o registro editado.
-
 Atualizar o(s) módulo(s) [ver lista] (2020-07-30)
 -------------------------------------------------
 
@@ -4254,149 +1518,6 @@ Atualizar o(s) módulo(s) [ver lista] (2020-07-30)
                 exit
 
                 /etc/init.d/odoo start
-
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-30a)
---------------------------------------------------------------------------
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-            # data_dir = /var/lib/odoo/.local/share/Odoo
-            #
-
-            cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-30a.sql
-
-            gzip clvhealth_jcafb_2021v_13_2020-07-30a.sql
-            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-07-30a.sql
-
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-30a.tar.gz clvhealth_jcafb_2021v_13
-
-            cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-30a.tar.gz clvhealth_jcafb
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    Criados os seguintes arquivos:
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-30a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-07-30a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-30a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-30a.tar.gz
-
-.. index:: clvhealth_jcafb_2021v_13_2020-07-30a.sql
-.. index:: clvhealth_jcafb_2021v_13_2020-07-30a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_13_2020-07-30a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-30a
-
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-07-30a)
-------------------------------------------------------------------------------
-
-    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
-
-    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            ssh tkl-odoo13-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_13_2020-07-30a.sql.gz
-
-            dropdb -i clvhealth_jcafb_2021v_13
-
-            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_13
-            psql -f clvhealth_jcafb_2021v_13_2020-07-30a.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
-
-            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            rm -rf clvhealth_jcafb_2021v_13
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-07-30a.tar.gz
-
-            # mkdir /opt/odoo/clvsol_filestore
-            cd /opt/odoo/clvsol_filestore
-            rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-07-30a.tar.gz
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo13-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    #. [tkl-odoo13-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
-
-        #. Acessar a *View* **Parâmetros do Sistema**:
-
-            * Menu de acesso:
-                
-                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
-
-        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
-
-        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
-
-        #. Alterar o campo **Valor** para:
-
-            * "**http://tkl-odoo13-jcafb21-vm**".
-
-        #. Salvar o registro editado.
 
 Atualizar o(s) módulo(s) [ver lista] (2020-08-03)
 -------------------------------------------------
@@ -4506,6 +1627,7 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-08-03a)
             /etc/init.d/odoo start
 
     Criados os seguintes arquivos:
+
         * /opt/odoo/clvhealth_jcafb_2021v_13_2020-08-03a.sql
         * /opt/odoo/clvhealth_jcafb_2021v_13_2020-08-03a.sql.gz
         * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-08-03a.tar.gz
@@ -4649,6 +1771,7 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-08-03b)
             /etc/init.d/odoo start
 
     Criados os seguintes arquivos:
+
         * /opt/odoo/clvhealth_jcafb_2021v_13_2020-08-03b.sql
         * /opt/odoo/clvhealth_jcafb_2021v_13_2020-08-03b.sql.gz
         * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-08-03b.tar.gz
@@ -4661,8 +1784,6 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-08-03b)
 
 Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-08-03b)
 ------------------------------------------------------------------------------
-
-    * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
 
     #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
 
@@ -4701,6 +1822,251 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-08-03b)
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
             tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-08-03b.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [tkl-odoo13-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo13-jcafb21-vm**".
+
+        #. Salvar o registro editado.
+
+Configurar "*Global Settings*" para a *CLVhealth-JCAFB-2020v-13* (2020-08-04)
+-----------------------------------------------------------------------------
+
+    #. Acessar a *View* *Global Settings*:
+
+        * Menu de acesso:
+
+            * :bi:`Base` » :bi:`Global Settings` » :bi:`Global Settings`
+
+        #. Configurar o parâmetro :bi:`Person` » :bi:`Reference Date`: **31/01/2021**
+
+Atualisar a Idade de Referência para todas as Pessoas (2020-08-04)
+------------------------------------------------------------------
+
+    #. [tkl-odoo13-jcafb21-vm] Executar a Ação :bi:`Person Mass Edit` para todas as Pessoas:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
+
+        #. Acessar a *View* *Persons*:
+
+            * Menu de acesso:
+
+                * :bi:`Communities` » :bi:`Communities` » :bi:`Persons`
+
+        #. Selecionar todas as Pessoas (**1540**)
+
+        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Person Reference Age Refresh*: **marcado**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Atualizar o *State* das Pessoas *Selected* (2020-08-04)
+-------------------------------------------------------
+
+    #. [tkl-odoo13-jcafb21-vm] Executar a Ação :bi:`Person Mass Edit` para as Pessoas :bi:`Selected`:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
+
+        #. Acessar a *View* *Persons*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Persons`
+
+        #. Selecionar todas as Pessoas :bi:`Selected` (**189**)
+
+        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *State*: **Set** **Available**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Atualizar o *State* das Famílias *Selected* (2020-08-04)
+--------------------------------------------------------
+
+    #. [tkl-odoo13-jcafb21-vm] Executar a Ação :bi:`Family Mass Edit` para as Famílias :bi:`Selected`:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
+
+        #. Acessar a *View* *Families*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Families`
+
+        #. Selecionar todas as Famílias (**146**)
+
+        #. Exercutar a Ação ":bi:`Family Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *State*: **Set** **Available**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Atualizar o *State* dos Endereços *Selected* (2020-08-04)
+---------------------------------------------------------
+
+    #. [tkl-odoo13-jcafb21-vm] Executar a Ação :bi:`Address Mass Edit` para os Endereços :bi:`Selected`:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo13-jcafb21-vm <https://tkl-odoo13-jcafb21-vm>`_
+
+        #. Acessar a *View* *Addresses*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Addresses`
+
+        #. Selecionar todas os Endereços (**144**)
+
+        #. Exercutar a Ação ":bi:`Address Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *State*: **Set** **Available**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-08-04a)
+--------------------------------------------------------------------------
+
+    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb21-vm
+            #
+
+            ssh tkl-odoo13-jcafb21-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb21-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-08-04a.sql
+
+            gzip clvhealth_jcafb_2021v_13_2020-08-04a.sql
+            pg_dump clvhealth_jcafb_2021v_13 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_13_2020-08-04a.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-08-04a.tar.gz clvhealth_jcafb_2021v_13
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-08-04a.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+
+        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-08-04a.sql
+        * /opt/odoo/clvhealth_jcafb_2021v_13_2020-08-04a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-08-04a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-08-04a.tar.gz
+
+.. index:: clvhealth_jcafb_2021v_13_2020-08-04a.sql
+.. index:: clvhealth_jcafb_2021v_13_2020-08-04a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2021v_13_2020-08-04a
+.. index:: clvsol_filestore_clvhealth_jcafb_2021v_13_2020-08-04a
+
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-08-04a)
+------------------------------------------------------------------------------
+
+    #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb21-vm
+            #
+
+            ssh tkl-odoo13-jcafb21-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo13-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo13-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2021v_13_2020-08-04a.sql.gz
+
+            dropdb -i clvhealth_jcafb_2021v_13
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_13
+            psql -f clvhealth_jcafb_2021v_13_2020-08-04a.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2021v_13
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-08-04a.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-08-04a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
 
