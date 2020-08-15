@@ -14,7 +14,7 @@
 Manutenção do Banco de Dados - JCAFB-2021v-13
 =============================================
 
-Atualizar os fontes do projeto (2020-08-13)
+Atualizar os fontes do projeto (2020-08-15)
 -------------------------------------------
 
     #. **Atualizar** os fontes do projeto
@@ -102,7 +102,7 @@ Atualizar os fontes do projeto (2020-08-13)
             cd /opt/odoo
             /usr/bin/odoo -c /etc/odoo/odoo-man.conf
 
-[clvheatlh-jcafb-2021v-13-aws-tst] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-08-13a)
+[clvheatlh-jcafb-2021v-13-aws-tst] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-08-15a)
 -----------------------------------------------------------------------------------------------------------------
 
     * Referência: :doc:`/setup/clvhealth_jcafb_restore`.
@@ -128,22 +128,22 @@ Atualizar os fontes do projeto (2020-08-13)
             #
 
             cd /opt/odoo
-            gzip -d clvhealth_jcafb_2021v_13_2020-08-13a.sql.gz
+            gzip -d clvhealth_jcafb_2021v_13_2020-08-15a.sql.gz
 
             dropdb -i clvhealth_jcafb_2021v_13
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_13
-            psql -f clvhealth_jcafb_2021v_13_2020-08-13a.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2021v_13_2020-08-15a.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2021v_13
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-08-13a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-08-15a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-08-13a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-08-15a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **clvheatlh-jcafb-2021v-13-aws-tst** ao modo desejado:
 
@@ -181,7 +181,7 @@ Atualizar os fontes do projeto (2020-08-13)
 
         #. Salvar o registro editado.
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-08-13a)
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-08-15a)
 ------------------------------------------------------------------------------
 
     #. [tkl-odoo13-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo13-jcafb21-vm** e paralizar o *Odoo*:
@@ -205,22 +205,22 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-13* (2020-08-13a)
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_13_2020-08-13a.sql.gz
+            # gzip -d clvhealth_jcafb_2021v_13_2020-08-15a.sql.gz
 
             dropdb -i clvhealth_jcafb_2021v_13
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_13
-            psql -f clvhealth_jcafb_2021v_13_2020-08-13a.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2021v_13_2020-08-15a.sql -d clvhealth_jcafb_2021v_13 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2021v_13
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-08-13a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_13_2020-08-15a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-08-13a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_13_2020-08-15a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo13-jcafb21-vm** ao modo desejado:
 
