@@ -16,6 +16,7 @@ Administração do *CLVhealth-JCAFB*
    server_setup_local_13
    server_setup_local_13_20
    server_setup_local_13_21
+   server_setup_local_14_21
    server_setup_aws_tst
    server_setup_aws_tst_2
    server_setup_aws_pro
