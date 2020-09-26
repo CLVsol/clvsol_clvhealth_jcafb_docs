@@ -178,7 +178,7 @@ VM preparation
 
                 AllowTcpForwarding yes
 
-        #. To stop and start the Odoo server, use the following commands (as root):
+        #. To stop and start the sshd service, use the following commands (as root):
 
             ::
 
