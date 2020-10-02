@@ -434,7 +434,7 @@ Replace the Odoo installation (Odoo 14.0)
         ::
 
             # wget -O - https://nightly.odoo.com/odoo.key | apt-key --keyring /usr/share/keyrings/odoo.gpg add -
-            echo "deb [signed-by=/usr/share/keyrings/odoo.gpg] http://nightly.odoo.com/master/nightly/deb/ ./" >> /etc/apt/sources.list.d/odoo.list
+            echo "deb [signed-by=/usr/share/keyrings/odoo.gpg] http://nightly.odoo.com/14.0/nightly/deb/ ./" >> /etc/apt/sources.list.d/odoo.list
 
             apt-get update
 
