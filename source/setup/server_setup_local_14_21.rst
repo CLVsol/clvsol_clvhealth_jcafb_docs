@@ -522,14 +522,14 @@ Repositories Installation
             cd /opt/odoo
             git clone https://github.com/OCA/l10n-brazil oca_l10n-brazil --branch 12.0
             git clone https://github.com/CLVsol/clvsol_odoo_client --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_clvhealth_jcafb --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_l10n_brazil --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_jcafb --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br --branch 13.0
+            git clone https://github.com/CLVsol/clvsol_clvhealth_jcafb --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_l10n_brazil --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_jcafb --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br --branch 14.0
             git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br_jcafb --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_history --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_history_jcafb --branch 13.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_history --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_history_jcafb --branch 14.0
             git clone https://github.com/CLVsol/clvsol_odoo_addons_verification --branch 13.0
             git clone https://github.com/CLVsol/clvsol_odoo_addons_verification_jcafb --branch 13.0
             git clone https://github.com/CLVsol/clvsol_odoo_addons_summary --branch 13.0
@@ -540,8 +540,8 @@ Repositories Installation
             git clone https://github.com/CLVsol/clvsol_odoo_addons_report_jcafb --branch 13.0
             git clone https://github.com/CLVsol/clvsol_odoo_addons_process --branch 13.0
             git clone https://github.com/CLVsol/clvsol_odoo_addons_process_jcafb --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_sync --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_sync_jcafb --branch 13.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_sync --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_sync_jcafb --branch 13.0to14.0
 
     #. To create a symbolic link "odoo_client", use the following commands (as **root**):
 
@@ -697,11 +697,11 @@ Repositories
 
           CLVsol Odoo Client.
 
-    #. `clvsol_clvhealth_jcafb (13.0) <https://github.com/CLVsol/clvsol_clvhealth_jcafb/tree/13.0>`_
+    #. `clvsol_clvhealth_jcafb (14.0) <https://github.com/CLVsol/clvsol_clvhealth_jcafb/tree/14.0>`_
 
           Implemantation of CLVhealth-JCAFB-2021, the CLVsol Health Management solution for JCAFB.
 
-    #. `clvsol_l10n_brazil (13.0) <https://github.com/CLVsol/clvsol_l10n_brazil/tree/13.0>`_
+    #. `clvsol_l10n_brazil (14.0) <https://github.com/CLVsol/clvsol_l10n_brazil/tree/14.0>`_
 
           Core da localização Brasileira do Odoo (used by CLVsol solutions)
           Este projeto contêm os módulos básicos da localização brasileira do Odoo, para uso exclusivo pelas soluções da CLVsol.
@@ -711,23 +711,23 @@ Repositories
 
           Este projeto contêm os principais módulos da localização brasileira do Odoo.
 
-    #. `clvsol_odoo_addons (13.0) <https://github.com/CLVsol/clvsol_odoo_addons/tree/13.0>`_
+    #. `clvsol_odoo_addons (14.0) <https://github.com/CLVsol/clvsol_odoo_addons/tree/14.0>`_
 
           CLVsol Odoo Addons.
 
-    #. `clvsol_odoo_addons_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_jcafb/tree/13.0>`_
+    #. `clvsol_odoo_addons_jcafb (14.0) <https://github.com/CLVsol/clvsol_odoo_addons_jcafb/tree/14.0>`_
 
           CLVsol Odoo Addons - JCAFB customizations.
 
-    #. `clvsol_odoo_addons_history (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_history/tree/13.0>`_
+    #. `clvsol_odoo_addons_history (14.0) <https://github.com/CLVsol/clvsol_odoo_addons_history/tree/14.0>`_
 
           CLVsol Odoo Addons - History
 
-    #. `clvsol_odoo_addons_history_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_history_jcafb/tree/13.0>`_
+    #. `clvsol_odoo_addons_history_jcafb (14.0) <https://github.com/CLVsol/clvsol_odoo_addons_history_jcafb/tree/14.0>`_
 
           CLVsol Odoo Addons - History - JCAFB customizations
 
-    #. `clvsol_odoo_addons_l10n_br (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_l10n_br/tree/13.0>`_
+    #. `clvsol_odoo_addons_l10n_br (14.0) <https://github.com/CLVsol/clvsol_odoo_addons_l10n_br/tree/14.0>`_
 
           CLVsol Odoo Addons - Brazilian Localization.
 
@@ -775,11 +775,11 @@ Repositories
 
           CLVsol Odoo Addons - Process - JCAFB customizations
 
-    #. `clvsol_odoo_addons_sync (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_sync/tree/13.0>`_
+    #. `clvsol_odoo_addons_sync (14.0) <https://github.com/CLVsol/clvsol_odoo_addons_sync/tree/14.0>`_
 
           CLVsol Odoo Addons - Sync
 
-    #. `clvsol_odoo_addons_sync_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_sync_jcafb/tree/13.0>`_
+    #. `clvsol_odoo_addons_sync_jcafb (13.0to14.0) <https://github.com/CLVsol/clvsol_odoo_addons_sync_jcafb/tree/13.0to14.0>`_
 
           CLVsol Odoo Addons - Sync - JCAFB customizations
 
