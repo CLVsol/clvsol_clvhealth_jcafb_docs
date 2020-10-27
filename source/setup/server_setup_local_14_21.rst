@@ -440,6 +440,8 @@ Replace the Odoo installation (Odoo 14.0)
 
             apt-get install odoo
 
+            # apt-get remove odoo
+
     #. To stop and start the Odoo server, use the following commands (as root):
 
         ::
