@@ -326,6 +326,12 @@ Development
 
             pip3 install erppeek
 
+    #. To install xlrd 1.2.0, execute the following commands (as root):
+
+        ::
+
+            pip3 install xlrd==1.2.0
+
     #. To install xlrd 1.1.0, execute the following commands (as root):
 
         ::
@@ -361,6 +367,12 @@ Development
             * :red:`odoo 12.0.post20200609 requires pyldap, which is not installed.`
             * :red:`odoo 12.0.post20200609 requires qrcode, which is not installed.`
             * :red:`odoo 12.0.post20200609 requires vobject, which is not installed.`
+
+    #. To install xlrd 1.2.0, execute the following commands (as root):
+
+        ::
+
+            pip3 install xlrd==1.2.0
 
     #. :red:`(Not Used)` To install odoolib (for python 3.5), use the following commands (as root):
 
