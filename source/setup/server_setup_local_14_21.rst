@@ -522,6 +522,47 @@ Replace the Odoo installation (Odoo 14.0)
                 # server_wide_modules = base,web
                 server_wide_modules = None
 
+    #. Configure "osv_memory_age_limit"
+
+        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+            * `[14.0] DeprecationWarning: The osv-memory-age-limit <https://github.com/odoo/odoo/issues/60681>`_
+
+            ::
+
+                osv_memory_age_l3imit = 1.0
+
+            ::
+
+                # osv_memory_age_limit = 1.0
+                osv_memory_age_limit = False
+
+    #. To install Jinja2-2.11.2, execute the following commands (as root):
+
+        * Issue:
+
+            ::
+
+                2021-01-14 13:29:55,275 8698 WARNING clvhealth_jcafb_2021v_14 py.warnings: /usr/lib/python3/dist-packages/jinja2/sandbox.py:82: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+                from collections import MutableSet, MutableMapping, MutableSequence
+ 
+        ::
+
+            pip3 install -U Jinja2
+
+        ::
+
+            root@tkl-odoo14-jcafb21-vm ~# pip3 install -U Jinja2
+            Collecting Jinja2
+              Downloading https://files.pythonhosted.org/packages/30/9e/f663a2aa66a09d838042ae1a2c5659828bb9b41ea3a6efa20a20fd92b121/Jinja2-2.11.2-py2.py3-none-any.whl (125kB)
+                100% |████████████████████████████████| 133kB 1.2MB/s 
+            Requirement already satisfied, skipping upgrade: MarkupSafe>=0.23 in /usr/lib/python3/dist-packages (from Jinja2) (1.1.0)
+            Installing collected packages: Jinja2
+              Found existing installation: Jinja2 2.10
+                Not uninstalling jinja2 at /usr/lib/python3/dist-packages, outside environment /usr
+                Can't uninstall 'Jinja2'. No files were found to uninstall.
+            Successfully installed Jinja2-2.11.2
+
 Repositories Installation
 -------------------------
 
