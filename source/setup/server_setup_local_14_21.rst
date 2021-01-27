@@ -582,19 +582,19 @@ Repositories Installation
             git clone https://github.com/CLVsol/clvsol_odoo_addons --branch 14.0
             git clone https://github.com/CLVsol/clvsol_odoo_addons_jcafb --branch 14.0
             git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br --branch 14.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br_jcafb --branch 13.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br_jcafb --branch 14.0
             git clone https://github.com/CLVsol/clvsol_odoo_addons_history --branch 14.0
             git clone https://github.com/CLVsol/clvsol_odoo_addons_history_jcafb --branch 14.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_verification --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_verification_jcafb --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_summary --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_summary_jcafb --branch 13.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_verification --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_verification_jcafb --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_summary --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_summary_jcafb --branch 14.0
             git clone https://github.com/CLVsol/clvsol_odoo_addons_export --branch 13.0
             git clone https://github.com/CLVsol/clvsol_odoo_addons_export_jcafb --branch 13.0
             git clone https://github.com/CLVsol/clvsol_odoo_addons_report --branch 13.0
             git clone https://github.com/CLVsol/clvsol_odoo_addons_report_jcafb --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_process --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_process_jcafb --branch 13.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_process --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_process_jcafb --branch 14.0
             git clone https://github.com/CLVsol/clvsol_odoo_addons_sync --branch 14.0
             git clone https://github.com/CLVsol/clvsol_odoo_addons_sync_jcafb --branch 13.0to14.0
             git clone https://github.com/OCA/partner-contact oca_partner-contact --branch 13.0
