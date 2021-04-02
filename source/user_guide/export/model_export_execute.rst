@@ -21,7 +21,7 @@
 
         #. Selecionar o(s) :bi:`Model Export(s)` desejado(s).
 
-        #. Exercutar a ação ":bi:`Model Export Execute`":
+        #. Executar a ação ":bi:`Model Export Execute`":
 
             * Parâmetros apresentados:
                 * (nenhum)

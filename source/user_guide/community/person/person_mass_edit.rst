@@ -21,7 +21,7 @@
 
         #. Selecionar a(s) Pessoa(s) desejada(s).
 
-        #. Exercutar a ação "**Person Mass Edit**":
+        #. Executar a ação "**Person Mass Edit**":
 
             * Parâmetros apresentados:
                 * *Global Tags*

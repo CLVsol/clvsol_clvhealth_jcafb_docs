@@ -221,7 +221,7 @@ Criar o *Document Type* "[QAN20]" (2019-09-02)
 
         #. Abrir o Formulário do *Document Type* "**[QAN19]**".
 
-        #. Exercutar a Ação ":bi:`Document Type Duplicate`":
+        #. Executar a Ação ":bi:`Document Type Duplicate`":
 
             * Parâmetros utilizados:
                 * *New Document Type*: **QAN20**
@@ -254,7 +254,7 @@ Criar o *Document Type* "[QDH20]" (2019-09-02)
 
         #. Abrir o Formulário do *Document Type* "**[QDH19]**".
 
-        #. Exercutar a Ação ":bi:`Document Type Duplicate`":
+        #. Executar a Ação ":bi:`Document Type Duplicate`":
 
             * Parâmetros utilizados:
                 * *New Document Type*: **QDH20**
@@ -287,7 +287,7 @@ Criar o *Document Type* "[QMD20]" (2019-09-02)
 
         #. Abrir o Formulário do *Document Type* "**[QMD19]**".
 
-        #. Exercutar a Ação ":bi:`Document Type Duplicate`":
+        #. Executar a Ação ":bi:`Document Type Duplicate`":
 
             * Parâmetros utilizados:
                 * *New Document Type*: **QMD20**
@@ -320,7 +320,7 @@ Criar o *Document Type* "[QSC20]" (2019-09-02)
 
         #. Abrir o Formulário do *Document Type* "**[QSC19]**".
 
-        #. Exercutar a Ação ":bi:`Document Type Duplicate`":
+        #. Executar a Ação ":bi:`Document Type Duplicate`":
 
             * Parâmetros utilizados:
                 * *New Document Type*: **QSC20**
@@ -353,7 +353,7 @@ Criar o *Document Type* "[QSF20]" (2019-09-02)
 
         #. Abrir o Formulário do *Document Type* "**[QSF19]**".
 
-        #. Exercutar a Ação ":bi:`Document Type Duplicate`":
+        #. Executar a Ação ":bi:`Document Type Duplicate`":
 
             * Parâmetros utilizados:
                 * *New Document Type*: **QSF20**
@@ -386,7 +386,7 @@ Criar o *Document Type* "[QSI20]" (2019-09-02)
 
         #. Abrir o Formulário do *Document Type* "**[QSI19]**".
 
-        #. Exercutar a Ação ":bi:`Document Type Duplicate`":
+        #. Executar a Ação ":bi:`Document Type Duplicate`":
 
             * Parâmetros utilizados:
                 * *New Document Type*: **QSI20**
@@ -419,7 +419,7 @@ Criar o *Document Type* "[TAN20]" (2019-09-02)
 
         #. Abrir o Formulário do *Document Type* "**[TAN19]**".
 
-        #. Exercutar a Ação ":bi:`Document Type Duplicate`":
+        #. Executar a Ação ":bi:`Document Type Duplicate`":
 
             * Parâmetros utilizados:
                 * *New Document Type*: **TAN20**
@@ -452,7 +452,7 @@ Criar o *Document Type* "[TCR20]" (2019-09-02)
 
         #. Abrir o Formulário do *Document Type* "**[TCR19]**".
 
-        #. Exercutar a Ação ":bi:`Document Type Duplicate`":
+        #. Executar a Ação ":bi:`Document Type Duplicate`":
 
             * Parâmetros utilizados:
                 * *New Document Type*: **TCR20**
@@ -485,7 +485,7 @@ Criar o *Document Type* "[TDH20]" (2019-09-02)
 
         #. Abrir o Formulário do *Document Type* "**[TDH19]**".
 
-        #. Exercutar a Ação ":bi:`Document Type Duplicate`":
+        #. Executar a Ação ":bi:`Document Type Duplicate`":
 
             * Parâmetros utilizados:
                 * *New Document Type*: **TDH20**
@@ -518,7 +518,7 @@ Criar o *Document Type* "[TID20]" (2019-09-02)
 
         #. Abrir o Formulário do *Document Type* "**[TID19]**".
 
-        #. Exercutar a Ação ":bi:`Document Type Duplicate`":
+        #. Executar a Ação ":bi:`Document Type Duplicate`":
 
             * Parâmetros utilizados:
                 * *New Document Type*: **TID20**

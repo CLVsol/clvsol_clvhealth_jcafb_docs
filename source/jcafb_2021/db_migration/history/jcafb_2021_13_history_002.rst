@@ -382,7 +382,7 @@ Marcar o *Active Log* de todos os Objetos (2020-07-11)
 
         #. Selecionar todos os :bi:`Global Log Clients` (**43**)
 
-        #. Exercutar a Ação ":bi:`Global Log Client Mass Edit`":
+        #. Executar a Ação ":bi:`Global Log Client Mass Edit`":
 
             * Parâmetros utilizados:
 

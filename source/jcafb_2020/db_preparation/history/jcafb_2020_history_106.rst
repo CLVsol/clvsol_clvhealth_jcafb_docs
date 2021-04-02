@@ -139,7 +139,7 @@ Criar o *Lab Test Type* "JCAFB 2020 - Exames - Detecção de Anemia" (2019-08-25
 
         #. Abrir o Formulário do *Lab Test Type* "JCAFB 2019 - Exames - Detecção de Anemia".
 
-        #. Exercutar a Ação ":bi:`Lab Test Type Duplicate`":
+        #. Executar a Ação ":bi:`Lab Test Type Duplicate`":
 
             * Parâmetros utilizados:
                 * *New Lab Test Type*: **JCAFB 2020 - Exames - Detecção de Anemia**
@@ -167,7 +167,7 @@ Criar o *Lab Test Type* "JCAFB 2020 - Exames - Diabetes, Hipertensão Arterial e
 
         #. Abrir o Formulário do *Lab Test Type* "JCAFB 2019 - Exames - Diabetes, Hipertensão Arterial e Hipercolesterolemia".
 
-        #. Exercutar a Ação ":bi:`Lab Test Type Duplicate`":
+        #. Executar a Ação ":bi:`Lab Test Type Duplicate`":
 
             * Parâmetros utilizados:
                 * *New Lab Test Type*: **JCAFB 2020 - Exames - Diabetes, Hipertensão Arterial e Hipercolesterolemia**
@@ -195,7 +195,7 @@ Criar o *Lab Test Type* "JCAFB 2020 - Laboratório - Parasitologia" (2019-08-25)
 
         #. Abrir o Formulário do *Lab Test Type* "JCAFB 2019 - Laboratório - Parasitologia".
 
-        #. Exercutar a Ação ":bi:`Lab Test Type Duplicate`":
+        #. Executar a Ação ":bi:`Lab Test Type Duplicate`":
 
             * Parâmetros utilizados:
                 * *New Lab Test Type*: **JCAFB 2020 - Laboratório - Parasitologia**
@@ -223,7 +223,7 @@ Criar o *Lab Test Type* "JCAFB 2020 - Laboratório - Pesquisa de Enterobius verm
 
         #. Abrir o Formulário do *Lab Test Type* "JCAFB 2019 - Laboratório - Pesquisa de Enterobius vermicularis".
 
-        #. Exercutar a Ação ":bi:`Lab Test Type Duplicate`":
+        #. Executar a Ação ":bi:`Lab Test Type Duplicate`":
 
             * Parâmetros utilizados:
                 * *New Lab Test Type*: **JCAFB 2020 - Laboratório - Pesquisa de Enterobius vermicularis**
@@ -251,7 +251,7 @@ Criar o *Lab Test Type* "JCAFB 2020 - Laboratório - Urinálise" (2019-08-25)
 
         #. Abrir o Formulário do *Lab Test Type* "JCAFB 2019 - Laboratório - Urinálise".
 
-        #. Exercutar a Ação ":bi:`Lab Test Type Duplicate`":
+        #. Executar a Ação ":bi:`Lab Test Type Duplicate`":
 
             * Parâmetros utilizados:
                 * *New Lab Test Type*: **JCAFB 2020 - Laboratório - Urinálise**

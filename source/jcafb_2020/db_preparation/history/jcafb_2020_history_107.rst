@@ -87,7 +87,7 @@ Criar a Pesquisa "[TUR20]" (2019-08-31)
 
         #. Abrir o Formulário da Pesquisa "**[TUR19]**".
 
-        #. Exercutar a Ação ":bi:`Survey Duplicate`":
+        #. Executar a Ação ":bi:`Survey Duplicate`":
 
             * Parâmetros utilizados:
                 * *New Survey Title*: **[TUR20]**
@@ -116,7 +116,7 @@ Criar a Pesquisa "[TPR20]" (2019-08-31)
 
         #. Abrir o Formulário da Pesquisa "**[TPR19]**".
 
-        #. Exercutar a Ação ":bi:`Survey Duplicate`":
+        #. Executar a Ação ":bi:`Survey Duplicate`":
 
             * Parâmetros utilizados:
                 * *New Survey Title*: **[TPR20]**
@@ -145,7 +145,7 @@ Criar a Pesquisa "[TID20]" (2019-08-31)
 
         #. Abrir o Formulário da Pesquisa "**[TID19]**".
 
-        #. Exercutar a Ação ":bi:`Survey Duplicate`":
+        #. Executar a Ação ":bi:`Survey Duplicate`":
 
             * Parâmetros utilizados:
                 * *New Survey Title*: **[TID20]**
@@ -174,7 +174,7 @@ Criar a Pesquisa "[TCR20]" (2019-08-31)
 
         #. Abrir o Formulário da Pesquisa "**[TCR19]**".
 
-        #. Exercutar a Ação ":bi:`Survey Duplicate`":
+        #. Executar a Ação ":bi:`Survey Duplicate`":
 
             * Parâmetros utilizados:
                 * *New Survey Title*: **[TCR20]**
@@ -203,7 +203,7 @@ Criar a Pesquisa "[TDH20]" (2019-08-31)
 
         #. Abrir o Formulário da Pesquisa "**[TDH19]**".
 
-        #. Exercutar a Ação ":bi:`Survey Duplicate`":
+        #. Executar a Ação ":bi:`Survey Duplicate`":
 
             * Parâmetros utilizados:
                 * *New Survey Title*: **[TDH20]**
@@ -232,7 +232,7 @@ Criar a Pesquisa "[TAN20]" (2019-08-31)
 
         #. Abrir o Formulário da Pesquisa "**[TAN19]**".
 
-        #. Exercutar a Ação ":bi:`Survey Duplicate`":
+        #. Executar a Ação ":bi:`Survey Duplicate`":
 
             * Parâmetros utilizados:
                 * *New Survey Title*: **[TAN20]**
@@ -261,7 +261,7 @@ Criar a Pesquisa "[QSI20]" (2019-08-31)
 
         #. Abrir o Formulário da Pesquisa "**[QSI19]**".
 
-        #. Exercutar a Ação ":bi:`Survey Duplicate`":
+        #. Executar a Ação ":bi:`Survey Duplicate`":
 
             * Parâmetros utilizados:
                 * *New Survey Title*: **[QSI20]**
@@ -290,7 +290,7 @@ Criar a Pesquisa "[QSC20]" (2019-08-31)
 
         #. Abrir o Formulário da Pesquisa "**[QSC19]**".
 
-        #. Exercutar a Ação ":bi:`Survey Duplicate`":
+        #. Executar a Ação ":bi:`Survey Duplicate`":
 
             * Parâmetros utilizados:
                 * *New Survey Title*: **[QSC20]**
@@ -319,7 +319,7 @@ Criar a Pesquisa "[QSF20]" (2019-08-31)
 
         #. Abrir o Formulário da Pesquisa "**[QSF19]**".
 
-        #. Exercutar a Ação ":bi:`Survey Duplicate`":
+        #. Executar a Ação ":bi:`Survey Duplicate`":
 
             * Parâmetros utilizados:
                 * *New Survey Title*: **[QSF20]**
@@ -348,7 +348,7 @@ Criar a Pesquisa "[QMD20]" (2019-08-31)
 
         #. Abrir o Formulário da Pesquisa "**[QMD19]**".
 
-        #. Exercutar a Ação ":bi:`Survey Duplicate`":
+        #. Executar a Ação ":bi:`Survey Duplicate`":
 
             * Parâmetros utilizados:
                 * *New Survey Title*: **[QMD20]**
@@ -377,7 +377,7 @@ Criar a Pesquisa "[QDH20]" (2019-08-31)
 
         #. Abrir o Formulário da Pesquisa "**[QDH19]**".
 
-        #. Exercutar a Ação ":bi:`Survey Duplicate`":
+        #. Executar a Ação ":bi:`Survey Duplicate`":
 
             * Parâmetros utilizados:
                 * *New Survey Title*: **[QDH20]**
@@ -406,7 +406,7 @@ Criar a Pesquisa "[QAN20]" (2019-08-31)
 
         #. Abrir o Formulário da Pesquisa "**[QAN19]**".
 
-        #. Exercutar a Ação ":bi:`Survey Duplicate`":
+        #. Executar a Ação ":bi:`Survey Duplicate`":
 
             * Parâmetros utilizados:
                 * *New Survey Title*: **[QAN20]**

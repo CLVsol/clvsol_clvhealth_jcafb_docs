@@ -546,7 +546,7 @@ Atualizar o *Person History* de todas as Pessoas (2020-03-28)
 
         #. Selecionar todas as Pessoas (**1540**)
 
-        #. Exercutar a Ação ":bi:`Person History Update`":
+        #. Executar a Ação ":bi:`Person History Update`":
 
             * Parâmetros utilizados:
 
@@ -572,7 +572,7 @@ Atualizar o *Address History* de todos os Endereços (2020-03-28)
 
         #. Selecionar todos os Endereços (**665**)
 
-        #. Exercutar a Ação ":bi:`Address History Update`":
+        #. Executar a Ação ":bi:`Address History Update`":
 
             * Parâmetros utilizados:
 
@@ -598,7 +598,7 @@ Atualizar o *Family History* de todas as Famílias (2020-03-28)
 
         #. Selecionar todas as Famílias (**441**)
 
-        #. Exercutar a Ação ":bi:`Family History Update`":
+        #. Executar a Ação ":bi:`Family History Update`":
 
             * Parâmetros utilizados:
 

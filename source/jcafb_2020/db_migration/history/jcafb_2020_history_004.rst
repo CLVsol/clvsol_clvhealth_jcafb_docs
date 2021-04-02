@@ -321,7 +321,7 @@ Atualizar o *Contact Information* de todas as Pessoas (2019-07-13)
 
         #. Selecionar todas as Pessoas (**1375**)
 
-        #. Exercutar a Ação "**Person Contact Information Update**":
+        #. Executar a Ação "**Person Contact Information Update**":
 
             * Parâmetros utilizados:
                 * *Update Phone*: marcado
@@ -348,7 +348,7 @@ Criar a *Family* para cada Idosos e Crianças da JCAFB-2019 (2019-07-13)
 
         #. Selecionar todas as Crianças da JCAFB-2019 (**195**)
 
-        #. Exercutar a Ação "**Person Associate to Family**":
+        #. Executar a Ação "**Person Associate to Family**":
 
             * Parâmetros utilizados:
                 * *Create new Family*: marcado

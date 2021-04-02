@@ -21,7 +21,7 @@
 
         #. Selecionar o(s) :bi:`Employee(s)` desejado(s).
 
-        #. Exercutar a ação ":bi:`Employee History Update`":
+        #. Executar a ação ":bi:`Employee History Update`":
 
             * Parâmetros apresentados:
                 * *Sign out date*

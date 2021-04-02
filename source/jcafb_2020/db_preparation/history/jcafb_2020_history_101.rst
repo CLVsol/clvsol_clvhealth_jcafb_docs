@@ -134,7 +134,7 @@ Preparar as "*Phases*" para a JCAFB-2020 (2019-07-22)
 
         #. Selecionar os registros referentes às Fases **JCAFB-2019*** e **JCAFB-2019****.
 
-        #. Exercutar a Ação "**Excluir**":
+        #. Executar a Ação "**Excluir**":
 
     #. Incluir a nova Fase **JCAFB-2020**:
 
@@ -190,7 +190,7 @@ Redefinir a senha do usuário de referência da JCAFB-2020 (2019-07-22)
 
         #. Selecionar o usuário de referência.
 
-        #. Exercutar a Ação "**Alterar Senha**":
+        #. Executar a Ação "**Alterar Senha**":
 
             * Parâmetros:
                 * Nova Senha: *******

@@ -1308,7 +1308,7 @@ Atualisar a Idade de Referência para todas as Pessoas (2020-06-20)
 
         #. Selecionar todas as Pessoas (**1540**)
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -1331,7 +1331,7 @@ Executar a Verificação para todos os Endereços (2020-06-20)
 
         #. Selecionar todos os Endereços (**665**)
 
-        #. Exercutar a Ação ":bi:`Address Verification Execute`":
+        #. Executar a Ação ":bi:`Address Verification Execute`":
 
             #. Utilize o botão :bi:`Address Verification Execute` para executar a Ação.
 
@@ -1350,7 +1350,7 @@ Executar a Verificação para todas as Famílias (2020-06-20)
 
         #. Selecionar todos os Famílias (**441**)
 
-        #. Exercutar a Ação ":bi:`Family Verification Execute`":
+        #. Executar a Ação ":bi:`Family Verification Execute`":
 
             #. Utilize o botão :bi:`Family Verification Execute` para executar a Ação.
 
@@ -1369,7 +1369,7 @@ Executar a Verificação para todas as Pessoas (2020-06-20)
 
         #. Selecionar todos os Pessoas (**1540**)
 
-        #. Exercutar a Ação ":bi:`Person Verification Execute`":
+        #. Executar a Ação ":bi:`Person Verification Execute`":
 
             #. Utilize o botão :bi:`Person Verification Execute` para executar a Ação.
 
@@ -1388,7 +1388,7 @@ Executar a Verificação para todos os Endereços (Aux) (2020-06-20)
 
         #. Selecionar todos os Endereços (Aux) (**202**)
 
-        #. Exercutar a Ação ":bi:`Address (Aux) Verification Execute`":
+        #. Executar a Ação ":bi:`Address (Aux) Verification Execute`":
 
             #. Utilize o botão :bi:`Address (Aux) Verification Execute` para executar a Ação.
 
@@ -1407,7 +1407,7 @@ Executar a Verificação para todas as Pessoas (Aux) (2020-06-20)
 
         #. Selecionar todos os Pessoas (Aux) (**605**)
 
-        #. Exercutar a Ação ":bi:`Person (Aux) Verification Execute`":
+        #. Executar a Ação ":bi:`Person (Aux) Verification Execute`":
 
             #. Utilize o botão :bi:`Person (Aux) Verification Execute` para executar a Ação.
 
@@ -1696,7 +1696,7 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2020-13* (2020-06-20b)
 
         #. Selecionar todos os Grupos de Campo (**16**) e Reserva Técnica (**5**)
 
-        #. Exercutar a Ação ":bi:`Employee Summary Set Up`":
+        #. Executar a Ação ":bi:`Employee Summary Set Up`":
 
             #. Utilize o botão :bi:`Employee Summary Set Up` para executar a Ação.
 
@@ -1715,7 +1715,7 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2020-13* (2020-06-20b)
 
         #. Selecionar todos os Endereços (JCAFB-2020-13) *Available* (**210**), *Selected* (**146**) e *Unselected* (**78**)
 
-        #. Exercutar a Ação ":bi:`Address Summary Set Up`":
+        #. Executar a Ação ":bi:`Address Summary Set Up`":
 
             #. Utilize o botão :bi:`Address Summary Set Up` para executar a Ação.
 
@@ -1734,7 +1734,7 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2020-13* (2020-06-20b)
 
         #. Selecionar todos as Famílias (JCAFB-2020-13) *Available* (**132**), *Selected* (**148**) e *Unselected* (**82**)
 
-        #. Exercutar a Ação ":bi:`Family Summary Set Up`":
+        #. Executar a Ação ":bi:`Family Summary Set Up`":
 
             #. Utilize o botão :bi:`Family Summary Set Up` para executar a Ação.
 
@@ -1753,7 +1753,7 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2020-13* (2020-06-20b)
 
         #. Selecionar todos as Pessoas (JCAFB-2020-13) *Available* (**861**), *Selected* (**191**) e *Unselected* (**127**)
 
-        #. Exercutar a Ação ":bi:`Person Summary Set Up`":
+        #. Executar a Ação ":bi:`Person Summary Set Up`":
 
             #. Utilize o botão :bi:`Person Summary Set Up` para executar a Ação.
 
@@ -1772,7 +1772,7 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2020-13* (2020-06-20b)
 
         #. Selecionar todos as Pessoas (Aux) (JCAFB-2020-13) *Available* (**313**), *Selected* (**197**),  *Unselected* (**50**) e *Waiting* (**7**)
 
-        #. Exercutar a Ação ":bi:`Person (Aux) Summary Set Up`":
+        #. Executar a Ação ":bi:`Person (Aux) Summary Set Up`":
 
             #. Utilize o botão :bi:`Person (Aux) Summary Set Up` para executar a Ação.
 

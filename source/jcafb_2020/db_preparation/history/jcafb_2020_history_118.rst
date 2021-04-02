@@ -1147,7 +1147,7 @@ Executar o *Processing Schedule* "Family Address Restore" (2019-11-07)
 
         #. Abrir o Formulário do *Processing Schedule* "":bi:`Family Address Restore`"*".
 
-        #. Exercutar a Ação ":bi:`Processing Schedule Execute`":
+        #. Executar a Ação ":bi:`Processing Schedule Execute`":
 
             #. Utilize o botão :bi:`Processing Schedule Execute` para executar a Ação.
 
@@ -1167,7 +1167,7 @@ Executar o *Processing Schedule* "Person Family Restore" (2019-11-07)
 
         #. Abrir o Formulário do *Processing Schedule* "":bi:`Person Family Restore`"*".
 
-        #. Exercutar a Ação ":bi:`Processing Schedule Execute`":
+        #. Executar a Ação ":bi:`Processing Schedule Execute`":
 
             #. Utilize o botão :bi:`Processing Schedule Execute` para executar a Ação.
 

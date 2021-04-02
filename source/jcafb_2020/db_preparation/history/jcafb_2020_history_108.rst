@@ -89,7 +89,7 @@ Alterar o Questionário "[QSF20]" (2019-08-31)
 
         #. Aplicar as alterações sugeridas pela Coordenação da JCAFB-2020.
 
-        #. Exercutar a Ação ":bi:`Survey Code Renew`":
+        #. Executar a Ação ":bi:`Survey Code Renew`":
 
             #. Utilize o botão :bi:`Code Renew` para executar a Ação.
 
@@ -111,7 +111,7 @@ Alterar o Questionário "[QSI20]" (2019-08-31)
 
         #. Aplicar as alterações sugeridas pela Coordenação da JCAFB-2020.
 
-        #. Exercutar a Ação ":bi:`Survey Code Renew`":
+        #. Executar a Ação ":bi:`Survey Code Renew`":
 
             #. Utilize o botão :bi:`Code Renew` para executar a Ação.
 
@@ -131,7 +131,7 @@ Exportar o Questionário "[QSI20]" (2019-08-31)
 
         #. Abrir o Formulário da Pesquisa "**[QSI20]**".
 
-        #. Exercutar a Ação ":bi:`Survey Export XLS`":
+        #. Executar a Ação ":bi:`Survey Export XLS`":
 
             * Parâmetros utilizados:
                 * *Directory Path*: **/opt/odoo/clvsol_filestore/clvhealth_jcafb/survey_files/templates**
@@ -157,7 +157,7 @@ Exportar o Questionário "[QSC20]" (2019-08-31)
 
         #. Abrir o Formulário da Pesquisa "**[QSC20]**".
 
-        #. Exercutar a Ação ":bi:`Survey Export XLS`":
+        #. Executar a Ação ":bi:`Survey Export XLS`":
 
             * Parâmetros utilizados:
                 * *Directory Path*: **/opt/odoo/clvsol_filestore/clvhealth_jcafb/survey_files/templates**
@@ -183,7 +183,7 @@ Exportar o Questionário "[QSF20]" (2019-08-31)
 
         #. Abrir o Formulário da Pesquisa "**[QSF20]**".
 
-        #. Exercutar a Ação ":bi:`Survey Export XLS`":
+        #. Executar a Ação ":bi:`Survey Export XLS`":
 
             * Parâmetros utilizados:
                 * *Directory Path*: **/opt/odoo/clvsol_filestore/clvhealth_jcafb/survey_files/templates**
@@ -209,7 +209,7 @@ Exportar o Questionário "[QMD20]" (2019-08-31)
 
         #. Abrir o Formulário da Pesquisa "**[QMD20]**".
 
-        #. Exercutar a Ação ":bi:`Survey Export XLS`":
+        #. Executar a Ação ":bi:`Survey Export XLS`":
 
             * Parâmetros utilizados:
                 * *Directory Path*: **/opt/odoo/clvsol_filestore/clvhealth_jcafb/survey_files/templates**
@@ -235,7 +235,7 @@ Exportar o Questionário "[QDH20]" (2019-08-31)
 
         #. Abrir o Formulário da Pesquisa "**[QDH20]**".
 
-        #. Exercutar a Ação ":bi:`Survey Export XLS`":
+        #. Executar a Ação ":bi:`Survey Export XLS`":
 
             * Parâmetros utilizados:
                 * *Directory Path*: **/opt/odoo/clvsol_filestore/clvhealth_jcafb/survey_files/templates**
@@ -261,7 +261,7 @@ Exportar o Questionário "[QAN20]" (2019-08-31)
 
         #. Abrir o Formulário da Pesquisa "**[QAN20]**".
 
-        #. Exercutar a Ação ":bi:`Survey Export XLS`":
+        #. Executar a Ação ":bi:`Survey Export XLS`":
 
             * Parâmetros utilizados:
                 * *Directory Path*: **/opt/odoo/clvsol_filestore/clvhealth_jcafb/survey_files/templates**

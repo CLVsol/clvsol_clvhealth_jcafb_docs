@@ -21,7 +21,7 @@
 
         #. Selecionar o(s) :bi:`Address(s)` desejado(s).
 
-        #. Exercutar a ação ":bi:`Address History Update`":
+        #. Executar a ação ":bi:`Address History Update`":
 
             * Parâmetros apresentados:
                 * *Sign out date*

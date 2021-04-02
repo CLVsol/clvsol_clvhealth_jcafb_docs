@@ -21,7 +21,7 @@
 
         #. Selecionar a(s) Pessoa(s) desejada(s).
 
-        #. Exercutar a ação "**Family Mass Edit**":
+        #. Executar a ação "**Family Mass Edit**":
 
             * Parâmetros apresentados:
                 * *Global Tags*

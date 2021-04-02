@@ -23,7 +23,7 @@
 
         #. Abrir o Formulário do *Document Type* desejado.
 
-        #. Exercutar a Ação ":bi:`Document Type Duplicate`":
+        #. Executar a Ação ":bi:`Document Type Duplicate`":
 
             * Parâmetros apresentados:
                 * *New Document Type*

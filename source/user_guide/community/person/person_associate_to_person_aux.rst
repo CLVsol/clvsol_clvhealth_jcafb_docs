@@ -21,7 +21,7 @@
 
         #. Selecionar a(s) Pessoa(s) desejada(s).
 
-        #. Exercutar a Ação ":bi:`Person Associate to Person (Aux)`":
+        #. Executar a Ação ":bi:`Person Associate to Person (Aux)`":
 
             * Parâmetros apresentados:
                 * *Create new Person (Aux)* (**Observação**: Parâmetro não modificável)

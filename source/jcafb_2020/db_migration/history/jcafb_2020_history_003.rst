@@ -261,7 +261,7 @@ Atualizar o *Employee History* de todos os Funcionários (a)
 
         #. Selecionar todos os Funcionários (**192**)
 
-        #. Exercutar a Ação ":bi:`Employee History Update`":
+        #. Executar a Ação ":bi:`Employee History Update`":
 
             * Parâmetros utilizados:
                 * *Sign out date*: **01/07/2019**
@@ -285,7 +285,7 @@ Remover a Fase de todos os Funcionários
 
         #. Selecionar todos os Funcionários (**192**)
 
-        #. Exercutar a Ação ":bi:`Employee Mass Edit`":
+        #. Executar a Ação ":bi:`Employee Mass Edit`":
 
             * Parâmetros utilizados:
                 * *Phase*: :bi:`Remove`
@@ -308,7 +308,7 @@ Atualizar o *Employee History* de todos os Funcionários (b)
 
         #. Selecionar todos os Funcionários (**192**)
 
-        #. Exercutar a Ação ":bi:`Employee History Update`":
+        #. Executar a Ação ":bi:`Employee History Update`":
 
             * Parâmetros utilizados:
                 * *Sign out date*: **01/07/2019**

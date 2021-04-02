@@ -21,7 +21,7 @@
 
         #. Selecionar a(s) Endereço(s) desejada(s).
 
-        #. Exercutar a Ação "**Address Mass Edit**":
+        #. Executar a Ação "**Address Mass Edit**":
 
             * Parâmetros apresentados:
                 * *Global Tags*

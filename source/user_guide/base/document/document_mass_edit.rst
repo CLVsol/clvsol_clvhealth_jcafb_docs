@@ -21,7 +21,7 @@
 
         #. Selecionar a(s) Documento(s) desejada(s).
 
-        #. Exercutar a Ação "**Document Mass Edit**":
+        #. Executar a Ação "**Document Mass Edit**":
 
             * Parâmetros apresentados:
                 * *Global Tags*

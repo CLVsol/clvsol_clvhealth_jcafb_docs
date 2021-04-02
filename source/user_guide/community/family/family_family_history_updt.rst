@@ -21,7 +21,7 @@
 
         #. Selecionar o(s) :bi:`Family(s)` desejado(s).
 
-        #. Exercutar a ação ":bi:`Family History Update`":
+        #. Executar a ação ":bi:`Family History Update`":
 
             * Parâmetros apresentados:
                 * *Sign out date*

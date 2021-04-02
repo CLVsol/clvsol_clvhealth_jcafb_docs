@@ -139,7 +139,7 @@ Atualizar o *Person History* de todas as Pessoas (a) (2019-08-20)
 
         #. Selecionar todas as Pessoas (**1375**)
 
-        #. Exercutar a Ação ":bi:`Person History Update`":
+        #. Executar a Ação ":bi:`Person History Update`":
 
             * Parâmetros utilizados:
                 * *Sign out date*: **01/07/2019**
@@ -163,7 +163,7 @@ Remover a Fase de todas as Pessoas (2019-08-20)
 
         #. Selecionar todas as Pessoas (**1375**)
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
                 * *Phase*: :bi:`Remove`
@@ -186,7 +186,7 @@ Atualizar o *Person History* de todas as Pessoas (b) (2019-08-20)
 
         #. Selecionar todas as Pessoas (**1375**)
 
-        #. Exercutar a Ação ":bi:`Person History Update`":
+        #. Executar a Ação ":bi:`Person History Update`":
 
             * Parâmetros utilizados:
                 * *Sign out date*: **01/07/2019**
@@ -210,7 +210,7 @@ Atualizar o *Address History* de todos os Endereços (a) (2019-08-20)
 
         #. Selecionar todos os Endereços (**575**)
 
-        #. Exercutar a Ação ":bi:`Address History Update`":
+        #. Executar a Ação ":bi:`Address History Update`":
 
             * Parâmetros utilizados:
                 * *Sign out date*: **01/07/2019**
@@ -234,7 +234,7 @@ Remover a Fase de todos os Endereços (2019-08-20)
 
         #. Selecionar todas as Pessoas (**575**)
 
-        #. Exercutar a Ação ":bi:`Address Mass Edit`":
+        #. Executar a Ação ":bi:`Address Mass Edit`":
 
             * Parâmetros utilizados:
                 * *Phase*: :bi:`Remove`
@@ -257,7 +257,7 @@ Atualizar o *Address History* de todos os Endereços (b) (2019-08-20)
 
         #. Selecionar todos os Endereços (**575**)
 
-        #. Exercutar a Ação ":bi:`Address History Update`":
+        #. Executar a Ação ":bi:`Address History Update`":
 
             * Parâmetros utilizados:
                 * *Sign out date*: **01/07/2019**
@@ -281,7 +281,7 @@ Atualizar o *Family History* de todas as Famílias (a) (2019-08-20)
 
         #. Selecionar todas as Famílias (**373**)
 
-        #. Exercutar a Ação ":bi:`Family History Update`":
+        #. Executar a Ação ":bi:`Family History Update`":
 
             * Parâmetros utilizados:
                 * *Sign out date*: **01/07/2019**
@@ -305,7 +305,7 @@ Remover a Fase de todas as Famílias (2019-08-20)
 
         #. Selecionar todas as Famílias (**373**)
 
-        #. Exercutar a Ação ":bi:`Family Mass Edit`":
+        #. Executar a Ação ":bi:`Family Mass Edit`":
 
             * Parâmetros utilizados:
                 * *Phase*: :bi:`Remove`
@@ -328,7 +328,7 @@ Atualizar o *Family History* de todas as Famílias (b) (2019-08-20)
 
         #. Selecionar todas as Famílias (**373**)
 
-        #. Exercutar a Ação ":bi:`Family History Update`":
+        #. Executar a Ação ":bi:`Family History Update`":
 
             * Parâmetros utilizados:
                 * *Sign out date*: **01/07/2019**
@@ -352,7 +352,7 @@ Remover o *Responsible Empĺoyee* de todos os Endereços (2019-08-20)
 
         #. Selecionar todas as Pessoas (**575**)
 
-        #. Exercutar a Ação ":bi:`Address Mass Edit`":
+        #. Executar a Ação ":bi:`Address Mass Edit`":
 
             * Parâmetros utilizados:
                 * *Responsible Empĺoyee*: :bi:`Remove`
@@ -375,7 +375,7 @@ Renovar o *Random ID* de todas as Pessoas (2019-08-20)
 
         #. Selecionar todas as Pessoas (**1375**)
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
                 * *Random ID*: "**/**"

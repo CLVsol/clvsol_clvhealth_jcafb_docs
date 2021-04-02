@@ -21,7 +21,7 @@
 
         #. Selecionar o(s) :bi:`Employee(s)` desejado(s).
 
-        #. Exercutar a ação ":bi:`Employee User Groups Update`":
+        #. Executar a ação ":bi:`Employee User Groups Update`":
 
             * Parâmetros apresentados:
                 * *Reference Employee*

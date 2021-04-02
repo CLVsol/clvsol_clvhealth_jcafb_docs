@@ -30,7 +30,7 @@
 
         #. Selecionar o registro do Endereço encontrado.
 
-        #. Exercutar a Ação ":bi:`Address Associate to Address (Aux)`":
+        #. Executar a Ação ":bi:`Address Associate to Address (Aux)`":
 
             * Parâmetros apresentados:
                 * *Create new Address (Aux)* (**Observação**: Parâmetro não modificável)

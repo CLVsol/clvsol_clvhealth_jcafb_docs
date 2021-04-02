@@ -612,7 +612,7 @@ Marcar o *Active Log* de todos os Objetos (2020-07-09)
 
         #. Selecionar todos os :bi:`Global Log Clients` (**43**)
 
-        #. Exercutar a Ação ":bi:`Global Log Client Mass Edit`":
+        #. Executar a Ação ":bi:`Global Log Client Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -635,7 +635,7 @@ Atualizar o *Employee History* de todos os Funcionários (1) (2020-07-10)
 
         #. Selecionar todos os Funcionários (**248**)
 
-        #. Exercutar a Ação ":bi:`Employee History Update`":
+        #. Executar a Ação ":bi:`Employee History Update`":
 
             * Parâmetros utilizados:
 

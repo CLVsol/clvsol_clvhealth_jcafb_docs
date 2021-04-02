@@ -465,7 +465,7 @@ Executar o processo de verificação para todas as Pessoas (Aux) (2019-10-11)
 
         #. Selecionar todas as Pessoas (Aux) (**1344**)
 
-        #. Exercutar a Ação ":bi:`Person (Aux) Verification Execute`":
+        #. Executar a Ação ":bi:`Person (Aux) Verification Execute`":
 
             #. Utilize o botão :bi:`Person (Aux) Verification Execute` para executar a Ação.
 
@@ -849,7 +849,7 @@ Executar o processo de verificação para todas as Pessoas (2019-10-12)
 
         #. Selecionar todas as Pessoas (**1375**)
 
-        #. Exercutar a Ação ":bi:`Person Verification Execute`":
+        #. Executar a Ação ":bi:`Person Verification Execute`":
 
             #. Utilize o botão :bi:`Person Verification Execute` para executar a Ação.
 
@@ -867,7 +867,7 @@ Executar o processo de verificação para todas as Famílias (2019-10-12)
 
         #. Selecionar todas as Pessoas (**373**)
 
-        #. Exercutar a Ação ":bi:`Family Verification Execute`":
+        #. Executar a Ação ":bi:`Family Verification Execute`":
 
             #. Utilize o botão :bi:`Family Verification Execute` para executar a Ação.
 
@@ -885,7 +885,7 @@ Executar o processo de verificação para todos os Endereços (2019-10-12)
 
         #. Selecionar todas as Pessoas (**575**)
 
-        #. Exercutar a Ação ":bi:`Address Verification Execute`":
+        #. Executar a Ação ":bi:`Address Verification Execute`":
 
             #. Utilize o botão :bi:`Address Verification Execute` para executar a Ação.
 
@@ -903,7 +903,7 @@ Executar o processo de verificação para todas as Famílias (Aux) (2019-10-12)
 
         #. Selecionar todas as Famílias (Aux) (**261**)
 
-        #. Exercutar a Ação ":bi:`Family (Aux) Verification Execute`":
+        #. Executar a Ação ":bi:`Family (Aux) Verification Execute`":
 
             #. Utilize o botão :bi:`Family (Aux) Verification Execute` para executar a Ação.
 
@@ -921,7 +921,7 @@ Executar o processo de verificação para todos os Endereços (Aux) (2019-10-12)
 
         #. Selecionar todas os Endereços (Aux) (**429**)
 
-        #. Exercutar a Ação ":bi:`Address (Aux) Verification Execute`":
+        #. Executar a Ação ":bi:`Address (Aux) Verification Execute`":
 
             #. Utilize o botão :bi:`Address (Aux) Verification Execute` para executar a Ação.
 
@@ -939,7 +939,7 @@ Executar o processo de verificação para todas as Pessoas (Aux) (2019-10-12)
 
         #. Selecionar todas as Pessoas (Aux) (**1344**)
 
-        #. Exercutar a Ação ":bi:`Person (Aux) Verification Execute`":
+        #. Executar a Ação ":bi:`Person (Aux) Verification Execute`":
 
             #. Utilize o botão :bi:`Person (Aux) Verification Execute` para executar a Ação.
 

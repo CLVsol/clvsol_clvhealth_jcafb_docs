@@ -21,7 +21,7 @@
 
         #. Selecionar a(s) Família(s) desejada(s).
 
-        #. Exercutar a Ação "**Family (Aux) Contact Information Update**":
+        #. Executar a Ação "**Family (Aux) Contact Information Update**":
 
             * Parâmetros apresentados:
                 * *Update Phone*

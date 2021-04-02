@@ -383,7 +383,7 @@ Excluir todas as Pessoas do Cadastro :bi:`Person (Aux)` (2019-12-05)
 
         #. Selecionar todas as :bi:`Persons (Aux)` (**1347**)
 
-        #. Exercutar a Ação "**Excluir**":
+        #. Executar a Ação "**Excluir**":
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
@@ -403,7 +403,7 @@ Excluir todas os Endereços do Cadastro :bi:`Address (Aux)` (2019-12-05)
 
         #. Selecionar todas os :bi:`Addresss (Aux)` (**437**)
 
-        #. Exercutar a Ação "**Excluir**":
+        #. Executar a Ação "**Excluir**":
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 

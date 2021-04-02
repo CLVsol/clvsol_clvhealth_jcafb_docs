@@ -21,7 +21,7 @@
 
         #. Selecionar a(s) Pessoa(s) desejada(s).
 
-        #. Exercutar a Ação ":bi:`Person Associate to Family`":
+        #. Executar a Ação ":bi:`Person Associate to Family`":
 
             * Parâmetros apresentados:
                 * *Create new Family*

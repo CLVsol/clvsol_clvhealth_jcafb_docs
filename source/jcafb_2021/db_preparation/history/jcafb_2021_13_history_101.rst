@@ -110,7 +110,7 @@ Excluir todas as Pessoas do Cadastro :bi:`Person (Aux)` (2020-07-12)
 
         #. Selecionar todas as :bi:`Persons (Aux)` (**605**)
 
-        #. Exercutar a Ação "**Excluir**":
+        #. Executar a Ação "**Excluir**":
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
@@ -128,7 +128,7 @@ Excluir todas as Pessoas do Cadastro :bi:`Person (Aux)` (2020-07-12)
 
         #. Selecionar todas os :bi:`Verification Outcomes` referentes a **clv.person_aux** (**3025**)
 
-        #. Exercutar a Ação "**Excluir**":
+        #. Executar a Ação "**Excluir**":
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
@@ -149,7 +149,7 @@ Excluir todos os Endereços do Cadastro :bi:`Address (Aux)` (2020-07-12)
 
         #. Selecionar todas os :bi:`Addresss (Aux)` (**202**)
 
-        #. Exercutar a Ação "**Excluir**":
+        #. Executar a Ação "**Excluir**":
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
@@ -167,7 +167,7 @@ Excluir todos os Endereços do Cadastro :bi:`Address (Aux)` (2020-07-12)
 
         #. Selecionar todas os :bi:`Verification Outcomes` referentes a **clv.address_aux** (**404**)
 
-        #. Exercutar a Ação "**Excluir**":
+        #. Executar a Ação "**Excluir**":
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
@@ -186,7 +186,7 @@ Remover a Fase de todos os Funcionários (2020-07-12)
 
         #. Selecionar todos os Funcionários (**248**)
 
-        #. Exercutar a Ação ":bi:`Employee Mass Edit`":
+        #. Executar a Ação ":bi:`Employee Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -209,7 +209,7 @@ Atualizar o *Employee History* de todos os Funcionários (2020-07-12)
 
         #. Selecionar todos os Funcionários (**248**)
 
-        #. Exercutar a Ação ":bi:`Employee History Update`":
+        #. Executar a Ação ":bi:`Employee History Update`":
 
             * Parâmetros utilizados:
 
@@ -233,7 +233,7 @@ Remover a Fase de todas as Pessoas (2020-07-12)
 
         #. Selecionar todas as Pessoas (**1540**)
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -256,7 +256,7 @@ Atualizar o *Person History* de todas as Pessoas (2020-07-12)
 
         #. Selecionar todas as Pessoas (**1540**)
 
-        #. Exercutar a Ação ":bi:`Person History Update`":
+        #. Executar a Ação ":bi:`Person History Update`":
 
             * Parâmetros utilizados:
 
@@ -280,7 +280,7 @@ Renovar o *Random ID* de todas as Pessoas (2020-07-12)
 
         #. Selecionar todas as Pessoas (**1540**)
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -303,7 +303,7 @@ Remover a Fase de todas as Famílias (2020-07-12)
 
         #. Selecionar todas as Famílias (**441**)
 
-        #. Exercutar a Ação ":bi:`Family Mass Edit`":
+        #. Executar a Ação ":bi:`Family Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -326,7 +326,7 @@ Atualizar o *Family History* de todas as Famílias (2020-07-12)
 
         #. Selecionar todas as Famílias (**441**)
 
-        #. Exercutar a Ação ":bi:`Family History Update`":
+        #. Executar a Ação ":bi:`Family History Update`":
 
             * Parâmetros utilizados:
 
@@ -350,7 +350,7 @@ Remover a Fase de todos os Endereços (2020-07-12)
 
         #. Selecionar todos os Endereços (**665**)
 
-        #. Exercutar a Ação ":bi:`Address Mass Edit`":
+        #. Executar a Ação ":bi:`Address Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -373,7 +373,7 @@ Atualizar o *Address History* de todos os Endereços (2020-07-12)
 
         #. Selecionar todos os Endereços (**665**)
 
-        #. Exercutar a Ação ":bi:`Address History Update`":
+        #. Executar a Ação ":bi:`Address History Update`":
 
             * Parâmetros utilizados:
 
@@ -397,7 +397,7 @@ Remover o *Responsible Empĺoyee* de todos os Endereços (2020-07-12)
 
         #. Selecionar todas as Pessoas (**665**)
 
-        #. Exercutar a Ação ":bi:`Address Mass Edit`":
+        #. Executar a Ação ":bi:`Address Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -520,7 +520,7 @@ Renovar o *Token* de todos os Funcionários (2020-07-15)
 
         #. Selecionar todos os Funcionários (**248**)
 
-        #. Exercutar a Ação ":bi:`Employee Mass Edit`":
+        #. Executar a Ação ":bi:`Employee Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -530,7 +530,7 @@ Renovar o *Token* de todos os Funcionários (2020-07-15)
 
         #. Selecionar todos os Funcionários (**248**)
 
-        #. Exercutar a Ação ":bi:`Employee Mass Edit`":
+        #. Executar a Ação ":bi:`Employee Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -553,7 +553,7 @@ Redefinir a **Senha** de todos os Funcionários da **JCAFB-2021v** (2020-07-15)
 
         #. Selecionar todos os Funcionários da **JCAFB-2021v** (**28**)
 
-        #. Exercutar a Ação ":bi:`Employee Mass Edit`":
+        #. Executar a Ação ":bi:`Employee Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -576,7 +576,7 @@ Redefinir a senha do usuário de referência da JCAFB-2021v (2020-07-15)
 
         #. Selecionar o usuário de referência.
 
-        #. Exercutar a Ação "**Alterar Senha**":
+        #. Executar a Ação "**Alterar Senha**":
 
             * Parâmetros:
                 * Nova Senha: *******

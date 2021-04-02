@@ -23,7 +23,7 @@
 
         #. Selecionar a(s) Pessoa(s) desejada(s).
 
-        #. Exercutar a Ação ":bi:`Lab Test Request Set Up [Person]`":
+        #. Executar a Ação ":bi:`Lab Test Request Set Up [Person]`":
 
             * Parâmetros apresentados:
                 * *Lab Test Types*

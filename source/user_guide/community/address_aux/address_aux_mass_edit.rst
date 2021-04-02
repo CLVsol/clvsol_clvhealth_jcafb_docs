@@ -21,7 +21,7 @@
 
         #. Selecionar a(s) Endereço(s) desejada(s).
 
-        #. Exercutar a Ação "**Address (Auxf) Mass Edit**":
+        #. Executar a Ação "**Address (Auxf) Mass Edit**":
 
             * Parâmetros apresentados:
                 * *Global Tags*

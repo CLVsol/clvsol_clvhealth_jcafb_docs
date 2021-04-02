@@ -21,7 +21,7 @@
 
         #. Selecionar a(s) Pessoa(s) desejada(s).
 
-        #. Exercutar a Ação "**Person (Aux) Contact Information Update**":
+        #. Executar a Ação "**Person (Aux) Contact Information Update**":
 
             * Parâmetros apresentados:
                 * *Update Phone*

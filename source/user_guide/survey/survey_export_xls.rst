@@ -23,7 +23,7 @@
 
         #. Abrir o Formulário da Pesquisa desejada.
 
-        #. Exercutar a Ação ":bi:`Survey Export XLS`":
+        #. Executar a Ação ":bi:`Survey Export XLS`":
 
             * Parâmetros apresentados:
                 * *Directory Path*

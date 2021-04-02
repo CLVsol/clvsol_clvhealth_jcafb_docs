@@ -193,7 +193,7 @@ Atualizar o *Entity Code* de todas as Pessoas (2019-08-19)
 
         #. Selecionar todas as Pessoas (**1375**)
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
                 * *Partner Entity Code*: **Set**
@@ -216,7 +216,7 @@ Atualizar o *Entity Code* de todas as Famílias (2019-08-19)
 
         #. Selecionar todas as Famílias (**373**)
 
-        #. Exercutar a Ação ":bi:`Family Mass Edit`":
+        #. Executar a Ação ":bi:`Family Mass Edit`":
 
             * Parâmetros utilizados:
                 * *Partner Entity Code*: **Set**
@@ -239,7 +239,7 @@ Atualizar o *Entity Code* de todas os Endereços (2019-08-19)
 
         #. Selecionar todas os Endereços (**575**)
 
-        #. Exercutar a Ação ":bi:`Address Mass Edit`":
+        #. Executar a Ação ":bi:`Address Mass Edit`":
 
             * Parâmetros utilizados:
                 * *Partner Entity Code*: **Set**

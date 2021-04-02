@@ -23,7 +23,7 @@
 
         #. Abrir o Formulário da Pesquisa desejada.
 
-        #. Exercutar a Ação ":bi:`Survey Duplicate`":
+        #. Executar a Ação ":bi:`Survey Duplicate`":
 
             * Parâmetros apresentados:
                 * *New Survey Title*

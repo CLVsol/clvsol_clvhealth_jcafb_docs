@@ -168,7 +168,7 @@ Renovar o *Token* de todos os Funcionários (2020-07-16)
 
         #. Selecionar todos os Funcionários (**248**)
 
-        #. Exercutar a Ação ":bi:`Employee Mass Edit`":
+        #. Executar a Ação ":bi:`Employee Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -178,7 +178,7 @@ Renovar o *Token* de todos os Funcionários (2020-07-16)
 
         #. Selecionar todos os Funcionários (**248**)
 
-        #. Exercutar a Ação ":bi:`Employee Mass Edit`":
+        #. Executar a Ação ":bi:`Employee Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -201,7 +201,7 @@ Redefinir a **Senha** de todos os Funcionários da **JCAFB-2020** (2020-07-16)
 
         #. Selecionar todos os Funcionários da **JCAFB-2020** (**57**)
 
-        #. Exercutar a Ação ":bi:`Employee Mass Edit`":
+        #. Executar a Ação ":bi:`Employee Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -224,7 +224,7 @@ Redefinir a senha do usuário de referência da JCAFB-2020 (2020-07-16)
 
         #. Selecionar o usuário de referência.
 
-        #. Exercutar a Ação "**Alterar Senha**":
+        #. Executar a Ação "**Alterar Senha**":
 
             * Parâmetros:
                 * Nova Senha: *******
@@ -519,7 +519,7 @@ Ativar *Automatic Name* de todos os Endereços (2020-07-17)
 
         #. Selecionar todos os Endereços (**665**)
 
-        #. Exercutar a Ação ":bi:`Address Mass Edit`":
+        #. Executar a Ação ":bi:`Address Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -542,7 +542,7 @@ Ativar *Automatic Name* de todas as Famílias (2020-07-17)
 
         #. Selecionar todas as Famílias (**441**)
 
-        #. Exercutar a Ação ":bi:`Family Mass Edit`":
+        #. Executar a Ação ":bi:`Family Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -565,7 +565,7 @@ Atualizar o *Entity Code* de todas as Pessoas (2020-07-17)
 
         #. Selecionar todas as Pessoas (**1540**)
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -588,7 +588,7 @@ Atualizar o *Entity Code* de todas as Famílias (2020-07-17)
 
         #. Selecionar todas as Famílias (**441**)
 
-        #. Exercutar a Ação ":bi:`Family Mass Edit`":
+        #. Executar a Ação ":bi:`Family Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -611,7 +611,7 @@ Atualizar o *Entity Code* de todas os Endereços (2020-07-17)
 
         #. Selecionar todas os Endereços (**665**)
 
-        #. Exercutar a Ação ":bi:`Address Mass Edit`":
+        #. Executar a Ação ":bi:`Address Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -634,7 +634,7 @@ Atualizar o *Entity Code* de todas as Pessoas (Aux) (2020-07-17)
 
         #. Selecionar todas as Pessoas (Aux) (**605**)
 
-        #. Exercutar a Ação ":bi:`Person (Aux) Mass Edit`":
+        #. Executar a Ação ":bi:`Person (Aux) Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -657,7 +657,7 @@ Atualizar o *Entity Code* de todas os Endereços (Aux) (2020-07-17)
 
         #. Selecionar todas os Endereços (Aux) (**202**)
 
-        #. Exercutar a Ação ":bi:`Address (Aux) Mass Edit`":
+        #. Executar a Ação ":bi:`Address (Aux) Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -733,7 +733,7 @@ Ativar *Automatic Name* de todos os Endereços (Aux) (2020-07-18)
 
         #. Selecionar todos os Endereços (Aux) (**202**)
 
-        #. Exercutar a Ação ":bi:`Address (Aux) Mass Edit`":
+        #. Executar a Ação ":bi:`Address (Aux) Mass Edit`":
 
             * Parâmetros utilizados:
 

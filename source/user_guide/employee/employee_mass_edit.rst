@@ -21,7 +21,7 @@
 
         #. Selecionar o(s) Funcionário(s) desejado(s).
 
-        #. Exercutar a ação "**Employee Mass Edit**":
+        #. Executar a ação "**Employee Mass Edit**":
 
             * Parâmetros apresentados:
                 * *Job*

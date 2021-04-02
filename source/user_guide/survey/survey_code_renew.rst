@@ -23,7 +23,7 @@
 
         #. Abrir o Formulário da Pesquisa desejada.
 
-        #. Exercutar a Ação ":bi:`Survey Code Renew`":
+        #. Executar a Ação ":bi:`Survey Code Renew`":
 
             * Parâmetros apresentados:
                 * Nenhum

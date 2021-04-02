@@ -144,7 +144,7 @@ Atualizar as permissões de todos os Usuários da JCAFB-2021v (2020-07-16)
 
         #. Selecionar os *Employees* da JCAFB-2021v (**28**)
 
-        #. Exercutar a Ação "**Employee User Groups Update**":
+        #. Executar a Ação "**Employee User Groups Update**":
 
             #. Selecionar o :bi:`Reference Employee`: Usuário de referência (selecionado no ítem anterior).
 
@@ -226,7 +226,7 @@ Ativar *Automatic Name* de todos os Endereços (2020-07-17)
 
         #. Selecionar todos os Endereços (**665**)
 
-        #. Exercutar a Ação ":bi:`Address Mass Edit`":
+        #. Executar a Ação ":bi:`Address Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -249,7 +249,7 @@ Ativar *Automatic Name* de todas as Famílias (2020-07-17)
 
         #. Selecionar todas as Famílias (**441**)
 
-        #. Exercutar a Ação ":bi:`Family Mass Edit`":
+        #. Executar a Ação ":bi:`Family Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -272,7 +272,7 @@ Atualizar o *Entity Code* de todas as Pessoas (2020-07-17)
 
         #. Selecionar todas as Pessoas (**1540**)
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -295,7 +295,7 @@ Atualizar o *Entity Code* de todas as Famílias (2020-07-17)
 
         #. Selecionar todas as Famílias (**441**)
 
-        #. Exercutar a Ação ":bi:`Family Mass Edit`":
+        #. Executar a Ação ":bi:`Family Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -318,7 +318,7 @@ Atualizar o *Entity Code* de todas os Endereços (2020-07-17)
 
         #. Selecionar todas os Endereços (**665**)
 
-        #. Exercutar a Ação ":bi:`Address Mass Edit`":
+        #. Executar a Ação ":bi:`Address Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -480,7 +480,7 @@ Associar todas as Pessoas a uma Pessoa (Aux) (2020-07-19)
 
         #. Selecionar todas as Pessoas (**1540**)
 
-        #. Exercutar a Ação "**Person Associate to Person (Aux)**":
+        #. Executar a Ação "**Person Associate to Person (Aux)**":
 
             * Parâmetros utilizados:
 
@@ -504,7 +504,7 @@ Associar todos os Endereços a um Endereço (Aux) (2020-07-19)
 
         #. Selecionar todos os Endereços (**665**)
 
-        #. Exercutar a Ação "**Address Associate to Address (Aux)**":
+        #. Executar a Ação "**Address Associate to Address (Aux)**":
 
             * Parâmetros utilizados:
 
@@ -527,7 +527,7 @@ Remover a Fase de todas as Pessoas (Aux) (2020-07-19)
 
         #. Selecionar todas as Pessoas (Aux) (**1540**)
 
-        #. Exercutar a Ação ":bi:`Person (Aux) Mass Edit`":
+        #. Executar a Ação ":bi:`Person (Aux) Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -550,7 +550,7 @@ Remover a Fase de todos os Endereços (Aux) (2020-07-19)
 
         #. Selecionar todos os Endereços (Aux) (**665**)
 
-        #. Exercutar a Ação ":bi:`Address (Aux) Mass Edit`":
+        #. Executar a Ação ":bi:`Address (Aux) Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -672,7 +672,7 @@ Excluir todas as Pessoas do Cadastro :bi:`Person (Aux)` (2020-07-20)
 
         #. Selecionar todas as :bi:`Persons (Aux)` (**1540**)
 
-        #. Exercutar a Ação "**Excluir**":
+        #. Executar a Ação "**Excluir**":
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
@@ -690,7 +690,7 @@ Excluir todas as Pessoas do Cadastro :bi:`Person (Aux)` (2020-07-20)
 
         #. Selecionar todas os :bi:`Verification Outcomes` referentes a **clv.person_aux** (**7700**)
 
-        #. Exercutar a Ação "**Excluir**":
+        #. Executar a Ação "**Excluir**":
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
@@ -711,7 +711,7 @@ Excluir todos os Endereços do Cadastro :bi:`Address (Aux)` (2020-07-20)
 
         #. Selecionar todas os :bi:`Addresss (Aux)` (**665**)
 
-        #. Exercutar a Ação "**Excluir**":
+        #. Executar a Ação "**Excluir**":
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
@@ -729,7 +729,7 @@ Excluir todos os Endereços do Cadastro :bi:`Address (Aux)` (2020-07-20)
 
         #. Selecionar todas os :bi:`Verification Outcomes` referentes a **clv.address_aux** (**1330**)
 
-        #. Exercutar a Ação "**Excluir**":
+        #. Executar a Ação "**Excluir**":
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
@@ -748,7 +748,7 @@ Associar todas as Pessoas a uma Pessoa (Aux) (2020-07-20)
 
         #. Selecionar todas as Pessoas (**1540**)
 
-        #. Exercutar a Ação "**Person Associate to Person (Aux)**":
+        #. Executar a Ação "**Person Associate to Person (Aux)**":
 
             * Parâmetros utilizados:
 
@@ -772,7 +772,7 @@ Associar todos os Endereços a um Endereço (Aux) (2020-07-20)
 
         #. Selecionar todos os Endereços (**665**)
 
-        #. Exercutar a Ação "**Address Associate to Address (Aux)**":
+        #. Executar a Ação "**Address Associate to Address (Aux)**":
 
             * Parâmetros utilizados:
 
@@ -795,7 +795,7 @@ Remover a Fase de todas as Pessoas (Aux) (2020-07-20)
 
         #. Selecionar todas as Pessoas (Aux) (**1540**)
 
-        #. Exercutar a Ação ":bi:`Person (Aux) Mass Edit`":
+        #. Executar a Ação ":bi:`Person (Aux) Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -818,7 +818,7 @@ Remover a Fase de todos os Endereços (Aux) (2020-07-20)
 
         #. Selecionar todos os Endereços (Aux) (**665**)
 
-        #. Exercutar a Ação ":bi:`Address (Aux) Mass Edit`":
+        #. Executar a Ação ":bi:`Address (Aux) Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -887,7 +887,7 @@ Excluir todas as Pessoas do Cadastro :bi:`Person (Aux)` (2020-07-20)
 
         #. Selecionar todas as :bi:`Persons (Aux)` (**1540**)
 
-        #. Exercutar a Ação "**Excluir**":
+        #. Executar a Ação "**Excluir**":
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
@@ -905,7 +905,7 @@ Excluir todas as Pessoas do Cadastro :bi:`Person (Aux)` (2020-07-20)
 
         #. Selecionar todas os :bi:`Verification Outcomes` referentes a **clv.person_aux** (**7700**)
 
-        #. Exercutar a Ação "**Excluir**":
+        #. Executar a Ação "**Excluir**":
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
@@ -926,7 +926,7 @@ Excluir todos os Endereços do Cadastro :bi:`Address (Aux)` (2020-07-20)
 
         #. Selecionar todas os :bi:`Addresss (Aux)` (**665**)
 
-        #. Exercutar a Ação "**Excluir**":
+        #. Executar a Ação "**Excluir**":
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
@@ -944,7 +944,7 @@ Excluir todos os Endereços do Cadastro :bi:`Address (Aux)` (2020-07-20)
 
         #. Selecionar todas os :bi:`Verification Outcomes` referentes a **clv.address_aux** (**1330**)
 
-        #. Exercutar a Ação "**Excluir**":
+        #. Executar a Ação "**Excluir**":
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
@@ -963,7 +963,7 @@ Associar todas as Pessoas a uma Pessoa (Aux) (2020-07-20)
 
         #. Selecionar todas as Pessoas (**1540**)
 
-        #. Exercutar a Ação "**Person Associate to Person (Aux)**":
+        #. Executar a Ação "**Person Associate to Person (Aux)**":
 
             * Parâmetros utilizados:
 
@@ -987,7 +987,7 @@ Associar todos os Endereços a um Endereço (Aux) (2020-07-20)
 
         #. Selecionar todos os Endereços (**665**)
 
-        #. Exercutar a Ação "**Address Associate to Address (Aux)**":
+        #. Executar a Ação "**Address Associate to Address (Aux)**":
 
             * Parâmetros utilizados:
 
@@ -1010,7 +1010,7 @@ Remover a Fase de todas as Pessoas (Aux) (2020-07-20)
 
         #. Selecionar todas as Pessoas (Aux) (**1540**)
 
-        #. Exercutar a Ação ":bi:`Person (Aux) Mass Edit`":
+        #. Executar a Ação ":bi:`Person (Aux) Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -1033,7 +1033,7 @@ Remover a Fase de todos os Endereços (Aux) (2020-07-20)
 
         #. Selecionar todos os Endereços (Aux) (**665**)
 
-        #. Exercutar a Ação ":bi:`Address (Aux) Mass Edit`":
+        #. Executar a Ação ":bi:`Address (Aux) Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -1599,7 +1599,7 @@ Atualisar a Idade de Referência para todas as Pessoas (2020-08-04)
 
         #. Selecionar todas as Pessoas (**1540**)
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -1622,7 +1622,7 @@ Atualizar o *State* das Pessoas *Selected* (2020-08-04)
 
         #. Selecionar todas as Pessoas :bi:`Selected` (**189**)
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -1645,7 +1645,7 @@ Atualizar o *State* das Famílias *Selected* (2020-08-04)
 
         #. Selecionar todas as Famílias (**146**)
 
-        #. Exercutar a Ação ":bi:`Family Mass Edit`":
+        #. Executar a Ação ":bi:`Family Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -1668,7 +1668,7 @@ Atualizar o *State* dos Endereços *Selected* (2020-08-04)
 
         #. Selecionar todas os Endereços (**144**)
 
-        #. Exercutar a Ação ":bi:`Address Mass Edit`":
+        #. Executar a Ação ":bi:`Address Mass Edit`":
 
             * Parâmetros utilizados:
 

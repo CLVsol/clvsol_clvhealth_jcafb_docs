@@ -21,7 +21,7 @@
 
         #. Abrir o Formulário do *Lab Test Type* desejado.
 
-        #. Exercutar a Ação ":bi:`Lab Test Type Duplicate`":
+        #. Executar a Ação ":bi:`Lab Test Type Duplicate`":
 
             * Parâmetros apresentados:
                 * *New Lab Test Type*
